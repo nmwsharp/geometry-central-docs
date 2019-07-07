@@ -47,7 +47,7 @@
       
         
         
-        <meta name="theme-color" content="#f9a825">
+        <meta name="theme-color" content="#ff7043">
       
     
     
@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700|Inconsolata">
+        <style>body,input{font-family:"Merriweather","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Inconsolata","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="assets/fonts/material-icons.css">
@@ -67,13 +67,38 @@
     
     
       
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-58346315-3", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
   
     
     
-    <body dir="ltr" data-md-color-primary="yellow" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="red">
   
     <svg class="md-svg">
       <defs>
@@ -765,7 +790,7 @@
                 
                 
                 <h1 id="welcome-to-geometry-central">Welcome to Geometry Central</h1>
-<p>Geometry Central is a modern C++ library of data structures and algorithms for geometry processing, with a particular focus on surface meshes.</p>
+<p>Geometry-central is a modern C++ library of data structures and algorithms for geometry processing, with a particular focus on surface meshes.</p>
 <p>Features include:</p>
 <ul>
 <li>A polished <strong>halfedge mesh</strong> class, with efficient support for mesh modification, and a system of containers for associating data with mesh elements.</li>
@@ -786,7 +811,7 @@
 <p><strong>What is geometry-central not?</strong></p>
 <ul>
 <li><strong>A user interface</strong>. Geometry-central does not include any facilities for user interaction; it is an algorithms and data structures library on which you might build user-facing tools. This philosphy keeps the library lightweight, and avoids dependencies on rendering and windowing systems. For a UI that interoperates well with geometry-central, see <a href="https://polyscope.run">Polyscope</a>.</li>
-<li><strong>A research code dump</strong>. Geometry Central was built by researchers, and is used to prototype research projects. However, we strive to ensure that this library contains only polished &amp; tested, broadly useful algorithms.</li>
+<li><strong>A research code dump</strong>. Geometry-central was built by researchers, and is used to prototype research projects. However, we strive to ensure that this library contains only polished &amp; tested, broadly useful algorithms.</li>
 </ul>
 <p><strong>Related alternatives:</strong> 
 <a href="https://www.cgal.org/">CGAL</a>,
@@ -802,7 +827,7 @@
 <a href="http://rohansawhney.io/">Rohan Sawhney</a>, and many others.</p>
 <p>If geometry-central contributes to an academic publication, cite it as:
 <div class="codehilite"><pre><span></span><span class="nc">@misc</span><span class="p">{</span><span class="nl">geometrycentral</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Geometry-Central}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{geometry-central}</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Nicholas Sharp and Keenan Crane and others}</span><span class="p">,</span>
   <span class="na">note</span> <span class="p">=</span> <span class="s">{www.geometry-central.net}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2019}</span>
