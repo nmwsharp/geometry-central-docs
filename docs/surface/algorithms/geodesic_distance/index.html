@@ -36,7 +36,7 @@
     
     
       
-        <title>Boundaries - Geometry Central</title>
+        <title>Geodesic Distance - Geometry Central</title>
       
     
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#exterior-halfedges" tabindex="1" class="md-skip">
+      <a href="#polyhedral-distance" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -138,7 +138,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Boundaries
+                Geodesic Distance
               
             </span>
           
@@ -376,12 +376,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
     
     <label class="md-nav__link" for="nav-4-1">
       Halfedge Mesh
@@ -399,7 +397,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../basics/" title="Basics" class="md-nav__link">
+    <a href="../../halfedge_mesh/basics/" title="Basics" class="md-nav__link">
       Basics
     </a>
   </li>
@@ -411,7 +409,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../elements/" title="Elements" class="md-nav__link">
+    <a href="../../halfedge_mesh/elements/" title="Elements" class="md-nav__link">
       Elements
     </a>
   </li>
@@ -421,59 +419,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Boundaries
-      </label>
-    
-    <a href="./" title="Boundaries" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../halfedge_mesh/boundaries/" title="Boundaries" class="md-nav__link">
       Boundaries
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exterior-halfedges" title="Exterior halfedges" class="md-nav__link">
-    Exterior halfedges
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faces-and-boundary-loops" title="Faces and boundary loops" class="md-nav__link">
-    Faces and boundary loops
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#element-boundary-properties" title="Element boundary properties" class="md-nav__link">
-    Element boundary properties
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -483,7 +433,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../navigation/" title="Navigation and Iteration" class="md-nav__link">
+    <a href="../../halfedge_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
       Navigation and Iteration
     </a>
   </li>
@@ -495,7 +445,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../containers/" title="Containers" class="md-nav__link">
+    <a href="../../halfedge_mesh/containers/" title="Containers" class="md-nav__link">
       Containers
     </a>
   </li>
@@ -507,7 +457,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../mutation/" title="Mutation" class="md-nav__link">
+    <a href="../../halfedge_mesh/mutation/" title="Mutation" class="md-nav__link">
       Mutation
     </a>
   </li>
@@ -519,7 +469,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../delta_complex/" title="Delta Complexes" class="md-nav__link">
+    <a href="../../halfedge_mesh/delta_complex/" title="Delta Complexes" class="md-nav__link">
       Delta Complexes
     </a>
   </li>
@@ -531,7 +481,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../internals/" title="Internals" class="md-nav__link">
+    <a href="../../halfedge_mesh/internals/" title="Internals" class="md-nav__link">
       Internals
     </a>
   </li>
@@ -642,10 +592,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" checked>
     
     <label class="md-nav__link" for="nav-4-4">
       Algorithms
@@ -663,7 +615,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/direction_fields/" title="Direction Fields" class="md-nav__link">
+    <a href="../direction_fields/" title="Direction Fields" class="md-nav__link">
       Direction Fields
     </a>
   </li>
@@ -673,11 +625,72 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Geodesic Distance
+      </label>
+    
+    <a href="./" title="Geodesic Distance" class="md-nav__link md-nav__link--active">
       Geodesic Distance
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#polyhedral-distance" title="Polyhedral Distance" class="md-nav__link">
+    Polyhedral Distance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heat-method-for-distance" title="Heat Method for Distance" class="md-nav__link">
+    Heat Method for Distance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-solves" title="Single Solves" class="md-nav__link">
+    Single Solves
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repeated-solves" title="Repeated Solves" class="md-nav__link">
+    Repeated Solves
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -687,7 +700,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
+    <a href="../vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
       Vector Heat Method
     </a>
   </li>
@@ -699,7 +712,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
+    <a href="../surface_centers/" title="Surface Centers" class="md-nav__link">
       Surface Centers
     </a>
   </li>
@@ -711,7 +724,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
+    <a href="../mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
       Mesh Graph Algorithms
     </a>
   </li>
@@ -866,23 +879,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exterior-halfedges" title="Exterior halfedges" class="md-nav__link">
-    Exterior halfedges
+  <a href="#polyhedral-distance" title="Polyhedral Distance" class="md-nav__link">
+    Polyhedral Distance
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#faces-and-boundary-loops" title="Faces and boundary loops" class="md-nav__link">
-    Faces and boundary loops
+  <a href="#heat-method-for-distance" title="Heat Method for Distance" class="md-nav__link">
+    Heat Method for Distance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-solves" title="Single Solves" class="md-nav__link">
+    Single Solves
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#element-boundary-properties" title="Element boundary properties" class="md-nav__link">
-    Element boundary properties
+        
+          <li class="md-nav__item">
+  <a href="#repeated-solves" title="Repeated Solves" class="md-nav__link">
+    Repeated Solves
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -902,52 +928,87 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/halfedge_mesh/boundaries.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/geodesic_distance.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Boundaries</h1>
+                  <h1>Geodesic Distance</h1>
                 
-                <p>Mesh boundaries in halfedge meshes are modelled by logically treating each <em>boundary loop</em> as if it were a face with an associated set of halfedges. These halfedges incident on boundary loops are referred to as <em>exterior halfedges</em>, while the usual halfedges incident on faces actually present in the mesh are <em>interior halfedges</em>. Any boundary edge of the mesh will have one interior and one exterior halfedge incident upon it.</p>
-<p><img alt="halfedge boundary diagram" src="../../../media/halfedge_boundary_diagram.svg" /></p>
-<h2 id="exterior-halfedges">Exterior halfedges</h2>
-<p>Nearly all routines involving halfedges include both interior and exterior halfedges, as this is most often what is needed in algorithms. <code class="codehilite"><span class="n">HalfedgeData</span><span class="o">&lt;&gt;</span></code> containers can hold data on exterior halfedges, and iterators (like <code class="codehilite"><span class="n">Vertex</span><span class="p">::</span><span class="n">outgoingHalfedges</span></code>) will iterate over both interior and exterior halfedges.</p>
-<p>A few routines explicitly indicate whether they process interior halfedges, exterior halfedges, or both, such as <code class="codehilite"><span class="n">HalfedgeMesh</span><span class="p">::</span><span class="n">nInteriorHalfedges</span><span class="p">()</span></code>.</p>
-<details class="func"><summary><code class="codehilite"><span class="kt">bool</span> <span class="n">Halfedge</span><span class="o">::</span><span class="n">isInterior</span><span class="p">()</span></code></summary><p><strong>Return:</strong> true if the halfedge is an interior halfedge, and false if it is an exterior halfedge.</p>
+                <p>This section describes algorithms for computing distance along a surface, or <em>geodesic</em> distance. </p>
+<p>Note that distance depends on the <em>intrinsic</em> geometry of a surface (via the <code class="codehilite"><span class="n">IntrinsicGeometryInterface</span></code>). Therefore, these routines can be run on abstract geometric domains as well as traditional surfaces in 3D.</p>
+<h2 id="polyhedral-distance">Polyhedral Distance</h2>
+<p>TODO document</p>
+<h2 id="heat-method-for-distance">Heat Method for Distance</h2>
+<p>These routines implement the <a href="http://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/paper.pdf">Heat Method for Geodesic Distance</a>. This algorithm uses short time heat flow to compute distance on surfaces. Because the main burden is simply solving linear systems of equations, it tends to be faster than polyhedral schemes, especially when computing distance multiple times on the same surface.  In the computational geometry sense, this method is an approximation, as the result is not precisely equal to the polyhedral distance on the surface; nonetheless it is fast and well-suited for many applications.</p>
+<p><code class="codehilite">#<span class="k">include</span> <span class="s2">&quot;</span><span class="s">geometrycentral/surface/heat_method_distance.h</span><span class="s2">&quot;</span></code></p>
+<h3 id="single-solves">Single Solves</h3>
+<p>A one-off utility function is provided which computes the distance from a source vertex using the heat method. Repeated solves or more general source data should use the stateful version below.</p>
+<p>Example
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/heat_method_distance.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// Load a mesh</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">HalfedgeMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">loadMesh</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+
+<span class="c1">// Pick a vertex</span>
+<span class="n">Vertex</span> <span class="n">sourceVert</span> <span class="o">=</span> <span class="cm">/* some vertex */</span>
+
+<span class="c1">// Compute distance</span>
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">distToSource</span> <span class="o">=</span> <span class="n">heatMethodDistance</span><span class="p">(</span><span class="o">*</span><span class="n">geometry</span><span class="p">,</span> <span class="n">sourceVert</span><span class="p">);</span>
+<span class="cm">/* do something useful */</span>
+</pre></div></p>
+<details class="func"><summary><code class="codehilite"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">heatMethodDistance</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">Vertex</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Compute the distance from the source using the heat method.</p>
 </details>
-<h2 id="faces-and-boundary-loops">Faces and boundary loops</h2>
-<p>The separate type <code class="codehilite"><span class="n">BoundaryLoop</span></code> is used to represent boundary loops, and offers all functionality of other element types. For instance, the <code class="codehilite"><span class="n">BoundaryLoopData</span><span class="o">&lt;&gt;</span></code> container can be used to associate data with boundary loops, and <code class="codehilite"><span class="n">BoundaryLoop</span><span class="p">::</span><span class="n">adjacentVertices</span><span class="p">()</span></code> can be used to iterate over the vertices along a boundary component.</p>
-<p>Since boundary loops act like faces in the mesh connectivity, traversing the mesh might yield a &ldquo;face&rdquo; referring to what is really a boundary loop. In particular, calling <code class="codehilite"><span class="n">Halfedge</span><span class="p">::</span><span class="n">face</span><span class="p">()</span></code> on an exterior halfedge will yield the &ldquo;face&rdquo; which is its boundary loop.  However, this &ldquo;face&rdquo; is a lie, we have not really <em>added</em> a face to the mesh: <code class="codehilite"><span class="n">HalfedgeMesh</span><span class="p">::</span><span class="n">nFaces</span><span class="p">()</span></code> will still report the actual number of faces, etc.  The only valid thing to do with a <code class="codehilite"><span class="n">Face</span></code> which actually a boundary loop is to immediately convert it to a <code class="codehilite"><span class="n">BoundaryLoop</span></code>, See the example below.</p>
-<div class="codehilite"><pre><span></span><span class="n">Halfedge</span> <span class="n">myHe</span> <span class="o">=</span> <span class="cm">/* some exterior halfedge */</span><span class="p">;</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">myHe</span><span class="p">.</span><span class="n">isInterior</span><span class="p">()</span> <span class="o">==</span> <span class="nb">false</span><span class="p">);</span> <span class="c1">// this is an exterior halfedge</span>
+<h3 id="repeated-solves">Repeated Solves</h3>
+<p>The stateful class <code class="codehilite"><span class="n">HeatMethodDistanceSolver</span></code> does precomputation when constructed, then allows many distance solves from different source locations to be performed efficiently.</p>
+<p>The <code class="codehilite"><span class="n">computeDistance</span><span class="p">()</span></code> method in <code class="codehilite"><span class="n">HeatMethodDistanceSolver</span></code> can also take <code class="codehilite"><span class="n">SurfacePoint</span></code>(s) as the source location(s). A <code class="codehilite"><span class="n">SurfacePoint</span></code> (see <a href="../../utilities/surface_point/">here</a>) is a location on a surface, which may be a vertex, a point along an edge, or a point inside a face.</p>
+<p>Example:
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/heat_method_distance.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
 
-<span class="c1">// Traverse to &quot;face&quot;</span>
-<span class="n">Face</span> <span class="n">bFace</span> <span class="o">=</span> <span class="n">myExteriorHalfedge</span><span class="p">.</span><span class="n">face</span><span class="p">()</span>
+<span class="c1">// Load a mesh</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">HalfedgeMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">loadMesh</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
 
-<span class="c1">// bFace is really a boundary loop, doing any face things </span>
-<span class="c1">// with it would be invalid</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">bFace</span><span class="p">.</span><span class="n">isBoundaryLoop</span><span class="p">()</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span>
+<span class="c1">// Create the Heat Method solver</span>
+<span class="n">HeatMethodDistanceSolver</span> <span class="nf">heatSolver</span><span class="p">(</span><span class="n">geometry</span><span class="p">);</span>
 
-<span class="c1">// Convert the &quot;face&quot; to its true boundary loop form </span>
-<span class="n">BoundaryLoop</span> <span class="n">bLoop</span> <span class="o">=</span> <span class="n">bFace</span><span class="p">.</span><span class="n">asBoundaryLoop</span><span class="p">();</span>
-
-<span class="c1">// Now we can do all kinds of things with it</span>
-<span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">bLoop</span><span class="p">.</span><span class="n">adjacentEdges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="cm">/* do science */</span>
+<span class="c1">// Some vertices as source set</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;</span> <span class="n">sourceVerts</span> <span class="o">=</span> <span class="cm">/* some interesting vertices */</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">sourceVerts</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">distToSource</span> <span class="o">=</span> <span class="n">heatSolver</span><span class="p">.</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+  <span class="cm">/* do something useful */</span>
 <span class="p">}</span>
-</pre></div>
 
-<details class="func"><summary><code class="codehilite"><span class="kt">bool</span> <span class="n">Face</span><span class="o">::</span><span class="n">isBoundaryLoop</span><span class="p">()</span></code></summary><p>Returns true if the face is really a boundary loop.</p>
+
+<span class="c1">// A point in a face as a source set</span>
+<span class="n">Face</span> <span class="n">sourceF</span> <span class="o">=</span>  <span class="cm">/* some face */</span><span class="p">;</span>
+<span class="n">Vector3</span> <span class="n">sourceFBary</span> <span class="o">=</span>  <span class="cm">/* some barycentric coords in face */</span><span class="p">;</span>
+<span class="n">SurfacePoint</span> <span class="nf">targetP</span><span class="p">(</span><span class="n">sourceF</span><span class="p">,</span> <span class="n">sourceFBary</span><span class="p">);</span>
+
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">distToSource</span> <span class="o">=</span> <span class="n">heatSolver</span><span class="p">.</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">targetP</span><span class="p">);</span>
+<span class="cm">/* do something useful */</span>
+</pre></div></p>
+<details class="func"><summary><code class="codehilite"><span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">HeatMethodDistanceSolver</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="kt">double</span> <span class="n">tCoef</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code></summary><p>Create a new solver to compute geodesic distance using the heat method. All precomputation work is performed immediately at construction time.</p>
+<ul>
+<li>
+<p><code class="codehilite"><span class="n">geom</span></code> is the geometry (and hence mesh) on which to compute. Note that nearly any geometry object (<code class="codehilite"><span class="n">VertexPositionGeometry</span></code>, etc) can be passed here.</p>
+</li>
+<li>
+<p><code class="codehilite"><span class="n">tCoef</span></code> is the time to use for short time heat flow, as a factor <code class="codehilite"><span class="n">m</span> <span class="o">*</span> <span class="n">h</span><span class="o">^</span><span class="mi">2</span></code>, where <code class="codehilite"><span class="n">h</span></code> is the mean edge length. The default value of <code class="codehilite"><span class="mi">1</span><span class="p">.</span><span class="mi">0</span></code> is almost always sufficient.</p>
+</li>
+</ul>
+<p>Algorithm options (like <code class="codehilite"><span class="n">tCoef</span></code>) cannot be changed after construction; create a new solver object with the new settings.</p>
 </details>
-<details class="func"><summary><code class="codehilite"><span class="n">BoundaryLoop</span> <span class="n">Face</span><span class="o">::</span><span class="n">asBoundaryLoop</span><span class="p">()</span></code></summary><p>Convert a face to the equivalent boundary loop. Only valid to call on a face for which <code class="codehilite"><span class="n">Face</span><span class="p">::</span><span class="n">isBoundaryLoop</span><span class="p">()</span> <span class="o">==</span> <span class="k">true</span></code>.</p>
+<details class="func"><summary><code class="codehilite"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">Vertex</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Compute the distance from a single source vertex.</p>
 </details>
-<details class="func"><summary><code class="codehilite"><span class="n">Face</span> <span class="n">BoundaryLoop</span><span class="o">::</span><span class="n">asFace</span><span class="p">()</span></code></summary><p>Convert a boundary loop back to its equivalent face. The inverse of <code class="codehilite"><span class="n">Face</span><span class="p">::</span><span class="n">asBoundaryLoop</span><span class="p">()</span></code>. Rarely used.</p>
+<details class="func"><summary><code class="codehilite"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;</span> <span class="n">verts</span><span class="p">)</span></code></summary><p>Compute the distance from a set of source vertices.</p>
 </details>
-<h2 id="element-boundary-properties">Element boundary properties</h2>
-<p>The previous sections describe elements which <em>make up</em> the boundary of a mesh. The methods here identify elements which merely lie along the mesh boundary.</p>
-<details class="func"><summary><code class="codehilite"><span class="kt">bool</span> <span class="n">Vertex</span><span class="o">::</span><span class="n">isBoundary</span><span class="p">()</span></code></summary><p>Returns true if the vertex is on the boundary. A vertex is on the boundary if any of its incident edges are boundary edges. <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>.</p>
+<details class="func"><summary><code class="codehilite"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">SurfacePoint</span> <span class="n">p</span><span class="p">)</span></code></summary><p>Compute the distance from a single source point.</p>
 </details>
-<details class="func"><summary><code class="codehilite"><span class="kt">bool</span> <span class="n">Edge</span><span class="o">::</span><span class="n">isBoundary</span><span class="p">()</span></code></summary><p>Returns true if the edge is on the boundary. An edge is on the boundary if either of its incident halfedges are exterior halfedges. <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>.</p>
-<p>Note that only edges which lie entirely along a boundary are considered boundary edges. Edges which &ldquo;point at&rdquo; the boundary and touch the boundary only at one endpoint are not considered boundary edges by this function.</p>
+<details class="func"><summary><code class="codehilite"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span> <span class="n">points</span><span class="p">)</span></code></summary><p>Compute the distance from a set of source points.</p>
 </details>
                 
                   
@@ -969,7 +1030,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../elements/" title="Elements" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../direction_fields/" title="Direction Fields" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -978,19 +1039,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Elements
+                Direction Fields
               </span>
             </div>
           </a>
         
         
-          <a href="../navigation/" title="Navigation and Iteration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../vector_heat_method/" title="Vector Heat Method" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Navigation and Iteration
+                Vector Heat Method
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

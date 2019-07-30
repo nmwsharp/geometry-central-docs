@@ -630,8 +630,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/distance/" title="Distance" class="md-nav__link">
-      Distance
+    <a href="../../algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
+      Geodesic Distance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
+      Vector Heat Method
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
+      Surface Centers
     </a>
   </li>
 
@@ -815,8 +839,11 @@
 <p>Surface points have a few useful utility methods:</p>
 <details class="func"><summary><code class="codehilite"><span class="n">T</span> <span class="n">SurfacePoint</span><span class="o">::</span><span class="n">interpolate</span><span class="p">(</span><span class="k">const</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">data</span><span class="p">)</span></code></summary><p>Given data of tempalte type <code class="codehilite"><span class="n">T</span></code> defined at vertices, linearly interpolates to a value at this location.</p>
 </details>
-<details class="func"><summary><code class="codehilite"><span class="kr">inline</span> <span class="n">SurfacePoint</span> <span class="n">SurfacePoint</span><span class="o">::</span><span class="n">inSomeFace</span><span class="p">()</span></code></summary><p>All surface points (vertex, edge, face) have an equivalent point in one or many adjacent faces. For instance, a vertex could be equivalently a point in any of the incident faces, with a single <code class="codehilite"><span class="mi">1</span></code> barycentric coordinate, or a point on an edge could be a point in either of the two adjacent faces.</p>
+<details class="func"><summary><code class="codehilite"><span class="n">SurfacePoint</span> <span class="n">SurfacePoint</span><span class="o">::</span><span class="n">inSomeFace</span><span class="p">()</span></code></summary><p>All surface points (vertex, edge, face) have an equivalent point in one or many adjacent faces. For instance, a vertex could be equivalently a point in any of the incident faces, with a single <code class="codehilite"><span class="mi">1</span></code> barycentric coordinate, or a point on an edge could be a point in either of the two adjacent faces.</p>
 <p>This function returns one of the equivalent surface points in a face (chosen arbitrarily). If this point is a face point, the output is a copy of this point.</p>
+</details>
+<details class="func"><summary><code class="codehilite"><span class="n">Vertex</span> <span class="n">SurfacePoint</span><span class="o">::</span><span class="n">nearestVertex</span><span class="p">()</span></code></summary><p>Returns the nearest vertex which is adjacent to this point.</p>
+<p>For surface points which are vertices, it will return the same vertex.  For surface points which are along edges, it will return one of the two incident vertices.  For surface points which are inside faces, it will return one of the three incident vertices.</p>
 </details>
                 
                   

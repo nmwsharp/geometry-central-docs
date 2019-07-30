@@ -36,7 +36,7 @@
     
     
       
-        <title>Distance - Geometry Central</title>
+        <title>Surface Centers - Geometry Central</title>
       
     
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#polyhedral-distance" tabindex="1" class="md-skip">
+      <a href="#centers-of-points" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -138,7 +138,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Distance
+                Surface Centers
               
             </span>
           
@@ -625,6 +625,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
+      Geodesic Distance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
+      Vector Heat Method
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -634,11 +658,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Distance
+        Surface Centers
       </label>
     
-    <a href="./" title="Distance" class="md-nav__link md-nav__link--active">
-      Distance
+    <a href="./" title="Surface Centers" class="md-nav__link md-nav__link--active">
+      Surface Centers
     </a>
     
       
@@ -650,36 +674,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#polyhedral-distance" title="Polyhedral Distance" class="md-nav__link">
-    Polyhedral Distance
+  <a href="#centers-of-points" title="Centers of points" class="md-nav__link">
+    Centers of points
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#heat-method-for-distance" title="Heat Method for Distance" class="md-nav__link">
-    Heat Method for Distance
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#single-solves" title="Single Solves" class="md-nav__link">
-    Single Solves
+  <a href="#centers-of-distributions" title="Centers of distributions" class="md-nav__link">
+    Centers of distributions
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#repeated-solves" title="Repeated Solves" class="md-nav__link">
-    Repeated Solves
+      
+        <li class="md-nav__item">
+  <a href="#citation" title="Citation" class="md-nav__link">
+    Citation
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -855,36 +866,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#polyhedral-distance" title="Polyhedral Distance" class="md-nav__link">
-    Polyhedral Distance
+  <a href="#centers-of-points" title="Centers of points" class="md-nav__link">
+    Centers of points
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#heat-method-for-distance" title="Heat Method for Distance" class="md-nav__link">
-    Heat Method for Distance
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#single-solves" title="Single Solves" class="md-nav__link">
-    Single Solves
+  <a href="#centers-of-distributions" title="Centers of distributions" class="md-nav__link">
+    Centers of distributions
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#repeated-solves" title="Repeated Solves" class="md-nav__link">
-    Repeated Solves
+      
+        <li class="md-nav__item">
+  <a href="#citation" title="Citation" class="md-nav__link">
+    Citation
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -904,88 +902,51 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/distance.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/surface_centers.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Distance</h1>
+                  <h1>Surface Centers</h1>
                 
-                <p>This section describes algorithms for computing distance along a surface, or <em>geodesic</em> distance. </p>
-<p>Note that distance depends on the <em>intrinsic</em> geometry of a surface (via the <code class="codehilite"><span class="n">IntrinsicGeometryInterface</span></code>). Therefore, these routines can be run on abstract geometric domains as well as traditional surfaces in 3D.</p>
-<h2 id="polyhedral-distance">Polyhedral Distance</h2>
-<p>TODO document</p>
-<h2 id="heat-method-for-distance">Heat Method for Distance</h2>
-<p>These routines implement the <a href="http://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/paper.pdf">Heat Method for Geodesic Distance</a>. This algorithm uses short time heat flow to compute distance on surfaces. Because the main burden is simply solving linear systems of equations, it tends to be faster than polyhedral schemes, especially when computing distance multiple times on the same surface.  In the computational geometry sense, this method is an approximation, as the result is not precisely equal to the polyhedral distance on the surface; nonetheless it is fast and well-suited for many applications.</p>
-<p><code class="codehilite">#<span class="k">include</span> <span class="s2">&quot;</span><span class="s">geometrycentral/surface/heat_method_distance.h</span><span class="s2">&quot;</span></code></p>
-<h3 id="single-solves">Single Solves</h3>
-<p>A one-off utility function is provided which computes the distance from a source vertex using the heat method. Repeated solves or more general source data should use the stateful version below.</p>
-<p>Example
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/heat_method_distance.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
-
-<span class="c1">// Load a mesh</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">HalfedgeMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">loadMesh</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
-
-<span class="c1">// Pick a vertex</span>
-<span class="n">Vertex</span> <span class="n">sourceVert</span> <span class="o">=</span> <span class="cm">/* some vertex */</span>
-
-<span class="c1">// Compute distance</span>
-<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">distToSource</span> <span class="o">=</span> <span class="n">heatMethodDistance</span><span class="p">(</span><span class="o">*</span><span class="n">geometry</span><span class="p">,</span> <span class="n">sourceVert</span><span class="p">);</span>
-<span class="cm">/* do something useful */</span>
-</pre></div></p>
-<details class="func"><summary><code class="codehilite"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">heatMethodDistance</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">Vertex</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Compute the distance from the source using the heat method.</p>
+                <p>These routines compute geometric centers of point sets and distrubtions on surfaces.</p>
+<p>A &ldquo;center&rdquo; <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> is a point on the surface which is a local minimum of the energy:
+$$
+c = \underset{m}{\textrm{argmin}}\sum_{y \in \mathcal{Y}} d(m,y)^p
+$$
+where <span><span class="MathJax_Preview">\mathcal{Y}</span><script type="math/tex">\mathcal{Y}</script></span> is a set of sites to take the average of and <span><span class="MathJax_Preview">d(\cdot, \cdot)</span><script type="math/tex">d(\cdot, \cdot)</script></span> denotes the geodesic distance.</p>
+<p>Centers on surfaces with <span><span class="MathJax_Preview">p=2</span><script type="math/tex">p=2</script></span> (&ldquo;means&rdquo;) are known as <em>Karcher Means</em> or <em>Frechet Means</em>. Centers on surfaces with <span><span class="MathJax_Preview">p=1</span><script type="math/tex">p=1</script></span> (&ldquo;medians&rdquo;) are known as <em>geometric medians</em>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Centers are not unique!</p>
+<p>In general, there will not be a single unqiue &ldquo;center&rdquo; of a point set or distribution on a surface. For nearby sites there may be a single center, but in general this may not be the case.</p>
+<p>The routines in this section use random initialization to report <em>a center</em>. As such, the results may be different under repeated runs of the procedure.</p>
+</div>
+<p><code class="codehilite">#<span class="k">include</span> <span class="s2">&quot;</span><span class="s">geometrycentral/surface/surface_centers.h</span><span class="s2">&quot;</span></code></p>
+<p><img alt="karcher means" src="/media/karcher_mean_simple.jpg" /></p>
+<h2 id="centers-of-points">Centers of points</h2>
+<details class="func"><summary><code class="codehilite"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;&amp;</span> <span class="n">vertexPts</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Find a center of a collection of points at vertices.</p>
+<p><code class="codehilite"><span class="n">p</span></code> must be either <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> or <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>.</p>
 </details>
-<h3 id="repeated-solves">Repeated Solves</h3>
-<p>The stateful class <code class="codehilite"><span class="n">HeatMethodDistanceSolver</span></code> does precomputation when constructed, then allows many distance solves from different source locations to be performed efficiently.</p>
-<p>The <code class="codehilite"><span class="n">computeDistance</span><span class="p">()</span></code> method in <code class="codehilite"><span class="n">HeatMethodDistanceSolver</span></code> can also take <code class="codehilite"><span class="n">SurfacePoint</span></code>(s) as the source location(s). A <code class="codehilite"><span class="n">SurfacePoint</span></code> (see <a href="../../utilities/surface_point/">here</a>) is a location on a surface, which may be a vertex, a point along an edge, or a point inside a face.</p>
-<p>Example:
-<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/heat_method_distance.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
-
-<span class="c1">// Load a mesh</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">HalfedgeMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">loadMesh</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
-
-<span class="c1">// Create the Heat Method solver</span>
-<span class="n">HeatMethodDistanceSolver</span> <span class="nf">heatSolver</span><span class="p">(</span><span class="n">geometry</span><span class="p">);</span>
-
-<span class="c1">// Some vertices as source set</span>
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;</span> <span class="n">sourceVerts</span> <span class="o">=</span> <span class="cm">/* some interesting vertices */</span>
-<span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">sourceVerts</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">distToSource</span> <span class="o">=</span> <span class="n">heatSolver</span><span class="p">.</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
-  <span class="cm">/* do something useful */</span>
+<details class="func"><summary><code class="codehilite"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">VectorHeatMethodSolver</span><span class="o">&amp;</span> <span class="n">solver</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;&amp;</span> <span class="n">vertexPts</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Like the above method, but uses an existing solver object, which saves precomputation.</p>
+</details>
+<h2 id="centers-of-distributions">Centers of distributions</h2>
+<details class="func"><summary><code class="codehilite"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="k">const</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span> <span class="n">distribution</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Find a center of a distribution at vertices.</p>
+<p>Note that the input <code class="codehilite"><span class="n">distribution</span></code> is treated as integrated values at vertices. If your distribution is &ldquo;per-unit-area&rdquo;, you should multiply times vertex area before passing it in.</p>
+<p><code class="codehilite"><span class="n">p</span></code> must be either <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> or <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>.</p>
+</details>
+<details class="func"><summary><code class="codehilite"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">VectorHeatMethodSolver</span><span class="o">&amp;</span> <span class="n">solver</span><span class="p">,</span> <span class="k">const</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span> <span class="n">distribution</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Like the above method, but uses an existing solver object, which saves precomputation.</p>
+</details>
+<h2 id="citation">Citation</h2>
+<p>These algorithms are described in <a href="http://www.cs.cmu.edu/~kmcrane/Projects/VectorHeatMethod/paper.pdf">The Vector Heat Method</a>, the appropriate citation is:</p>
+<div class="codehilite"><pre><span></span><span class="nc">@article</span><span class="p">{</span><span class="nl">sharp2019vector</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">=</span><span class="s">{The Vector Heat Method}</span><span class="p">,</span>
+  <span class="na">author</span><span class="p">=</span><span class="s">{Sharp, Nicholas and Soliman, Yousuf and Crane, Keenan}</span><span class="p">,</span>
+  <span class="na">journal</span><span class="p">=</span><span class="s">{ACM Transactions on Graphics (TOG)}</span><span class="p">,</span>
+  <span class="na">volume</span><span class="p">=</span><span class="s">{38}</span><span class="p">,</span>
+  <span class="na">number</span><span class="p">=</span><span class="s">{3}</span><span class="p">,</span>
+  <span class="na">pages</span><span class="p">=</span><span class="s">{24}</span><span class="p">,</span>
+  <span class="na">year</span><span class="p">=</span><span class="s">{2019}</span><span class="p">,</span>
+  <span class="na">publisher</span><span class="p">=</span><span class="s">{ACM}</span>
 <span class="p">}</span>
-
-
-<span class="c1">// A point in a face as a source set</span>
-<span class="n">Face</span> <span class="n">sourceF</span> <span class="o">=</span>  <span class="cm">/* some face */</span><span class="p">;</span>
-<span class="n">Vector3</span> <span class="n">sourceFBary</span> <span class="o">=</span>  <span class="cm">/* some barycentric coords in face */</span><span class="p">;</span>
-<span class="n">SurfacePoint</span> <span class="nf">targetP</span><span class="p">(</span><span class="n">sourceF</span><span class="p">,</span> <span class="n">sourceFBary</span><span class="p">);</span>
-
-<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">distToSource</span> <span class="o">=</span> <span class="n">heatSolver</span><span class="p">.</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">targetP</span><span class="p">);</span>
-<span class="cm">/* do something useful */</span>
-</pre></div></p>
-<details class="func"><summary><code class="codehilite"><span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">HeatMethodDistanceSolver</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="kt">double</span> <span class="n">tCoef</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code></summary><p>Create a new solver to compute geodesic distance using the heat method. All precomputation work is performed immediately at construction time.</p>
-<ul>
-<li>
-<p><code class="codehilite"><span class="n">geom</span></code> is the geometry (and hence mesh) on which to compute. Note that nearly any geometry object (<code class="codehilite"><span class="n">VertexPositionGeometry</span></code>, etc) can be passed here.</p>
-</li>
-<li>
-<p><code class="codehilite"><span class="n">tCoef</span></code> is the time to use for short time heat flow, as a factor <code class="codehilite"><span class="n">m</span> <span class="o">*</span> <span class="n">h</span><span class="o">^</span><span class="mi">2</span></code>, where <code class="codehilite"><span class="n">h</span></code> is the mean edge length. The default value of <code class="codehilite"><span class="mi">1</span><span class="p">.</span><span class="mi">0</span></code> is almost always sufficient.</p>
-</li>
-</ul>
-<p>Algorithm options (like <code class="codehilite"><span class="n">tCoef</span></code>) cannot be changed after construction; create a new solver object with the new settings.</p>
-</details>
-<details class="func"><summary><code class="codehilite"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">Vertex</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Compute the distance from a single source vertex.</p>
-</details>
-<details class="func"><summary><code class="codehilite"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;</span> <span class="n">verts</span><span class="p">)</span></code></summary><p>Compute the distance from a set of source vertices.</p>
-</details>
-<details class="func"><summary><code class="codehilite"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">SurfacePoint</span> <span class="n">p</span><span class="p">)</span></code></summary><p>Compute the distance from a single source point.</p>
-</details>
-<details class="func"><summary><code class="codehilite"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span> <span class="n">points</span><span class="p">)</span></code></summary><p>Compute the distance from a set of source points.</p>
-</details>
+</pre></div>
                 
                   
                 
@@ -1006,7 +967,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../direction_fields/" title="Direction Fields" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../vector_heat_method/" title="Vector Heat Method" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1015,7 +976,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Direction Fields
+                Vector Heat Method
               </span>
             </div>
           </a>
