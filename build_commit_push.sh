@@ -1,6 +1,6 @@
 #!/bin/sh
 cd geometry-central
-git pull origin v1
+git pull origin master
 cd ../
 git add geometry-central
 git commit -m "pull new version"
