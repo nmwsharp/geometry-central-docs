@@ -873,7 +873,7 @@
 <p>As such, the build system uses the following strategies in order to resolve Eigen:</p>
 <ol>
 <li>Using Eigen in any directory passed via the <code class="codehilite"><span class="n">GC_EIGEN_LOCATION</span></code> CMake variable (empty by default)</li>
-<li>Using Eigen from your system libraries, as resolved via <code class="codehilite"><span class="n">find_package</span><span class="p">(</span><span class="n">Eigen</span> <span class="mi">3</span><span class="p">.</span><span class="mi">3</span><span class="p">)</span></code></li>
+<li>Using Eigen from your system libraries, as resolved via <code class="codehilite"><span class="n">find_package</span><span class="p">(</span><span class="n">Eigen3</span> <span class="mi">3</span><span class="p">.</span><span class="mi">3</span><span class="p">)</span></code></li>
 <li>Downloading a copy of Eigen in to the <code class="codehilite"><span class="n">deps</span><span class="o">/</span><span class="n">downloads</span><span class="o">/</span></code> directory</li>
 </ol>
 <p>For instance, if your project already has a copy of Eigen in its source tree, you can use with (1) by setting <code class="codehilite"><span class="n">GC_EIGEN_LOCATION</span></code>. If not, many programmers have installed Eigen, which will be found in (2). Finally, as a last resort the build system will download a copy of Eigen as in (3).</p>
