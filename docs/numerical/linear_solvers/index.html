@@ -1,0 +1,1068 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-\.::]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Linear Solvers - Geometry Central</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff7043">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700|Inconsolata&display=fallback">
+        <style>body,input{font-family:"Merriweather","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Inconsolata","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../extras.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-58346315-3", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-orange" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#direct-solvers" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Geometry Central" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Geometry Central
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Linear Solvers
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/nmwsharp/geometry-central/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    nmwsharp/geometry-central
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Geometry Central" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    Geometry Central
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/nmwsharp/geometry-central/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    nmwsharp/geometry-central
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Build
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Build
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build/building/" title="Building" class="md-nav__link">
+      Building
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build/dependencies/" title="Dependencies" class="md-nav__link">
+      Dependencies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build/tests/" title="Tests" class="md-nav__link">
+      Tests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Surface
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Surface
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Halfedge Mesh
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Halfedge Mesh
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/halfedge_mesh/basics/" title="Basics" class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/halfedge_mesh/elements/" title="Elements" class="md-nav__link">
+      Elements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/halfedge_mesh/boundaries/" title="Boundaries" class="md-nav__link">
+      Boundaries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/halfedge_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
+      Navigation and Iteration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/halfedge_mesh/containers/" title="Containers" class="md-nav__link">
+      Containers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/halfedge_mesh/mutation/" title="Mutation" class="md-nav__link">
+      Mutation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/halfedge_mesh/delta_complex/" title="Delta Complexes" class="md-nav__link">
+      Delta Complexes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/halfedge_mesh/internals/" title="Internals" class="md-nav__link">
+      Internals
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Geometry
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Geometry
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/geometry/geometry/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/geometry/quantities/" title="Quantities" class="md-nav__link">
+      Quantities
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Utilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/utilities/io/" title="I/O" class="md-nav__link">
+      I/O
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/utilities/surface_point/" title="Surface Point" class="md-nav__link">
+      Surface Point
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Algorithms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Algorithms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/direction_fields/" title="Direction Fields" class="md-nav__link">
+      Direction Fields
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
+      Geodesic Distance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
+      Vector Heat Method
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
+      Surface Centers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
+      Mesh Graph Algorithms
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Numerical
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Numerical
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../matrix_types/" title="Matrix Types" class="md-nav__link">
+      Matrix Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linear_algebra_utilities/" title="Linear Algebra Utilities" class="md-nav__link">
+      Linear Algebra Utilities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Linear Solvers
+      </label>
+    
+    <a href="./" title="Linear Solvers" class="md-nav__link md-nav__link--active">
+      Linear Solvers
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#direct-solvers" title="Direct solvers" class="md-nav__link">
+    Direct solvers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-solves" title="Quick solves" class="md-nav__link">
+    Quick solves
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retain-factorizations" title="Retain factorizations" class="md-nav__link">
+    Retain factorizations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigenproblem-solvers" title="Eigenproblem solvers" class="md-nav__link">
+    Eigenproblem solvers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilities" title="Utilities" class="md-nav__link">
+    Utilities
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Utilities
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utilities/miscellaneous/" title="Miscellaneous" class="md-nav__link">
+      Miscellaneous
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utilities/vector2/" title="Vector2" class="md-nav__link">
+      Vector2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utilities/vector3/" title="Vector3" class="md-nav__link">
+      Vector3
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#direct-solvers" title="Direct solvers" class="md-nav__link">
+    Direct solvers
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-solves" title="Quick solves" class="md-nav__link">
+    Quick solves
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retain-factorizations" title="Retain factorizations" class="md-nav__link">
+    Retain factorizations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eigenproblem-solvers" title="Eigenproblem solvers" class="md-nav__link">
+    Eigenproblem solvers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilities" title="Utilities" class="md-nav__link">
+    Utilities
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/numerical/linear_solvers.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Linear Solvers</h1>
+                
+                <p>This section covers the solvers available in geometry central for sparse linear algebra problems.</p>
+<p>All solvers support real and complex matrices, and can be templated on a <code class="codehilite"><span class="kt">float</span></code>, <code class="codehilite"><span class="kt">double</span></code>, or <code class="codehilite"><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span></code>.</p>
+<p><code class="codehilite"><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/numerical/linear_solvers.h&quot;</span><span class="cp"></span></code></p>
+<h2 id="direct-solvers">Direct solvers</h2>
+<p>These solvers provide a simple interface for solving sparse linear <span><span class="MathJax_Preview">Ax = b</span><script type="math/tex">Ax = b</script></span>. </p>
+<p>A key feature is that these solvers abstract over the underlying numerical library. In their most basic form, <a href="https://eigen.tuxfamily.org/dox/group__TopicSparseSystems.html">Eigen&rsquo;s sparse solvers</a> will be used, and are always available. However, if present, the more-powerful <a href="http://faculty.cse.tamu.edu/davis/suitesparse.html">Suitesprase solvers</a> will be used intead. See the <a href="../../build/dependencies/#suitesparse">dependencies section</a> for instruction to build with Suitesparse support.</p>
+<p>As always, be sure to compile <a href="../../build/build/#compiling-with-optimizations">with optimizations</a> for meaningful performance. In particular, Eigen&rsquo;s built-in solvers will be very slow in debug mode (though the Eigen QR solver is always slow).</p>
+<h3 id="quick-solves">Quick solves</h3>
+<p>These are one-off routines for quick solves.</p>
+<details class="func"><summary><code class="codehilite"><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">solve</span><span class="p">(</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">matrix</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span></code></summary><p>Solve a system with a general matrix. Uses a QR decomposition interally.</p>
+<p>Warning: The Eigen built-in sparse QR solver is <em>very</em> inefficient for many problems. Also, it doesn&rsquo;t work well for underdetermined systems.</p>
+</details>
+<details class="func"><summary><code class="codehilite"><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">solveSquare</span><span class="p">(</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">matrix</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span></code></summary><p>Solve a system with a <em>square</em> matrix. Uses an LU decomposition interally.</p>
+</details>
+<details class="func"><summary><code class="codehilite"><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">solvePositiveDefinite</span><span class="p">(</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">matrix</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span></code></summary><p>Solve a system with a <em>symmetric positive (semi-)definite</em> matrix. Uses an LDLT decomposition interally.</p>
+</details>
+<h3 id="retain-factorizations">Retain factorizations</h3>
+<p>When solving many linear systems <span><span class="MathJax_Preview">Ax=b</span><script type="math/tex">Ax=b</script></span> with the same matrix <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> but different <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>, it is dramatically more efficient to retain and reuse the factorization of <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>. The following solver classes are stateful, storing the factorization to be re-used for may solves.</p>
+<div class="codehilite"><pre><span></span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="cm">/* ... some matrix ... */</span><span class="p">;</span>
+
+<span class="c1">// Build the solver</span>
+<span class="n">Solver</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">solver</span><span class="p">(</span><span class="n">A</span><span class="p">);</span>
+
+<span class="c1">// Solve a problem</span>
+<span class="n">Vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">rhs1</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>
+<span class="n">Vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">sol</span> <span class="o">=</span> <span class="n">solver</span><span class="p">.</span><span class="n">solve</span><span class="p">(</span><span class="n">rhs1</span><span class="p">);</span>
+
+<span class="c1">// Solve another problem</span>
+<span class="n">Vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">rhs2</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>
+<span class="n">Vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">sol2</span> <span class="o">=</span> <span class="n">solver</span><span class="p">.</span><span class="n">solve</span><span class="p">(</span><span class="n">rhs2</span><span class="p">);</span>
+
+<span class="c1">// Can place solution in existing vector</span>
+<span class="n">Vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">rhs3</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>
+<span class="n">solver</span><span class="p">.</span><span class="n">solve</span><span class="p">(</span><span class="n">sol</span><span class="p">,</span> <span class="n">rhs3</span><span class="p">);</span>
+
+<span class="c1">// Some solvers have extra powers.</span>
+<span class="c1">// Solver&lt;&gt; can compute matrix rank, since it uses QR under the hood.</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;matrix rank is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">solver</span><span class="p">.</span><span class="n">rank</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+
+<details class="func"><summary><code class="codehilite"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="k">class</span> <span class="nc">Solver</span></code></summary><p>Solve a system with a general matrix. Uses a QR decomposition interally.</p>
+<p>Supports methods:</p>
+<ul>
+<li><code class="codehilite"><span class="n">Sovler</span><span class="o">::</span><span class="n">Solver</span><span class="p">(</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">mat</span><span class="p">)</span></code> construct from  a matrix</li>
+<li><code class="codehilite"><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">Sovler</span><span class="o">::</span><span class="n">solve</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span></code> solve and return result in new vector</li>
+<li><code class="codehilite"><span class="kt">void</span> <span class="n">Sovler</span><span class="o">::</span><span class="n">solve</span><span class="p">(</span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">result</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span></code> solve and place result in existing vector</li>
+<li><code class="codehilite"><span class="kt">size_t</span> <span class="n">Sovler</span><span class="o">::</span><span class="n">rank</span><span class="p">()</span></code> report the rank of the matrix. Some solvers may give only an approximate rank.</li>
+</ul>
+<p>Warning: The Eigen built-in sparse QR solver is <em>very</em> inefficient for many problems. Also, it doesn&rsquo;t work well for underdetermined systems.</p>
+</details>
+<details class="func"><summary><code class="codehilite"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="k">class</span> <span class="nc">SquareSolver</span></code></summary><p>Solve a system with a <em>square</em> matrix. Uses an LU decomposition interally.</p>
+<p>Supports methods:</p>
+<ul>
+<li><code class="codehilite"><span class="n">SquareSovler</span><span class="o">::</span><span class="n">Solver</span><span class="p">(</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">mat</span><span class="p">)</span></code> construct from  a matrix</li>
+<li><code class="codehilite"><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">SquareSovler</span><span class="o">::</span><span class="n">solve</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span></code> solve and return result in new vector</li>
+<li><code class="codehilite"><span class="kt">void</span> <span class="n">SquareSovler</span><span class="o">::</span><span class="n">solve</span><span class="p">(</span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">result</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span></code> solve and place result in existing vector</li>
+</ul>
+</details>
+<details class="func"><summary><code class="codehilite"><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="k">class</span> <span class="nc">PositiveDefiniteSolver</span></code></summary><p>Supports methods:</p>
+<ul>
+<li><code class="codehilite"><span class="n">PositiveDefiniteSolver</span><span class="o">::</span><span class="n">Solver</span><span class="p">(</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">mat</span><span class="p">)</span></code> construct from  a matrix</li>
+<li><code class="codehilite"><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">PositiveDefiniteSolver</span><span class="o">::</span><span class="n">solve</span><span class="p">(</span><span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span></code> solve and return result in new vector</li>
+<li><code class="codehilite"><span class="kt">void</span> <span class="n">PositiveDefiniteSolver</span><span class="o">::</span><span class="n">solve</span><span class="p">(</span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">result</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span></code> solve and place result in existing vector</li>
+</ul>
+<p>Solve a system with a <em>symmetric positive (semi-)definite</em> matrix. Uses an LDLT decomposition interally.</p>
+</details>
+<h2 id="eigenproblem-solvers">Eigenproblem solvers</h2>
+<p>These routines build on top of the direct solvers to solve eigenvalue problems using power methods.</p>
+<details class="func"><summary><code class="codehilite"><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">smallestEigenvectorPositiveDefinite</span><span class="p">(</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">energyMatrix</span><span class="p">,</span> <span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">massMatrix</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">nIterations</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span></code></summary><p>Solves the eigenvector problem <span><span class="MathJax_Preview">A x = \lambda M x</span><script type="math/tex">A x = \lambda M x</script></span> for the smallest-eigenvalue&rsquo;d nontrivial eigenvector <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> of a positive definite sparse matrix <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>.</p>
+</details>
+<details class="func"><summary><code class="codehilite"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="n">smallestKEigenvectorsPositiveDefinite</span><span class="p">(</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">energyMatrix</span><span class="p">,</span> <span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">massMatrix</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">kEigenvalues</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">nIterations</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span></code></summary><p>Solves the eigenvector problem <span><span class="MathJax_Preview">A x = \lambda M x</span><script type="math/tex">A x = \lambda M x</script></span> for the first <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> smallest-eigenvalue&rsquo;d nontrivial eigenvectors <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> of a positive definite sparse matrix <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>.</p>
+</details>
+<details class="func"><summary><code class="codehilite"><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">smallestEigenvectorSquare</span><span class="p">(</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">energyMatrix</span><span class="p">,</span> <span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">massMatrix</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">nIterations</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span></code></summary><p>Solves the eigenvector problem <span><span class="MathJax_Preview">A x = \lambda M x</span><script type="math/tex">A x = \lambda M x</script></span> for the smallest-eigenvalue&rsquo;d nontrivial eigenvector <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> of a square matrix <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>.</p>
+</details>
+<details class="func"><summary><code class="codehilite"><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">largestEigenvector</span><span class="p">(</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">energyMatrix</span><span class="p">,</span> <span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">massMatrix</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">nIterations</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span></code></summary><p>Solves the eigenvector problem <span><span class="MathJax_Preview">A x = \lambda M x</span><script type="math/tex">A x = \lambda M x</script></span> for the largest-eigenvalue&rsquo;d nontrivial eigenvector <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> of a square matrix <span><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>.</p>
+</details>
+<h2 id="utilities">Utilities</h2>
+<details class="func"><summary><code class="codehilite"><span class="kt">double</span> <span class="n">residual</span><span class="p">(</span><span class="k">const</span> <span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">matrix</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span></code></summary><p>Measure the L2 residual of a linear system as <span><span class="MathJax_Preview">||Ax - b||_2</span><script type="math/tex">||Ax - b||_2</script></span>.</p>
+</details>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../linear_algebra_utilities/" title="Linear Algebra Utilities" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Linear Algebra Utilities
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../utilities/miscellaneous/" title="Miscellaneous" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Miscellaneous
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
