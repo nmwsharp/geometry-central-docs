@@ -15,7 +15,7 @@
     
     
       
-        <title>Internals - Geometry Central</title>
+        <title>Mutation - Geometry Central</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#halfedge-mesh-internals" class="md-skip">
+        <a href="#in-place-modifications" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Internals
+              Mutation
             
           </span>
         </div>
@@ -228,6 +228,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../build/versions/" title="Versions" class="md-nav__link">
+      Versions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../build/building/" title="Building" class="md-nav__link">
       Building
     </a>
@@ -267,21 +279,87 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Tutorials
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/load_mesh/" title="Load & navigate a mesh" class="md-nav__link">
+      Load & navigate a mesh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/basic_mutation/" title="Basic Mutation" class="md-nav__link">
+      Basic Mutation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/direction_fields/" title="Direction fields" class="md-nav__link">
+      Direction fields
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-4">
       Surface
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Surface" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -299,20 +377,20 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
     
-    <label class="md-nav__link" for="nav-3-1">
-      Halfedge Mesh
+    <label class="md-nav__link" for="nav-4-1">
+      Surface Mesh
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Halfedge Mesh" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-1">
+    <nav class="md-nav" aria-label="Surface Mesh" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
-        Halfedge Mesh
+        Surface Mesh
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -381,11 +459,89 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../mutation/" title="Mutation" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Mutation
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Mutation" class="md-nav__link md-nav__link--active">
       Mutation
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#in-place-modifications" class="md-nav__link">
+    In-place modifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insertions" class="md-nav__link">
+    Insertions
+  </a>
+  
+    <nav class="md-nav" aria-label="Insertions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trimming-storage" class="md-nav__link">
+    Trimming storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletions" class="md-nav__link">
+    Deletions
+  </a>
+  
+    <nav class="md-nav" aria-label="Deletions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compressed-mode" class="md-nav__link">
+    Compressed mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -405,94 +561,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Internals
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Internals" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../internals/" title="Internals" class="md-nav__link">
       Internals
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#permutation-halfedge-mesh" class="md-nav__link">
-    Permutation halfedge mesh
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basic-structures" class="md-nav__link">
-    Basic structures
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#invariants" class="md-nav__link">
-    Invariants
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resizing-and-deleting" class="md-nav__link">
-    Resizing and deleting
-  </a>
-  
-    <nav class="md-nav" aria-label="Resizing and deleting">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exterior-boundary-elements" class="md-nav__link">
-    Exterior boundary elements
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resize-callbacks" class="md-nav__link">
-    Resize callbacks
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -508,16 +581,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
     
-    <label class="md-nav__link" for="nav-3-2">
+    <label class="md-nav__link" for="nav-4-2">
       Geometry
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Geometry" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-2">
+      <label class="md-nav__title" for="nav-4-2">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -562,16 +635,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
     
-    <label class="md-nav__link" for="nav-3-3">
+    <label class="md-nav__link" for="nav-4-3">
       Utilities
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Utilities" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
+      <label class="md-nav__title" for="nav-4-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -579,6 +652,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utilities/simple_polygon_mesh/" title="Simple Polygon Mesh" class="md-nav__link">
+      Simple Polygon Mesh
+    </a>
+  </li>
+
         
           
           
@@ -616,16 +701,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
     
-    <label class="md-nav__link" for="nav-3-4">
+    <label class="md-nav__link" for="nav-4-4">
       Algorithms
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
+      <label class="md-nav__title" for="nav-4-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -694,6 +779,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/robust_geometry/" title="Robust Geometry" class="md-nav__link">
+      Robust Geometry
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -711,16 +808,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Numerical
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Numerical" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -777,16 +874,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Utilities
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Utilities" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -850,8 +947,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -862,37 +957,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#permutation-halfedge-mesh" class="md-nav__link">
-    Permutation halfedge mesh
+  <a href="#in-place-modifications" class="md-nav__link">
+    In-place modifications
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-structures" class="md-nav__link">
-    Basic structures
+  <a href="#insertions" class="md-nav__link">
+    Insertions
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#invariants" class="md-nav__link">
-    Invariants
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resizing-and-deleting" class="md-nav__link">
-    Resizing and deleting
-  </a>
-  
-    <nav class="md-nav" aria-label="Resizing and deleting">
+    <nav class="md-nav" aria-label="Insertions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exterior-boundary-elements" class="md-nav__link">
-    Exterior boundary elements
+  <a href="#trimming-storage" class="md-nav__link">
+    Trimming storage
   </a>
   
 </li>
@@ -903,9 +984,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resize-callbacks" class="md-nav__link">
-    Resize callbacks
+  <a href="#deletions" class="md-nav__link">
+    Deletions
   </a>
+  
+    <nav class="md-nav" aria-label="Deletions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compressed-mode" class="md-nav__link">
+    Compressed mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -921,7 +1015,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/halfedge_mesh/internals.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/surface_mesh/mutation.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -929,76 +1023,107 @@
                   
                 
                 
-                <h1 id="halfedge-mesh-internals">Halfedge mesh internals</h1>
-<p>This section contains details about the internal implementation of the halfedge mesh data structure. Typical users should not need to care about these details, but they may be useful for extension and debugging.</p>
-<p>The halfedge mesh structure is designed to simultaneously satisfy two core principles:</p>
-<ol>
-<li><strong>contiguous storage:</strong> elements and mesh data are stored in flat buffers of memory. This makes traversing and storing data on the mesh fast.</li>
-<li><strong>O(1) updates:</strong> dynamic operations that add and remove new elements must be supported in (amortized) constant time. This makes modifying the mesh fast.</li>
-</ol>
-<p>The solution to these two requirements is a dynamically-resizing, array-based mesh. Like a <code>std::vector</code>, elements are stored in contiguous buffers of memory, which are transparently expanded and copied sporadically. Of course, this expansion is largely hidden from the user.</p>
-<p>Philosophically, our halfedge mesh aims to be <em>as-implicit-as-possible</em>: whenever we can, we represent connectivity and properties implicitly by indices. Although this strategy runs the risk of being &ldquo;overly clever&rdquo; programming, it has proven effective for two reasons. First, anything tracked explicitly and stored an array is a liability if that array is not updated properly&mdash;conversely implicit relationships can be abstracted away behind helper functions, and need not be carefully maintained. Second, implicit relationships tend to lead fast implementations out of the box, avoiding performance hacking which runs a huge risk of breaking correctness.</p>
-<h2 id="permutation-halfedge-mesh">Permutation halfedge mesh</h2>
-<p>Here&rsquo;s a neat fact: a halfedge mesh can be represented by a single <a href="https://en.wikipedia.org/wiki/Permutation">permutation</a> of length <code>nHalfedges</code>. </p>
-<p>How? First, consider an enumeration of the halfedges. We can implicitly encode the <code>twin()</code> relationship by storing twinned halfedges adjacent to one another&ndash; that is, the twin of an even-numbered halfedge numbered <code>he</code> is <code>he+1</code>, and the twin of and odd-numbered halfedge is <code>he-1</code>. We then use the permutation to encode the <code>next()</code> relationships. The faces are the <a href="https://en.wikipedia.org/wiki/Permutation#Cycle_notation">orbits</a> of the <code>next()</code> operation, enumerated in the order they are encountered. The edges are the orbits of the <code>twin()</code> operation, which can be enumerated implicitly from the index. The vertices are the orbits of the <code>twin().next()</code> operation, again enumerated in the order they are encountered.</p>
-<p>This idea of a permutation is essentially the representation used for our halfedge mesh data structure: a single permutation array encodes the <code>next()</code> map, while the <code>twin()</code>, <code>edge()</code>, and <code>edge.halfedge()</code> maps are implicitly defined. However, although vertices and faces <em>could</em> be represented implicitly by an enumeration of orbits, doing so is inconvenient and expensive to update. Instead, we include additional arrays storing the <code>he.vertex()</code>, <code>he.face()</code>, <code>v.halfedge()</code> and <code>f.halfedge()</code> maps which are explicitly maintained.</p>
-<h2 id="basic-structures">Basic structures</h2>
-<p>Our halfedge mesh is index-based. Each {halfedge,edge,vertex,face} is identified by a 0-based index. The <code>HalfedgeMesh</code> class then holds the following explicit arrays encoding the connectivity between these indexed elements (the remaining relationships are implicitly defined).</p>
-<div class="highlight"><pre><span></span><code>class HalfedgeMesh {
-  ...
-  private:
-    std::vector&lt;size_t&gt; heNext;     // for he.next()
-    std::vector&lt;size_t&gt; heVertex;   // for he.vertex()
-    std::vector&lt;size_t&gt; heFace;     // for he.face()
-    std::vector&lt;size_t&gt; vHalfedge;  // for v.halfedge()
-    std::vector&lt;size_t&gt; fHalfedge;  // for f.face()
-  ...
-};
+                  <h1>Mutation</h1>
+                
+                <p>These routines allow modification of the mesh connectivity and insertion/deletion of elements.</p>
+<p>Geometry-central is designed from the ground up to have good support for mesh mutation. The underlying <code>SurfaceMesh</code> data structure is index-based, with lazy expansion and deletion, so all operations run in (amortized) constant time with respect to the number of mesh elements, and usually do not incur any memory allocations. <a href="../containers/">Containers</a> automatically update after mesh operations.</p>
+<p>As much as possible, these routines will check for validity before executing and throw an exception if something isn&rsquo;t right. The <code>NGC_SAFETY_CHECKS</code> define disables this behavior for a modest increase in performance, but checks are enabled by default even in release builds.</p>
+<p>Note that aggressive use of these routines may reduce a mesh from a <em>simplicial complex</em> to a <em><span><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>-complex</em>. For instance, flipping enough edges in a mesh might create self-edges, which connect a vertex to itself. See the <a href="../delta_complex/"><span><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>-complex</a> section for details, and an explanation of why these complexes are important.</p>
+<div class="admonition note">
+<p class="admonition-title">General <code>SurfaceMesh</code></p>
+<p>Many of these operations could be defined for a general <code>SurfaceMesh</code>, but are currently only implemented on the <code>ManifoldSurfaceMesh</code>. Future releases of geometry-central will gradually port them over.</p>
+</div>
+<h2 id="in-place-modifications">In-place modifications</h2>
+<p>These routines modify a mesh, but do not require inserting or deleting elements.</p>
+<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">flip</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">)</span></code></summary><p>Flip an edge by rotating counter-clockwise. </p>
+<p>An edge cannot be combinatorially flipped if it is:</p>
+<ul>
+<li>a boundary edge</li>
+<li>incident on a degree-1 vertex.</li>
+</ul>
+<p><strong>Return:</strong> true if the edge was actually flipped </p>
+</details>
+<h2 id="insertions">Insertions</h2>
+<p>These routines modify a mesh by inserting new elements. Element references remain valid, and <a href="../containers/">containers</a> will automatically resize themselves to accommodate the new elements. </p>
+<p>Note that some operations my re-use existing elements to create their output. For instance, <code>splitEdge()</code> turns a single edge in to two; the input edge will be re-used as one of the two output edges, and data along that edge will be unchanged in any containers.</p>
+<hr />
+<details class="func"><summary><code class="highlight"><span class="n">Halfedge</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">insertVertexAlongEdge</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">)</span></code></summary><p>Adds a degree 2 vertex along an edge. Unlike <code>splitEdge()</code>, this <em>does not</em> triangulate the adjacent faces; the degree of adjacent faces will be increased by 1. Works as expected on boundary edges.</p>
+<p>Returns a halfedge <code>he</code> along the newly created edge, which points in the same direction as <code>e.halfedge()</code>, and such that <code>he.vertex()</code> is the newly inserted vertex.</p>
+<p>Preserves canonical direction of edge.halfedge() for both halves of new edge. The original edge is repurposed as one of the two new edges (same for original halfedges).</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Halfedge</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">splitEdge</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">)</span></code></summary><p>Inserts a vertex along an edge, and triangulates the adjacent faces. On a triangle mesh, the newly inserted vertex will be a degree 4 vertex.  Works as expected on boundary edges.</p>
+<p>Returns a halfedge <code>he</code> along the newly created edge, which points in the same direction as <code>e.halfedge()</code>, and such that <code>he.vertex()</code> is the newly inserted vertex.</p>
+<p>Preserves canonical direction of edge.halfedge() for both halves of new edge. The original edge is repurposed as one of the new edges (same for original halfedges).</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">insertVertex</span><span class="p">(</span><span class="n">Face</span> <span class="n">f</span><span class="p">)</span></code></summary><p>TODO
+// Add vertex inside face and triangulate. Returns new vertex.
+Vertex insertVertex(Face f);</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Halfedge</span> <span class="n">connectVertices</span><span class="p">(</span><span class="n">Halfedge</span> <span class="n">heA</span><span class="p">,</span> <span class="n">Halfedge</span> <span class="n">heB</span><span class="p">)</span></code></summary><p>Call to add an edge to a face, splitting it to two faces.</p>
+<p>Creates a new edge connecting <code>heA.vertex()</code> to <code>heB.vertex()</code>. The initial shared face will be repurposed as one of the two resulting faces.</p>
+<p><code>heA</code> and <code>heB</code> must be distinct halfedges in the same face, and their vertices must not already be adjacent in that face.</p>
+<p>Returns new halfedge with <code>heA.vertex()</code> at tail, and <code>he.twin().face()</code> is the new face.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Face</span><span class="o">&gt;</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">triangulate</span><span class="p">(</span><span class="n">Face</span> <span class="n">face</span><span class="p">)</span></code></summary><p>Triangulate a face in the mesh, returning all of the resulting faces.</p>
+<p>One of the returned faces will be the input face, repurposed as a face in the triangulation.</p>
+</details>
+<h3 id="trimming-storage">Trimming storage</h3>
+<p>To amortize the cost of allocation, mesh buffers are resized sporadically in large increments; these resized buffers might significantly increase (e.g., double) the storage size of a mesh and the associated containers. Calling <code>trimStorage()</code> frees up any unused storage space to reduce memory usage. </p>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">trimStorage</span><span class="p">()</span></code></summary><p>Free any additional storage associated with the mesh. Does not invalidate elements.</p>
+<p>Trimming storage <em>does not</em> put the mesh in <em>compressed mode</em>, though compressing the mesh does trim storage.</p>
+<p>This function costs <span><span class="MathJax_Preview">O(n)</span><script type="math/tex">O(n)</script></span> and should not be called in a tight loop.</p>
+</details>
+<h2 id="deletions">Deletions</h2>
+<p>These routines delete mesh elements. Elements (like <code>Vertex</code>) and containers (like <code>VertexData&lt;&gt;</code>) will remain valid through deletions. However, performing any deletion will cause the mesh to no longer be <a href="#compressed-mode">compressed</a>.</p>
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">collapseEdge</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">)</span></code></summary><p>// Collapse an edge. Returns the vertex adjacent to that edge which still exists. Returns Vertex() if not
+// collapsible.
+Vertex collapseEdge(Edge e);</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">removeFaceAlongBoundary</span><span class="p">(</span><span class="n">Face</span> <span class="n">f</span><span class="p">)</span></code></summary><p>// Remove a face which is adjacent to the boundary of the mesh (along with its edge on the boundary).
+// Face must have exactly one boundary edge.
+// Returns true if could remove
+bool removeFaceAlongBoundary(Face f);</p>
+</details>
+<h3 id="compressed-mode">Compressed mode</h3>
+<p>Internally, the halfedge mesh is represented by dense arrays of indices which are lazily expanded (see <a href="../internals/">interals</a> for details). To support fast deletion operations, we simply mark elements as deleted, without re-packing the index space. We say that the mesh is <em>compressed</em> if the index space is dense and there are no such marked elements. When a mesh is not compressed, the <code>index</code> of a mesh element no longer serves as a proper enumeration from <code>[0,N)</code>, but merely as a unique ID.</p>
+<p>There are two consequences to being non-compressed:</p>
+<ul>
+<li>Some operations cannot be implemented efficiently/correctly (e.g., random access of the i&rsquo;th vertex), as noted in the documentation. Calling such function will generally throw an error in Debug mode, but may fail silently in Release.</li>
+<li>Storage space is wasted by deleted elements.</li>
+</ul>
+<p>All meshes are compressed after construction, and only become non-compressed if the user performs a deletion operation. The <code>compress()</code> function can be called to re-index the elements of the mesh as a proper enumeration from <code>[0,N)</code>.</p>
+<p>The <code>compress()</code> function invalidates pointers, and incurs an update of existing containers. As such, it is recommended to be called sporadically, after a sequence of operations is completed.</p>
+<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">isCompressed</span><span class="p">()</span></code></summary><p>Returns true if the mesh is compressed.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">compress</span><span class="p">()</span></code></summary><p>Re-index the elements of the mesh to yield a dense enumeration. Invalidates all <code>Vertex</code>, <code>Edge</code> (etc) objects. All <code>VertexData&lt;&gt;</code>, <code>FaceData&lt;&gt;</code>, etc containers are automatically resized and re-indexed.</p>
+<p>Does nothing if the mesh is already compressed.</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Preserving notable elements</p>
+<p>In some rare situations, you might want to manually keep track of a significant mesh elements (vertices, faces, etc) through a call to <code>compress()</code> (which invalidates all element references).</p>
+<p>One way to do this is to leverage the <code>MeshData&lt;&gt;</code> containers, which automatically stay valid through updates:</p>
+<div class="highlight"><pre><span></span><code><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">;</span> <span class="c1">// our mesh</span>
+<span class="n">Vertex</span> <span class="n">vA</span><span class="p">,</span> <span class="n">vB</span><span class="p">;</span> <span class="c1">// two special vertices we want to keep track of</span>
+
+<span class="c1">// Label the special vertices</span>
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">specialVerts</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="n">specialVerts</span><span class="p">[</span><span class="n">vA</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">specialVerts</span><span class="p">[</span><span class="n">vB</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="c1">// Compress the mesh</span>
+<span class="c1">// (invalidating the Vertex objects)</span>
+<span class="n">mesh</span><span class="p">.</span><span class="n">compress</span><span class="p">();</span>   
+<span class="c1">// specialVerts is automatically maintained through the compression</span>
+
+<span class="c1">// Find the interesting vertices by label</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">vertices</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">specialVerts</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="n">vA</span> <span class="o">=</span> <span class="n">v</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">specialVerts</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="n">vB</span> <span class="o">=</span> <span class="n">v</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 
-<p>The <code>Halfedge</code>, <code>Vertex</code>, etc. classes serve as typed wrappers referring to a mesh element. These wrappers store the index of the underlying element, as well as pointer to the mesh object itself. Traversal operations like <code>he.next()</code> are either implemented implicitly via index arithmetic, or by lookup in to the appropriate array.
-<div class="highlight"><pre><span></span><code>class Halfedge {
-  ...
-  size_t ind;
-  HalfedgeMesh* mesh;
-  Halfedge next() { return Halfedge{mesh-&gt;heNext[ind], mesh}; }   // explicit
-  Halfedge twin() { return Halfedge{ind ^ 1, mesh}; }             // implicit
-  ...
-};
-</code></pre></div></p>
-<div class="admonition info">
-<p class="admonition-title">Why not pointers?</p>
-<p>One potential drawback to the index-based design is that each element must store its index as well as a pointer to the underlying mesh data structure. For instance, the smallest possible data layout of <code>Halfedge</code> would look something like <code>struct Halfedge { size_t ind; HalfedgeMesh* mesh; };</code>, because the <code>ind</code> is useless unless we know what arrays to index in to (e.g., to implement <code>next()</code>).</p>
-<p>This extra storage could be avoided by replacing <code>size_t ind</code> with a pointer directly to memory encoding data about the halfedge. This design would reduce the <code>sizeof(Halfedge)</code> from 16 bytes to 8, as well as potentially avoiding some offset index instructions. So why don&rsquo;t we do that instead?</p>
-<p>In fact, the first implementation of this library used exactly that pointer-based design. However, it turned out to have two main downsides:</p>
-<ul>
-<li><strong>semantics of pointer invalidation:</strong> In C++, doing nearly anything with an invalid pointer incurs undefined behavior, and expanding our buffers invalidates pointers. This meant that an &ldquo;under the hood&rdquo; resize event would invalidate all of the user&rsquo;s <code>Halfedge</code> objects, necessitating frequent expensive use of <code>DynamicHalfedge</code>, rather than just around <code>compress()</code> as in the current design.  </li>
-<li><strong>implementation complexity:</strong> Working with raw pointers makes a lot of easy things hard. Significant pointer gymnastics were needed to internally implement resize operations without running afoul of invalid pointer rules. Simple operations like copying meshes and mesh data required pointer translation. Indexing in to a container essentially required a dense index from the element, so the codebase ended up littered with operations to construct indices from pointer offsets. The cumulative effect was quite error-prone.</li>
-</ul>
-<p>Ultimately, the index-based design seems preferrable.</p>
+<p>This is an intentionally simplistic example, but generally speaking the <code>MeshData&lt;&gt;</code> arrays can be used to track mesh elements and other data through a <code>compress()</code>.</p>
 </div>
-<h2 id="invariants">Invariants</h2>
-<p>In addition to the basic properties of the <code>twin()</code> and <code>next()</code> maps, the halfedge mesh data structure offers a few useful invariants about its indexing scheme which must be maintained by all operations.</p>
-<ul>
-<li>on a boundary edge, <code>e.halfedge()</code> is the interior halfedge</li>
-<li>on a boundary vertex, <code>v.halfedge()</code> is the unique real interior halfedge along the boundary (so <code>v.halfedge().twin()</code> is necessarily exterior, and traversing in CCW order walks the wedge)</li>
-</ul>
-<p>The <code>validateConnectivity()</code> function is extremely useful for checking invariants while developing the data structure.</p>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">HalfedgeMesh</span><span class="o">::</span><span class="n">validateConnectivity</span><span class="p">()</span></code></summary><p>Perform <em>a lot</em> of sanity checks about the halfedge mesh. Throws if any fail.</p>
-</details>
-<h2 id="resizing-and-deleting">Resizing and deleting</h2>
-<p>To enable (amortized) <span><span class="MathJax_Preview">\mathcal{O}(1)</span><script type="math/tex">\mathcal{O}(1)</script></span> mutation, the buffers containing mesh data are lazily reallocated like a <code>std::vector</code> when needed. As such the actual buffers like <code>mesh.heNext</code> might be larger than the current number of elements in the mesh; we separately track the count of real, valid elements to avoid accessing the extra regions of the array. The special index value <code>INVALID_IND</code> (which happens to be <code>std::numeric_limits&lt;size_t&gt;::max()</code>) is used to fill index values that have no meaning.</p>
-<p>A similar issue arises with deletion. When a mesh element is deleted, it would be too expensive to shift the indices of all subsequent elements. Instead, we simply mark the element as deleted, leaving a hole in our index space. Deleted halfedges and their edges are implicitly encoded by <code>heNext[he] == INVALID_IND</code>, while deleted edges and vertices are encoded by <code>vHalfedge[v] == INVALID_IND</code> and <code>fHalfedge[f] == INVALID_IND</code>.</p>
-<p>Thus at any point in time, some indices may be invalid elements, left from previous deletions, and other array entries might correspond to extra elements allocated during the last resizing, waiting to be used. In all iterators and counts, explicit logic ensures that invalid elements are skipped. Traversal functions do not need any such logic, as it should be impossible to traverse from a valid element to an invalid element. The <code>HalfedgeMesh::compress()</code> function is provided to re-index all mesh elements, and ensure a dense packing with no deleted elements.</p>
-<p>The following diagram lays out what this index space might look like.</p>
-<p><img alt="halfedge index diagram" src="../../../media/halfedge_index_diagram.svg" /></p>
-<h3 id="exterior-boundary-elements">Exterior boundary elements</h3>
-<p>One complexity in our implementation is the existence of exterior boundary elements. Recall that boundaries of our mesh are represented by filling each hole with a single, many-sided boundary loop; the halfedges incident on this face are &ldquo;exterior&rdquo;. This definition is convenient because it saves us from constantly special-casing elements on the boundary, but introduces some complexity because the user probably doesn&rsquo;t want to think about these boundary loops as faces most of the time.</p>
-<p>Exterior halfedges are enumerated alongside their interior counterparts, and generally are treated just like normal interior halfedges; most routines do not distinguish between the two.</p>
-<p>In contrast, although boundary loops are just faces internally, the API provides the illusion that they are a distinct type from the faces of the mesh. To enable this treatment, boundary loops are always stored at the <em>back</em> of the face index space. In general, the layout of the allocated index space will consist of first actual mesh faces, then any extra not-yet-used space, and finally boundary loops. </p>
-<h2 id="resize-callbacks">Resize callbacks</h2>
-<p>As the halfedge mesh is mutated, all <code>MeshData&lt;&gt;</code> containers automatically resize to stay in sync. This is implemented under the hood with a system of callback functions registered with the mesh itself. Whenever the mesh resizes or compresses one of its index spaces, it invokes a callback for each associated <code>MeshData&lt;&gt;</code> to do the same.</p>
-<p><code>DynamicHalfedge</code> and friends also register themselves with the callback system, to stay valid as the mesh resizes. However, this results in a callback per dynamic element, which is why the dynamic elements are more expensive. Fortunately, dynamic elements can be used sparingly.</p>
                 
               
               
@@ -1017,7 +1142,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../delta_complex/" title="Delta Complexes" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../containers/" title="Containers" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -1026,19 +1151,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Delta Complexes
+                Containers
               </div>
             </div>
           </a>
         
         
-          <a href="../../geometry/geometry/" title="Overview" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../delta_complex/" title="Delta Complexes" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Overview
+                Delta Complexes
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

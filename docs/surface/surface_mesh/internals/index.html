@@ -15,7 +15,7 @@
     
     
       
-        <title>Boundaries - Geometry Central</title>
+        <title>Internals - Geometry Central</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exterior-halfedges" class="md-skip">
+        <a href="#halfedge-mesh-internals" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Boundaries
+              Internals
             
           </span>
         </div>
@@ -228,6 +228,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../build/versions/" title="Versions" class="md-nav__link">
+      Versions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../build/building/" title="Building" class="md-nav__link">
       Building
     </a>
@@ -267,21 +279,87 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Tutorials
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/load_mesh/" title="Load & navigate a mesh" class="md-nav__link">
+      Load & navigate a mesh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/basic_mutation/" title="Basic Mutation" class="md-nav__link">
+      Basic Mutation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorials/direction_fields/" title="Direction fields" class="md-nav__link">
+      Direction fields
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-4">
       Surface
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Surface" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -299,20 +377,20 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
     
-    <label class="md-nav__link" for="nav-3-1">
-      Halfedge Mesh
+    <label class="md-nav__link" for="nav-4-1">
+      Surface Mesh
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Halfedge Mesh" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-1">
+    <nav class="md-nav" aria-label="Surface Mesh" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
-        Halfedge Mesh
+        Surface Mesh
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -345,63 +423,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Boundaries
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Boundaries" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../boundaries/" title="Boundaries" class="md-nav__link">
       Boundaries
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exterior-halfedges" class="md-nav__link">
-    Exterior halfedges
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faces-and-boundary-loops" class="md-nav__link">
-    Faces and boundary loops
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#element-boundary-properties" class="md-nav__link">
-    Element boundary properties
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -457,11 +483,101 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../internals/" title="Internals" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Internals
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Internals" class="md-nav__link md-nav__link--active">
       Internals
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#permutation-halfedge-mesh" class="md-nav__link">
+    Permutation halfedge mesh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-structures" class="md-nav__link">
+    Basic structures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invariants" class="md-nav__link">
+    Invariants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resizing-and-deleting" class="md-nav__link">
+    Resizing and deleting
+  </a>
+  
+    <nav class="md-nav" aria-label="Resizing and deleting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-surface-meshes" class="md-nav__link">
+    General Surface Meshes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exterior-boundary-elements" class="md-nav__link">
+    Exterior boundary elements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resize-callbacks" class="md-nav__link">
+    Resize callbacks
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -477,16 +593,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
     
-    <label class="md-nav__link" for="nav-3-2">
+    <label class="md-nav__link" for="nav-4-2">
       Geometry
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Geometry" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-2">
+      <label class="md-nav__title" for="nav-4-2">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -531,16 +647,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
     
-    <label class="md-nav__link" for="nav-3-3">
+    <label class="md-nav__link" for="nav-4-3">
       Utilities
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Utilities" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
+      <label class="md-nav__title" for="nav-4-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -548,6 +664,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utilities/simple_polygon_mesh/" title="Simple Polygon Mesh" class="md-nav__link">
+      Simple Polygon Mesh
+    </a>
+  </li>
+
         
           
           
@@ -585,16 +713,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
     
-    <label class="md-nav__link" for="nav-3-4">
+    <label class="md-nav__link" for="nav-4-4">
       Algorithms
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
+      <label class="md-nav__title" for="nav-4-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -663,6 +791,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/robust_geometry/" title="Robust Geometry" class="md-nav__link">
+      Robust Geometry
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -680,16 +820,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Numerical
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Numerical" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -746,16 +886,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Utilities
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Utilities" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
         </span>
@@ -819,6 +959,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -829,22 +971,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exterior-halfedges" class="md-nav__link">
-    Exterior halfedges
+  <a href="#permutation-halfedge-mesh" class="md-nav__link">
+    Permutation halfedge mesh
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#faces-and-boundary-loops" class="md-nav__link">
-    Faces and boundary loops
+  <a href="#basic-structures" class="md-nav__link">
+    Basic structures
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#element-boundary-properties" class="md-nav__link">
-    Element boundary properties
+  <a href="#invariants" class="md-nav__link">
+    Invariants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resizing-and-deleting" class="md-nav__link">
+    Resizing and deleting
+  </a>
+  
+    <nav class="md-nav" aria-label="Resizing and deleting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-surface-meshes" class="md-nav__link">
+    General Surface Meshes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exterior-boundary-elements" class="md-nav__link">
+    Exterior boundary elements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resize-callbacks" class="md-nav__link">
+    Resize callbacks
   </a>
   
 </li>
@@ -861,7 +1037,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/halfedge_mesh/boundaries.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/surface_mesh/internals.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -869,50 +1045,79 @@
                   
                 
                 
-                  <h1>Boundaries</h1>
-                
-                <p>Mesh boundaries in halfedge meshes are modelled by logically treating each <em>boundary loop</em> as if it were a face with an associated set of halfedges. These halfedges incident on boundary loops are referred to as <em>exterior halfedges</em>, while the usual halfedges incident on faces actually present in the mesh are <em>interior halfedges</em>. Any boundary edge of the mesh will have one interior and one exterior halfedge incident upon it.</p>
-<p><img alt="halfedge boundary diagram" src="../../../media/halfedge_boundary_diagram.svg" /></p>
-<h2 id="exterior-halfedges">Exterior halfedges</h2>
-<p>Nearly all routines involving halfedges include both interior and exterior halfedges, as this is most often what is needed in algorithms. <code>HalfedgeData&lt;&gt;</code> containers can hold data on exterior halfedges, and iterators (like <code>Vertex::outgoingHalfedges</code>) will iterate over both interior and exterior halfedges.</p>
-<p>A few routines explicitly indicate whether they process interior halfedges, exterior halfedges, or both, such as <code>HalfedgeMesh::nInteriorHalfedges()</code>.</p>
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">Halfedge</span><span class="o">::</span><span class="n">isInterior</span><span class="p">()</span></code></summary><p><strong>Return:</strong> true if the halfedge is an interior halfedge, and false if it is an exterior halfedge.</p>
-</details>
-<h2 id="faces-and-boundary-loops">Faces and boundary loops</h2>
-<p>The separate type <code>BoundaryLoop</code> is used to represent boundary loops, and offers all functionality of other element types. For instance, the <code>BoundaryLoopData&lt;&gt;</code> container can be used to associate data with boundary loops, and <code>BoundaryLoop::adjacentVertices()</code> can be used to iterate over the vertices along a boundary component.</p>
-<p>Since boundary loops act like faces in the mesh connectivity, traversing the mesh might yield a &ldquo;face&rdquo; referring to what is really a boundary loop. In particular, calling <code>Halfedge::face()</code> on an exterior halfedge will yield the &ldquo;face&rdquo; which is its boundary loop.  However, this &ldquo;face&rdquo; is a lie, we have not really <em>added</em> a face to the mesh: <code>HalfedgeMesh::nFaces()</code> will still report the actual number of faces, etc.  The only valid thing to do with a <code>Face</code> which actually a boundary loop is to immediately convert it to a <code>BoundaryLoop</code>, See the example below.</p>
-<div class="highlight"><pre><span></span><code><span class="n">Halfedge</span> <span class="n">myHe</span> <span class="o">=</span> <span class="cm">/* some exterior halfedge */</span><span class="p">;</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">myHe</span><span class="p">.</span><span class="n">isInterior</span><span class="p">()</span> <span class="o">==</span> <span class="nb">false</span><span class="p">);</span> <span class="c1">// this is an exterior halfedge</span>
-
-<span class="c1">// Traverse to &quot;face&quot;</span>
-<span class="n">Face</span> <span class="n">bFace</span> <span class="o">=</span> <span class="n">myExteriorHalfedge</span><span class="p">.</span><span class="n">face</span><span class="p">()</span>
-
-<span class="c1">// bFace is really a boundary loop, doing any face things </span>
-<span class="c1">// with it would be invalid</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">bFace</span><span class="p">.</span><span class="n">isBoundaryLoop</span><span class="p">()</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span>
-
-<span class="c1">// Convert the &quot;face&quot; to its true boundary loop form </span>
-<span class="n">BoundaryLoop</span> <span class="n">bLoop</span> <span class="o">=</span> <span class="n">bFace</span><span class="p">.</span><span class="n">asBoundaryLoop</span><span class="p">();</span>
-
-<span class="c1">// Now we can do all kinds of things with it</span>
-<span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">bLoop</span><span class="p">.</span><span class="n">adjacentEdges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="cm">/* do science */</span>
-<span class="p">}</span>
+                <h1 id="halfedge-mesh-internals">Halfedge mesh internals</h1>
+<p>This section contains details about the internal implementation of the halfedge mesh data structure. Typical users should not need to care about these details, but they may be useful for extension and debugging.</p>
+<p>The halfedge mesh structure is designed to simultaneously satisfy two core principles:</p>
+<ol>
+<li><strong>contiguous storage:</strong> elements and mesh data are stored in flat buffers of memory. This makes traversing and storing data on the mesh fast.</li>
+<li><strong>O(1) updates:</strong> dynamic operations that add and remove new elements must be supported in (amortized) constant time. This makes modifying the mesh fast.</li>
+</ol>
+<p>The solution to these two requirements is a dynamically-resizing, array-based mesh. Like a <code>std::vector</code>, elements are stored in contiguous buffers of memory, which are transparently expanded and copied sporadically. Of course, this expansion is largely hidden from the user.</p>
+<p>Philosophically, our halfedge mesh aims to be <em>as-implicit-as-possible</em>: whenever we can, we represent connectivity and properties implicitly by indices. Although this strategy runs the risk of being &ldquo;overly clever&rdquo; programming, it has proven effective for two reasons. First, anything tracked explicitly and stored an array is a liability if that array is not updated properly&mdash;conversely implicit relationships can be abstracted away behind helper functions, and need not be carefully maintained. Second, implicit relationships tend to lead fast implementations out of the box, avoiding performance hacking which runs a huge risk of breaking correctness.</p>
+<h2 id="permutation-halfedge-mesh">Permutation halfedge mesh</h2>
+<p>Here&rsquo;s a neat fact: a halfedge mesh can be represented by a single <a href="https://en.wikipedia.org/wiki/Permutation">permutation</a> of length <code>nHalfedges</code>. </p>
+<p>How? First, consider an enumeration of the halfedges. We can implicitly encode the <code>twin()</code> relationship by storing twinned halfedges adjacent to one another&ndash; that is, the twin of an even-numbered halfedge numbered <code>he</code> is <code>he+1</code>, and the twin of and odd-numbered halfedge is <code>he-1</code>. We then use the permutation to encode the <code>next()</code> relationships. The faces are the <a href="https://en.wikipedia.org/wiki/Permutation#Cycle_notation">orbits</a> of the <code>next()</code> operation, enumerated in the order they are encountered. The edges are the orbits of the <code>twin()</code> operation, which can be enumerated implicitly from the index. The vertices are the orbits of the <code>twin().next()</code> operation, again enumerated in the order they are encountered.</p>
+<p>This idea of a permutation is essentially the representation used for our halfedge mesh data structure: a single permutation array encodes the <code>next()</code> map, while the <code>twin()</code>, <code>edge()</code>, and <code>edge.halfedge()</code> maps are implicitly defined. However, although vertices and faces <em>could</em> be represented implicitly by an enumeration of orbits, doing so is inconvenient and expensive to update. Instead, we include additional arrays storing the <code>he.vertex()</code>, <code>he.face()</code>, <code>v.halfedge()</code> and <code>f.halfedge()</code> maps which are explicitly maintained.</p>
+<h2 id="basic-structures">Basic structures</h2>
+<p>Our halfedge mesh is index-based. Each {halfedge,edge,vertex,face} is identified by a 0-based index. The <code>SurfaceMesh</code> class then holds the following explicit arrays encoding the connectivity between these indexed elements (the remaining relationships are implicitly defined).</p>
+<div class="highlight"><pre><span></span><code>class SurfaceMesh {
+  ...
+  private:
+    std::vector&lt;size_t&gt; heNext;     // for he.next()
+    std::vector&lt;size_t&gt; heVertex;   // for he.vertex()
+    std::vector&lt;size_t&gt; heFace;     // for he.face()
+    std::vector&lt;size_t&gt; vHalfedge;  // for v.halfedge()
+    std::vector&lt;size_t&gt; fHalfedge;  // for f.face()
+  ...
+};
 </code></pre></div>
 
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">Face</span><span class="o">::</span><span class="n">isBoundaryLoop</span><span class="p">()</span></code></summary><p>Returns true if the face is really a boundary loop.</p>
+<p>The <code>Halfedge</code>, <code>Vertex</code>, etc. classes serve as typed wrappers referring to a mesh element. These wrappers store the index of the underlying element, as well as pointer to the mesh object itself. Traversal operations like <code>he.next()</code> are either implemented implicitly via index arithmetic, or by lookup in to the appropriate array.
+<div class="highlight"><pre><span></span><code>class Halfedge {
+  ...
+  size_t ind;
+  SurfaceMesh* mesh;
+  Halfedge next() { return Halfedge{mesh-&gt;heNext[ind], mesh}; }   // explicit
+  Halfedge twin() { return Halfedge{ind ^ 1, mesh}; }             // implicit
+  ...
+};
+</code></pre></div></p>
+<div class="admonition info">
+<p class="admonition-title">Why not pointers?</p>
+<p>One potential drawback to the index-based design is that each element must store its index as well as a pointer to the underlying mesh data structure. For instance, the smallest possible data layout of <code>Halfedge</code> would look something like <code>struct Halfedge { size_t ind; SurfaceMesh* mesh; };</code>, because the <code>ind</code> is useless unless we know what arrays to index in to (e.g., to implement <code>next()</code>).</p>
+<p>This extra storage could be avoided by replacing <code>size_t ind</code> with a pointer directly to memory encoding data about the halfedge. This design would reduce the <code>sizeof(Halfedge)</code> from 16 bytes to 8, as well as potentially avoiding some offset index instructions. So why don&rsquo;t we do that instead?</p>
+<p>In fact, the first implementation of this library used exactly that pointer-based design. However, it turned out to have two main downsides:</p>
+<ul>
+<li><strong>semantics of pointer invalidation:</strong> In C++, doing nearly anything with an invalid pointer incurs undefined behavior, and expanding our buffers invalidates pointers. This meant that an &ldquo;under the hood&rdquo; resize event would invalidate all of the user&rsquo;s <code>Halfedge</code> objects, necessitating frequent expensive use of <code>DynamicHalfedge</code>, rather than just around <code>compress()</code> as in the current design.  </li>
+<li><strong>implementation complexity:</strong> Working with raw pointers makes a lot of easy things hard. Significant pointer gymnastics were needed to internally implement resize operations without running afoul of invalid pointer rules. Simple operations like copying meshes and mesh data required pointer translation. Indexing in to a container essentially required a dense index from the element, so the codebase ended up littered with operations to construct indices from pointer offsets. The cumulative effect was quite error-prone.</li>
+</ul>
+<p>Ultimately, the index-based design seems preferrable.</p>
+</div>
+<h2 id="invariants">Invariants</h2>
+<p>In addition to the basic properties of the <code>twin()</code> and <code>next()</code> maps, the halfedge mesh data structure offers a few useful invariants about its indexing scheme which must be maintained by all operations.</p>
+<ul>
+<li>on a boundary edge, <code>e.halfedge()</code> is the interior halfedge</li>
+<li>on a boundary vertex, <code>v.halfedge()</code> is the unique real interior halfedge along the boundary (so <code>v.halfedge().twin()</code> is necessarily exterior, and traversing in CCW order walks the wedge)</li>
+</ul>
+<p>The <code>validateConnectivity()</code> function is extremely useful for checking invariants while developing the data structure.</p>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">validateConnectivity</span><span class="p">()</span></code></summary><p>Perform <em>a lot</em> of sanity checks about the halfedge mesh. Throws if any fail.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">BoundaryLoop</span> <span class="n">Face</span><span class="o">::</span><span class="n">asBoundaryLoop</span><span class="p">()</span></code></summary><p>Convert a face to the equivalent boundary loop. Only valid to call on a face for which <code>Face::isBoundaryLoop() == true</code>.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Face</span> <span class="n">BoundaryLoop</span><span class="o">::</span><span class="n">asFace</span><span class="p">()</span></code></summary><p>Convert a boundary loop back to its equivalent face. The inverse of <code>Face::asBoundaryLoop()</code>. Rarely used.</p>
-</details>
-<h2 id="element-boundary-properties">Element boundary properties</h2>
-<p>The previous sections describe elements which <em>make up</em> the boundary of a mesh. The methods here identify elements which merely lie along the mesh boundary.</p>
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">Vertex</span><span class="o">::</span><span class="n">isBoundary</span><span class="p">()</span></code></summary><p>Returns true if the vertex is on the boundary. A vertex is on the boundary if any of its incident edges are boundary edges. <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">Edge</span><span class="o">::</span><span class="n">isBoundary</span><span class="p">()</span></code></summary><p>Returns true if the edge is on the boundary. An edge is on the boundary if either of its incident halfedges are exterior halfedges. <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>.</p>
-<p>Note that only edges which lie entirely along a boundary are considered boundary edges. Edges which &ldquo;point at&rdquo; the boundary and touch the boundary only at one endpoint are not considered boundary edges by this function.</p>
-</details>
+<h2 id="resizing-and-deleting">Resizing and deleting</h2>
+<p>To enable (amortized) <span><span class="MathJax_Preview">\mathcal{O}(1)</span><script type="math/tex">\mathcal{O}(1)</script></span> mutation, the buffers containing mesh data are lazily reallocated like a <code>std::vector</code> when needed. As such the actual buffers like <code>mesh.heNext</code> might be larger than the current number of elements in the mesh; we separately track the count of real, valid elements to avoid accessing the extra regions of the array. The special index value <code>INVALID_IND</code> (which happens to be <code>std::numeric_limits&lt;size_t&gt;::max()</code>) is used to fill index values that have no meaning.</p>
+<p>A similar issue arises with deletion. When a mesh element is deleted, it would be too expensive to shift the indices of all subsequent elements. Instead, we simply mark the element as deleted, leaving a hole in our index space. Deleted halfedges and their edges are implicitly encoded by <code>heNext[he] == INVALID_IND</code>, while deleted edges and vertices are encoded by <code>vHalfedge[v] == INVALID_IND</code> and <code>fHalfedge[f] == INVALID_IND</code>.</p>
+<p>Thus at any point in time, some indices may be invalid elements, left from previous deletions, and other array entries might correspond to extra elements allocated during the last resizing, waiting to be used. In all iterators and counts, explicit logic ensures that invalid elements are skipped. Traversal functions do not need any such logic, as it should be impossible to traverse from a valid element to an invalid element. The <code>SurfaceMesh::compress()</code> function is provided to re-index all mesh elements, and ensure a dense packing with no deleted elements.</p>
+<p>The following diagram lays out what this index space might look like.</p>
+<p><img alt="halfedge index diagram" src="../../../media/halfedge_index_diagram.svg" /></p>
+<h3 id="general-surface-meshes">General Surface Meshes</h3>
+<p>To represent more general surfaces meshes which might be nonmanifold or oriented, we augment our representation with a few extra arrays of data. In particular, we depart from implicit indexing schemes, and explicitly store halfedge siblings and edges, as well as each edge&rsquo;s halfedge. We also store an orientation bit for each halfedge along its edge, and and in implicit linked list of halfedges incident on each vertex. The last of which is particularly unsatisfying, but otherwise iterating around vertices is quite difficult.</p>
+<h3 id="exterior-boundary-elements">Exterior boundary elements</h3>
+<p>(<code>ManifoldSurfaceMesh</code> only)</p>
+<p>One complexity in our implementation is the existence of exterior boundary elements. Recall that boundaries of our mesh are represented by filling each hole with a single, many-sided boundary loop; the halfedges incident on this face are &ldquo;exterior&rdquo;. This definition is convenient because it saves us from constantly special-casing elements on the boundary, but introduces some complexity because the user probably doesn&rsquo;t want to think about these boundary loops as faces most of the time.</p>
+<p>Exterior halfedges are enumerated alongside their interior counterparts, and generally are treated just like normal interior halfedges; most routines do not distinguish between the two.</p>
+<p>In contrast, although boundary loops are just faces internally, the API provides the illusion that they are a distinct type from the faces of the mesh. To enable this treatment, boundary loops are always stored at the <em>back</em> of the face index space. In general, the layout of the allocated index space will consist of first actual mesh faces, then any extra not-yet-used space, and finally boundary loops. </p>
+<h2 id="resize-callbacks">Resize callbacks</h2>
+<p>As the halfedge mesh is mutated, all <code>MeshData&lt;&gt;</code> containers automatically resize to stay in sync. This is implemented under the hood with a system of callback functions registered with the mesh itself. Whenever the mesh resizes or compresses one of its index spaces, it invokes a callback for each associated <code>MeshData&lt;&gt;</code> to do the same.</p>
+<p><code>DynamicHalfedge</code> and friends also register themselves with the callback system, to stay valid as the mesh resizes. However, this results in a callback per dynamic element, which is why the dynamic elements are more expensive. Fortunately, dynamic elements can be used sparingly.</p>
                 
               
               
@@ -931,7 +1136,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../elements/" title="Elements" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../delta_complex/" title="Delta Complexes" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -940,19 +1145,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Elements
+                Delta Complexes
               </div>
             </div>
           </a>
         
         
-          <a href="../navigation/" title="Navigation and Iteration" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../geometry/geometry/" title="Overview" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Navigation and Iteration
+                Overview
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

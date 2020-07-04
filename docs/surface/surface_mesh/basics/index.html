@@ -15,7 +15,7 @@
     
     
       
-        <title>Surface Centers - Geometry Central</title>
+        <title>Basics - Geometry Central</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#centers-of-points" class="md-skip">
+        <a href="#general-vs-manifold-surface-meshes" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Surface Centers
+              Basics
             
           </span>
         </div>
@@ -372,10 +372,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
     
     <label class="md-nav__link" for="nav-4-1">
       Surface Mesh
@@ -397,11 +399,117 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/basics/" title="Basics" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Basics
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Basics" class="md-nav__link md-nav__link--active">
       Basics
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-vs-manifold-surface-meshes" class="md-nav__link">
+    General vs. Manifold Surface Meshes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element-types" class="md-nav__link">
+    Element types
+  </a>
+  
+    <nav class="md-nav" aria-label="Element types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mesh-mesh-connectivity" class="md-nav__link">
+    Mesh mesh connectivity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manifold-oriented-surfaces" class="md-nav__link">
+    Manifold, Oriented Surfaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-api" class="md-nav__link">
+    Basic API
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    Constructors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#element-counts" class="md-nav__link">
+    Element counts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-functions" class="md-nav__link">
+    Utility functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -411,7 +519,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/elements/" title="Elements" class="md-nav__link">
+    <a href="../elements/" title="Elements" class="md-nav__link">
       Elements
     </a>
   </li>
@@ -423,7 +531,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/boundaries/" title="Boundaries" class="md-nav__link">
+    <a href="../boundaries/" title="Boundaries" class="md-nav__link">
       Boundaries
     </a>
   </li>
@@ -435,7 +543,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
+    <a href="../navigation/" title="Navigation and Iteration" class="md-nav__link">
       Navigation and Iteration
     </a>
   </li>
@@ -447,7 +555,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/containers/" title="Containers" class="md-nav__link">
+    <a href="../containers/" title="Containers" class="md-nav__link">
       Containers
     </a>
   </li>
@@ -459,7 +567,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/mutation/" title="Mutation" class="md-nav__link">
+    <a href="../mutation/" title="Mutation" class="md-nav__link">
       Mutation
     </a>
   </li>
@@ -471,7 +579,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/delta_complex/" title="Delta Complexes" class="md-nav__link">
+    <a href="../delta_complex/" title="Delta Complexes" class="md-nav__link">
       Delta Complexes
     </a>
   </li>
@@ -483,7 +591,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/internals/" title="Internals" class="md-nav__link">
+    <a href="../internals/" title="Internals" class="md-nav__link">
       Internals
     </a>
   </li>
@@ -618,12 +726,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
     
     <label class="md-nav__link" for="nav-4-4">
       Algorithms
@@ -647,7 +753,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../direction_fields/" title="Direction Fields" class="md-nav__link">
+    <a href="../../algorithms/direction_fields/" title="Direction Fields" class="md-nav__link">
       Direction Fields
     </a>
   </li>
@@ -659,7 +765,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
+    <a href="../../algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
       Geodesic Distance
     </a>
   </li>
@@ -671,7 +777,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
+    <a href="../../algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
       Vector Heat Method
     </a>
   </li>
@@ -681,63 +787,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Surface Centers
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Surface Centers" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
       Surface Centers
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#centers-of-points" class="md-nav__link">
-    Centers of points
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#centers-of-distributions" class="md-nav__link">
-    Centers of distributions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#citation" class="md-nav__link">
-    Citation
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -747,7 +801,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
+    <a href="../../algorithms/mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
       Mesh Graph Algorithms
     </a>
   </li>
@@ -759,7 +813,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../robust_geometry/" title="Robust Geometry" class="md-nav__link">
+    <a href="../../algorithms/robust_geometry/" title="Robust Geometry" class="md-nav__link">
       Robust Geometry
     </a>
   </li>
@@ -931,23 +985,77 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#centers-of-points" class="md-nav__link">
-    Centers of points
+  <a href="#general-vs-manifold-surface-meshes" class="md-nav__link">
+    General vs. Manifold Surface Meshes
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#centers-of-distributions" class="md-nav__link">
-    Centers of distributions
+  <a href="#element-types" class="md-nav__link">
+    Element types
+  </a>
+  
+    <nav class="md-nav" aria-label="Element types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mesh-mesh-connectivity" class="md-nav__link">
+    Mesh mesh connectivity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manifold-oriented-surfaces" class="md-nav__link">
+    Manifold, Oriented Surfaces
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#citation" class="md-nav__link">
-    Citation
+  <a href="#basic-api" class="md-nav__link">
+    Basic API
   </a>
+  
+    <nav class="md-nav" aria-label="Basic API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    Constructors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#element-counts" class="md-nav__link">
+    Element counts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-functions" class="md-nav__link">
+    Utility functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -963,7 +1071,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/surface_centers.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/surface_mesh/basics.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -971,48 +1079,140 @@
                   
                 
                 
-                  <h1>Surface Centers</h1>
+                  <h1>Basics</h1>
                 
-                <p>These routines compute geometric centers of point sets and distrubtions on surfaces.</p>
-<p>A &ldquo;center&rdquo; <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> is a point on the surface which is a local minimum of the energy:
-$$
-c = \underset{m}{\textrm{argmin}}\sum_{y \in \mathcal{Y}} d(m,y)^p
-$$
-where <span><span class="MathJax_Preview">\mathcal{Y}</span><script type="math/tex">\mathcal{Y}</script></span> is a set of sites to take the average of and <span><span class="MathJax_Preview">d(\cdot, \cdot)</span><script type="math/tex">d(\cdot, \cdot)</script></span> denotes the geodesic distance.</p>
-<p>Centers on surfaces with <span><span class="MathJax_Preview">p=2</span><script type="math/tex">p=2</script></span> (&ldquo;means&rdquo;) are known as <em>Karcher Means</em> or <em>Frechet Means</em>. Centers on surfaces with <span><span class="MathJax_Preview">p=1</span><script type="math/tex">p=1</script></span> (&ldquo;medians&rdquo;) are known as <em>geometric medians</em>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Centers are not unique!</p>
-<p>In general, there will not be a single unqiue &ldquo;center&rdquo; of a point set or distribution on a surface. For nearby sites there may be a single center, but in general this may not be the case.</p>
-<p>The routines in this section use random initialization to report <em>a center</em>. As such, the results may be different under repeated runs of the procedure.</p>
+                <p>The <code>SurfaceMesh</code> is the workhorse datastructure for representing for represeting surface in geometry-central. Internally, it is reference-based mesh (similar to halfedge mesh), and can hold general polygonal meshes (though many routines only support triangle meshes). <code>SurfaceMesh</code> offers wide support for things like iterating around a mesh, modifying a mesh, and associating data with a mesh via containers. Under the hood, it is implemented with dense, automatically resizing buffers for efficient performance.</p>
+<div class="highlight"><pre><span></span><code>#include &quot;geometrycentral/surface/surface_mesh.h&quot;
+#include &quot;geometrycentral/surface/manifold_surface_mesh.h&quot;
+</code></pre></div>
+
+<details class="warning"><summary>Old <code>HalfedgeMesh</code> type</summary><p>In a previous version of <code>geometrycentral</code>, the mesh type was simply called <code>HalfedgeMesh</code>, and only supported manifold meshes. This type as been renamed to <code>ManifoldSurfaceMesh</code>.</p>
+<p>Including <code>geometrycentral/surface/halfedge_mesh.h</code> will simply typedef <code>HalfedgeMesh</code> as <code>ManifoldSurfaceMesh</code>, so most existing code will still work unchanged; new code should use <code>ManifoldSurfaceMesh</code>.</p>
+</details>
+<h2 id="general-vs-manifold-surface-meshes">General vs. Manifold Surface Meshes</h2>
+<p>There are variants of the surface mesh class; the more general <code>SurfaceMesh</code> which can hold any very general polygonal mesh, and the more specific <code>ManifoldSurfaceMesh</code>, which only supports manifold, oriented meshes. </p>
+<p>Beyond the general capabilities of a <code>SurfaceMesh</code>, the <code>ManifoldSurfaceMesh</code>:</p>
+<ul>
+<li>inherits from <code>SurfaceMesh</code>, and can be used anywhere a <code>SurfaceMesh</code> is expected</li>
+<li>supports additional operations which require a manifold structure</li>
+<li>internally uses a more efficient representation</li>
+</ul>
+<p>There are also a small number of operations which might throw an error if called on a <code>ManifoldSurfaceMesh</code>, and should be used only on the more general <code>SurfaceMesh</code>. In particular, mutations which would make the mesh nonmanifold.</p>
+<div class="admonition note">
+<p class="admonition-title">Nonmanifold Meshes</p>
+<p>Support for general, possibly nonmanifold surface meshes is a recent addition to geometry-central. We are still gradually porting routines from supporting <code>ManifoldSurfaceMesh</code> to the more general <code>SurfaceMesh</code> where appropriate!</p>
 </div>
-<p><code>#include "geometrycentral/surface/surface_centers.h"</code></p>
-<p><img alt="karcher means" src="/media/karcher_mean_simple.jpg" /></p>
-<h2 id="centers-of-points">Centers of points</h2>
-<details class="func"><summary><code class="highlight"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;&amp;</span> <span class="n">vertexPts</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Find a center of a collection of points at vertices.</p>
-<p><code>p</code> must be either <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> or <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">VectorHeatMethodSolver</span><span class="o">&amp;</span> <span class="n">solver</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;&amp;</span> <span class="n">vertexPts</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Like the above method, but uses an existing solver object, which saves precomputation.</p>
-</details>
-<h2 id="centers-of-distributions">Centers of distributions</h2>
-<details class="func"><summary><code class="highlight"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="k">const</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span> <span class="n">distribution</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Find a center of a distribution at vertices.</p>
-<p>Note that the input <code>distribution</code> is treated as integrated values at vertices. If your distribution is &ldquo;per-unit-area&rdquo;, you should multiply times vertex area before passing it in.</p>
-<p><code>p</code> must be either <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> or <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">VectorHeatMethodSolver</span><span class="o">&amp;</span> <span class="n">solver</span><span class="p">,</span> <span class="k">const</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span> <span class="n">distribution</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Like the above method, but uses an existing solver object, which saves precomputation.</p>
-</details>
-<h2 id="citation">Citation</h2>
-<p>These algorithms are described in <a href="http://www.cs.cmu.edu/~kmcrane/Projects/VectorHeatMethod/paper.pdf">The Vector Heat Method</a>, the appropriate citation is:</p>
-<div class="highlight"><pre><span></span><code><span class="nc">@article</span><span class="p">{</span><span class="nl">sharp2019vector</span><span class="p">,</span>
-  <span class="na">title</span><span class="p">=</span><span class="s">{The Vector Heat Method}</span><span class="p">,</span>
-  <span class="na">author</span><span class="p">=</span><span class="s">{Sharp, Nicholas and Soliman, Yousuf and Crane, Keenan}</span><span class="p">,</span>
-  <span class="na">journal</span><span class="p">=</span><span class="s">{ACM Transactions on Graphics (TOG)}</span><span class="p">,</span>
-  <span class="na">volume</span><span class="p">=</span><span class="s">{38}</span><span class="p">,</span>
-  <span class="na">number</span><span class="p">=</span><span class="s">{3}</span><span class="p">,</span>
-  <span class="na">pages</span><span class="p">=</span><span class="s">{24}</span><span class="p">,</span>
-  <span class="na">year</span><span class="p">=</span><span class="s">{2019}</span><span class="p">,</span>
-  <span class="na">publisher</span><span class="p">=</span><span class="s">{ACM}</span>
+<h2 id="element-types">Element types</h2>
+<p>The <code>SurfaceMesh</code> also comes with a collection of lightweight types serving as logical references, or &ldquo;handles&rdquo; to mesh elements: <code>Vertex</code>, <code>Halfedge</code>, <code>Edge</code>, <code>Corner</code>, <code>Face</code>, and <code>BoundaryLoop</code> (<code>ManifoldSurfaceMesh</code> only). These handles are essentially just a typed wrapper around an ID for the element.  Deleting one of these handles does not delete the underlying element, and one may have many distinct handles to the same element <code>Vertex a; Vertex b; a == b;</code>.</p>
+<h3 id="mesh-mesh-connectivity">Mesh mesh connectivity</h3>
+<p>Generally, you can (and should) interact with the mesh via <a href="/surface/surface_mesh/navigation">higher-level, abstracted routines</a>. However, this section details the low-level relationships between these handles. Note that on a <code>ManifoldSurfaceMesh</code>, the guarantees about these relationships are much stronger than on a more general <code>SurfaceMesh</code>.</p>
+<p>The primary type in our halfedge-based mesh is a <em>halfedge</em>, in addition to the usual <em>vertex</em>, <em>edge</em> and <em>face</em> types. A halfedge is a directed edge incident on a face, as shown below. </p>
+<p>On a <code>ManifoldSurfaceMesh</code>, two halfedges, oriented in opposite directions, make up each edge in the mesh. Each halfedge has relationships with five adjacent elements: </p>
+<ul>
+<li><code>Halfedge::twin()</code> the other halfedge across the incident edge</li>
+<li><code>Halfedge::next()</code> the next halfedge in clockwise order around the incident face</li>
+<li><code>Halfedge::vertex()</code> the vertex at the tail (back) of the halfedge</li>
+<li><code>Halfedge::edge()</code> the incident edge</li>
+<li><code>Halfedge::face()</code> the incident face</li>
+</ul>
+<p><img alt="halfedge pointers" src="../../../media/halfedge_pointers.png" /></p>
+<p>On a more general <code>SurfaceMesh</code>, rather than a single twin, the <code>Halfedge::sibling()</code> referene orbits around all other halfedge incident on the edge, which might point in the same or the opposite direction.</p>
+<p>Each vertex, edge, and face need just one relationship:</p>
+<ul>
+<li><code>Vertex::halfedge()</code> <em>any</em> of the incident halfedges (which point outward from the vertex)</li>
+<li><code>Edge::halfedge()</code> <em>any</em> of the incident halfedges</li>
+<li><code>Face::halfedge()</code> <em>any</em> of the incident halfedges</li>
+</ul>
+<p>In fact, these relationships is sufficient to implement pretty much <em>any</em> local traversal. Geometry central provides a wide range of convience iterators which wrap these relationships to traverse neighborhoods (see <a href="/surface/surface_mesh/navigation">navigation</a>).</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">vertex</span><span class="p">.</span><span class="n">adjacentEdges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science</span>
 <span class="p">}</span>
 </code></pre></div>
+
+<h2 id="manifold-oriented-surfaces">Manifold, Oriented Surfaces</h2>
+<p>The <code>ManifoldSurfaceMesh</code> mesh imposes two requirements: manifoldness and orientation. </p>
+<p>Manifoldness means that our surface must locally look like a plane in any neighborhood. This disallows structures such as three faces meeting at an edge, or two cones of faces meeting at a single vertex like an hourglass. </p>
+<p>Furthermore the halfedge mesh implies a combinatorial <em>orientation</em> of the surface, indicated by the clockwise ordering of halfedges around each face (see figure below). Because the halfedge mesh implies an orientation, it cannot represent non-orientable surfaces, like a Klein bottle.</p>
+<p><img alt="halfedge orientation" src="../../../media/halfedge_orientation.png" /></p>
+<p>These properties are invariants which always hold for the <code>ManifoldSurfaceMesh</code>; in practice we check them during construction and ensure that all operations preserve them.</p>
+<h2 id="basic-api">Basic API</h2>
+<h3 id="constructors">Constructors</h3>
+<p>SurfaceMesh(const std::vector<std::vector\<size_t>>&amp; polygons);</p>
+<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">)</span></code></summary><p>Constructs a mesh from a face-index list.</p>
+<ul>
+<li><code>polygons</code> a list of faces, each holding the indices of the vertices incident on that face, zero-indexed and in counter-clockwise order.</li>
+</ul>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">ManifoldSurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">)</span></code></summary><p>Constructs a mesh from a face-index list.</p>
+<ul>
+<li><code>polygons</code> a list of faces, each holding the indices of the vertices incident on that face, zero-indexed and in counter-clockwise order.</li>
+</ul>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">ManifoldSurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="p">,</span> <span class="kt">size_t</span><span class="o">&gt;&gt;&gt;&amp;</span> <span class="n">twins</span><span class="p">)</span></code></summary><p>Constructs a mesh from a face-index list, and extra data specifying the neighboring face across each face-side. This extra data allows you to describe meshes where there are multiple, distinct edges between some pair of vertices</p>
+<ul>
+<li>
+<p><code>polygons</code> a list of faces, each holding the indices of the vertices incident on that face, zero-indexed and in counter-clockwise order.</p>
+</li>
+<li>
+<p><code>twins</code> a list of tuples, in correspondence with the <code>polygons</code> list. For each side of a face, it holds an <code>(iF, iS)</code> tuple, where <code>iF</code> is the index of the face across the edge, and <code>iS</code> is the side of that face (e.g. the <code>iS = 2</code> for the third side of a triangle). Set both tuple elements to <code>INVALID_IND</code> for boundary sides.</p>
+</li>
+</ul>
+</details>
+<h3 id="element-counts">Element counts</h3>
+<p>Remember, all functions from <code>SurfaceMesh</code> can also be called on <code>ManifoldSurfaceMesh</code>.</p>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">nVertices</span><span class="p">()</span></code></summary><p>Returns the number of vertices. </p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">nInteriorVertices</span><span class="p">()</span></code></summary><p>Returns the number of vertices not incident on the boundary.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">nBoundaryVertices</span><span class="p">()</span></code></summary><p>Returns the number of vertices incident on the boundary.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">nEdges</span><span class="p">()</span></code></summary><p>Returns the number of edges. </p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">nFaces</span><span class="p">()</span></code></summary><p>Returns the number of faces in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">nHalfedges</span><span class="p">()</span></code></summary><p>Returns the number of halfedges, including both interior halfedges and any exterior halfedges incident on boundary loops. Always exactly twice the number of edges.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">nInterioHalfedges</span><span class="p">()</span></code></summary><p>Returns the number of interior halfedges, which are incident on faces of the mesh. Always equal to the sum of the number of sides of all faces.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">nExteriorHalfedges</span><span class="p">()</span></code></summary><p>Returns the number of exterior halfedges, which are opposite boundary faces. </p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">nBoundaryLoops</span><span class="p">()</span></code></summary><p>Returns the number of distinct boundary loops in the mesh, each identified as an fictional face closing a boundary loop in the mesh.</p>
+</details>
+<h3 id="properties">Properties</h3>
+<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">hasBoundary</span><span class="p">()</span></code></summary><p>Returns true if the mesh has boundary, that is if it is not <em>closed</em>.</p>
+<p>Complexity <span><span class="MathJax_Preview">\mathcal{O}(1)</span><script type="math/tex">\mathcal{O}(1)</script></span>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">int</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">eulerCharacteristic</span><span class="p">()</span></code></summary><p>Returns the Euler characteristic of the surface. Computed in O(1) from element counts. </p>
+<p><strong>Note:</strong> always computed by naively applying <a href="https://en.wikipedia.org/wiki/Euler_characteristic#Polyhedra">Euler&rsquo;s polyhedron formula</a>, which might not do what you want in the case of multiple-connected components.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">int</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">genus</span><span class="p">()</span></code></summary><p>Returns the genus of the surface. Computed in O(1) from element counts.</p>
+<p><strong>Note:</strong> always computed by naively applying <a href="https://en.wikipedia.org/wiki/Euler_characteristic#Polyhedra">Euler&rsquo;s polyhedron formula</a>, which might not do what you want in the case of multiple connected components.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">isManifold</span><span class="p">()</span></code></summary><p>Returns true if the mesh is both edge- and vertex- manifold.</p>
+<p>Note that there is no <code>isVertexManifold()</code>, because a mesh which is edge-nonmanifold is always also vertex-nonmanifold.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">isEdgeManifold</span><span class="p">()</span></code></summary><p>Returns true if the mesh is both edge-manifold. </p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">isOriented</span><span class="p">()</span></code></summary><p>Returns true if all faces have consistent orientations.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">isTriangular</span><span class="p">()</span></code></summary><p>Returns true if all faces in the mesh have 3 sides. </p>
+<p>Complexity <span><span class="MathJax_Preview">\mathcal{O}(n)</span><script type="math/tex">\mathcal{O}(n)</script></span>, do not call in a tight loop.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">nConnectedComponents</span><span class="p">()</span></code></summary><p>Returns the number of distinct connected components of the mesh. </p>
+<p>Complexity <span><span class="MathJax_Preview">\mathcal{O}(n)</span><script type="math/tex">\mathcal{O}(n)</script></span>, do not call in a tight loop.</p>
+</details>
+<h3 id="utility-functions">Utility functions</h3>
+<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">getFaceVertexList</span><span class="p">()</span></code></summary><p>Return a listing of the vertex indices incident on each face.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">copy</span><span class="p">()</span> <span class="k">const</span></code></summary><p>Construct a copy of the mesh. </p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">copy</span><span class="p">()</span> <span class="k">const</span></code></summary><p>Construct a copy of the mesh. </p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">copyToSurfaceMesh</span><span class="p">()</span> <span class="k">const</span></code></summary><p>Construct a copy of the mesh. The underlying type will be the same as the underlying type of the mesh on which it is called.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">toManifoldMesh</span><span class="p">()</span></code></summary><p>Convert the mesh to <code>ManifoldSurfaceMesh</code>, which is certainly manifold and oriented.</p>
+<p>Throws an error if the mesh is not manifold and oriented.</p>
+</details>
                 
               
               
@@ -1031,7 +1231,7 @@ where <span><span class="MathJax_Preview">\mathcal{Y}</span><script type="math/t
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../vector_heat_method/" title="Vector Heat Method" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../../tutorials/direction_fields/" title="Direction fields" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -1040,19 +1240,19 @@ where <span><span class="MathJax_Preview">\mathcal{Y}</span><script type="math/t
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Vector Heat Method
+                Direction fields
               </div>
             </div>
           </a>
         
         
-          <a href="../mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../elements/" title="Elements" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Mesh Graph Algorithms
+                Elements
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

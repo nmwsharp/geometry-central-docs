@@ -15,7 +15,7 @@
     
     
       
-        <title>Direction Fields - Geometry Central</title>
+        <title>Robust Geometry - Geometry Central</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#intrinsic-mollifiction" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -86,7 +91,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Direction Fields
+              Robust Geometry
             
           </span>
         </div>
@@ -640,18 +645,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Direction Fields" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../direction_fields/" title="Direction Fields" class="md-nav__link">
       Direction Fields
     </a>
-    
   </li>
 
         
@@ -707,11 +705,49 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../robust_geometry/" title="Robust Geometry" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Robust Geometry
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Robust Geometry" class="md-nav__link md-nav__link--active">
       Robust Geometry
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intrinsic-mollifiction" class="md-nav__link">
+    Intrinsic Mollifiction
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -864,12 +900,42 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intrinsic-mollifiction" class="md-nav__link">
+    Intrinsic Mollifiction
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/direction_fields.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/robust_geometry.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -877,9 +943,60 @@
                   
                 
                 
-                  <h1>Direction Fields</h1>
+                  <h1>Robust Geometry</h1>
                 
-                
+                <p>Many data structures and algorithms in geometry-central help to &ldquo;robustify&rdquo; algorithms, and help them automatically work better on meshes with poor geometry and/or connectivity. Whenever possible, this done in a way which is transparent to the algorithm designer and end user.</p>
+<h3 id="intrinsic-mollifiction">Intrinsic Mollifiction</h3>
+<p><code>#include "geometrycentral/surface/intrinsic_mollification.h"</code></p>
+<p>Poor quality meshes might have triangles whose shape is so close to being degenerate that even basic floating point arithmetic breaks down. Such features are difficult to resolve with by perturbing vertex positions, because a motion that makes one triangle better might make another triangle worse. Fortunately, when working with intrinsic geometry, there is a simple strategy which is always guaranteed to work.</p>
+<p>To ensure that all triangles are nondegenerate, we want to have</p>
+<div>
+<div class="MathJax_Preview">
+l_{ij} + l_{jk} &gt; l_{ki} + \delta
+</div>
+<script type="math/tex; mode=display">
+l_{ij} + l_{jk} > l_{ki} + \delta
+</script>
+</div>
+<p>for all triples of triangle edge lengths, according to some user-specified numerical tolerance <span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span>, which specified how far from degenerate the triangles should be.  This is easily achieved by simply adding some small value <span><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span> to all edge lengths, chosen to be the smallest <span><span class="MathJax_Preview">\epsilon</span><script type="math/tex">\epsilon</script></span> which will make the above inequality hold. </p>
+<p>This strategy ensures all triangles are non-degenerate, yet yields a negligible change to the mesh&rsquo;s geometry. For a mesh which already has no degenerate triangles, it will have no effect.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/intrinsic_mollification.h&quot;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">surface</span><span class="p">;</span>
+
+<span class="c1">// your mesh and intrinsic geometry</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">EdgeLengthGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
+
+<span class="c1">// mollify the edge lengths</span>
+<span class="n">mollifyIntrinsic</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="o">-&gt;</span><span class="n">inputEdgeLengths</span><span class="p">);</span>
+
+<span class="c1">// ensure that any existing quantities are updated for the new edge lengths</span>
+<span class="n">geometry</span><span class="o">-&gt;</span><span class="n">refreshQuantities</span><span class="p">();</span>
+
+<span class="c1">// continue running algorithms, etc</span>
+<span class="n">geometry</span><span class="o">-&gt;</span><span class="n">requireVertexGaussianCurvatures</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">mesh</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">())</span> <span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Gaussian curvature of &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">v</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; is &quot;</span> 
+    <span class="o">&lt;&lt;</span> <span class="n">geometry</span><span class="o">-&gt;</span><span class="n">vertexGaussianCurvatures</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">mollifyIntrinsic</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span> <span class="n">edgeLengths</span><span class="p">,</span> <span class="kt">double</span> <span class="n">relativeFactor</span> <span class="o">=</span> <span class="mf">1e-6</span><span class="p">)</span></code></summary><p>Mollify the edge lengths in <code>edgeLengths</code>, to ensure that all triangles are nondegenerate by a factor <span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span>, where <span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> is computed as <code>relativeFactor</code> times the mean edge length in the input.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">mollifyIntrinsicAbsolute</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span> <span class="n">edgeLengths</span><span class="p">,</span> <span class="kt">double</span> <span class="n">absoluteFactor</span><span class="p">)</span></code></summary><p>Similar to above, but mollifies with an absolute factor given by <code>absoluteFactor</code>, rather than a relative factor.</p>
+</details>
+<p>This strategy is described in <a href="http://www.cs.cmu.edu/~kmcrane/Projects/NonmanifoldLaplace/NonmanifoldLaplace.pdf">A Laplacian for Nonmanifold Triangle Meshes</a>. The appropriate citation is:</p>
+<div class="highlight"><pre><span></span><code><span class="nc">@article</span><span class="p">{</span><span class="nl">Sharp:2020:LNT</span><span class="p">,</span>
+  <span class="na">author</span><span class="p">=</span><span class="s">{Nicholas Sharp and Keenan Crane}</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">=</span><span class="s">{{A Laplacian for Nonmanifold Triangle Meshes}}</span><span class="p">,</span>
+  <span class="na">journal</span><span class="p">=</span><span class="s">{Computer Graphics Forum (SGP)}</span><span class="p">,</span>
+  <span class="na">volume</span><span class="p">=</span><span class="s">{39}</span><span class="p">,</span>
+  <span class="na">number</span><span class="p">=</span><span class="s">{5}</span><span class="p">,</span>
+  <span class="na">year</span><span class="p">=</span><span class="s">{2020}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
@@ -898,7 +1015,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../utilities/surface_point/" title="Surface Point" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -907,19 +1024,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Surface Point
+                Mesh Graph Algorithms
               </div>
             </div>
           </a>
         
         
-          <a href="../geodesic_distance/" title="Geodesic Distance" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../../numerical/matrix_types/" title="Matrix Types" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Geodesic Distance
+                Matrix Types
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

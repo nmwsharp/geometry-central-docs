@@ -15,7 +15,7 @@
     
     
       
-        <title>Surface Centers - Geometry Central</title>
+        <title>Navigation and Iteration - Geometry Central</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#centers-of-points" class="md-skip">
+        <a href="#collection-iterators" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Surface Centers
+              Navigation and Iteration
             
           </span>
         </div>
@@ -372,10 +372,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
     
     <label class="md-nav__link" for="nav-4-1">
       Surface Mesh
@@ -399,7 +401,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/basics/" title="Basics" class="md-nav__link">
+    <a href="../basics/" title="Basics" class="md-nav__link">
       Basics
     </a>
   </li>
@@ -411,7 +413,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/elements/" title="Elements" class="md-nav__link">
+    <a href="../elements/" title="Elements" class="md-nav__link">
       Elements
     </a>
   </li>
@@ -423,7 +425,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/boundaries/" title="Boundaries" class="md-nav__link">
+    <a href="../boundaries/" title="Boundaries" class="md-nav__link">
       Boundaries
     </a>
   </li>
@@ -433,11 +435,97 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Navigation and Iteration
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Navigation and Iteration" class="md-nav__link md-nav__link--active">
       Navigation and Iteration
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#collection-iterators" class="md-nav__link">
+    Collection Iterators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neighborhood-iterators" class="md-nav__link">
+    Neighborhood Iterators
+  </a>
+  
+    <nav class="md-nav" aria-label="Neighborhood Iterators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#around-a-vertex" class="md-nav__link">
+    Around a vertex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#around-an-edge" class="md-nav__link">
+    Around an edge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#around-a-face" class="md-nav__link">
+    Around a face
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#around-a-boundary-loop" class="md-nav__link">
+    Around a boundary loop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessors" class="md-nav__link">
+    Accessors
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -447,7 +535,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/containers/" title="Containers" class="md-nav__link">
+    <a href="../containers/" title="Containers" class="md-nav__link">
       Containers
     </a>
   </li>
@@ -459,7 +547,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/mutation/" title="Mutation" class="md-nav__link">
+    <a href="../mutation/" title="Mutation" class="md-nav__link">
       Mutation
     </a>
   </li>
@@ -471,7 +559,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/delta_complex/" title="Delta Complexes" class="md-nav__link">
+    <a href="../delta_complex/" title="Delta Complexes" class="md-nav__link">
       Delta Complexes
     </a>
   </li>
@@ -483,7 +571,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/internals/" title="Internals" class="md-nav__link">
+    <a href="../internals/" title="Internals" class="md-nav__link">
       Internals
     </a>
   </li>
@@ -618,12 +706,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
     
     <label class="md-nav__link" for="nav-4-4">
       Algorithms
@@ -647,7 +733,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../direction_fields/" title="Direction Fields" class="md-nav__link">
+    <a href="../../algorithms/direction_fields/" title="Direction Fields" class="md-nav__link">
       Direction Fields
     </a>
   </li>
@@ -659,7 +745,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
+    <a href="../../algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
       Geodesic Distance
     </a>
   </li>
@@ -671,7 +757,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
+    <a href="../../algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
       Vector Heat Method
     </a>
   </li>
@@ -681,63 +767,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Surface Centers
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Surface Centers" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
       Surface Centers
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#centers-of-points" class="md-nav__link">
-    Centers of points
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#centers-of-distributions" class="md-nav__link">
-    Centers of distributions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#citation" class="md-nav__link">
-    Citation
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -747,7 +781,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
+    <a href="../../algorithms/mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
       Mesh Graph Algorithms
     </a>
   </li>
@@ -759,7 +793,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../robust_geometry/" title="Robust Geometry" class="md-nav__link">
+    <a href="../../algorithms/robust_geometry/" title="Robust Geometry" class="md-nav__link">
       Robust Geometry
     </a>
   </li>
@@ -931,22 +965,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#centers-of-points" class="md-nav__link">
-    Centers of points
+  <a href="#collection-iterators" class="md-nav__link">
+    Collection Iterators
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#centers-of-distributions" class="md-nav__link">
-    Centers of distributions
+  <a href="#neighborhood-iterators" class="md-nav__link">
+    Neighborhood Iterators
   </a>
+  
+    <nav class="md-nav" aria-label="Neighborhood Iterators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#around-a-vertex" class="md-nav__link">
+    Around a vertex
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#around-an-edge" class="md-nav__link">
+    Around an edge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#around-a-face" class="md-nav__link">
+    Around a face
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#around-a-boundary-loop" class="md-nav__link">
+    Around a boundary loop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#citation" class="md-nav__link">
-    Citation
+  <a href="#accessors" class="md-nav__link">
+    Accessors
   </a>
   
 </li>
@@ -963,7 +1031,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/surface_centers.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/surface_mesh/navigation.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -971,48 +1039,166 @@
                   
                 
                 
-                  <h1>Surface Centers</h1>
+                  <h1>Navigation and Iteration</h1>
                 
-                <p>These routines compute geometric centers of point sets and distrubtions on surfaces.</p>
-<p>A &ldquo;center&rdquo; <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> is a point on the surface which is a local minimum of the energy:
-$$
-c = \underset{m}{\textrm{argmin}}\sum_{y \in \mathcal{Y}} d(m,y)^p
-$$
-where <span><span class="MathJax_Preview">\mathcal{Y}</span><script type="math/tex">\mathcal{Y}</script></span> is a set of sites to take the average of and <span><span class="MathJax_Preview">d(\cdot, \cdot)</span><script type="math/tex">d(\cdot, \cdot)</script></span> denotes the geodesic distance.</p>
-<p>Centers on surfaces with <span><span class="MathJax_Preview">p=2</span><script type="math/tex">p=2</script></span> (&ldquo;means&rdquo;) are known as <em>Karcher Means</em> or <em>Frechet Means</em>. Centers on surfaces with <span><span class="MathJax_Preview">p=1</span><script type="math/tex">p=1</script></span> (&ldquo;medians&rdquo;) are known as <em>geometric medians</em>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Centers are not unique!</p>
-<p>In general, there will not be a single unqiue &ldquo;center&rdquo; of a point set or distribution on a surface. For nearby sites there may be a single center, but in general this may not be the case.</p>
-<p>The routines in this section use random initialization to report <em>a center</em>. As such, the results may be different under repeated runs of the procedure.</p>
-</div>
-<p><code>#include "geometrycentral/surface/surface_centers.h"</code></p>
-<p><img alt="karcher means" src="/media/karcher_mean_simple.jpg" /></p>
-<h2 id="centers-of-points">Centers of points</h2>
-<details class="func"><summary><code class="highlight"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;&amp;</span> <span class="n">vertexPts</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Find a center of a collection of points at vertices.</p>
-<p><code>p</code> must be either <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> or <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>.</p>
+                <h3 id="collection-iterators">Collection Iterators</h3>
+<p>Use these routines to iterate over all of the elements in the mesh.</p>
+<p><strong>Note:</strong> Generally, modifying the mesh while iterating is allowed, but the new elements may or may not be iterated over, and previous elements might even appear again later later in the iteration after modifying.</p>
+<hr />
+<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">vertices</span><span class="p">()</span></code></summary><p>Iterate over the vertices in a mesh.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">vertices</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">VectorHeatMethodSolver</span><span class="o">&amp;</span> <span class="n">solver</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;&amp;</span> <span class="n">vertexPts</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Like the above method, but uses an existing solver object, which saves precomputation.</p>
+<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">halfedges</span><span class="p">()</span></code></summary><p>Iterate over all of the halfedges in a mesh (both real and imaginary, if the mesh has boundary).
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">halfedges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
 </details>
-<h2 id="centers-of-distributions">Centers of distributions</h2>
-<details class="func"><summary><code class="highlight"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="k">const</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span> <span class="n">distribution</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Find a center of a distribution at vertices.</p>
-<p>Note that the input <code>distribution</code> is treated as integrated values at vertices. If your distribution is &ldquo;per-unit-area&rdquo;, you should multiply times vertex area before passing it in.</p>
-<p><code>p</code> must be either <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span> or <span><span class="MathJax_Preview">2</span><script type="math/tex">2</script></span>.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfacePoint</span> <span class="n">findCenter</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">VectorHeatMethodSolver</span><span class="o">&amp;</span> <span class="n">solver</span><span class="p">,</span> <span class="k">const</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span> <span class="n">distribution</span><span class="p">,</span> <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span></code></summary><p>Like the above method, but uses an existing solver object, which saves precomputation.</p>
-</details>
-<h2 id="citation">Citation</h2>
-<p>These algorithms are described in <a href="http://www.cs.cmu.edu/~kmcrane/Projects/VectorHeatMethod/paper.pdf">The Vector Heat Method</a>, the appropriate citation is:</p>
-<div class="highlight"><pre><span></span><code><span class="nc">@article</span><span class="p">{</span><span class="nl">sharp2019vector</span><span class="p">,</span>
-  <span class="na">title</span><span class="p">=</span><span class="s">{The Vector Heat Method}</span><span class="p">,</span>
-  <span class="na">author</span><span class="p">=</span><span class="s">{Sharp, Nicholas and Soliman, Yousuf and Crane, Keenan}</span><span class="p">,</span>
-  <span class="na">journal</span><span class="p">=</span><span class="s">{ACM Transactions on Graphics (TOG)}</span><span class="p">,</span>
-  <span class="na">volume</span><span class="p">=</span><span class="s">{38}</span><span class="p">,</span>
-  <span class="na">number</span><span class="p">=</span><span class="s">{3}</span><span class="p">,</span>
-  <span class="na">pages</span><span class="p">=</span><span class="s">{24}</span><span class="p">,</span>
-  <span class="na">year</span><span class="p">=</span><span class="s">{2019}</span><span class="p">,</span>
-  <span class="na">publisher</span><span class="p">=</span><span class="s">{ACM}</span>
+<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">realHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the real halfedges in a mesh.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">realHalfedges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
 <span class="p">}</span>
 </code></pre></div>
+Note that on a boundary edge between vertices <code>i &lt;--&gt; j</code>, this set will only include a halfedge from <code>i --&gt; j</code>, but not from <code>j --&gt; i</code> (or vice versa).</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">exteriorHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the exterior halfedges in a mesh. (only useful on <code>ManifoldSurfaceMesh</code>)
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">exteriorHalfedges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div>
+Note that on a boundary edge between vertices <code>i &lt;--&gt; j</code>, this set will only include a halfedge from <code>i --&gt; j</code>, but not from <code>j --&gt; i</code> (or vice versa).</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">edges</span><span class="p">()</span></code></summary><p>Iterate over the edges in a mesh.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">edges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">faces</span><span class="p">()</span></code></summary><p>Iterate over the faces in a mesh.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Face</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">faces</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<h2 id="neighborhood-iterators">Neighborhood Iterators</h2>
+<p>Use these routines to iterate over the neighbors of a mesh element.</p>
+<details class="note"><summary>Note: neighborhoods on <span><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>-complexes</summary><p>The iterators in this section may have unexpected behavior in the advanced case of a <span><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>-complex, when there are (e.g.) self-edges, or multiple edges between a pair of vertices. Essentially, these iterators always naively traverse the local neighborhood, even if that neighborhood might include duplicate elements. </p>
+<p>For instance, if a <span><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>-complex has multiple edges connecting vertex <code>va</code> to vertex <code>vb</code>, then iterating <code>va.adjacentVertices()</code> will return <code>vb</code> multiple times.</p>
+<p>Of course, for ordinary triangle mesh they will behave as expected. See the <a href="../delta_complex/">Delta complex</a> section for more information.</p>
+</details>
+<hr />
+<h3 id="around-a-vertex">Around a vertex</h3>
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span><span class="o">::</span><span class="n">outgoingHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the halfedges which point outward from a vertex.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">vert</span><span class="p">.</span><span class="n">outgoingHalfedges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="n">assert</span><span class="p">(</span><span class="n">he</span><span class="p">.</span><span class="n">vertex</span><span class="p">()</span> <span class="o">==</span> <span class="n">vert</span><span class="p">);</span> <span class="c1">// true</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span><span class="o">::</span><span class="n">incomingHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the halfedges which point inward at a vertex.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">vert</span><span class="p">.</span><span class="n">incomingHalfedges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="n">assert</span><span class="p">(</span><span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">vertex</span><span class="p">()</span> <span class="o">==</span> <span class="n">vert</span><span class="p">);</span> <span class="c1">// true</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span><span class="o">::</span><span class="n">adjacentVertices</span><span class="p">()</span></code></summary><p>Iterate over the vertices edge-connected to this vertex.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">vert</span><span class="p">.</span><span class="n">adjacentVertices</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span><span class="o">::</span><span class="n">adjacentEdges</span><span class="p">()</span></code></summary><p>Iterate over the edges incident on this vertex.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">vert</span><span class="p">.</span><span class="n">adjacentEdges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span><span class="o">::</span><span class="n">adjacentFaces</span><span class="p">()</span></code></summary><p>Iterate over the faces incident on this vertex.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Face</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">vert</span><span class="p">.</span><span class="n">adjacentFaces</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<h3 id="around-an-edge">Around an edge</h3>
+<details class="func"><summary><code class="highlight"><span class="n">Edge</span><span class="o">::</span><span class="n">adjacentHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the halfedges incident on this edge.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">edge</span><span class="p">.</span><span class="n">adjacentHalfedges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Edge</span><span class="o">::</span><span class="n">adjacentFaces</span><span class="p">()</span></code></summary><p>Iterate over the (one or two) faces incident on this edge.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Face</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">edge</span><span class="p">.</span><span class="n">adjacentFaces</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<h3 id="around-a-face">Around a face</h3>
+<details class="func"><summary><code class="highlight"><span class="n">Face</span><span class="o">::</span><span class="n">adjacentVertices</span><span class="p">()</span></code></summary><p>Iterate over the vertices adjacent to a face.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">face</span><span class="p">.</span><span class="n">adjacentVertices</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Face</span><span class="o">::</span><span class="n">adjacentHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the halfedges incident on a face.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">face</span><span class="p">.</span><span class="n">adjacentHalfedges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Face</span><span class="o">::</span><span class="n">adjacentEdges</span><span class="p">()</span></code></summary><p>Iterate over the edges on the boundary of a face.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">face</span><span class="p">.</span><span class="n">adjacentEdges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Face</span><span class="o">::</span><span class="n">adjacentFaces</span><span class="p">()</span></code></summary><p>Iterate over the faces adjacent to a face, across each edge.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Face</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">face</span><span class="p">.</span><span class="n">adjacentFaces</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<h3 id="around-a-boundary-loop">Around a boundary loop</h3>
+<details class="func"><summary><code class="highlight"><span class="n">BoundaryLoop</span><span class="o">::</span><span class="n">adjacentVertices</span><span class="p">()</span></code></summary><p>Iterate over the vertices adjacent to a boundary loop.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">boundaryLoop</span><span class="p">.</span><span class="n">adjacentVertices</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">BoundaryLoop</span><span class="o">::</span><span class="n">adjacentHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the (exterior) halfedges incident on a boundary loop.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">boundaryLoop</span><span class="p">.</span><span class="n">adjacentHalfedges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">BoundaryLoop</span><span class="o">::</span><span class="n">adjacentEdges</span><span class="p">()</span></code></summary><p>Iterate over the edges on the boundary of a boundary loop.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">boundaryLoop</span><span class="p">.</span><span class="n">adjacentEdges</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</details>
+<h2 id="accessors">Accessors</h2>
+<p>Use these routines to access elements of the mesh by their index.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The indexing routines in the section are only valid when the mesh is <a href="../mutation/#compressed-mode">compressed</a>.</p>
+</div>
+<hr />
+<details class="func"><summary><code class="highlight"><span class="n">Halfedge</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">halfedge</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th halfedge in the mesh. <code>0 &lt;= index &lt; nHalfedges()</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">vertex</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th vertex in the mesh. <code>0 &lt;= index &lt; nVertices()</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Face</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">face</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th face in the mesh. <code>0 &lt;= index &lt; nFaces()</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Edge</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">edge</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th edge in the mesh. <code>0 &lt;= index &lt; nEdges()</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Face</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">face</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th face in the mesh. <code>0 &lt;= index &lt; nFaces()</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Face</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">boundaryLoop</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th boundary loop in the mesh. <code>0 &lt;= index &lt; nBoundaryLoops()</code>.</p>
+</details>
                 
               
               
@@ -1031,7 +1217,7 @@ where <span><span class="MathJax_Preview">\mathcal{Y}</span><script type="math/t
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../vector_heat_method/" title="Vector Heat Method" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../boundaries/" title="Boundaries" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -1040,19 +1226,19 @@ where <span><span class="MathJax_Preview">\mathcal{Y}</span><script type="math/t
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Vector Heat Method
+                Boundaries
               </div>
             </div>
           </a>
         
         
-          <a href="../mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../containers/" title="Containers" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Mesh Graph Algorithms
+                Containers
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
