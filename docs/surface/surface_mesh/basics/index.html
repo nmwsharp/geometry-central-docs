@@ -1137,6 +1137,7 @@
 <p>These properties are invariants which always hold for the <code>ManifoldSurfaceMesh</code>; in practice we check them during construction and ensure that all operations preserve them.</p>
 <h2 id="basic-api">Basic API</h2>
 <h3 id="constructors">Constructors</h3>
+<p>See the <a href="/surface/utilities/io">mesh I/O page</a> for helpers which read a mesh from file, and factory methods to construct a mesh and geometry simultaneously.</p>
 <details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">)</span></code></summary><p>Constructs a mesh from a face-index list.</p>
 <ul>
 <li><code>polygons</code> a list of faces, each holding the indices of the vertices incident on that face, zero-indexed and in counter-clockwise order.</li>
@@ -1145,7 +1146,7 @@
 <details class="func"><summary><code class="highlight"><span class="n">ManifoldSurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">)</span></code></summary><p>Same as above, but constructs a manifold surface mesh.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">faces</span><span class="p">)</span></code></summary><p>Constructs a mesh from a rectangular face-index matrix, like an <code>Fx3</code> array of triangle indices, or an <code>Fx4</code> array of quad indices. The matrix scalar can be any integer type, like <code>size_t</code> or <code>int</code>.</p>
-<p>The <code>Eigen:MatrixBase&lt;T&gt;</code> type is just a general type which accepts most Eigen matrix types as input, including geoemtry-central&rsquo;s nicely-named wrapper <code>DenseMatrix&lt;T&gt;</code>.</p>
+<p>The <code>Eigen:MatrixBase&lt;T&gt;</code> type is just a general type which accepts most Eigen matrix types as input, including geometry-central&rsquo;s nicely-named wrapper <code>DenseMatrix&lt;T&gt;</code>.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="n">ManifoldSurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">faces</span><span class="p">)</span></code></summary><p>Same as above, but constructs a manifold surface mesh.</p>
 </details>
@@ -1213,7 +1214,7 @@ to get a matrix where each entry is a <code>size_t</code>, or like
 <div class="highlight"><pre><span></span><code><span class="n">DenseMatrix</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">F</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">-&gt;</span><span class="n">getFaceVertexMatrix</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
 </code></pre></div>
 to get a matrix where each entry is an <code>int</code>.</p>
-<p>Remember that <code>DenseMatrix&lt;T&gt;</code> is just our nice synonym for <code>Eigen:::DenseMatrix</code>.</p>
+<p>Remember that <code>DenseMatrix&lt;T&gt;</code> is just our nice synonym for <code>Eigen:::Matrix</code>.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">copy</span><span class="p">()</span> <span class="k">const</span></code></summary><p>Construct a copy of the mesh. </p>
 </details>

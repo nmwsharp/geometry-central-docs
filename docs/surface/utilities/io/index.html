@@ -684,6 +684,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#factory-constructors" class="md-nav__link">
+    Factory constructors
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1028,6 +1035,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#factory-constructors" class="md-nav__link">
+    Factory constructors
+  </a>
   
 </li>
       
@@ -1396,6 +1410,46 @@
 <details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getGeometry</span><span class="p">()</span></code></summary><p>Build a new geometry object from vertex postions stored in a file (by <code>addGeometry()</code>).</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">EdgeLengthGeometry</span><span class="o">&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getIntrinsicGeometry</span><span class="p">()</span></code></summary><p>Build a new geometry object from edge lengths stored in a file (by <code>addIntrinsicGeometry()</code>).</p>
+</details>
+<h2 id="factory-constructors">Factory constructors</h2>
+<p>These simultaneously construct the connectivity and geometry of a mesh, and are used internally in many of the subroutines above.</p>
+<p><code>#include "geometrycentral/surface/surface_mesh_factories.h"</code></p>
+<p>Construct a mesh and geometry from a list of polygons and vertex positions:</p>
+<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">makeSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">vertexPositions</span><span class="p">)</span></code></summary><p>Construct a new surface mesh and geometry from a list of face indices and a list of vertex positions. See the constructors of <code>SurfaceMesh</code> and <code>VertexPositionGeometry</code> for more details about their semantics.</p>
+<ul>
+<li><code>polygons</code> is a nested list of zero-indexed face indices </li>
+<li><code>vertexPositions</code> is a list of 3D vertex positions</li>
+</ul>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">makeManifoldSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">vertexPositions</span><span class="p">)</span></code></summary><p>Same as above, but the result is a <code>ManifoldSurfaceMesh</code> (and thus the connectivity must describe a manifold mesh).</p>
+</details>
+<p>Construct a mesh and geometry from face indices and vertex positions, stored in dense (Eigen) matrices:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/surface_mesh_factories.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// matrices describing mesh (populated somehow)</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span> <span class="n">vMat</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>  <span class="c1">// V x 3 array of vertex positions</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXi</span> <span class="n">fMat</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>  <span class="c1">// F x 3 array of zero-indexed face indices </span>
+                                   <span class="c1">// (or F x 4 for quads, etc)</span>
+
+<span class="c1">// construct geometry-central mesh types</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">makeSurfaceMeshAndGeometry</span><span class="p">(</span><span class="n">vMat</span><span class="p">,</span> <span class="n">fMat</span><span class="p">);</span>
+
+<span class="c1">// OR to construct a mesh which must be manifold</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span> <span class="n">meshManifold</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometryManifold</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">meshManifold</span><span class="p">,</span> <span class="n">geometryManifold</span><span class="p">)</span> <span class="o">=</span> <span class="n">makeManifoldSurfaceMeshAndGeometry</span><span class="p">(</span><span class="n">vMat</span><span class="p">,</span> <span class="n">fMat</span><span class="p">);</span>
+</code></pre></div>
+
+<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">makeSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_V</span><span class="o">&gt;&amp;</span> <span class="n">vMat</span><span class="p">,</span> <span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_F</span><span class="o">&gt;&amp;</span> <span class="n">fMat</span><span class="p">)</span></code></summary><p>Construct a new surface mesh and geometry from a list of face indices and a list of vertex positions. See the constructors of <code>SurfaceMesh</code> and <code>VertexPositionGeometry</code> for more details about their semantics. Note that these arguments are ordered <code>V,F</code> to match MATLAB &amp; friends conventions.</p>
+<ul>
+<li><code>vMat</code> is a <code>Vx3</code> floating-point valued matrix of vertex positions. Any floating point type can be used.</li>
+<li><code>fMat</code> is an <code>FxD</code> index valued matrix of zero-indexed face indices (e.g. an Fx3 array of triangles, of Fx4 array of quads). The index type can be any integer type (like <code>size_t</code> or <code>int</code>).</li>
+</ul>
+<p>The <code>Eigen:MatrixBase&lt;T&gt;</code> type is just a general type which accepts most Eigen matrix types as input, including geometry-central&rsquo;s nicely-named wrapper <code>DenseMatrix&lt;T&gt;</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">makeManifoldSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_V</span><span class="o">&gt;&amp;</span> <span class="n">vMat</span><span class="p">,</span> <span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_F</span><span class="o">&gt;&amp;</span> <span class="n">fMat</span><span class="p">)</span></code></summary><p>Same as above, but the result is a <code>ManifoldSurfaceMesh</code> (and thus the connectivity must describe a manifold mesh).</p>
 </details>
                 
               
