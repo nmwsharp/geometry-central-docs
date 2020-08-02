@@ -447,8 +447,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mesh-mesh-connectivity" class="md-nav__link">
-    Mesh mesh connectivity
+  <a href="#mesh-connectivity" class="md-nav__link">
+    Mesh connectivity
   </a>
   
 </li>
@@ -1000,8 +1000,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mesh-mesh-connectivity" class="md-nav__link">
-    Mesh mesh connectivity
+  <a href="#mesh-connectivity" class="md-nav__link">
+    Mesh connectivity
   </a>
   
 </li>
@@ -1104,7 +1104,7 @@
 </div>
 <h2 id="element-types">Element types</h2>
 <p>The <code>SurfaceMesh</code> also comes with a collection of lightweight types serving as logical references, or &ldquo;handles&rdquo; to mesh elements: <code>Vertex</code>, <code>Halfedge</code>, <code>Edge</code>, <code>Corner</code>, <code>Face</code>, and <code>BoundaryLoop</code> (<code>ManifoldSurfaceMesh</code> only). These handles are essentially just a typed wrapper around an ID for the element.  Deleting one of these handles does not delete the underlying element, and one may have many distinct handles to the same element <code>Vertex a; Vertex b; a == b;</code>.</p>
-<h3 id="mesh-mesh-connectivity">Mesh mesh connectivity</h3>
+<h3 id="mesh-connectivity">Mesh connectivity</h3>
 <p>Generally, you can (and should) interact with the mesh via <a href="/surface/surface_mesh/navigation">higher-level, abstracted routines</a>. However, this section details the low-level relationships between these handles. Note that on a <code>ManifoldSurfaceMesh</code>, the guarantees about these relationships are much stronger than on a more general <code>SurfaceMesh</code>.</p>
 <p>The primary type in our halfedge-based mesh is a <em>halfedge</em>, in addition to the usual <em>vertex</em>, <em>edge</em> and <em>face</em> types. A halfedge is a directed edge incident on a face, as shown below. </p>
 <p>On a <code>ManifoldSurfaceMesh</code>, two halfedges, oriented in opposite directions, make up each edge in the mesh. Each halfedge has relationships with five adjacent elements: </p>
@@ -1137,16 +1137,17 @@
 <p>These properties are invariants which always hold for the <code>ManifoldSurfaceMesh</code>; in practice we check them during construction and ensure that all operations preserve them.</p>
 <h2 id="basic-api">Basic API</h2>
 <h3 id="constructors">Constructors</h3>
-<p>SurfaceMesh(const std::vector<std::vector\<size_t>>&amp; polygons);</p>
 <details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">)</span></code></summary><p>Constructs a mesh from a face-index list.</p>
 <ul>
 <li><code>polygons</code> a list of faces, each holding the indices of the vertices incident on that face, zero-indexed and in counter-clockwise order.</li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">ManifoldSurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">)</span></code></summary><p>Constructs a mesh from a face-index list.</p>
-<ul>
-<li><code>polygons</code> a list of faces, each holding the indices of the vertices incident on that face, zero-indexed and in counter-clockwise order.</li>
-</ul>
+<details class="func"><summary><code class="highlight"><span class="n">ManifoldSurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">)</span></code></summary><p>Same as above, but constructs a manifold surface mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">faces</span><span class="p">)</span></code></summary><p>Constructs a mesh from a rectangular face-index matrix, like an <code>Fx3</code> array of triangle indices, or an <code>Fx4</code> array of quad indices. The matrix scalar can be any integer type, like <code>size_t</code> or <code>int</code>.</p>
+<p>The <code>Eigen:MatrixBase&lt;T&gt;</code> type is just a general type which accepts most Eigen matrix types as input, including geoemtry-central&rsquo;s nicely-named wrapper <code>DenseMatrix&lt;T&gt;</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">ManifoldSurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">faces</span><span class="p">)</span></code></summary><p>Same as above, but constructs a manifold surface mesh.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="n">ManifoldSurfaceMesh</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="p">,</span> <span class="kt">size_t</span><span class="o">&gt;&gt;&gt;&amp;</span> <span class="n">twins</span><span class="p">)</span></code></summary><p>Constructs a mesh from a face-index list, and extra data specifying the neighboring face across each face-side. This extra data allows you to describe meshes where there are multiple, distinct edges between some pair of vertices</p>
 <ul>
@@ -1203,6 +1204,16 @@
 </details>
 <h3 id="utility-functions">Utility functions</h3>
 <details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">getFaceVertexList</span><span class="p">()</span></code></summary><p>Return a listing of the vertex indices incident on each face.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">DenseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">getFaceVertexMatrix</span><span class="p">()</span></code></summary><p>Return a dense <code>F x D</code> matrix of the vertex indices for each face in the mesh.  All faces in the mesh must have the same degree <code>D</code>.</p>
+<p>This function is templated on the scalar type for the resulting matrix, so call it like
+<div class="highlight"><pre><span></span><code><span class="n">DenseMatrix</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span> <span class="n">F</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">-&gt;</span><span class="n">getFaceVertexMatrix</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div>
+to get a matrix where each entry is a <code>size_t</code>, or like
+<div class="highlight"><pre><span></span><code><span class="n">DenseMatrix</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">F</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">-&gt;</span><span class="n">getFaceVertexMatrix</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span>
+</code></pre></div>
+to get a matrix where each entry is an <code>int</code>.</p>
+<p>Remember that <code>DenseMatrix&lt;T&gt;</code> is just our nice synonym for <code>Eigen:::DenseMatrix</code>.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">copy</span><span class="p">()</span> <span class="k">const</span></code></summary><p>Construct a copy of the mesh. </p>
 </details>
