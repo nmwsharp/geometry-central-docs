@@ -975,13 +975,18 @@
 <p>As such, the build system uses the following strategies in order to resolve Eigen:</p>
 <ol>
 <li>The target <code>Eigen3::Eigen</code> is already defined somewhere. Use the predefined target over any hints from the user</li>
-<li>Using Eigen in any directory passed via the <code>GC_EIGEN_LOCATION</code> CMake variable (empty by default)</li>
+<li>Using Eigen in any directory passed via the <code>GC_EIGEN_LOCATION</code> CMake cache variable (empty by default, see note below)</li>
 <li>Using Eigen from your system libraries, as resolved via <code>find_package(Eigen3 3.3)</code></li>
 <li>Downloading a copy of Eigen in to the <code>deps/downloads/</code> directory</li>
 </ol>
-<p>For instance, if your project already has a copy of Eigen in its source tree, you can use with (2) by setting <code>GC_EIGEN_LOCATION</code>. If not, many programmers have installed Eigen, which will be found in (3). Finally, as a last resort the build system will download a copy of Eigen as in (4).</p>
+<p>For instance, if your project already has a copy of Eigen in its source tree, you can use it with (2) by setting <code>GC_EIGEN_LOCATION</code>. If not, many programmers have installed Eigen, which will be found in (3). Finally, as a last resort the build system will download a copy of Eigen as in (4).</p>
 <p>geometry-central is known to work with version 3.3 of Eigen; other versions have not been tested (but recent versions probably work).</p>
-<p>Note: once upon a time, Eigen was a submodule of geometry-central. If updating from an old version, you may need to manually delete <code>deps/eigen-git-mirror</code>.</p>
+<details class="note"><summary>setting <code>GC_EIGEN_LOCATION</code></summary><p>The joys of CMake: if you are trying to set <code>GC_EIGEN_LOCATION</code> from some higher-level CMake script, you need to set it as a cache variable, which are different from &lsquo;normal&rsquo; variables in CMake. As an example:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">set</span><span class="p">(</span><span class="s">GC_EIGEN_LOCATION</span> <span class="s2">&quot;full/path/to/eigen&quot;</span> <span class="s">CACHE</span> <span class="s">PATH</span> <span class="s2">&quot;my path&quot;</span><span class="p">)</span>
+<span class="nb">add_subdirectory</span><span class="p">(</span><span class="s">geometry-central</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
 <h2 id="suitesparse">Suitesparse</h2>
 <p><a href="http://faculty.cse.tamu.edu/davis/suitesparse.html">Suitesparse</a> is an optional dependency which improves the performance and robustness of geometry-central&rsquo;s sparse linear solver routines. If Suitesparse is detected at configure time, linear solves will automatically use Suitesparse under the hood, and otherwise they will default to Eigen&rsquo;s solvers. The output of the CMake script will indicate whether or not Suitesparse was found.</p>
 <p>At any time, setting the <code>SUITESPARSE</code> CMake variable to false will stop the build system from using Suitesparse, even if it is availble.</p>
