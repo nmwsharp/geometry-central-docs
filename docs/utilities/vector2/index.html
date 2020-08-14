@@ -1112,6 +1112,8 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 </details>
 <details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">normalizeCutoff</span><span class="p">(</span><span class="kt">double</span> <span class="n">mag</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span></code></summary><p>Returns a unit-norm vector with the same direction. If the input has magnitude less <code>&lt;= mag</code>, the vector is unchanged.</p>
 </details>
+<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">unit</span><span class="p">()</span></code></summary><p>Alias for <code>normalize()</code>. </p>
+</details>
 <details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">rotate</span><span class="p">(</span><span class="kt">double</span> <span class="n">theta</span><span class="p">)</span></code></summary><p>Rotate the vector by angle <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> in the counter-clockwise direction.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">rotate90</span><span class="p">()</span></code></summary><p>Rotate the vector by <span><span class="MathJax_Preview">90^{\circ}</span><script type="math/tex">90^{\circ}</script></span> in the counter-clockwise direction.</p>
@@ -1132,7 +1134,11 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">norm2</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the squared magnitude of the vector.</p>
 <p>Also available as <code>v.norm()</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">unit</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns normalized copy of the vector.</p>
+<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">normalize</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns normalized copy of the vector.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">normalizeCutoff</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">,</span> <span class="kt">double</span> <span class="n">mag</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span></code></summary><p>Returns a normalized copy of the vector. If the input has magnitude less <code>&lt;= mag</code>, the vector is unchanged.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">unit</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Alias for <code>normalize(v)</code>.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">arg</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the argument in the sense of complex arithmetic (i.e., the angle against the <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis).</p>
 <p>Also available as <code>v.arg()</code>.</p>

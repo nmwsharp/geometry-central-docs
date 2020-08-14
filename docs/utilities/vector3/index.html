@@ -1071,6 +1071,8 @@
 </details>
 <details class="func"><summary><code class="highlight"><span class="n">Vector3</span> <span class="n">Vector3</span><span class="o">::</span><span class="n">normalizeCutoff</span><span class="p">(</span><span class="kt">double</span> <span class="n">mag</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span></code></summary><p>Returns a unit-norm vector with the same direction. If the input has magnitude less <code>&lt;= mag</code>, the vector is unchanged.</p>
 </details>
+<details class="func"><summary><code class="highlight"><span class="n">Vector3</span> <span class="n">Vector3</span><span class="o">::</span><span class="n">unit</span><span class="p">()</span></code></summary><p>Alias for <code>normalize()</code>.</p>
+</details>
 <details class="func"><summary><code class="highlight"><span class="n">Vector3</span> <span class="n">Vector3</span><span class="o">::</span><span class="n">rotateAround</span><span class="p">(</span><span class="n">Vector3</span> <span class="n">axis</span><span class="p">,</span> <span class="kt">double</span> <span class="n">theta</span><span class="p">)</span></code></summary><p>Rotate the vector by angle <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> around <code>axis</code> in the right-handed direction. <code>axis</code> need not be a unit vector.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="n">Vector3</span> <span class="n">Vector3</span><span class="o">::</span><span class="n">removeComponent</span><span class="p">(</span><span class="n">Vector3</span> <span class="n">unitDir</span><span class="p">)</span></code></summary><p>Removes any component of this vector in the direction <code>unitDir</code>, making the result orthogonal to <code>unitDir</code>. As the name suggests, <code>unitDir</code> must be a unit vector.</p>
@@ -1089,7 +1091,11 @@
 <details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">norm2</span><span class="p">(</span><span class="n">Vector3</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the squared magnitude of the vector.</p>
 <p>Also available as <code>v.norm2()</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector3</span> <span class="n">unit</span><span class="p">(</span><span class="n">Vector3</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns normalized copy of the vector.</p>
+<details class="func"><summary><code class="highlight"><span class="n">Vector3</span> <span class="n">normalize</span><span class="p">(</span><span class="n">Vector3</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns normalized copy of the vector.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vector3</span> <span class="n">normalizeCutoff</span><span class="p">(</span><span class="n">Vector3</span> <span class="n">v</span><span class="p">,</span> <span class="kt">double</span> <span class="n">mag</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span></code></summary><p>Returns a normalized copy of the vector. If the input has magnitude less <code>&lt;= mag</code>, the vector is unchanged.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vector3</span> <span class="n">unit</span><span class="p">(</span><span class="n">Vector3</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Alias for <code>normalize(v)</code>.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">dot</span><span class="p">(</span><span class="n">Vector3</span> <span class="n">u</span><span class="p">,</span> <span class="n">Vector3</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the dot product between two vectors.</p>
 </details>
