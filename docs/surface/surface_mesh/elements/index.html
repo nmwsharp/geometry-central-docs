@@ -1157,7 +1157,13 @@
 <p><strong>Traversal:</strong></p>
 <details class="func"><summary><code class="highlight"><span class="n">Halfedge</span> <span class="n">Edge</span><span class="o">::</span><span class="n">halfedge</span><span class="p">()</span></code></summary><p>Returns one of the two halfedges incident on this edge. If the edge is a boundary edge, it is guaranteed that the returned edge will be the interior one.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vertex</span> <span class="n">Halfedge</span><span class="o">::</span><span class="n">otherVertex</span><span class="p">(</span><span class="n">Vertex</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Of the two vertices incident on the edge, returns the one which is not <code>v</code>. If both incident vertices are <code>v</code>, returns <code>v</code>.</p>
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span> <span class="n">Edge</span><span class="o">::</span><span class="n">otherVertex</span><span class="p">(</span><span class="n">Vertex</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Of the two vertices incident on the edge, returns the one which is not <code>v</code>. If both incident vertices are <code>v</code>, returns <code>v</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span> <span class="n">Edge</span><span class="o">::</span><span class="n">firstVertex</span><span class="p">()</span></code></summary><p>Returns one of the two vertices incident on the edge. In particular, returns <code>edge.halfedge().tailVertex()</code>.</p>
+<p>See also: <code>Edge::secondVertex()</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span> <span class="n">Edge</span><span class="o">::</span><span class="n">secondVertex</span><span class="p">()</span></code></summary><p>Returns one of the two vertices incident on the edge. In particular, returns <code>edge.halfedge().tipVertex()</code>.</p>
+<p>See also: <code>Edge::firstVertex()</code>.</p>
 </details>
 <p><strong>Utility:</strong></p>
 <details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">Edge</span><span class="o">::</span><span class="n">isBoundary</span><span class="p">()</span></code></summary><p>Returns true if the edge is along the boundary of the mesh. Note that edges which merely touch the boundary at one endpoint are not considered to be boundary edges.</p>

@@ -1137,6 +1137,30 @@ Note that on a boundary edge between vertices <code>i &lt;--&gt; j</code>, this 
 <span class="p">}</span>
 </code></pre></div></p>
 </details>
+<details class="func"><summary><code class="highlight"><span class="n">Edge</span><span class="o">::</span><span class="n">adjacentVertices</span><span class="p">()</span></code></summary><p>Iterate over the (two) vertices which are endpoints of the edge.
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">edge</span><span class="p">.</span><span class="n">adjacentVertices</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Note: unlike most navigators, this routine actually returns a fixed-size array, so you can alternately write things like:
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">verts</span> <span class="o">=</span> <span class="n">edge</span><span class="p">.</span><span class="n">adjacentVertices</span><span class="p">();</span>
+</code></pre></div></p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Edge</span><span class="o">::</span><span class="n">diamondBoundary</span><span class="p">()</span></code></summary><p>Iterate over the four halfedges bounding the diamond with this edge as its center diagonal.</p>
+<p>More precisely, for an interior edge on a manifold triangle mesh, this returns
+<div class="highlight"><pre><span></span><code><span class="n">Halfedge</span> <span class="n">he</span> <span class="o">=</span> <span class="n">edge</span><span class="p">.</span><span class="n">halfedge</span><span class="p">();</span>
+<span class="k">return</span> <span class="p">{</span><span class="n">he</span><span class="p">.</span><span class="n">next</span><span class="p">(),</span> <span class="n">he</span><span class="p">.</span><span class="n">next</span><span class="p">().</span><span class="n">next</span><span class="p">(),</span> <span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">next</span><span class="p">(),</span> <span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">next</span><span class="p">().</span><span class="n">next</span><span class="p">()}</span>
+</code></pre></div></p>
+<p>Example:
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">edge</span><span class="p">.</span><span class="n">diamondBoundary</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Throws an exception if there are non-triangular faces, the edge is on the boundary, or if the edge is nonmanifold.</p>
+<p>Note: unlike most navigators, this routine actually returns a fixed-size array, so you can alternately write things like:
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">Halfedge</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">halfedges</span> <span class="o">=</span> <span class="n">edge</span><span class="p">.</span><span class="n">diamondBoundary</span><span class="p">();</span>
+</code></pre></div></p>
+</details>
 <h3 id="around-a-face">Around a face</h3>
 <details class="func"><summary><code class="highlight"><span class="n">Face</span><span class="o">::</span><span class="n">adjacentVertices</span><span class="p">()</span></code></summary><p>Iterate over the vertices adjacent to a face.
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">face</span><span class="p">.</span><span class="n">adjacentVertices</span><span class="p">())</span> <span class="p">{</span>
