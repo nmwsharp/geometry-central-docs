@@ -1017,6 +1017,7 @@
 <p>TODO document</p>
 <h2 id="heat-method-for-distance">Heat Method for Distance</h2>
 <p>These routines implement the <a href="http://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/paper.pdf">Heat Method for Geodesic Distance</a>. This algorithm uses short time heat flow to compute distance on surfaces. Because the main burden is simply solving linear systems of equations, it tends to be faster than polyhedral schemes, especially when computing distance multiple times on the same surface.  In the computational geometry sense, this method is an approximation, as the result is not precisely equal to the polyhedral distance on the surface; nonetheless it is fast and well-suited for many applications.</p>
+<p>This class supports any (possibly-nonmanifold) triangle mesh as input, and requires only intrinsic geometry (aka edge lengths) to function. Furthermore, it can optionally use robust operators internally to improve performance on low-quality meshes.</p>
 <p><code>#include "geometrycentral/surface/heat_method_distance.h"</code></p>
 <h3 id="single-solves">Single Solves</h3>
 <p>A one-off utility function is provided which computes the distance from a source vertex using the heat method. Repeated solves or more general source data should use the stateful version below.</p>
@@ -1036,10 +1037,10 @@
 <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">distToSource</span> <span class="o">=</span> <span class="n">heatMethodDistance</span><span class="p">(</span><span class="o">*</span><span class="n">geometry</span><span class="p">,</span> <span class="n">sourceVert</span><span class="p">);</span>
 <span class="cm">/* do something useful */</span>
 </code></pre></div></p>
-<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">heatMethodDistance</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">Vertex</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Compute the distance from the source using the heat method.</p>
+<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">heatMethodDistance</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">Vertex</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Compute the distance from the source using the heat method. See the stateful class below for further options.</p>
 </details>
 <h3 id="repeated-solves">Repeated Solves</h3>
-<p>The stateful class <code>HeatMethodDistanceSolver</code> does precomputation when constructed, then allows many distance solves from different source locations to be performed efficiently.</p>
+<p>The stateful class <code>HeatMethodDistanceSolver</code> does precomputation when constructed, then allows many distance solves from different source locations to be performed efficiently. This class also exposes options, like changing the internal short-time parameter, or using a robust operators.</p>
 <p>The <code>computeDistance()</code> method in <code>HeatMethodDistanceSolver</code> can also take <code>SurfacePoint</code>(s) as the source location(s). A <code>SurfacePoint</code> (see <a href="../../utilities/surface_point/">here</a>) is a location on a surface, which may be a vertex, a point along an edge, or a point inside a face.</p>
 <p>Example:
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/heat_method_distance.h&quot;</span><span class="cp"></span>
@@ -1051,7 +1052,10 @@
 <span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">loadMesh</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
 
 <span class="c1">// Create the Heat Method solver</span>
-<span class="n">HeatMethodDistanceSolver</span> <span class="nf">heatSolver</span><span class="p">(</span><span class="n">geometry</span><span class="p">);</span>
+<span class="n">HeatMethodDistanceSolver</span> <span class="nf">heatSolver</span><span class="p">(</span><span class="o">*</span><span class="n">geometry</span><span class="p">);</span>
+
+<span class="c1">// Alternately, set useRobustLaplacian=true to get a robustified version</span>
+<span class="c1">// HeatMethodDistanceSolver heatSolver(*geometry, 1.0, true);</span>
 
 <span class="c1">// Some vertices as source set</span>
 <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;</span> <span class="n">sourceVerts</span> <span class="o">=</span> <span class="cm">/* some interesting vertices */</span>
@@ -1069,13 +1073,16 @@
 <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">distToSource</span> <span class="o">=</span> <span class="n">heatSolver</span><span class="p">.</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">targetP</span><span class="p">);</span>
 <span class="cm">/* do something useful */</span>
 </code></pre></div></p>
-<details class="func"><summary><code class="highlight"><span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">HeatMethodDistanceSolver</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="kt">double</span> <span class="n">tCoef</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code></summary><p>Create a new solver to compute geodesic distance using the heat method. All precomputation work is performed immediately at construction time.</p>
+<details class="func"><summary><code class="highlight"><span class="n">HeatMethodDistanceSolver</span><span class="o">::</span><span class="n">HeatMethodDistanceSolver</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="kt">double</span> <span class="n">tCoef</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">useRobustLaplacian</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span></code></summary><p>Create a new solver to compute geodesic distance using the heat method. All precomputation work is performed immediately at construction time.</p>
 <ul>
 <li>
 <p><code>geom</code> is the geometry (and hence mesh) on which to compute. Note that nearly any geometry object (<code>VertexPositionGeometry</code>, etc) can be passed here.</p>
 </li>
 <li>
 <p><code>tCoef</code> is the time to use for short time heat flow, as a factor <code>m * h^2</code>, where <code>h</code> is the mean edge length. The default value of <code>1.0</code> is almost always sufficient.</p>
+</li>
+<li>
+<p><code>useRobustLaplacian</code> is true, the solver will internally use a robust intrinsic Laplacian, including mollification &amp; tufting for nonmanifold inputs. See &ldquo;A Laplacian for Nonmanifold Triangle Meshes&rdquo; [Sharp &amp; Crane 2020 @ SGP] for algorithmic details and citation.</p>
 </li>
 </ul>
 <p>Algorithm options (like <code>tCoef</code>) cannot be changed after construction; create a new solver object with the new settings.</p>
