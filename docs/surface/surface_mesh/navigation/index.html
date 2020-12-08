@@ -1055,6 +1055,14 @@ Note that on a boundary edge between vertices <code>i &lt;--&gt; j</code>, this 
 <span class="p">}</span>
 </code></pre></div></p>
 </details>
+<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">boundaryLoops</span><span class="p">()</span></code></summary><p>Iterate over the boundary loops for a mesh.</p>
+<p>Remember that only <code>ManifoldSurfaceMesh</code>s have well-defined boundary loops.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">BoundaryLoop</span> <span class="nl">bl</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">boundaryLoops</span><span class="p">())</span> <span class="p">{</span>
+  <span class="c1">// do science here</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</details>
 <h2 id="neighborhood-iterators">Neighborhood Iterators</h2>
 <p>Use these routines to iterate over the neighbors of a mesh element.</p>
 <details class="note"><summary>Note: neighborhoods on <span><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>-complexes</summary><p>The iterators in this section may have unexpected behavior in the advanced case of a <span><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>-complex, when there are (e.g.) self-edges, or multiple edges between a pair of vertices. Essentially, these iterators always naively traverse the local neighborhood, even if that neighborhood might include duplicate elements. </p>

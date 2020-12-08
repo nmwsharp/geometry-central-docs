@@ -660,6 +660,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vertex-mean-curvature" class="md-nav__link">
+    vertex mean curvature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertex-principal-curvatures" class="md-nav__link">
+    vertex principal curvatures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#face-gaussian-curvature" class="md-nav__link">
     face Gaussian curvature
   </a>
@@ -1322,6 +1336,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vertex-mean-curvature" class="md-nav__link">
+    vertex mean curvature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertex-principal-curvatures" class="md-nav__link">
+    vertex principal curvatures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#face-gaussian-curvature" class="md-nav__link">
     face Gaussian curvature
   </a>
@@ -1668,6 +1696,11 @@
 <li><strong>member:</strong> <code>VertexData&lt;double&gt; IntrinsicGeometryInterface::vertexDualAreas</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexDualAreas()</code></li>
 </ul>
+<p>The inline immediate method can be used to compute this value directly from input data for a single element:</p>
+<ul>
+<li><strong>immediate:</strong> <code>double EdgeLengthGeometry::vertexDualArea(Vertex v)</code></li>
+<li><strong>immediate:</strong> <code>double VertexPositionGeometry::vertexDualArea(Vertex v)</code></li>
+</ul>
 </details>
 <details class="func"><summary>corner angles</summary><h5 id="corner-angles">corner angles</h5>
 <p>The angle between incident edges at each corner of a mesh.</p>
@@ -1698,6 +1731,7 @@
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireCornerScaledAngles()</code></li>
 </ul>
 </details>
+<p><img alt="vertex scalar curvatures" src="/media/vertex_scalar_curvatures.jpg" /></p>
 <details class="func"><summary>vertex Gaussian curvature</summary><h5 id="vertex-gaussian-curvature">vertex Gaussian curvature</h5>
 <p>The <a href="https://en.wikipedia.org/wiki/Gaussian_curvature"><em>Gaussian curvature</em></a> <span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> at a vertex, defined via the angle defect <span><span class="MathJax_Preview">K_v = 2 \pi - \sum \theta_i</span><script type="math/tex">K_v = 2 \pi - \sum \theta_i</script></span>, where <span><span class="MathJax_Preview">\sum \theta_i</span><script type="math/tex">\sum \theta_i</script></span> is the <code>vertexAngleSum</code> as above.</p>
 <p>Should be interpreted as an <em>integrated</em> Gaussian curvature, giving the total curvature in the neighborhood of the vertex. On a closed surface, the <a href="https://en.wikipedia.org/wiki/Gauss%E2%80%93Bonnet_theorem">Gauss-Bonnet theorem</a> tells us that the sum of these Gaussian curvatures will be a topological constant given by <span><span class="MathJax_Preview">\sum_v K_v = 2 \pi \chi</span><script type="math/tex">\sum_v K_v = 2 \pi \chi</script></span>, where <span><span class="MathJax_Preview">\chi</span><script type="math/tex">\chi</script></span> is the <a href="../../surface_mesh/basics/#properties">Euler characteristic</a> of the surface. On surfaces with boundary, the geodesic curvature of the boundary factors in.</p>
@@ -1705,6 +1739,44 @@
 <ul>
 <li><strong>member:</strong> <code>VertexData&lt;double&gt; IntrinsicGeometryInterface::vertexGaussianCurvatures</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexGaussianCurvatures()</code></li>
+</ul>
+<p>The inline immediate method can be used to compute this value directly from input data for a single element:</p>
+<ul>
+<li><strong>immediate:</strong> <code>double VertexPositionGeometry::vertexGaussianCurvature(Vertex v)</code></li>
+<li><strong>immediate:</strong> <code>double EdgeLengthGeometry::vertexGaussianCurvature(Vertex v)</code></li>
+</ul>
+</details>
+<details class="func"><summary>vertex mean curvature</summary><h5 id="vertex-mean-curvature">vertex mean curvature</h5>
+<p>The <a href="https://en.wikipedia.org/wiki/Mean_curvature"><em>mean curvature</em></a> <span><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> at a vertex <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>, defined via the Steiner approximation <span><span class="MathJax_Preview">H_i = \frac{1}{4}\sum_{ij} \theta_{ij} \ell_{ij}</span><script type="math/tex">H_i = \frac{1}{4}\sum_{ij} \theta_{ij} \ell_{ij}</script></span>, where <span><span class="MathJax_Preview">\theta_{ij}</span><script type="math/tex">\theta_{ij}</script></span> is the <code>edgeDihedralAngle</code> and <span><span class="MathJax_Preview">\ell_{ij}</span><script type="math/tex">\ell_{ij}</script></span> is the <code>edgeLength</code> as defined above (and the sum is taken over halfedges extending from <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>).</p>
+<p>Should be interpreted as an <em>integrated</em> mean curvature (units: <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>), giving the total curvature in the neighborhood of the vertex.  A corresponding <em>pointwise</em> mean curvature (units: <span><span class="MathJax_Preview">1/m</span><script type="math/tex">1/m</script></span>) can be obtained by dividing by the <code>vertexDualArea</code>.</p>
+<p>Only valid on triangular meshes.</p>
+<ul>
+<li><strong>member:</strong> <code>VertexData&lt;double&gt; IntrinsicGeometryInterface::vertexMeanCurvatures</code></li>
+<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexMeanCurvatures()</code></li>
+</ul>
+<p>The inline immediate method can be used to compute this value directly from input data for a single element:</p>
+<ul>
+<li><strong>immediate:</strong> <code>double VertexPositionGeometry::vertexMeanCurvature(Vertex v)</code></li>
+</ul>
+</details>
+<details class="func"><summary>vertex principal curvature</summary><h5 id="vertex-principal-curvatures">vertex principal curvatures</h5>
+<p>The <a href="https://en.wikipedia.org/wiki/Principal_curvature"><em>principal curvatures</em></a> <span><span class="MathJax_Preview">\kappa_1,\kappa_2</span><script type="math/tex">\kappa_1,\kappa_2</script></span> at a vertex <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>, defined by the relationships <span><span class="MathJax_Preview">K = \kappa_1\kappa_2</span><script type="math/tex">K = \kappa_1\kappa_2</script></span> and <span><span class="MathJax_Preview">H = (\kappa_1+\kappa_2)/2</span><script type="math/tex">H = (\kappa_1+\kappa_2)/2</script></span>, where <span><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> and <span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> are the pointwise mean and Gaussian curvatures (resp.).  These values are signed, and <span><span class="MathJax_Preview">\kappa_1</span><script type="math/tex">\kappa_1</script></span> is always the smaller curvature <em>in value</em>, but not necessarily the smaller one <em>in magnitude</em> (e.g., <span><span class="MathJax_Preview">\kappa_1</span><script type="math/tex">\kappa_1</script></span> could be a very large negative value, and <span><span class="MathJax_Preview">\kappa_2</span><script type="math/tex">\kappa_2</script></span> could be a very small positive value).</p>
+<p>These quantities can be interpreted as <em>pointwise</em> quantities (units: <span><span class="MathJax_Preview">1/m</span><script type="math/tex">1/m</script></span>), approximating the maximum and minimum bending the neighborhood of the vertex.</p>
+<p>Only valid on triangular meshes.</p>
+<ul>
+<li><strong>member:</strong> <code>VertexData&lt;double&gt; IntrinsicGeometryInterface::vertexMinPrincipalCurvatures</code></li>
+<li>
+<p><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexMinPrincipalCurvatures()</code></p>
+</li>
+<li>
+<p><strong>member:</strong> <code>VertexData&lt;double&gt; IntrinsicGeometryInterface::vertexMaxPrincipalCurvatures</code></p>
+</li>
+<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexMaxPrincipalCurvatures()</code></li>
+</ul>
+<p>The inline immediate methods can be used to compute this value directly from input data for a single element:</p>
+<ul>
+<li><strong>immediate:</strong> <code>double VertexPositionGeometry::vertexMinPrincipalCurvature(Vertex v)</code></li>
+<li><strong>immediate:</strong> <code>double VertexPositionGeometry::vertexMaxPrincipalCurvature(Vertex v)</code></li>
 </ul>
 </details>
 <details class="func"><summary>face Gaussian curvature</summary><h5 id="face-gaussian-curvature">face Gaussian curvature</h5>
@@ -1886,6 +1958,10 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <ul>
 <li><strong>member:</strong> <code>EdgeData&lt;double&gt; ExtrinsicGeometryInterface::edgeDihedralAngles</code></li>
 <li><strong>require:</strong> <code>void ExtrinsicGeometryInterface::requireEdgeDihedralAngles()</code></li>
+</ul>
+<p>The inline immediate method can be used to compute this value directly from input data for a single element:</p>
+<ul>
+<li><strong>immediate:</strong> <code>double VertexPositionGeometry::edgeDihedralAngle(Edge e)</code></li>
 </ul>
 </details>
 <details class="func"><summary>vertex principal curvature direction</summary><h5 id="vertex-principal-curvature-direction">vertex principal curvature direction</h5>
