@@ -9,6 +9,11 @@ pip install mkdocs mkdocs-material pygments
 ```
 
 To build and deploy:
+
+`sh build_commit_push.sh`
+
+or, manually run:
+
 ```
 python3 -m mkdocs build --config-file geometry-central/docs/mkdocs.yml --site-dir ../../docs
 git add docs/
