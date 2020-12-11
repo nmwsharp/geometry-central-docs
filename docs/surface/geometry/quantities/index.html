@@ -653,6 +653,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#halfedge-cotan-weight" class="md-nav__link">
+    halfedge cotan weight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cotan-weight" class="md-nav__link">
+    edge cotan weight
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curvatures" class="md-nav__link">
+    Curvatures
+  </a>
+  
+    <nav class="md-nav" aria-label="Curvatures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#vertex-gaussian-curvature" class="md-nav__link">
     vertex Gaussian curvature
   </a>
@@ -676,20 +703,6 @@
           <li class="md-nav__item">
   <a href="#face-gaussian-curvature" class="md-nav__link">
     face Gaussian curvature
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#halfedge-cotan-weight" class="md-nav__link">
-    halfedge cotan weight
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edge-cotan-weight" class="md-nav__link">
-    edge cotan weight
   </a>
   
 </li>
@@ -1056,6 +1069,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/flip_geodesics/" title="Flip Geodesics" class="md-nav__link">
+      Flip Geodesics
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1329,6 +1354,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#halfedge-cotan-weight" class="md-nav__link">
+    halfedge cotan weight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cotan-weight" class="md-nav__link">
+    edge cotan weight
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curvatures" class="md-nav__link">
+    Curvatures
+  </a>
+  
+    <nav class="md-nav" aria-label="Curvatures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#vertex-gaussian-curvature" class="md-nav__link">
     vertex Gaussian curvature
   </a>
@@ -1352,20 +1404,6 @@
           <li class="md-nav__item">
   <a href="#face-gaussian-curvature" class="md-nav__link">
     face Gaussian curvature
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#halfedge-cotan-weight" class="md-nav__link">
-    halfedge cotan weight
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edge-cotan-weight" class="md-nav__link">
-    edge cotan weight
   </a>
   
 </li>
@@ -1731,6 +1769,35 @@
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireCornerScaledAngles()</code></li>
 </ul>
 </details>
+<details class="func"><summary>halfedge cotan weight</summary><h5 id="halfedge-cotan-weight">halfedge cotan weight</h5>
+<p>The &ldquo;cotangent weight&rdquo; of an interior halfedge, defined as <span><span class="MathJax_Preview">\frac{1}{2} \cot(\theta)</span><script type="math/tex">\frac{1}{2} \cot(\theta)</script></span>, where <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> is the corner angle opposite the halfedge. Defined to be <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> for exterior halfedges.</p>
+<p>Can be computed directly from edge lengths, or more efficiently in an embedded triangle via <span><span class="MathJax_Preview">\cot(\theta) = \frac{u \cdot v}{||u \times v||}</span><script type="math/tex">\cot(\theta) = \frac{u \cdot v}{||u \times v||}</script></span>, where <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> and <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> are the edge vectors emanating from the opposite corner.</p>
+<p>Only valid on triangular meshes.</p>
+<ul>
+<li><strong>member:</strong> <code>HalfedgeData&lt;double&gt; IntrinsicGeometryInterface::halfedgeCotanWeights</code></li>
+<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireHalfedgeCotanWeights()</code></li>
+</ul>
+<p>The inline immediate method can alternately be used to compute this value directly from input data for a single element:</p>
+<ul>
+<li><strong>immediate:</strong> <code>double EdgeLengthGeometry::halfedgeCotanWeight(Halfedge he)</code></li>
+<li><strong>immediate:</strong> <code>double VertexPositionGeometry::halfedgeCotanWeight(Halfedge he)</code></li>
+</ul>
+</details>
+<details class="func"><summary>edge cotan weight</summary><h5 id="edge-cotan-weight">edge cotan weight</h5>
+<p>The &ldquo;cotangent weight&rdquo; of an edge, defined as the sum of halfedge cotan weights for incident interior halfedges.</p>
+<p>Only valid on triangular meshes.</p>
+<ul>
+<li><strong>member:</strong> <code>EdgeData&lt;double&gt; IntrinsicGeometryInterface::edgeCotanWeights</code></li>
+<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireEdgeCotanWeights()</code></li>
+</ul>
+<p>The inline immediate method can alternately be used to compute this value directly from input data for a single element:</p>
+<ul>
+<li><strong>immediate:</strong> <code>double EdgeLengthGeometry::edgeCotanWeight(Edge e)</code></li>
+<li><strong>immediate:</strong> <code>double VertexPositionGeometry::edgeCotanWeight(Edge e)</code></li>
+</ul>
+</details>
+<h2 id="curvatures">Curvatures</h2>
+<p>Different curvatures are available depending on whether geometry is intrinsic or extrinsic.  In particular, Gaussian curvature is available for any <code>IntrinsicGeometryInterface</code> (such as <code>EdgeLengthGeometry</code>), which is the base class of all other geometry objects, whereas mean and principal curvatures are available only from an <code>ExtrinsicGeometryInterface</code> (such as <code>VertexPositionGeometry</code>).  All curvatures are rigid motion invariant.  Importantly, Gaussian and mean curvatures correspond to the <em>integral</em> of curvature over a local neighborhood, and are hence scale invariant&mdash;to get the pointwise curvatures you should divide by area (see details below).  Principal curvatures are pointwise values.  See also <code>vertexPrincipalCurvatureDirections</code>, which provides curvature directions (rather than curvature magnitudes).  See <a href="vertexPrincipalCurvatureDirections">this video</a> for further background on discrete curvature.</p>
 <p><img alt="vertex scalar curvatures" src="/media/vertex_scalar_curvatures.jpg" /></p>
 <details class="func"><summary>vertex Gaussian curvature</summary><h5 id="vertex-gaussian-curvature">vertex Gaussian curvature</h5>
 <p>The <a href="https://en.wikipedia.org/wiki/Gaussian_curvature"><em>Gaussian curvature</em></a> <span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> at a vertex, defined via the angle defect <span><span class="MathJax_Preview">K_v = 2 \pi - \sum \theta_i</span><script type="math/tex">K_v = 2 \pi - \sum \theta_i</script></span>, where <span><span class="MathJax_Preview">\sum \theta_i</span><script type="math/tex">\sum \theta_i</script></span> is the <code>vertexAngleSum</code> as above.</p>
@@ -1787,33 +1854,6 @@
 <ul>
 <li><strong>member:</strong> <code>FaceData&lt;double&gt; IntrinsicGeometryInterface::faceGaussianCurvatures</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireFaceGaussianCurvatures()</code></li>
-</ul>
-</details>
-<details class="func"><summary>halfedge cotan weight</summary><h5 id="halfedge-cotan-weight">halfedge cotan weight</h5>
-<p>The &ldquo;cotangent weight&rdquo; of an interior halfedge, defined as <span><span class="MathJax_Preview">\frac{1}{2} \cot(\theta)</span><script type="math/tex">\frac{1}{2} \cot(\theta)</script></span>, where <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> is the corner angle opposite the halfedge. Defined to be <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> for exterior halfedges.</p>
-<p>Can be computed directly from edge lengths, or more efficiently in an embedded triangle via <span><span class="MathJax_Preview">\cot(\theta) = \frac{u \cdot v}{||u \times v||}</span><script type="math/tex">\cot(\theta) = \frac{u \cdot v}{||u \times v||}</script></span>, where <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> and <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> are the edge vectors emanating from the opposite corner.</p>
-<p>Only valid on triangular meshes.</p>
-<ul>
-<li><strong>member:</strong> <code>HalfedgeData&lt;double&gt; IntrinsicGeometryInterface::halfedgeCotanWeights</code></li>
-<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireHalfedgeCotanWeights()</code></li>
-</ul>
-<p>The inline immediate method can alternately be used to compute this value directly from input data for a single element:</p>
-<ul>
-<li><strong>immediate:</strong> <code>double EdgeLengthGeometry::halfedgeCotanWeight(Halfedge he)</code></li>
-<li><strong>immediate:</strong> <code>double VertexPositionGeometry::halfedgeCotanWeight(Halfedge he)</code></li>
-</ul>
-</details>
-<details class="func"><summary>edge cotan weight</summary><h5 id="edge-cotan-weight">edge cotan weight</h5>
-<p>The &ldquo;cotangent weight&rdquo; of an edge, defined as the sum of halfedge cotan weights for incident interior halfedges.</p>
-<p>Only valid on triangular meshes.</p>
-<ul>
-<li><strong>member:</strong> <code>EdgeData&lt;double&gt; IntrinsicGeometryInterface::edgeCotanWeights</code></li>
-<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireEdgeCotanWeights()</code></li>
-</ul>
-<p>The inline immediate method can alternately be used to compute this value directly from input data for a single element:</p>
-<ul>
-<li><strong>immediate:</strong> <code>double EdgeLengthGeometry::edgeCotanWeight(Edge e)</code></li>
-<li><strong>immediate:</strong> <code>double VertexPositionGeometry::edgeCotanWeight(Edge e)</code></li>
 </ul>
 </details>
 <h2 id="tangent-vectors-and-transport">Tangent vectors and transport</h2>
