@@ -1019,12 +1019,13 @@
 </div>
 <h2 id="in-place-modifications">In-place modifications</h2>
 <p>These routines modify a mesh, but do not require inserting or deleting elements.</p>
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">flip</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">)</span></code></summary><p>Flip an edge by rotating counter-clockwise. </p>
+<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">flip</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">preventSelfEdges</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span></code></summary><p>Flip an edge by rotating counter-clockwise.</p>
 <p>An edge cannot be combinatorially flipped if it is:</p>
 <ul>
 <li>a boundary edge</li>
 <li>incident on a degree-1 vertex.</li>
 </ul>
+<p>If <code>true</code> is passed as the optional argument <code>preventSelfEdges</code>, then the edge will also not be flipped if it would result in both endpoints of the edge becoming the same vertex. </p>
 <p><strong>Return:</strong> true if the edge was actually flipped </p>
 </details>
 <h2 id="insertions">Insertions</h2>
@@ -1059,9 +1060,9 @@ Vertex insertVertex(Face f);</p>
 </details>
 <h2 id="deletions">Deletions</h2>
 <p>These routines delete mesh elements. Elements (like <code>Vertex</code>) and containers (like <code>VertexData&lt;&gt;</code>) will remain valid through deletions. However, performing any deletion will cause the mesh to no longer be <a href="#compressed-mode">compressed</a>.</p>
-<details class="func"><summary><code class="highlight"><span class="n">Vertex</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">collapseEdge</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">)</span></code></summary><p>// Collapse an edge. Returns the vertex adjacent to that edge which still exists. Returns Vertex() if not
+<details class="func"><summary><code class="highlight"><span class="n">Vertex</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">collapseEdgeTriangular</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">)</span></code></summary><p>// Collapse an edge. Returns the vertex adjacent to that edge which still exists. Returns Vertex() if not
 // collapsible.
-Vertex collapseEdge(Edge e);</p>
+Vertex collapseEdgeTriangular(Edge e);</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">ManifoldSurfaceMesh</span><span class="o">::</span><span class="n">removeFaceAlongBoundary</span><span class="p">(</span><span class="n">Face</span> <span class="n">f</span><span class="p">)</span></code></summary><p>// Remove a face which is adjacent to the boundary of the mesh (along with its edge on the boundary).
 // Face must have exactly one boundary edge.
