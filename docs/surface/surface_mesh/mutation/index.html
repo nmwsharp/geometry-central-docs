@@ -992,13 +992,13 @@
 <p>Many of these operations could be defined for a general <code>SurfaceMesh</code>, but are currently only implemented on the <code>ManifoldSurfaceMesh</code>. Future releases of geometry-central will gradually port them over.</p>
 </div>
 <h3 id="compressed-mode">Compressed mode</h3>
-<p>Internally, the halfedge mesh is represented by dense arrays of indices which are lazily expanded (see <a href="../internals/">interals</a> for details). To support fast deletion operations, we simply mark elements as deleted, without re-packing the index space. We say that the mesh is <em>compressed</em> if the index space is dense and there are no such marked elements. When a mesh is not compressed, the <code>index</code> of a mesh element no longer serves as a proper enumeration from <code>[0,N)</code>, but merely as a unique ID.</p>
+<p>Internally, the halfedge mesh is represented by dense arrays of indices which are lazily expanded (see <a href="../internals/">interals</a> for details). To support fast deletion operations, we simply mark elements as deleted, without re-packing the index space. We say that the mesh is <em>compressed</em> if the index space is dense, with no such marked elements. When a mesh is not compressed, the <code>index</code> of a mesh element no longer serves as a proper enumeration from <code>[0,N)</code>, but merely as a unique ID.</p>
 <p>There are two consequences to being non-compressed:</p>
 <ul>
 <li>Some operations cannot be implemented efficiently/correctly (e.g., random access of the i&rsquo;th vertex), as noted in the documentation. Calling such function will generally throw an error in Debug mode, but may fail silently in Release.</li>
 <li>Storage space is wasted by deleted elements.</li>
 </ul>
-<p>All meshes are compressed after construction, and only become non-compressed if the user performs a deletion operation. The <code>compress()</code> function can be called to re-index the elements of the mesh as a proper enumeration from <code>[0,N)</code>.</p>
+<p>All meshes are compressed after construction, and only become non-compressed if the user performs an insertion or deletion operation. The <code>compress()</code> function can be called to re-index the elements of the mesh as a proper enumeration from <code>[0,N)</code>.</p>
 <p>The <code>compress()</code> function invalidates pointers, and incurs an update of existing containers. As such, it is recommended to be called sporadically, after a sequence of operations is completed.</p>
 <details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">isCompressed</span><span class="p">()</span></code></summary><p>Returns true if the mesh is compressed.</p>
 </details>
