@@ -1951,8 +1951,8 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <p>This is the <em>weak</em> Laplace operator, if we use it to evalutae <span><span class="MathJax_Preview">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</span><script type="math/tex">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</script></span>, <span><span class="MathJax_Preview">\mathsf{x}</span><script type="math/tex">\mathsf{x}</script></span> should hold <em>pointwise</em> quantities at vertices, and the result <span><span class="MathJax_Preview">\mathsf{y}</span><script type="math/tex">\mathsf{y}</script></span> will contain <em>integrated</em> values of the result in the neighborhood of each vertex. If used to solve a Poisson problem, a mass matrix (such as the lumped or Galerkin mass matrices below) are likely necessary on the right hand side.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
-<li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::laplacian</code></li>
-<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireLaplacian()</code></li>
+<li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::cotanLaplacian</code></li>
+<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireCotanLaplacian()</code></li>
 </ul>
 </details>
 <details class="func"><summary>vertex lumped mass matrix</summary><h5 id="vertex-lumped-mass-matrix">vertex lumped mass matrix</h5>
@@ -1979,8 +1979,8 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <p>Given a complex vector <span><span class="MathJax_Preview">\mathsf{x}</span><script type="math/tex">\mathsf{x}</script></span> of tangent vectors at vertices, apply the operator by multiplying <span><span class="MathJax_Preview">\mathsf{L} * \mathsf{x}</span><script type="math/tex">\mathsf{L} * \mathsf{x}</script></span>.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
-<li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::vertexGalerkinMassMatrix</code></li>
-<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexGalerkinMassMatrix()</code></li>
+<li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::vertexConnectionLaplacian</code></li>
+<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexConnectionLaplacian()</code></li>
 </ul>
 </details>
 <details class="func"><summary>DEC operators</summary><h5 id="dec-operators">DEC operators</h5>
