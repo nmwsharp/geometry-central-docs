@@ -1107,7 +1107,7 @@ using a procedure described in &ldquo;Modeling on triangulations with geodesic c
 <ul>
 <li><code>nRounds</code> specifies the number of subdivision rounds to perform; the curve converges to an exact geodesics as <code>nRounds</code> increases. Setting <code>nRounds=3</code> is often a good initial choice.</li>
 </ul>
-<p>Note that the control points of the curve should be <em>marked vertices</em>, as described in the construction section.</p>
+<p>Note that the control points of the curve should be <em>marked vertices</em>, as described in the construction section. Additionally, this function should be applied to a network consisting of a <em>single path</em>, not distinct paths between multiple control points.  Calling the factory method <code>FlipEdgeNetwork::constructFromPiecewiseDijkstraPath(mesh, geom, /* vector of constrol vertices */, false, true)</code> above will construct a path ready for Bézier subdivision.</p>
 <p>The algorithm used here is essentially the one described in &ldquo;Modeling on triangulations with geodesic curves&rdquo; by Morera et al. (2008), but using flip-based geodesics to straighten paths.</p>
 </details>
 <figure>
