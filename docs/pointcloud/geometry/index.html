@@ -1,0 +1,1532 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.14">
+    
+    
+      
+        <title>Geometry - Geometry Central</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d3202873.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ff0a5ce4.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ff6e42">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700%7CInconsolata&display=fallback">
+        <style>body,input{font-family:"Merriweather",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Inconsolata",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../extras.css">
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-58346315-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#point-position-geometry" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Geometry Central" class="md-header-nav__button md-logo" aria-label="Geometry Central">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Geometry Central
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Geometry
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/nmwsharp/geometry-central/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nmwsharp/geometry-central
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Geometry Central" class="md-nav__button md-logo" aria-label="Geometry Central">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+
+    </a>
+    Geometry Central
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/nmwsharp/geometry-central/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nmwsharp/geometry-central
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Build
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Build" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Build
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build/versions/" title="Versions" class="md-nav__link">
+      Versions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build/building/" title="Building" class="md-nav__link">
+      Building
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build/dependencies/" title="Dependencies" class="md-nav__link">
+      Dependencies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build/tests/" title="Tests" class="md-nav__link">
+      Tests
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Tutorials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/load_mesh/" title="Load & navigate a mesh" class="md-nav__link">
+      Load & navigate a mesh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/basic_mutation/" title="Basic Mutation" class="md-nav__link">
+      Basic Mutation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/direction_fields/" title="Direction fields" class="md-nav__link">
+      Direction fields
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Surface
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Surface" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Surface
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Surface Mesh
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Surface Mesh" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        Surface Mesh
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/surface_mesh/basics/" title="Basics" class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/surface_mesh/elements/" title="Elements" class="md-nav__link">
+      Elements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/surface_mesh/boundaries/" title="Boundaries" class="md-nav__link">
+      Boundaries
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/surface_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
+      Navigation and Iteration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/surface_mesh/containers/" title="Containers" class="md-nav__link">
+      Containers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/surface_mesh/mutation/" title="Mutation" class="md-nav__link">
+      Mutation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/surface_mesh/delta_complex/" title="Delta Complexes" class="md-nav__link">
+      Delta Complexes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/surface_mesh/internals/" title="Internals" class="md-nav__link">
+      Internals
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Geometry
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Geometry" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        Geometry
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/geometry/geometry/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/geometry/quantities/" title="Quantities" class="md-nav__link">
+      Quantities
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Utilities
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Utilities" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/utilities/simple_polygon_mesh/" title="Simple Polygon Mesh" class="md-nav__link">
+      Simple Polygon Mesh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/utilities/io/" title="I/O" class="md-nav__link">
+      I/O
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/utilities/surface_point/" title="Surface Point" class="md-nav__link">
+      Surface Point
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Algorithms
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        Algorithms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/direction_fields/" title="Direction Fields" class="md-nav__link">
+      Direction Fields
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
+      Geodesic Distance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
+      Vector Heat Method
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
+      Surface Centers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
+      Mesh Graph Algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/intrinsic_triangulations/" title="Intrinsic Triangulations" class="md-nav__link">
+      Intrinsic Triangulations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/robust_geometry/" title="Robust Geometry" class="md-nav__link">
+      Robust Geometry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../surface/algorithms/flip_geodesics/" title="Flip Geodesics" class="md-nav__link">
+      Flip Geodesics
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Point Cloud
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Point Cloud" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Point Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basics/" title="Basics" class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Geometry
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Geometry" class="md-nav__link md-nav__link--active">
+      Geometry
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#point-position-geometry" class="md-nav__link">
+    Point Position Geometry
+  </a>
+  
+    <nav class="md-nav" aria-label="Point Position Geometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#construction" class="md-nav__link">
+    Construction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantities" class="md-nav__link">
+    Quantities
+  </a>
+  
+    <nav class="md-nav" aria-label="Quantities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neighbors" class="md-nav__link">
+    neighbors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normals" class="md-nav__link">
+    normals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangent-basis" class="md-nav__link">
+    tangent basis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangent-coordinates" class="md-nav__link">
+    tangent coordinates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangent-transport" class="md-nav__link">
+    tangent transport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tufted-triangulation" class="md-nav__link">
+    tufted triangulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laplacian" class="md-nav__link">
+    Laplacian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-laplacian" class="md-nav__link">
+    connection Laplacian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradient" class="md-nav__link">
+    gradient
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point-position-normal-geometry" class="md-nav__link">
+    Point Position &amp; Normal Geometry
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point-position-tangent-basis-geometry" class="md-nav__link">
+    Point Position &amp; Tangent Basis Geometry
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      Algorithms
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        <span class="md-nav__icon md-icon"></span>
+        Algorithms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../algorithms/heat_solver/" title="Heat distance & transport" class="md-nav__link">
+      Heat distance & transport
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+    
+    <label class="md-nav__link" for="nav-5-4">
+      Utilities
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Utilities" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-4">
+        <span class="md-nav__icon md-icon"></span>
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utilities/io/" title="IO" class="md-nav__link">
+      IO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utilities/sampling/" title="Sampling" class="md-nav__link">
+      Sampling
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Numerical
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Numerical" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Numerical
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../numerical/matrix_types/" title="Matrix Types" class="md-nav__link">
+      Matrix Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../numerical/linear_algebra_utilities/" title="Linear Algebra Utilities" class="md-nav__link">
+      Linear Algebra Utilities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../numerical/linear_solvers/" title="Linear Solvers" class="md-nav__link">
+      Linear Solvers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Utilities
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Utilities" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utilities/miscellaneous/" title="Miscellaneous" class="md-nav__link">
+      Miscellaneous
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utilities/vector2/" title="Vector2" class="md-nav__link">
+      Vector2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utilities/vector3/" title="Vector3" class="md-nav__link">
+      Vector3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utilities/eigenmap/" title="Utilities for Eigen Interoperability" class="md-nav__link">
+      Utilities for Eigen Interoperability
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#point-position-geometry" class="md-nav__link">
+    Point Position Geometry
+  </a>
+  
+    <nav class="md-nav" aria-label="Point Position Geometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#construction" class="md-nav__link">
+    Construction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantities" class="md-nav__link">
+    Quantities
+  </a>
+  
+    <nav class="md-nav" aria-label="Quantities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neighbors" class="md-nav__link">
+    neighbors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normals" class="md-nav__link">
+    normals
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangent-basis" class="md-nav__link">
+    tangent basis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangent-coordinates" class="md-nav__link">
+    tangent coordinates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tangent-transport" class="md-nav__link">
+    tangent transport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tufted-triangulation" class="md-nav__link">
+    tufted triangulation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laplacian" class="md-nav__link">
+    Laplacian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-laplacian" class="md-nav__link">
+    connection Laplacian
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradient" class="md-nav__link">
+    gradient
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point-position-normal-geometry" class="md-nav__link">
+    Point Position &amp; Normal Geometry
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#point-position-tangent-basis-geometry" class="md-nav__link">
+    Point Position &amp; Tangent Basis Geometry
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/pointcloud/geometry.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                  <h1>Geometry</h1>
+                
+                <p>The geometry classes associates 3D positions with the points in a point cloud, and can compute various derived quantities.  These use the same paradigm of &ldquo;requiring quantities&rdquo; as the <a href="/surface/geometry/geometry">surface mesh geometry interface</a>, see additional documentation there.  </p>
+<p><code>#include "geometrycentral/pointcloud/point_position_geometry.h"</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Point clouds are in beta</p>
+<p>The current point cloud API in geometry-central is preliminary, and may change in future versions.</p>
+</div>
+<p>The geometry classes manage buffers of geometric quantities which can be computed, as well as a dependency graph relationship between these quantities. For instance, calling <code>geom.requireNormals()</code> will ensure the <code>geom.normals</code> buffer is populated with normals, additionally computing &amp; caching any preceding quantities which are needed (here: neighborhoods).  Derived classes can be used to extend with more features, specify additional input data, or override the computation of particular quantities.</p>
+<p><strong>Example:</strong> Basic use of quantities
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/pointcloud/point_cloud.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/pointcloud/point_position_geometry.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// create a new cloud &amp; geometry object</span>
+<span class="kt">size_t</span> <span class="n">nPts</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span>
+<span class="n">PointCloud</span> <span class="nf">cloud</span><span class="p">(</span><span class="n">nPts</span><span class="p">);</span> 
+<span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">positions</span> <span class="o">=</span> <span class="cm">/* some positions */</span><span class="p">;</span>
+<span class="n">PointPositionGeometry</span> <span class="nf">geom</span><span class="p">(</span><span class="o">*</span><span class="n">cloud</span><span class="p">,</span> <span class="n">positions</span><span class="p">);</span>
+
+<span class="c1">// Per-point normals</span>
+<span class="n">geom</span><span class="p">.</span><span class="n">requireNormals</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Point</span> <span class="nl">p</span> <span class="p">:</span> <span class="n">cloud</span><span class="p">.</span><span class="n">points</span><span class="p">())</span> <span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;normal for point &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">p</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">geom</span><span class="p">.</span><span class="n">normals</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Point cloud Laplace matrix </span>
+<span class="n">geom</span><span class="p">.</span><span class="n">requireLaplacian</span><span class="p">();</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">L</span> <span class="o">=</span> <span class="n">geom</span><span class="p">.</span><span class="n">laplacian</span><span class="p">;</span>
+</code></pre></div></p>
+<h2 id="point-position-geometry">Point Position Geometry</h2>
+<p>This is the most basic core geometry, corresponding to a 3D position associated with each vertex.</p>
+<p>Remember, for each quantity YYY, call <code>requireYYY()</code> to ensure it has been computed, then access it at <code>geom.YYYs</code>.</p>
+<h3 id="construction">Construction</h3>
+<details class="func"><summary><code class="highlight"><span class="n">PointPositionGeometry</span><span class="o">::</span><span class="n">PointPositionGeometry</span><span class="p">(</span><span class="n">PointCloud</span><span class="o">&amp;</span> <span class="n">cloud</span><span class="p">)</span></code></summary><p>Constructs a new unitialized point position geometry on the cloud.</p>
+<p>You should immediately set positions like</p>
+<div class="highlight"><pre><span></span><code><span class="n">PointPositionGeometry</span> <span class="nf">goem</span><span class="p">(</span><span class="o">*</span><span class="n">cloud</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Point</span> <span class="nl">p</span> <span class="p">:</span> <span class="n">cloud</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">())</span> <span class="p">{</span>
+  <span class="n">geom</span><span class="p">.</span><span class="n">positions</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="cm">/* some Vector3 position */</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">PointPositionGeometry</span><span class="o">::</span><span class="n">PointPositionGeometry</span><span class="p">(</span><span class="n">PointCloud</span><span class="o">&amp;</span> <span class="n">cloud</span><span class="p">,</span> <span class="k">const</span> <span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;&amp;</span> <span class="n">positions</span><span class="p">)</span></code></summary><p>Constructs a new point position geometry with specified positions.</p>
+<p>The given positions will be copied to the <code>geom.positions</code> field.</p>
+</details>
+<h3 id="quantities">Quantities</h3>
+<details class="func"><summary>neighbors</summary><h5 id="neighbors">neighbors</h5>
+<p>A collection of <code>k</code>-nearest neighbors for each point. Represented via a <code>Neighborhoods</code> object, which encapsulates the functionality.</p>
+<p>Set the number of neighbors by assigning to <code>PointPositionGeometry::kNeighborSize</code>. The default is 30. If you&rsquo;re going to change it, do so <em>before</em> requiring any quantities that involve neighbors (most of them).</p>
+<p>Iterate over neighbors like:</p>
+<div class="highlight"><pre><span></span><code><span class="n">geom</span><span class="p">.</span><span class="n">requireNeighbors</span><span class="p">();</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">Point</span> <span class="nl">p</span> <span class="p">:</span> <span class="n">cloud</span><span class="o">-&gt;</span><span class="n">points</span><span class="p">())</span> <span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;&amp;</span> <span class="n">neigh</span> <span class="o">=</span> <span class="n">geom</span><span class="p">.</span><span class="n">neighbors</span><span class="o">-&gt;</span><span class="n">neighbors</span><span class="p">[</span><span class="n">p</span><span class="p">];</span>
+  <span class="kt">size_t</span> <span class="n">M</span> <span class="o">=</span> <span class="n">neigh</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">iN</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">iN</span> <span class="o">&lt;</span> <span class="n">M</span><span class="p">;</span> <span class="n">iN</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Point</span> <span class="n">pN</span> <span class="o">=</span> <span class="n">neigh</span><span class="p">[</span><span class="n">iN</span><span class="p">];</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Point &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">p</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; has neighbor &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">pN</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li><strong>member:</strong> <code>std::unique_ptr&lt;Neighborhoods&gt; PointPositionGeometry::neighbors</code></li>
+<li><strong>require:</strong> <code>void PointPositionGeometry::requireNeighbors()</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Changes coming</p>
+<p>A future update will replace this nested <code>std::vector&lt;&gt;</code> interface with a flat list and fancy iterators.</p>
+</div>
+</details>
+<details class="func"><summary>normals</summary><h5 id="normals">normals</h5>
+<p>A 3D unit normal at each point.</p>
+<p>Normals are comptuted via PCA over neighbors. By default, nothing is done to orient normals, so orientations will be arbitrary.</p>
+<ul>
+<li><strong>member:</strong> <code>PointData&lt;Vector3&gt; PointPositionGeometry::normals</code></li>
+<li><strong>require:</strong> <code>void PointPositionGeometry::requireNormals()</code></li>
+</ul>
+</details>
+<details class="func"><summary>tangent basis</summary><h5 id="tangent-basis">tangent basis</h5>
+<p>A pair of X-Y tangent basis axes at each point. Guaranteed to form an orthonormal right-handed coordinate frame with the normal vector.</p>
+<ul>
+<li><strong>member:</strong> <code>PointData&lt;std::array&lt;Vector3,2&gt;&gt; PointPositionGeometry::tangentBasis</code></li>
+<li><strong>require:</strong> <code>void PointPositionGeometry::requireTangentBasis()</code></li>
+</ul>
+</details>
+<details class="func"><summary>neighborhood tangent coordinates</summary><h5 id="tangent-coordinates">tangent coordinates</h5>
+<p>Local 2D tangent coordinates associated with each neighboring point, corresponding to projection in to the axes in <code>geom.tangentBasis</code>.</p>
+<ul>
+<li><strong>member:</strong> <code>PointData&lt;std::vector&lt;Vector2&gt;&gt; PointPositionGeometry::tangentCoordinates</code></li>
+<li><strong>require:</strong> <code>void PointPositionGeometry::requireTangentCoordinates()</code></li>
+</ul>
+</details>
+<details class="func"><summary>neighborhood tangent transport</summary><h5 id="tangent-transport">tangent transport</h5>
+<p>Parallel transport coefficients to rotate tangent vectors between neighboring frames.<code>tangentTransport[i][j]</code> holds the rotation which maps a vector in the tangent space of i to that of j.</p>
+<ul>
+<li><strong>member:</strong> <code>PointData&lt;std::vector&lt;Vector2&gt;&gt; PointPositionGeometry::tangentTransport</code></li>
+<li><strong>require:</strong> <code>void PointPositionGeometry::requireTangentTransport()</code></li>
+</ul>
+</details>
+<details class="func"><summary>tufted triangulation</summary><h5 id="tufted-triangulation">tufted triangulation</h5>
+<p>A tufted intrinsic triangulation associated with the point cloud. Intuitively this is a special triangulation atop the points in the pointcloud, represented only by its connectivity and edge lengths. It is a very effective numerical data structure to compute downstream quantities, like a highly-quality Laplace matrix. To be clear, this is <em>not</em> a &ldquo;nice&rdquo; triangulation like you might get from 3D reconstruction; instead it is a crazy nonmanifold triangulation which happens to have a very useful structure for subsequent numerical computations.  See the publication <a href="http://www.cs.cmu.edu/~kmcrane/Projects/NonmanifoldLaplace/NonmanifoldLaplace.pdf">&ldquo;A Laplacian for Nonmanifold Triangle Meshes&rdquo;</a> for formal details.</p>
+<p>Intuitively, </p>
+<ul>
+<li><strong>member:</strong> <code>PointData&lt;std::unique_ptr&lt;surface::SurfaceMesh&gt;&gt; PointPositionGeometry::tuftedMesh</code></li>
+<li><strong>member:</strong> <code>PointData&lt;std::unique_ptr&lt;surface::EdgeLengthGeometry&gt;&gt; PointPositionGeometry::tuftedGeom</code></li>
+<li><strong>require:</strong> <code>void PointPositionGeometry::requireTuftedTriangulation()</code></li>
+</ul>
+</details>
+<details class="func"><summary>Laplacian</summary><h5 id="laplacian">Laplacian</h5>
+<p>A Laplace matrix for the point cloud. Computed internally using the tufted triangulation as described in <a href="http://www.cs.cmu.edu/~kmcrane/Projects/NonmanifoldLaplace/NonmanifoldLaplace.pdf">A Laplacian for Nonmanifold Triangle Meshes&rdquo;</a>.</p>
+<ul>
+<li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; PointPositionGeometry::laplacian</code></li>
+<li><strong>require:</strong> <code>void PointPositionGeometry::requireLaplacian()</code></li>
+</ul>
+</details>
+<details class="func"><summary>connection Laplacian</summary><h5 id="connection-laplacian">connection Laplacian</h5>
+<p>A connection Laplace matrix for the point cloud, which is similar to normal scalar Laplacian, but operates on tangent vectors at each point rather than on scalar values. See <a href="https://nmwsharp.com/research/vector-heat-method">&ldquo;The Vector Heat Method&rdquo;</a> for a detailed introduction to connection Laplacians.</p>
+<p><strong>Note:</strong> This connection Laplacian includes an orientation flip to handle inconsistent normals. Rather than a complex matrix, it builds a <code>2N x 2N</code> expanded real matrix, with sign flips on imaginary elements to conjugate (a necessary trick, because conjugation is not a complex-linear operation). This allows us to apply the connection even when normal orientations are inconsistent.</p>
+<ul>
+<li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; PointPositionGeometry::connectionLaplacian</code></li>
+<li><strong>require:</strong> <code>void PointPositionGeometry::requireConnectionLaplacian()</code></li>
+</ul>
+</details>
+<details class="func"><summary>gradient</summary><h5 id="gradient">gradient</h5>
+<p>A gradient operator <code>G</code> for the point cloud. Given a vector <code>v</code> of scalar values at each point in the point cloud, multiplying <code>G*v</code> yields a tanget vector at each point (as a complex number), representing the spatial gradient of <code>v</code> at that point.</p>
+<p>Constructed via a least-squares approximation in the neighborhood tangent coordinate space at each point.</p>
+<ul>
+<li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;std::complex&lt;double&gt;&gt; PointPositionGeometry::gradient</code></li>
+<li><strong>require:</strong> <code>void PointPositionGeometry::requireGradient()</code></li>
+</ul>
+</details>
+<h2 id="point-position-normal-geometry">Point Position &amp; Normal Geometry</h2>
+<p>The class <code>PointPositionNormalGeometry</code> extends the basic <code>PointPositionGeometry</code> class to manually specify a set of known normals at points. These normals will be used for all computations, rather than computing normals from scratch.</p>
+<p>The <code>PointPositionNormalGeometry</code> <strong>is-a</strong> <code>PointPositionGeometry</code> via inheritance, so you can directly pass it anywhere a <code>PointPositionGeometry</code> is expected.</p>
+<p><code>#include "geometrycentral/pointcloud/point_position_normal_geometry.h"</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">PointCloud</span><span class="o">&gt;</span> <span class="n">cloud</span><span class="p">;</span> <span class="c1">// your cloud</span>
+<span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">positions</span><span class="p">(</span><span class="o">*</span><span class="n">cloud</span><span class="p">);</span> <span class="c1">// populate with your positions</span>
+<span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">knownNormals</span><span class="p">(</span><span class="o">*</span><span class="n">cloud</span><span class="p">);</span> <span class="c1">// populate with your normals</span>
+
+<span class="n">PointPositionNormalGeometry</span> <span class="nf">geom</span><span class="p">(</span><span class="o">*</span><span class="n">cloud</span><span class="p">,</span> <span class="n">positions</span><span class="p">,</span> <span class="n">knownNormals</span><span class="p">);</span>
+
+<span class="c1">// we can now use this just like a `PointPositionGeometry` as above</span>
+</code></pre></div></p>
+<details class="func"><summary><code class="highlight"><span class="n">PointPositionNormalGeometry</span><span class="o">::</span><span class="n">PointPositionNormalGeometry</span><span class="p">(</span><span class="n">PointCloud</span><span class="o">&amp;</span> <span class="n">cloud</span><span class="p">,</span> <span class="k">const</span> <span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;&amp;</span> <span class="n">positions</span><span class="p">,</span> <span class="k">const</span> <span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;&amp;</span> <span class="n">normals</span><span class="p">)</span></code></summary><p>Constructs a new point position geometry with specified normals.</p>
+<p>The given normals will be copied to the <code>geom.normals</code> field.</p>
+</details>
+<h2 id="point-position-tangent-basis-geometry">Point Position &amp; Tangent Basis Geometry</h2>
+<p>The class <code>PointPositionFrameGeometry</code> extends the basic <code>PointPositionGeometry</code> class to manually specify a set of known normals and tangent frames at points. These frames / normals will be used for all computations, rather than computing frames / normals from scratch.</p>
+<p>The input frames are specified via three vectors at each point <code>std::array&lt;Vector3, 3&gt;</code>. These vectors should form a right-handed, orthonormal basis at each vertex, with the two vectors forming the X/Y tangent basis, and the third as the normal direction.</p>
+<p>The <code>PointPositionFrameGeometry</code> <strong>is-a</strong> <code>PointPositionGeometry</code> via inheritance, so you can directly pass it anywhere a <code>PointPositionGeometry</code> is expected.</p>
+<p><code>#include "geometrycentral/pointcloud/point_position_frame_geometry.h"</code></p>
+<p><strong>Example:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">PointCloud</span><span class="o">&gt;</span> <span class="n">cloud</span><span class="p">;</span> <span class="c1">// your cloud</span>
+<span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">positions</span><span class="p">(</span><span class="o">*</span><span class="n">cloud</span><span class="p">);</span> <span class="c1">// populate with your positions</span>
+<span class="c1">// your {tangent-X, tangent-Y, normal} at each vertex</span>
+<span class="n">PointData</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="p">,</span> <span class="mi">3</span><span class="o">&gt;&gt;</span> <span class="n">knownFrames</span><span class="p">(</span><span class="o">*</span><span class="n">cloud</span><span class="p">);</span> 
+
+<span class="n">PointPositionFrameGeometrygeom</span><span class="p">(</span><span class="o">*</span><span class="n">cloud</span><span class="p">,</span> <span class="n">positions</span><span class="p">,</span> <span class="n">knownNormals</span><span class="p">);</span>
+
+<span class="c1">// we can now use this just like a `PointPositionGeometry` as above</span>
+</code></pre></div></p>
+<details class="func"><summary><code class="highlight"><span class="n">PointPositionFrameGeometry</span><span class="o">::</span><span class="n">PointPositionFrameGeometry</span><span class="p">(</span><span class="n">PointCloud</span><span class="o">&amp;</span> <span class="n">cloud</span><span class="p">,</span> <span class="k">const</span> <span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;&amp;</span> <span class="n">positions</span><span class="p">,</span> <span class="k">const</span> <span class="n">PointData</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="p">,</span> <span class="mi">3</span><span class="o">&gt;&gt;&amp;</span> <span class="n">frames</span><span class="p">)</span></code></summary><p>Constructs a new point position geometry with specified normals.</p>
+<p>The given tangent bases and normals will be copied to the <code>geom.normals</code> and <code>geom.tangentBasis</code> fields.</p>
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../basics/" title="Basics" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Basics
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../algorithms/heat_solver/" title="Heat distance & transport" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Heat distance & transport
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.2d1db4bd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

@@ -16,7 +16,7 @@
     
     
       
-        <title>Boundaries - Geometry Central</title>
+        <title>Heat distance & transport - Geometry Central</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exterior-halfedges" class="md-skip">
+        <a href="#heat-distance-transport-logarithmic-map-on-point-clouds" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Boundaries
+              Heat distance & transport
             
           </span>
         </div>
@@ -339,12 +339,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Surface
@@ -362,12 +360,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
     
     <label class="md-nav__link" for="nav-4-1">
       Surface Mesh
@@ -387,7 +383,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../basics/" title="Basics" class="md-nav__link">
+    <a href="../../../surface/surface_mesh/basics/" title="Basics" class="md-nav__link">
       Basics
     </a>
   </li>
@@ -399,7 +395,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../elements/" title="Elements" class="md-nav__link">
+    <a href="../../../surface/surface_mesh/elements/" title="Elements" class="md-nav__link">
       Elements
     </a>
   </li>
@@ -409,59 +405,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Boundaries
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Boundaries" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../../surface/surface_mesh/boundaries/" title="Boundaries" class="md-nav__link">
       Boundaries
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exterior-halfedges" class="md-nav__link">
-    Exterior halfedges
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faces-and-boundary-loops" class="md-nav__link">
-    Faces and boundary loops
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#element-boundary-properties" class="md-nav__link">
-    Element boundary properties
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -471,7 +419,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../navigation/" title="Navigation and Iteration" class="md-nav__link">
+    <a href="../../../surface/surface_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
       Navigation and Iteration
     </a>
   </li>
@@ -483,7 +431,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../containers/" title="Containers" class="md-nav__link">
+    <a href="../../../surface/surface_mesh/containers/" title="Containers" class="md-nav__link">
       Containers
     </a>
   </li>
@@ -495,7 +443,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../mutation/" title="Mutation" class="md-nav__link">
+    <a href="../../../surface/surface_mesh/mutation/" title="Mutation" class="md-nav__link">
       Mutation
     </a>
   </li>
@@ -507,7 +455,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../delta_complex/" title="Delta Complexes" class="md-nav__link">
+    <a href="../../../surface/surface_mesh/delta_complex/" title="Delta Complexes" class="md-nav__link">
       Delta Complexes
     </a>
   </li>
@@ -519,7 +467,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../internals/" title="Internals" class="md-nav__link">
+    <a href="../../../surface/surface_mesh/internals/" title="Internals" class="md-nav__link">
       Internals
     </a>
   </li>
@@ -557,7 +505,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../geometry/geometry/" title="Overview" class="md-nav__link">
+    <a href="../../../surface/geometry/geometry/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -569,7 +517,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../geometry/quantities/" title="Quantities" class="md-nav__link">
+    <a href="../../../surface/geometry/quantities/" title="Quantities" class="md-nav__link">
       Quantities
     </a>
   </li>
@@ -607,7 +555,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../utilities/simple_polygon_mesh/" title="Simple Polygon Mesh" class="md-nav__link">
+    <a href="../../../surface/utilities/simple_polygon_mesh/" title="Simple Polygon Mesh" class="md-nav__link">
       Simple Polygon Mesh
     </a>
   </li>
@@ -619,7 +567,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../utilities/io/" title="I/O" class="md-nav__link">
+    <a href="../../../surface/utilities/io/" title="I/O" class="md-nav__link">
       I/O
     </a>
   </li>
@@ -631,7 +579,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../utilities/surface_point/" title="Surface Point" class="md-nav__link">
+    <a href="../../../surface/utilities/surface_point/" title="Surface Point" class="md-nav__link">
       Surface Point
     </a>
   </li>
@@ -669,7 +617,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/direction_fields/" title="Direction Fields" class="md-nav__link">
+    <a href="../../../surface/algorithms/direction_fields/" title="Direction Fields" class="md-nav__link">
       Direction Fields
     </a>
   </li>
@@ -681,7 +629,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
+    <a href="../../../surface/algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
       Geodesic Distance
     </a>
   </li>
@@ -693,7 +641,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
+    <a href="../../../surface/algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
       Vector Heat Method
     </a>
   </li>
@@ -705,7 +653,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
+    <a href="../../../surface/algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
       Surface Centers
     </a>
   </li>
@@ -717,7 +665,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
+    <a href="../../../surface/algorithms/mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
       Mesh Graph Algorithms
     </a>
   </li>
@@ -729,7 +677,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/intrinsic_triangulations/" title="Intrinsic Triangulations" class="md-nav__link">
+    <a href="../../../surface/algorithms/intrinsic_triangulations/" title="Intrinsic Triangulations" class="md-nav__link">
       Intrinsic Triangulations
     </a>
   </li>
@@ -741,7 +689,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/robust_geometry/" title="Robust Geometry" class="md-nav__link">
+    <a href="../../../surface/algorithms/robust_geometry/" title="Robust Geometry" class="md-nav__link">
       Robust Geometry
     </a>
   </li>
@@ -753,7 +701,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../algorithms/flip_geodesics/" title="Flip Geodesics" class="md-nav__link">
+    <a href="../../../surface/algorithms/flip_geodesics/" title="Flip Geodesics" class="md-nav__link">
       Flip Geodesics
     </a>
   </li>
@@ -773,10 +721,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Point Cloud
@@ -796,7 +746,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../pointcloud/basics/" title="Basics" class="md-nav__link">
+    <a href="../../basics/" title="Basics" class="md-nav__link">
       Basics
     </a>
   </li>
@@ -808,7 +758,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../pointcloud/geometry/" title="Geometry" class="md-nav__link">
+    <a href="../../geometry/" title="Geometry" class="md-nav__link">
       Geometry
     </a>
   </li>
@@ -818,10 +768,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3" checked>
     
     <label class="md-nav__link" for="nav-5-3">
       Algorithms
@@ -839,11 +791,77 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../../pointcloud/algorithms/heat_solver/" title="Heat distance & transport" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Heat distance & transport
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Heat distance & transport" class="md-nav__link md-nav__link--active">
       Heat distance & transport
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    Constructor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geodesic-distance" class="md-nav__link">
+    Geodesic distance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scalar-extension" class="md-nav__link">
+    Scalar extension
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-extension" class="md-nav__link">
+    Vector extension
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logarithmic-map" class="md-nav__link">
+    Logarithmic Map
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -879,7 +897,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../pointcloud/utilities/io/" title="IO" class="md-nav__link">
+    <a href="../../utilities/io/" title="IO" class="md-nav__link">
       IO
     </a>
   </li>
@@ -891,7 +909,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../pointcloud/utilities/sampling/" title="Sampling" class="md-nav__link">
+    <a href="../../utilities/sampling/" title="Sampling" class="md-nav__link">
       Sampling
     </a>
   </li>
@@ -1057,6 +1075,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1065,22 +1085,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exterior-halfedges" class="md-nav__link">
-    Exterior halfedges
+  <a href="#constructor" class="md-nav__link">
+    Constructor
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#faces-and-boundary-loops" class="md-nav__link">
-    Faces and boundary loops
+  <a href="#geodesic-distance" class="md-nav__link">
+    Geodesic distance
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#element-boundary-properties" class="md-nav__link">
-    Element boundary properties
+  <a href="#scalar-extension" class="md-nav__link">
+    Scalar extension
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vector-extension" class="md-nav__link">
+    Vector extension
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logarithmic-map" class="md-nav__link">
+    Logarithmic Map
   </a>
   
 </li>
@@ -1097,7 +1131,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/surface_mesh/boundaries.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/pointcloud/algorithms/heat_solver.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1105,53 +1139,91 @@
                   
                 
                 
-                  <h1>Boundaries</h1>
-                
-                <p>Mesh boundaries in halfedge meshes are modelled by logically treating each <em>boundary loop</em> as if it were a face with an associated set of halfedges. These halfedges incident on boundary loops are referred to as <em>exterior halfedges</em>, while the usual halfedges incident on faces actually present in the mesh are <em>interior halfedges</em>. Any boundary edge of the mesh will have one interior and one exterior halfedge incident upon it.</p>
-<p><img alt="halfedge boundary diagram" src="../../../media/halfedge_boundary_diagram.svg" /></p>
-<div class="admonition note">
-<p class="admonition-title">Manifold Surfaces Only</p>
-<p>This section largely only applies to <code>ManifoldSurfaceMesh</code>, which has well-defined boundary loops. On a general <code>SurfaceMesh</code>, you can test if an element is along the boundary (like <code>edge.isBoundary()</code>), but not much else.</p>
-</div>
-<h2 id="exterior-halfedges">Exterior halfedges</h2>
-<p>Nearly all routines involving halfedges include both interior and exterior halfedges, as this is most often what is needed in algorithms. <code>HalfedgeData&lt;&gt;</code> containers can hold data on exterior halfedges, and iterators (like <code>Vertex::outgoingHalfedges</code>) will iterate over both interior and exterior halfedges.</p>
-<p>A few routines explicitly indicate whether they process interior halfedges, exterior halfedges, or both, such as <code>ManifoldSurfaceMesh::nInteriorHalfedges()</code>.</p>
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">Halfedge</span><span class="o">::</span><span class="n">isInterior</span><span class="p">()</span></code></summary><p><strong>Return:</strong> true if the halfedge is an interior halfedge, and false if it is an exterior halfedge.</p>
-</details>
-<h2 id="faces-and-boundary-loops">Faces and boundary loops</h2>
-<p>The separate type <code>BoundaryLoop</code> is used to represent boundary loops, and offers all functionality of other element types. For instance, the <code>BoundaryLoopData&lt;&gt;</code> container can be used to associate data with boundary loops, and <code>BoundaryLoop::adjacentVertices()</code> can be used to iterate over the vertices along a boundary component.</p>
-<p>Since boundary loops act like faces in the mesh connectivity, traversing the mesh might yield a &ldquo;face&rdquo; referring to what is really a boundary loop. In particular, calling <code>Halfedge::face()</code> on an exterior halfedge will yield the &ldquo;face&rdquo; which is its boundary loop.  However, this &ldquo;face&rdquo; is a lie, we have not really <em>added</em> a face to the mesh: <code>ManifoldSurfaceMesh::nFaces()</code> will still report the actual number of faces, etc.  The only valid thing to do with a <code>Face</code> which actually a boundary loop is to immediately convert it to a <code>BoundaryLoop</code>, See the example below.</p>
-<div class="highlight"><pre><span></span><code><span class="n">Halfedge</span> <span class="n">myHe</span> <span class="o">=</span> <span class="cm">/* some exterior halfedge */</span><span class="p">;</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">myHe</span><span class="p">.</span><span class="n">isInterior</span><span class="p">()</span> <span class="o">==</span> <span class="nb">false</span><span class="p">);</span> <span class="c1">// this is an exterior halfedge</span>
+                <h1 id="heat-distance-transport-logarithmic-map-on-point-clouds">Heat distance, transport, &amp; logarithmic map on point clouds</h1>
+<p>Compute geodesic distance, transport tangent vectors, and generate a special parameterization called the logarithmic map using fast solvers based on short-time heat flow.</p>
+<p><img alt="point cloud heat solve results" src="/media/point_heat_solvers.jpg" /></p>
+<p>These routines implement point cloud versions of the algorithms from:</p>
+<ul>
+<li><a href="http://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/index.html">The Heat Method for Distance Computation</a> (distance)</li>
+<li><a href="https://nmwsharp.com/research/vector-heat-method">The Vector Heat Method</a> (parallel transport and log map)</li>
+<li><a href="http://www.cs.cmu.edu/~kmcrane/Projects/NonmanifoldLaplace/NonmanifoldLaplace.pdf">A Laplacian for Nonmanifold Triangle Meshes</a> (used to build point cloud Laplacian for both)</li>
+</ul>
+<p>All computation is encapsulated by the <code>PointCloudHeatSolver</code> class, which maintains prefactored linear systems for the various methods. Some setup work is performed both on construction, and after the first query. Subsequent queries, even with different source points, will be fast.</p>
+<p><code>#include "geometrycentral/pointcloud/point_cloud_heat_solver.h"</code></p>
+<p><strong>Example:</strong> Basic usage</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/pointcloud/point_cloud.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/pointcloud/point_position_geometry.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/pointcloud/point_cloud_heat_solver.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/pointcloud/point_cloud_io.h&quot;</span><span class="cp"></span>
 
-<span class="c1">// Traverse to &quot;face&quot;</span>
-<span class="n">Face</span> <span class="n">bFace</span> <span class="o">=</span> <span class="n">myExteriorHalfedge</span><span class="p">.</span><span class="n">face</span><span class="p">()</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="o">::</span><span class="n">pointcloud</span><span class="p">;</span>
 
-<span class="c1">// bFace is really a boundary loop, doing any face things </span>
-<span class="c1">// with it would be invalid</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">bFace</span><span class="p">.</span><span class="n">isBoundaryLoop</span><span class="p">()</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span>
+<span class="c1">// Read in a point cloud</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">PointCloud</span><span class="o">&gt;</span> <span class="n">cloud</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">PointPositionGeometry</span><span class="o">&gt;</span> <span class="n">geom</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">cloud</span><span class="p">,</span> <span class="n">geom</span><span class="p">)</span> <span class="o">=</span> <span class="n">readPointCloud</span><span class="p">(</span><span class="s">&quot;my_cloud.ply&quot;</span><span class="p">);</span>
 
-<span class="c1">// Convert the &quot;face&quot; to its true boundary loop form </span>
-<span class="n">BoundaryLoop</span> <span class="n">bLoop</span> <span class="o">=</span> <span class="n">bFace</span><span class="p">.</span><span class="n">asBoundaryLoop</span><span class="p">();</span>
+<span class="c1">// Create the solver</span>
+<span class="n">PointCloudHeatSolver</span> <span class="nf">solver</span><span class="p">(</span><span class="o">*</span><span class="n">cloud</span><span class="p">,</span> <span class="o">*</span><span class="n">geom</span><span class="p">);</span>
 
-<span class="c1">// Now we can do all kinds of things with it</span>
-<span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">bLoop</span><span class="p">.</span><span class="n">adjacentEdges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="cm">/* do science */</span>
-<span class="p">}</span>
+<span class="c1">// Pick a source point or two</span>
+<span class="n">Point</span> <span class="n">pSource</span> <span class="o">=</span> <span class="n">cloud</span><span class="o">-&gt;</span><span class="n">point</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+<span class="n">Point</span> <span class="n">pSource2</span> <span class="o">=</span> <span class="n">cloud</span><span class="o">-&gt;</span><span class="n">point</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+
+<span class="c1">// Compute geodesic distance</span>
+<span class="n">PointData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">solver</span><span class="p">.</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">pSource</span><span class="p">);</span>
+
+<span class="c1">// Compute scalar extension</span>
+<span class="n">PointData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">extended</span> <span class="o">=</span> <span class="n">solver</span><span class="p">.</span><span class="n">extendScalars</span><span class="p">({{</span><span class="n">pSource</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">},</span>
+                                                   <span class="p">{</span><span class="n">pSource2</span><span class="p">,</span> <span class="mf">-5.</span><span class="p">}});</span>
+
+<span class="c1">// Compute parallel transport</span>
+<span class="n">Vector2</span> <span class="n">sourceVec</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">};</span>
+<span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">transport</span> <span class="o">=</span> <span class="n">solver</span><span class="p">.</span><span class="n">transportTangentVector</span><span class="p">(</span><span class="n">pSource</span><span class="p">,</span> <span class="n">sourceVec</span><span class="p">);</span>
+
+<span class="c1">// Compute the logarithmic map</span>
+<span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">logmap</span> <span class="o">=</span> <span class="n">solver</span><span class="p">.</span><span class="n">computeLogMap</span><span class="p">(</span><span class="n">pSource</span><span class="p">);</span>
 </code></pre></div>
 
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">Face</span><span class="o">::</span><span class="n">isBoundaryLoop</span><span class="p">()</span></code></summary><p>Returns true if the face is really a boundary loop.</p>
+<h3 id="constructor">Constructor</h3>
+<details class="func"><summary><code class="highlight"><span class="n">PointCloudHeatSolver</span><span class="o">::</span><span class="n">PointCloudHeatSolver</span><span class="p">(</span><span class="n">PointCloud</span><span class="o">&amp;</span> <span class="n">cloud</span><span class="p">,</span> <span class="n">PointPositionGeometry</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="kt">double</span> <span class="n">tCoef</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span></code></summary><p>Create a new solver for the heat methods. Precomputation is performed at startup and lazily as needed.</p>
+<ul>
+<li><code>cloud</code> is the point cloud to operate on.</li>
+<li>
+<p><code>geom</code> is the geometry (e.g., vertex positions) for the cloud. Note that nearly any point cloud geometry object can be passed here. For instance, use a <code>PointPositionFrameGeometry</code> if you want to represent tangent-valued data in tangent bases of your own choosing.</p>
+</li>
+<li>
+<p><code>tCoef</code> is the time to use for short time heat flow, as a factor <code>m * h^2</code>, where <code>h</code> is the mean between-point spacing. The default value of <code>1.0</code> is almost always sufficient.</p>
+</li>
+</ul>
+<p>Algorithm options (like <code>tCoef</code>) cannot be changed after construction; create a new solver object with the new settings.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">BoundaryLoop</span> <span class="n">Face</span><span class="o">::</span><span class="n">asBoundaryLoop</span><span class="p">()</span></code></summary><p>Convert a face to the equivalent boundary loop. Only valid to call on a face for which <code>Face::isBoundaryLoop() == true</code>.</p>
+<h2 id="geodesic-distance">Geodesic distance</h2>
+<p><em>Geodesic distance</em> is the distance from a given source along the surface represented by the point cloud. Specifying multiple source points yields the distance to the nearest source.</p>
+<details class="func"><summary><code class="highlight"><span class="n">PointData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">PointCloudHeatSolver</span><span class="o">::</span><span class="n">computeDistance</span><span class="p">(</span><span class="k">const</span> <span class="n">Point</span><span class="o">&amp;</span> <span class="n">sourcePoint</span><span class="p">)</span></code></summary><p>Compute the geodesic distance from <code>sourcePoint</code> to all other points.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Face</span> <span class="n">BoundaryLoop</span><span class="o">::</span><span class="n">asFace</span><span class="p">()</span></code></summary><p>Convert a boundary loop back to its equivalent face. The inverse of <code>Face::asBoundaryLoop()</code>. Rarely used.</p>
+<details class="func"><summary><code class="highlight"><span class="n">PointData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">PointCloudHeatSolver</span><span class="o">::</span><span class="n">computeDistance</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;&amp;</span> <span class="n">sourcePoints</span><span class="p">)</span></code></summary><p>Like above, but for multiple source points.</p>
 </details>
-<h2 id="element-boundary-properties">Element boundary properties</h2>
-<p>The previous sections describe elements which <em>make up</em> the boundary of a mesh. The methods here identify elements which merely lie along the mesh boundary.</p>
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">Vertex</span><span class="o">::</span><span class="n">isBoundary</span><span class="p">()</span></code></summary><p>Returns true if the vertex is on the boundary. A vertex is on the boundary if any of its incident edges are boundary edges. <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>.</p>
+<h2 id="scalar-extension">Scalar extension</h2>
+<p>Given scalar values defined at isolated points in the cloud, extend it to a scalar field on all points. Each point will take the value from the nearest source point, in the sense of geodesic distance. Note that the fast diffusion algorithm means the result is a slightly smoothed-out field.</p>
+<details class="func"><summary><code class="highlight"><span class="n">PointData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">PointCloudHeatSolver</span><span class="o">::</span><span class="n">extendScalars</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Point</span><span class="p">,</span> <span class="kt">double</span><span class="o">&gt;&gt;&amp;</span> <span class="n">sources</span><span class="p">)</span></code></summary><p>Given a collection of source points and scalars at those points, extends the scalar field to the whole cloud as a nearest-geodesic-neighbor interpolant.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">Edge</span><span class="o">::</span><span class="n">isBoundary</span><span class="p">()</span></code></summary><p>Returns true if the edge is on the boundary. An edge is on the boundary if either of its incident halfedges are exterior halfedges. <span><span class="MathJax_Preview">O(1)</span><script type="math/tex">O(1)</script></span>.</p>
-<p>Note that only edges which lie entirely along a boundary are considered boundary edges. Edges which &ldquo;point at&rdquo; the boundary and touch the boundary only at one endpoint are not considered boundary edges by this function.</p>
+<h2 id="vector-extension">Vector extension</h2>
+<p>Given tangent vectors defined at one or more isolated source locations on a surface, extend transport the vectors across the entire domain according to parallel transport. Each point on the domain will take the value of the nearest source point.  Note that the fast diffusion algorithm means the result is a slightly smoothed-out field.</p>
+<p>Despite operating on tangent-valued data, these routines work as expected even on a point cloud with inconsistent normal orientations. See <a href="/pointcloud/geometry/#connection-laplacian">connection Laplacian</a> for more details.</p>
+<details class="func"><summary><code class="highlight"><span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">PointCloudHeatSolver</span><span class="o">::</span><span class="n">transportTangentVector</span><span class="p">(</span><span class="k">const</span> <span class="n">Point</span><span class="o">&amp;</span> <span class="n">sourcePoint</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector2</span><span class="o">&amp;</span> <span class="n">sourceVector</span><span class="p">)</span></code></summary><p>Shorthand for the general version below when there is just one vector.</p>
+<p>Computes parallel transport of the given vector along shortest geodesics to the rest of the cloud.</p>
+<p>Polar directions are defined in each point&rsquo;s tangent space. <a href="/pointcloud/geometry#tangent-basis">See <code>PointPositionGeometry::tangentBasis</code></a>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">PointCloudHeatSolver</span><span class="o">::</span><span class="n">transportTangentVectors</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Point</span><span class="p">,</span> <span class="n">Vector2</span><span class="o">&gt;&gt;&amp;</span> <span class="n">sources</span><span class="p">)</span></code></summary><p>Given a collection of source points and tangent vectors at those points, extends the vector field to the whole cloud as a nearest-geodesic-neighbor interpolant via parallel transport along shortest geodesics.</p>
+<p>Polar directions are defined in each point&rsquo;s tangent space. <a href="/pointcloud/geometry#tangent-basis">See <code>PointPositionGeometry::tangentBasis</code></a>.</p>
+</details>
+<h2 id="logarithmic-map">Logarithmic Map</h2>
+<p>The <em>logarithmic map</em> is a very special 2D local parameterization of a surface about a point, where for each point on the surface the magnitude of the log map gives the geodesic distance from the source, and the polar coordinate of the log map gives the direction at which a geodesic must leave the source to arrive at the point.</p>
+<p>Despite operating on tangent-valued data, this routine works as expected even on a point cloud with inconsistent normal orientations. See <a href="/pointcloud/geometry/#connection-laplacian">connection Laplacian</a> for more details.</p>
+<details class="func"><summary><code class="highlight"><span class="n">PointData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">PointCloudHeatSolver</span><span class="o">::</span><span class="n">computeLogMap</span><span class="p">(</span><span class="k">const</span> <span class="n">Point</span><span class="o">&amp;</span> <span class="n">sourcePoint</span><span class="p">)</span></code></summary><p>Computes the logarithmic map from the given source point.</p>
+<p>Polar directions are defined in each point&rsquo;s tangent space. <a href="/pointcloud/geometry#tangent-basis">See <code>PointPositionGeometry::tangentBasis</code></a>.</p>
 </details>
                 
               
@@ -1171,7 +1243,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../elements/" title="Elements" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../geometry/" title="Geometry" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1180,19 +1252,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Elements
+                Geometry
               </div>
             </div>
           </a>
         
         
-          <a href="../navigation/" title="Navigation and Iteration" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../utilities/io/" title="IO" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Navigation and Iteration
+                IO
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

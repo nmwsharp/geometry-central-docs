@@ -793,11 +793,149 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
+      Point Cloud
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Point Cloud" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Point Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pointcloud/basics/" title="Basics" class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pointcloud/geometry/" title="Geometry" class="md-nav__link">
+      Geometry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      Algorithms
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        <span class="md-nav__icon md-icon"></span>
+        Algorithms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pointcloud/algorithms/heat_solver/" title="Heat distance & transport" class="md-nav__link">
+      Heat distance & transport
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+    
+    <label class="md-nav__link" for="nav-5-4">
+      Utilities
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Utilities" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-4">
+        <span class="md-nav__icon md-icon"></span>
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pointcloud/utilities/io/" title="IO" class="md-nav__link">
+      IO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pointcloud/utilities/sampling/" title="Sampling" class="md-nav__link">
+      Sampling
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
       Numerical
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Numerical" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         <span class="md-nav__icon md-icon"></span>
         Numerical
       </label>
@@ -852,14 +990,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       Utilities
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Utilities" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         <span class="md-nav__icon md-icon"></span>
         Utilities
       </label>
@@ -1015,7 +1153,7 @@
 <p>Algorithm options (like <code>tCoef</code>) cannot be changed after construction; create a new solver object with the new settings.</p>
 </details>
 <h2 id="scalar-extension">Scalar Extension</h2>
-<p>Given scalar data defined at isolated source locations on a surface, extend it to the entire domain. Each point on the domain will take the value of the nearest source point.</p>
+<p>Given scalar data defined at isolated source locations on a surface, extend it to the entire domain. Each point on the domain will take the value of the nearest source point.  Note that the fast diffusion algorithm means the result is a slightly smoothed-out field.</p>
 <p><img alt="bean scalar extension" src="/media/bean_scalar.jpg" /></p>
 <p>Example:
 <div class="highlight"><pre><span></span><code><span class="c1">// your mesh and geometry</span>
@@ -1042,7 +1180,7 @@
 </details>
 <h2 id="vector-extension">Vector Extension</h2>
 <p><img alt="bean vector extension" src="/media/bean_vector.jpg" /></p>
-<p>Given tangent vectors defined at one or more isolated source locations on a surface, extend transport the vectors across the entire domain according to parallel transport. Each point on the domain will take the value of the nearest source point.</p>
+<p>Given tangent vectors defined at one or more isolated source locations on a surface, extend transport the vectors across the entire domain according to parallel transport. Each point on the domain will take the value of the nearest source point.  Note that the fast diffusion algorithm means the result is a slightly smoothed-out field.</p>
 <details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">VectorHeatSolver</span><span class="o">::</span><span class="n">transportTangentVectors</span><span class="p">(</span><span class="n">Vertex</span> <span class="n">sourceVert</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">sourceVec</span><span class="p">)</span></code></summary><p>Compute the parallel transport of a vector defined at a single vertex to the entire domain. The input is defined in the tangent space of the source vertex.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">VectorHeatSolver</span><span class="o">::</span><span class="n">transportTangentVectors</span><span class="p">(</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="n">Vector2</span><span class="o">&gt;&gt;&amp;</span> <span class="n">sources</span><span class="p">)</span></code></summary><p>Compute the parallel transport of vectors defined at a collection of vertices to the entire domain. The input is defined in the tangent space of each the source vertex.</p>

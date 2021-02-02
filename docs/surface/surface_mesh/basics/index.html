@@ -833,11 +833,149 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
+      Point Cloud
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Point Cloud" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Point Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pointcloud/basics/" title="Basics" class="md-nav__link">
+      Basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pointcloud/geometry/" title="Geometry" class="md-nav__link">
+      Geometry
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      Algorithms
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        <span class="md-nav__icon md-icon"></span>
+        Algorithms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pointcloud/algorithms/heat_solver/" title="Heat distance & transport" class="md-nav__link">
+      Heat distance & transport
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
+    
+    <label class="md-nav__link" for="nav-5-4">
+      Utilities
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Utilities" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-4">
+        <span class="md-nav__icon md-icon"></span>
+        Utilities
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pointcloud/utilities/io/" title="IO" class="md-nav__link">
+      IO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pointcloud/utilities/sampling/" title="Sampling" class="md-nav__link">
+      Sampling
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
       Numerical
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Numerical" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         <span class="md-nav__icon md-icon"></span>
         Numerical
       </label>
@@ -892,14 +1030,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       Utilities
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Utilities" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         <span class="md-nav__icon md-icon"></span>
         Utilities
       </label>
@@ -1077,7 +1215,7 @@
                 
                   <h1>Basics</h1>
                 
-                <p>The <code>SurfaceMesh</code> is the workhorse datastructure for representing surface in geometry-central. Internally, it is reference-based mesh (similar to halfedge mesh), and can hold general polygonal meshes (though many routines only support triangle meshes). <code>SurfaceMesh</code> offers wide support for things like iterating around a mesh, modifying a mesh, and associating data with a mesh via containers. Under the hood, it is implemented with dense, automatically resizing buffers for efficient performance.</p>
+                <p>The <code>SurfaceMesh</code> is the workhorse data structure for representing surface in geometry-central. Internally, it is reference-based mesh (similar to halfedge mesh), and can hold general polygonal meshes (though many routines only support triangle meshes). <code>SurfaceMesh</code> offers wide support for things like iterating around a mesh, modifying a mesh, and associating data with a mesh via containers. Under the hood, it is implemented with dense, automatically resizing buffers for efficient performance.</p>
 <div class="highlight"><pre><span></span><code>#include &quot;geometrycentral/surface/surface_mesh.h&quot;
 #include &quot;geometrycentral/surface/manifold_surface_mesh.h&quot;
 </code></pre></div>
@@ -1086,7 +1224,7 @@
 <p>Including <code>geometrycentral/surface/halfedge_mesh.h</code> will simply typedef <code>HalfedgeMesh</code> as <code>ManifoldSurfaceMesh</code>, so most existing code will still work unchanged; new code should use <code>ManifoldSurfaceMesh</code>.</p>
 </details>
 <h2 id="general-vs-manifold-surface-meshes">General vs. Manifold Surface Meshes</h2>
-<p>There are variants of the surface mesh class; the more general <code>SurfaceMesh</code> which can hold any very general polygonal mesh, and the more specific <code>ManifoldSurfaceMesh</code>, which only supports manifold, oriented meshes. </p>
+<p>There are variants of the surface mesh class; the more general <code>SurfaceMesh</code> which can hold any very general polygonal mesh, and the more specific <code>ManifoldSurfaceMesh</code>, which only supports manifold, oriented meshes.</p>
 <p>Beyond the general capabilities of a <code>SurfaceMesh</code>, the <code>ManifoldSurfaceMesh</code>:</p>
 <ul>
 <li>inherits from <code>SurfaceMesh</code>, and can be used anywhere a <code>SurfaceMesh</code> is expected</li>
