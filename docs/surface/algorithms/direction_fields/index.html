@@ -1139,6 +1139,30 @@
 <p><img alt="n direction fields" src="/media/n_direction_fields.png" /></p>
 <p>Most of these routines only depend on the <em>intrinsic</em> geometry of a surface (via the <code>IntrinsicGeometryInterface</code>). Therefore, you can run them on abstract geometric domains as well as traditional surfaces in 3D. However, a surface&rsquo;s principal curvatures depend on the extrinsic geometry, so you can only compute curvature-aligned fields for surfaces in 3D.</p>
 <p><code>#include "geometrycentral/surface/direction_fields.h"</code></p>
+<details class="info"><summary>How to interpret our symmetric direction fields</summary><p>In geometry-central we use a &ldquo;power&rdquo; representation for symmetric vector fields (e.g. lines and cross fields, when <code>n &gt; 1</code> in the below algorithms). </p>
+<p>For instance, in the case of cross fields <code>n=4</code>, there are four different tangent vectors at each point giving the resulting cross <span><span class="MathJax_Preview">v_0, v_1, v_2, v_3</span><script type="math/tex">v_0, v_1, v_2, v_3</script></span>. Rather than outputting any one of these vectors, we output a vector raised to the 4th power (where exponentiation is defined in the sense of complex numbers) <span><span class="MathJax_Preview">v = v_0^4 = v_1^4 = v_2^4 = v_3^4</span><script type="math/tex">v = v_0^4 = v_1^4 = v_2^4 = v_3^4</script></span>.  This representation makes sense, because after raising to the 4th power maps each of these four cross vectors to the same representative vector.</p>
+<p><strong>How do I get the cross/line/etc directions?</strong></p>
+<p>Concretely, to get out the four tangent direction vectors for a cross fields, one could do something like:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Compute a cross field</span>
+<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> 
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">crossValues</span> <span class="o">=</span> <span class="n">computeSmoothestVertexDirectionField</span><span class="p">(</span><span class="o">*</span><span class="n">geometry</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+
+<span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">mesh</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">())</span> <span class="p">{</span>
+
+  <span class="n">Vector2</span> <span class="n">representative</span> <span class="o">=</span> <span class="n">crossValues</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+  <span class="n">Vector2</span> <span class="n">crossDir</span> <span class="o">=</span> <span class="n">crossDir</span><span class="p">.</span><span class="n">pow</span><span class="p">(</span><span class="n">representative</span><span class="p">,</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// take the n&#39;th root</span>
+
+  <span class="c1">// loop over the four directions</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">rot</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">rot</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">rot</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// crossDir is one of the four cross directions, as a tangent vector</span>
+    <span class="n">crossDir</span> <span class="o">=</span> <span class="n">crossDir</span><span class="p">.</span><span class="n">rot90</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">(</span><span class="n">and</span> <span class="n">the</span> <span class="n">same</span> <span class="n">applies</span> <span class="n">when</span> <span class="err">`</span><span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="err">`</span> <span class="k">for</span> <span class="n">line</span> <span class="n">fields</span><span class="p">,</span> <span class="n">etc</span><span class="p">)</span>
+</code></pre></div>
+
+</details>
 <h2 id="smoothest-direction-fields">Smoothest Direction Fields</h2>
 <p><img alt="direction fields basic" src="/media/direction_field_basic.jpg" /></p>
 <p>These routines compute the smoothest possible n-direction field on the input surface. They place singularities automatically. If you need to find out where the singularities are, refer to the <a href="#index-computation">Index Computation</a> section below.</p>
