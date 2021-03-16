@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#smoothest-direction-fields" class="md-skip">
+        <a href="#interpreting-symmetric-direction-fields" class="md-skip">
           Skip to content
         </a>
       
@@ -648,6 +648,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#interpreting-symmetric-direction-fields" class="md-nav__link">
+    Interpreting symmetric direction fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#smoothest-direction-fields" class="md-nav__link">
     Smoothest Direction Fields
   </a>
@@ -1079,6 +1086,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#interpreting-symmetric-direction-fields" class="md-nav__link">
+    Interpreting symmetric direction fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#smoothest-direction-fields" class="md-nav__link">
     Smoothest Direction Fields
   </a>
@@ -1139,7 +1153,8 @@
 <p><img alt="n direction fields" src="/media/n_direction_fields.png" /></p>
 <p>Most of these routines only depend on the <em>intrinsic</em> geometry of a surface (via the <code>IntrinsicGeometryInterface</code>). Therefore, you can run them on abstract geometric domains as well as traditional surfaces in 3D. However, a surface&rsquo;s principal curvatures depend on the extrinsic geometry, so you can only compute curvature-aligned fields for surfaces in 3D.</p>
 <p><code>#include "geometrycentral/surface/direction_fields.h"</code></p>
-<details class="info"><summary>How to interpret our symmetric direction fields</summary><p>In geometry-central we use a &ldquo;power&rdquo; representation for symmetric vector fields (e.g. lines and cross fields, when <code>n &gt; 1</code> in the below algorithms). </p>
+<details class="info"><summary>How to interpret our symmetric direction fields</summary><h5 id="interpreting-symmetric-direction-fields">Interpreting symmetric direction fields</h5>
+<p>In geometry-central we use a &ldquo;power&rdquo; representation for symmetric vector fields (e.g. lines and cross fields, when <code>n &gt; 1</code> in the below algorithms). </p>
 <p>For instance, in the case of cross fields <code>n=4</code>, there are four different tangent vectors at each point giving the resulting cross <span><span class="MathJax_Preview">v_0, v_1, v_2, v_3</span><script type="math/tex">v_0, v_1, v_2, v_3</script></span>. Rather than outputting any one of these vectors, we output a vector raised to the 4th power (where exponentiation is defined in the sense of complex numbers) <span><span class="MathJax_Preview">v = v_0^4 = v_1^4 = v_2^4 = v_3^4</span><script type="math/tex">v = v_0^4 = v_1^4 = v_2^4 = v_3^4</script></span>.  This representation makes sense, because after raising to the 4th power maps each of these four cross vectors to the same representative vector.</p>
 <p><strong>How do I get the cross/line/etc directions?</strong></p>
 <p>Concretely, to get out the four tangent direction vectors for a cross fields, one could do something like:</p>
