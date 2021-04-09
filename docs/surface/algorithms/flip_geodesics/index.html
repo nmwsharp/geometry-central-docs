@@ -1248,7 +1248,7 @@
 <h2 id="constructing-a-path-network">Constructing a path network</h2>
 <p>The class stateful class <code>FlipEdgeNetwork</code> encapsulates all functionality in the algorithm; all of the methods below are members functions. This class wraps a <code>SignpostIntrinsicTriangulation</code> (as member <code>FlipEdgeNetwork::tri</code>), and also manages a path network along the edges of that triangulation.</p>
 <p>The most direct construct takes as input a sequence of halfedges along the surface which comprise the path.</p>
-<details class="func"><summary><code class="highlight"><span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">FlipEdgeNetwork</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">inputGeom</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Halfedge</span><span class="o">&gt;&gt;</span> <span class="n">paths</span><span class="p">,</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">extraMarkedVerts</span> <span class="o">=</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">())</span></code></summary><p>Construct a network of paths along the surface.</p>
+<details class="func"><summary><code class="highlight"><span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">FlipEdgeNetwork</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">inputGeom</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Halfedge</span><span class="o">&gt;&gt;&amp;</span> <span class="n">paths</span><span class="p">,</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">extraMarkedVerts</span> <span class="o">=</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">())</span></code></summary><p>Construct a network of paths along the surface.</p>
 <ul>
 <li><code>mesh</code>: the input manifold triangle mesh</li>
 <li><code>inputGeom</code>: the input geometry (as always, a <code>VertexPositionGeometry</code> is valid input)</li>
@@ -1281,6 +1281,11 @@
 <li><code>extraMarkedVerts</code>: if given, boolean vector of vertices where the path is pinned, and should not be straightened</li>
 </ul>
 </details>
+<details class="func"><summary><code class="highlight"><span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">reinitializePath</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Halfedge</span><span class="o">&gt;&gt;&amp;</span> <span class="n">paths</span><span class="p">)</span></code></summary><p>Re-initialize an existing <code>FlipEdgeNetwork</code> object to hold the paths in <code>paths</code>, just like in the constructor. Useful when used in conjunction with <code>rewind()</code>.</p>
+<ul>
+<li><code>paths</code>: a collection of paths along the surface, each given as an ordered sequence of halfedges</li>
+</ul>
+</details>
 <h2 id="manipulating-paths">Manipulating paths</h2>
 <p>The key routine is <code>FlipEdgeNetwork::iterativeShorten()</code>, which shortens the path until it is a geodesic by flipping edges in the underlying intrinsic triangulation.</p>
 <details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">iterativeShorten</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">maxIterations</span> <span class="o">=</span> <span class="n">INVALID_IND</span><span class="p">,</span> <span class="kt">double</span> <span class="n">maxRelativeLengthDecrease</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span></code></summary><p>Shorten the network to be geodesic.</p>
@@ -1291,6 +1296,36 @@
 </ul>
 </details>
 <p>Importantly, after calling <code>iterativeShorten()</code>, the underlying intrinsic triangulation <code>FlipEdgeNetwork::tri</code> is a triangulation which <em>conforms</em> to the generated geodesics. This triangulation can then be used for subsequent computation, such as solving a PDE which has geodesics as boundary conditions.</p>
+<details class="info" open="open"><summary>Shortening many paths</summary><p>After shortening a path to a geodesic, the underlying triangulation has been mutated by edge flips. If you want to shorten another path, you can call <code>rewind()</code> to reset the data structure and prepare it for the next path.</p>
+<p>For instance, if you wanted to find many point-to-point geodesic paths, you might write something like:</p>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">FlipEdgeNetwork</span><span class="o">&gt;</span> <span class="n">flipNetwork</span><span class="p">(</span><span class="k">new</span> <span class="n">FlipEdgeNetwork</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="o">*</span><span class="n">geometry</span><span class="p">,</span> <span class="p">{}));</span>
+<span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">supportRewinding</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+<span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">posGeom</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+
+<span class="k">for</span><span class="p">(</span><span class="cm">/* each path to compute */</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="n">Vertex</span> <span class="n">startVert</span><span class="p">;</span> <span class="c1">// populate these somehow</span>
+  <span class="n">Vertex</span> <span class="n">endVert</span><span class="p">;</span> 
+
+  <span class="c1">// Get an initial dijkstra path</span>
+  <span class="c1">// (surface/mesh_graph_algorithms.h)</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Halfedge</span><span class="o">&gt;</span> <span class="n">dijkstraPath</span> <span class="o">=</span> <span class="n">shortestEdgePath</span><span class="p">(</span><span class="o">*</span><span class="n">geom</span><span class="p">,</span> <span class="n">startVert</span><span class="p">,</span> <span class="n">endVert</span><span class="p">);</span>
+
+  <span class="c1">// Reinitialize the ede network to contain this path</span>
+  <span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">reinitializePath</span><span class="p">({</span><span class="n">dijkstraPath</span><span class="p">});</span>
+
+  <span class="c1">// Straighten the path to geodesic</span>
+  <span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">iterativeShorten</span><span class="p">();</span>
+
+  <span class="c1">// Extract the path and store it in the vector</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">path3D</span> <span class="o">=</span> <span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">getPathPolyline3D</span><span class="p">().</span><span class="n">front</span><span class="p">();</span>
+
+  <span class="c1">// Be kind, rewind</span>
+  <span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">rewind</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</details>
 <h3 id="geodesic-bezier-curves">Geodesic Bézier curves</h3>
 <p>Once we can shorten curves to geodesics, we can use a de Casteljau-style subdivision scheme to construct geodesic Bézier curves along a mesh,
 using a procedure described in &ldquo;Modeling on triangulations with geodesic curves&rdquo; by Morera et al. (2008).</p>
@@ -1336,6 +1371,9 @@ using a procedure described in &ldquo;Modeling on triangulations with geodesic c
 <p><strong>To use this approach, you must first set your 3D mesh geometry as the <code>posGeom</code> member.</strong> </p>
 </details>
 <p>Additionally, a collection of useful utility functions are provided (see <code>flip_geodesic.h</code> the complete listing).</p>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">rewind</span><span class="p">()</span></code></summary><p>Undo any flips which have been performed, resetting the data structure to its initial state.</p>
+<p>Note that you must set <code>FlipEdgeNetwork::supportRewinding = true</code> right after constructure (before doing any shortening) to be able to use <code>rewind()</code>.</p>
+</details>
 <details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">edgeInPath</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">)</span></code></summary><p>Test whether a given edge from the intrinsic triangulation appears in the path.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">halfedgeInPath</span><span class="p">(</span><span class="n">Halfedge</span> <span class="n">he</span><span class="p">)</span></code></summary><p>Test whether a given halfedge from the intrinsic triangulation appears in the path.</p>
