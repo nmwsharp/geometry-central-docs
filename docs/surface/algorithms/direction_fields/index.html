@@ -1318,7 +1318,7 @@
 <span class="k">using</span> <span class="k">namespace</span> <span class="nn">surface</span><span class="p">;</span>
 
 <span class="c1">// Load a mesh</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">HalfedgeMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">loadMesh</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
 

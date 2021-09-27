@@ -1322,13 +1322,15 @@
                 <p>Intrinsic triangulations begin with a simple idea: rather than representing a triangle mesh&rsquo;s geometry via vertex positions, instead store a length associated with each edge. This turns out to be just the right data to compute many geometric quantities, including areas, angles, Laplacians, geodesic distance, etc; from these one can evaluate many algorithms directly on an intrinsic triangulation.</p>
 <p>The general workflow with intrinsic triangulations is to start out with some initial mesh having 3D vertex positions, and construct a new intrinsic triangulation which &ldquo;sits on top&rdquo; of the initial mesh, and can then be modified and improved.  The benefit of working with intrinsic triangulations is that they enable a family of simple &amp; powerful mesh operations to robustly compute with a surface while preserving its shape exactly&mdash;these operations are not possible when working directly with vertex positions. For a general introduction to intrinsic triangulations and the technique used here, <a href="https://nmwsharp.com/media/papers/int-tri-course/int_tri_course.pdf">see this course</a>.</p>
 <p><img alt="intrinsic triangulation teaser" src="/media/int_tri_teaser.jpg" />
-The above image shows an intrinsic triangulation of a poorly-tesselated surface. The original mesh is given by the black wireframe, while the intrinsic triangulation (after Delaunay refinement) is given by the colored triangles. Computing with the intrinsic triangulation yields significant benefits, while still implicitly encoding the original shape exactly.</p>
+The above image shows an intrinsic triangulation of a poorly-tessellated surface. The original mesh is given by the black wireframe, while the intrinsic triangulation (after Delaunay refinement) is given by the colored triangles. Computing with the intrinsic triangulation yields significant benefits, while still implicitly encoding the original shape exactly.</p>
+<p>The tricky part of working with intrinsic triangulations like this is encoding the correspondence to the original mesh. Geometry-central contains two data structures for encoding this correspondence, which allow you to e.g. transfer data between to original mesh and the intrinsic triangulation, or map a point in barycentric coordinates between the triangulations. Additionally, these data structures offer routines for standard operations such as generating a high-quality intrinsic triangulation of a given surface.</p>
 <p>The main interface for working with intrinsic triangulations is <code>IntrinsicTriangulation</code>. This interface is realized by the <code>SignpostIntrinsicTriangulation</code> and <code>IntegerCoordinatesIntrinsicTriangulation</code> classes (see <a href="/surface/geometry/geometry/#geometry-hierarchy">here</a> for a brief discussion of interfaces, realization, and polymorphism in C++). The routines in this section show how to initialize a triangulation, improve its quality, and run algorithms on it. In particular, this intrinsic triangulation satisfies the <a href="/surface/geometry/geometry/#intrinsic-geometry">IntrinsicGeometryInterface</a>, and thus can be used directly as input to many algorithms in geometry-central.</p>
 <p><a href="https://github.com/nmwsharp/navigating-intrinsic-triangulations-demo">This repository</a> contains a simple demo application with a GUI for manipulating intrinsic triangulations, and demonstrates much of the fuctionality documented here.</p>
+<p>Headers:
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/intrinsic_triangulation.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/signpost_intrinsic_triangulation.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/integer_coordinates_intrinsic_triangulation.h&quot;</span><span class="cp"></span>
-</code></pre></div>
+</code></pre></div></p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/signpost_intrinsic_triangulation.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/direction_fields.h&quot;</span><span class="cp"></span>
@@ -1337,59 +1339,63 @@ The above image shows an intrinsic triangulation of a poorly-tesselated surface.
 <span class="k">using</span> <span class="k">namespace</span> <span class="nn">surface</span><span class="p">;</span>
 
 <span class="c1">// Load a mesh</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">HalfedgeMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">loadMesh</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
 
 <span class="c1">// Construct an intrinsic triangulation</span>
-<span class="n">SignpostIntrinsicTriangulation</span> <span class="nf">intTri</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="o">*</span><span class="n">geometry</span><span class="p">);</span>
+<span class="c1">// (here, using the signpost data structure)</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">IntrinsicTriangulation</span><span class="o">&gt;</span> <span class="n">intTri</span><span class="p">(</span>
+  <span class="k">new</span> <span class="n">SignpostIntrinsicTriangulation</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="o">*</span><span class="n">geometry</span><span class="p">));</span>
 
 
 <span class="c1">// == Improve the quality</span>
 
 <span class="c1">// flip edges to get the intrinsic Delaunay triangulation</span>
-<span class="n">intTri</span><span class="p">.</span><span class="n">flipToDelaunay</span><span class="p">();</span> 
+<span class="n">intTri</span><span class="o">-&gt;</span><span class="n">flipToDelaunay</span><span class="p">();</span> 
 
 <span class="c1">// optional: go even further and insert new vertices guarantee </span>
 <span class="c1">// a minimum angle bound (default: 25 deg) in the underlying </span>
 <span class="c1">// intrinsic triangulation</span>
-<span class="n">intTri</span><span class="p">.</span><span class="n">delaunayRefine</span><span class="p">();</span>
+<span class="n">intTri</span><span class="o">-&gt;</span><span class="n">delaunayRefine</span><span class="p">();</span>
 
 
 <span class="c1">// == Do some computation on the intrinsic triangulation </span>
 
-<span class="c1">// (example here: compute a smooth direction field)</span>
-<span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">directionsOnInt</span> <span class="o">=</span> <span class="n">computeSmoothestVertexDirectionField</span><span class="p">(</span><span class="n">intTri</span><span class="p">);</span>
+<span class="c1">// Compute a smooth direction field</span>
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">directionsOnInt</span> <span class="o">=</span> <span class="n">computeSmoothestVertexDirectionField</span><span class="p">(</span><span class="o">*</span><span class="n">intTri</span><span class="p">);</span>
 
-<span class="c1">// copy the result back to the vertices of the input mesh</span>
-<span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">directionsOnOrig</span> <span class="o">=</span> <span class="n">intTri</span><span class="p">.</span><span class="n">restrictToInput</span><span class="p">(</span><span class="n">directionsOnInt</span><span class="p">);</span>
-
-<span class="c1">// == Compute some quantities</span>
+<span class="c1">// Copy the result back to the vertices of the input mesh</span>
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">directionsOnOrig</span> <span class="o">=</span> <span class="n">intTri</span><span class="o">-&gt;</span><span class="n">restrictToInput</span><span class="p">(</span><span class="n">directionsOnInt</span><span class="p">);</span>
 </code></pre></div>
 <h2 id="intrinsic-triangulation">Intrinsic Triangulation</h2>
 <p>This class tracks the geometry and connectivity of an intrinsic triangulation sitting atop a triangle mesh. It &ldquo;is-a&rdquo; <code>IntrinsicGeometryInterface</code>, so it can be used directly as a geometry input to many geometry-central subroutines. Furthermore, we can compute <a href="/surface/geometry/quantities">all sorts of geometric quantities</a> on it just as we normally would with a geometry object.</p>
 <p><code>IntrinsicTriangulation</code> is an interface and cannot be constructed directly: to use it, you must construct a <code>SignpostIntrinsicTriangulation</code> or <code>IntegerCoordinatesIntrinsicTriangulation</code>.</p>
 <p>Example: compute some quantities
-<div class="highlight"><pre><span></span><code><span class="n">SignpostIntrinsicTriangulation</span> <span class="nf">intTri</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="o">*</span><span class="n">geometry</span><span class="p">);</span>
-<span class="n">intTri</span><span class="p">.</span><span class="n">flipToDelaunay</span><span class="p">();</span> 
+<div class="highlight"><pre><span></span><code><span class="c1">// Construct an intrinsic triangulation</span>
+<span class="c1">// (here, using the signpost data structure)</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">IntrinsicTriangulation</span><span class="o">&gt;</span> <span class="n">intTri</span><span class="p">(</span>
+  <span class="k">new</span> <span class="n">SignpostIntrinsicTriangulation</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="o">*</span><span class="n">geometry</span><span class="p">));</span>
+
+<span class="n">intTri</span><span class="o">-&gt;</span><span class="n">flipToDelaunay</span><span class="p">();</span> 
 
 <span class="c1">// edge lengths</span>
-<span class="n">intTri</span><span class="p">.</span><span class="n">requireEdgeLengths</span><span class="p">();</span>
+<span class="n">intTri</span><span class="o">-&gt;</span><span class="n">requireEdgeLengths</span><span class="p">();</span>
 <span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">intTri</span><span class="o">-&gt;</span><span class="n">intrinsicMesh</span><span class="p">.</span><span class="n">edges</span><span class="p">())</span> <span class="p">{</span>
   <span class="c1">// print them, as an example</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Length of edge &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">e</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">intTri</span><span class="p">.</span><span class="n">edgeLengths</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Length of edge &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">e</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">intTri</span><span class="o">-&gt;</span><span class="n">edgeLengths</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// vertex dual area (mass)</span>
-<span class="n">intTri</span><span class="p">.</span><span class="n">requireVertexDualAreas</span><span class="p">();</span>
+<span class="n">intTri</span><span class="o">-&gt;</span><span class="n">requireVertexDualAreas</span><span class="p">();</span>
 <span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">intTri</span><span class="o">-&gt;</span><span class="n">intrinsicMesh</span><span class="p">.</span><span class="n">vertices</span><span class="p">())</span> <span class="p">{</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Area of vertex &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">v</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">intTri</span><span class="p">.</span><span class="n">vertexDualAreas</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Area of vertex &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">v</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">intTri</span><span class="o">-&gt;</span><span class="n">vertexDualAreas</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// Laplace matrix</span>
 <span class="c1">// (this is this intrinsic Delaunay Laplace matrix, since we flipped to Delaunay)</span>
-<span class="n">intTri</span><span class="p">.</span><span class="n">requireCotanLaplacian</span><span class="p">();</span>
-<span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">L</span> <span class="o">=</span> <span class="n">intTri</span><span class="p">.</span><span class="n">cotanLaplacian</span><span class="p">;</span> <span class="c1">// an Eigen sparse matrix</span>
+<span class="n">intTri</span><span class="o">-&gt;</span><span class="n">requireCotanLaplacian</span><span class="p">();</span>
+<span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">L</span> <span class="o">=</span> <span class="n">intTri</span><span class="o">-&gt;</span><span class="n">cotanLaplacian</span><span class="p">;</span> <span class="c1">// an Eigen sparse matrix</span>
 </code></pre></div></p>
 <h2 id="basic-api">Basic API</h2>
 <p>Note that some additional functions and members can be found in the <code>IntrinsicTriangulation</code> class at 
