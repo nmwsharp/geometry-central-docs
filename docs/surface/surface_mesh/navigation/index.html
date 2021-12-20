@@ -824,6 +824,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/parameterization/" title="Parameterization" class="md-nav__link">
+      Parameterization
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1328,14 +1340,14 @@
 <span class="p">}</span>
 </code></pre></div></p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">halfedges</span><span class="p">()</span></code></summary><p>Iterate over all of the halfedges in a mesh (both real and imaginary, if the mesh has boundary).
+<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">halfedges</span><span class="p">()</span></code></summary><p>Iterate over all of the halfedges in a mesh (both interior and exterior, if the mesh has boundary).
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">halfedges</span><span class="p">())</span> <span class="p">{</span>
   <span class="c1">// do science here</span>
 <span class="p">}</span>
 </code></pre></div></p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">realHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the real halfedges in a mesh.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">realHalfedges</span><span class="p">())</span> <span class="p">{</span>
+<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">interiorHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the interior halfedges in a mesh.
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">interiorHalfedges</span><span class="p">())</span> <span class="p">{</span>
   <span class="c1">// do science here</span>
 <span class="p">}</span>
 </code></pre></div>

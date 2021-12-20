@@ -790,6 +790,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/parameterization/" title="Parameterization" class="md-nav__link">
+      Parameterization
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1268,11 +1280,11 @@
 <span class="n">assert</span><span class="p">(</span><span class="n">myHe</span><span class="p">.</span><span class="n">isInterior</span><span class="p">()</span> <span class="o">==</span> <span class="nb">false</span><span class="p">);</span> <span class="c1">// this is an exterior halfedge</span>
 
 <span class="c1">// Traverse to &quot;face&quot;</span>
-<span class="n">Face</span> <span class="n">bFace</span> <span class="o">=</span> <span class="n">myExteriorHalfedge</span><span class="p">.</span><span class="n">face</span><span class="p">()</span>
+<span class="n">Face</span> <span class="n">bFace</span> <span class="o">=</span> <span class="n">myExteriorHalfedge</span><span class="p">.</span><span class="n">face</span><span class="p">();</span>
 
 <span class="c1">// bFace is really a boundary loop, doing any face things </span>
 <span class="c1">// with it would be invalid</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">bFace</span><span class="p">.</span><span class="n">isBoundaryLoop</span><span class="p">()</span> <span class="o">==</span> <span class="nb">true</span><span class="p">)</span>
+<span class="n">assert</span><span class="p">(</span><span class="n">bFace</span><span class="p">.</span><span class="n">isBoundaryLoop</span><span class="p">()</span> <span class="o">==</span> <span class="nb">true</span><span class="p">);</span>
 
 <span class="c1">// Convert the &quot;face&quot; to its true boundary loop form </span>
 <span class="n">BoundaryLoop</span> <span class="n">bLoop</span> <span class="o">=</span> <span class="n">bFace</span><span class="p">.</span><span class="n">asBoundaryLoop</span><span class="p">();</span>

@@ -825,6 +825,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/parameterization/" title="Parameterization" class="md-nav__link">
+      Parameterization
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1434,12 +1446,12 @@ and so on.</p>
 <p>Requires that both meshes be <a href="../mutation/#compressed-mode">compressed</a>.</p>
 <p>Example usage:
 <div class="highlight"><pre><span></span><code><span class="n">SurfaceMesh</span> <span class="n">meshA</span> <span class="o">=</span> <span class="cm">/* something */</span><span class="p">;</span>
-<span class="n">SurfaceMesh</span> <span class="n">meshB</span> <span class="o">=</span> <span class="n">meshA</span><span class="p">.</span><span class="n">copy</span><span class="p">();</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">meshB</span> <span class="o">=</span> <span class="n">meshA</span><span class="p">.</span><span class="n">copy</span><span class="p">();</span>
 
 <span class="n">FaceData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">myDataOnA</span><span class="p">(</span><span class="n">meshA</span><span class="p">);</span>
 <span class="cm">/* fill myDataOnA with interesting values */</span>
 
-<span class="n">FaceData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">myDataOnB</span> <span class="o">=</span> <span class="n">myDataOnA</span><span class="p">.</span><span class="n">reinterpretTo</span><span class="p">(</span><span class="n">meshB</span><span class="p">);</span>
+<span class="n">FaceData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">myDataOnB</span> <span class="o">=</span> <span class="n">myDataOnA</span><span class="p">.</span><span class="n">reinterpretTo</span><span class="p">(</span><span class="o">*</span><span class="n">meshB</span><span class="p">);</span>
 </code></pre></div></p>
 </details>
 <h2 id="advanced-features">Advanced features</h2>

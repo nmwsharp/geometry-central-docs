@@ -1124,6 +1124,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/parameterization/" title="Parameterization" class="md-nav__link">
+      Parameterization
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1920,14 +1932,14 @@
                 
                 <p>This page enumerates the surface geometry quantities available in geometry central.</p>
 <p>Recall that these quantities are each associated with a <a href="../geometry/#geometry-hierarchy">geometry interface</a> specifying what can be computed from the given input data. Instantiating a geometry from data, classes like <code>VertexPositionGeometry</code> extend these interfaces and give access to all of the quantities therein.  Quantities should usually be accessed via the <a href="../geometry/#managed-quantities">managed caches</a>, as in the example below.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/geometry.h&quot;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/vertex_position_geometry.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="o">::</span><span class="n">surface</span><span class="p">;</span>
 
 <span class="c1">// Load a mesh and geometry from file</span>
 <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">positionGeometry</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="o">&lt;</span><span class="n">mesh</span><span class="p">,</span> <span class="n">positionGeometry</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">loadMesh</span><span class="p">(</span><span class="s">&quot;spot.obj&quot;</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="o">&lt;</span><span class="n">mesh</span><span class="p">,</span> <span class="n">positionGeometry</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">readSurfaceMesh</span><span class="p">(</span><span class="s">&quot;spot.obj&quot;</span><span class="p">);</span>
 
 <span class="c1">// For the sake of the example, use an interface type that offers</span>
 <span class="c1">// only the quantities which we will actually use below.</span>
@@ -2173,18 +2185,18 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <p>Always a unit vector, which can be multiplied by any other vector to compute the rotation. (recall our <code>Vector2</code>s multiply like complex numbers)</p>
 <p>Only valid on triangular meshes. Not defined for halfedges (interior or exterior) incident on boundary edges, these boundary values are set to NaN so errors can be caught quickly.</p>
 <ul>
-<li><strong>member:</strong> <code>HalfedgeData&lt;Vector2&gt; IntrinsicGeometryInterface::transportVectorAcrossHalfedge</code></li>
+<li><strong>member:</strong> <code>HalfedgeData&lt;Vector2&gt; IntrinsicGeometryInterface::transportVectorsAcrossHalfedge</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireTransportVectorAcrossHalfedge()</code></li>
 </ul>
 <p>Example usage:
-<div class="highlight"><pre><span></span><code><span class="n">geometry</span><span class="p">.</span><span class="n">requireTransportVectorAcrossHalfedge</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="n">geometry</span><span class="p">.</span><span class="n">requireTransportVectorsAcrossHalfedge</span><span class="p">();</span>
 
 <span class="n">Face</span> <span class="n">f</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>        <span class="c1">// a face of interest</span>
 <span class="n">Vector2</span> <span class="n">myVec</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span> <span class="c1">// tangent vector in face f</span>
 
 <span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">f</span><span class="p">.</span><span class="n">adjacentHalfedges</span><span class="p">())</span> <span class="p">{</span>
 
-  <span class="n">Vertex</span> <span class="n">neighborFace</span> <span class="o">=</span> <span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">face</span><span class="p">();</span>
+  <span class="n">Face</span> <span class="n">neighborFace</span> <span class="o">=</span> <span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">face</span><span class="p">();</span>
   <span class="n">Vector2</span> <span class="n">rot</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">transportVectorAcrossHalfedge</span><span class="p">[</span><span class="n">he</span><span class="p">];</span>
   <span class="n">Vector2</span> <span class="n">neighVec</span> <span class="o">=</span> <span class="n">rot</span> <span class="o">*</span> <span class="n">myVec</span><span class="p">;</span>    <span class="c1">// now in the basis of neighborFace</span>
 <span class="p">}</span>
@@ -2207,11 +2219,11 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <p>Always a unit vector, which can be multiplied by any other vector to compute the rotation. (recall our <code>Vector2</code>s multiply like complex numbers)</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
-<li><strong>member:</strong> <code>HalfedgeData&lt;Vector2&gt; IntrinsicGeometryInterface::transportVectorAlongHalfedge</code></li>
-<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireTransportVectorAlongHalfedge()</code></li>
+<li><strong>member:</strong> <code>HalfedgeData&lt;Vector2&gt; IntrinsicGeometryInterface::transportVectorsAlongHalfedge</code></li>
+<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireTransportVectorsAlongHalfedge()</code></li>
 </ul>
 <p>Example usage:
-<div class="highlight"><pre><span></span><code><span class="n">geometry</span><span class="p">.</span><span class="n">requireTransportVectorAlongHalfedge</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="n">geometry</span><span class="p">.</span><span class="n">requireTransportVectorsAlongHalfedge</span><span class="p">();</span>
 
 <span class="n">Vertex</span> <span class="n">v</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>        <span class="c1">// a vertex of interest</span>
 <span class="n">Vector2</span> <span class="n">myVec</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>   <span class="c1">// tangent vector in vertex v</span>
@@ -2345,8 +2357,8 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <span class="k">for</span><span class="p">(</span><span class="n">Face</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">faces</span><span class="p">())</span> <span class="p">{</span>
   <span class="n">Vector2</span> <span class="n">field</span> <span class="o">=</span> <span class="n">myTangentVectorField</span><span class="p">[</span><span class="n">f</span><span class="p">];</span>
 
-  <span class="n">Vector3</span> <span class="n">basisX</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">faceTangentBasis</span><span class="p">[</span><span class="n">f</span><span class="p">];</span>
-  <span class="n">Vector3</span> <span class="n">basisY</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">faceTangentBasis</span><span class="p">[</span><span class="n">f</span><span class="p">];</span>
+  <span class="n">Vector3</span> <span class="n">basisX</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">faceTangentBasis</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+  <span class="n">Vector3</span> <span class="n">basisY</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">faceTangentBasis</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
 
   <span class="n">Vector3</span> <span class="n">fieldInWorldCoords</span> <span class="o">=</span> <span class="n">basisX</span> <span class="o">*</span> <span class="n">field</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">basisY</span> <span class="o">*</span> <span class="n">field</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
 <span class="p">}</span>
@@ -2369,8 +2381,8 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">vertices</span><span class="p">())</span> <span class="p">{</span>
   <span class="n">Vector2</span> <span class="n">field</span> <span class="o">=</span> <span class="n">myTangentVectorField</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
 
-  <span class="n">Vector3</span> <span class="n">basisX</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">vertexTangentBasis</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
-  <span class="n">Vector3</span> <span class="n">basisY</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">vertexTangentBasis</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+  <span class="n">Vector3</span> <span class="n">basisX</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">vertexTangentBasis</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+  <span class="n">Vector3</span> <span class="n">basisY</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">vertexTangentBasis</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
 
   <span class="n">Vector3</span> <span class="n">fieldInWorldCoords</span> <span class="o">=</span> <span class="n">basisX</span> <span class="o">*</span> <span class="n">field</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">basisY</span> <span class="o">*</span> <span class="n">field</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
 <span class="p">}</span>
