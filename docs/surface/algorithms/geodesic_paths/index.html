@@ -15,7 +15,7 @@
     
     
       
-        <title>Flip Geodesics - Geometry Central</title>
+        <title>Tracing Geodesic Paths - Geometry Central</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#constructing-a-path-network" class="md-skip">
+        <a href="#example" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Flip Geodesics
+              Tracing Geodesic Paths
             
           </span>
         </div>
@@ -670,11 +670,83 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../geodesic_paths/" title="Tracing Geodesic Paths" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Tracing Geodesic Paths
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Tracing Geodesic Paths" class="md-nav__link md-nav__link--active">
       Tracing Geodesic Paths
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helper-types" class="md-nav__link">
+    Helper Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Helper Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    Result
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tangent-spaces" class="md-nav__link">
+    Tangent Spaces
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -742,90 +814,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Flip Geodesics
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Flip Geodesics" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../flip_geodesics/" title="Flip Geodesics" class="md-nav__link">
       Flip Geodesics
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#constructing-a-path-network" class="md-nav__link">
-    Constructing a path network
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manipulating-paths" class="md-nav__link">
-    Manipulating paths
-  </a>
-  
-    <nav class="md-nav" aria-label="Manipulating paths">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#geodesic-bezier-curves" class="md-nav__link">
-    Geodesic Bézier curves
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#improving-the-triangulation" class="md-nav__link">
-    Improving the triangulation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output-and-utilities" class="md-nav__link">
-    Output and utilities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#citation" class="md-nav__link">
-    Citation
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1259,30 +1252,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#constructing-a-path-network" class="md-nav__link">
-    Constructing a path network
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#manipulating-paths" class="md-nav__link">
-    Manipulating paths
+  <a href="#helper-types" class="md-nav__link">
+    Helper Types
   </a>
   
-    <nav class="md-nav" aria-label="Manipulating paths">
+    <nav class="md-nav" aria-label="Helper Types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#geodesic-bezier-curves" class="md-nav__link">
-    Geodesic Bézier curves
+  <a href="#options" class="md-nav__link">
+    Options
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#improving-the-triangulation" class="md-nav__link">
-    Improving the triangulation
+  <a href="#result" class="md-nav__link">
+    Result
   </a>
   
 </li>
@@ -1293,15 +1286,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#output-and-utilities" class="md-nav__link">
-    Output and utilities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#citation" class="md-nav__link">
-    Citation
+  <a href="#tangent-spaces" class="md-nav__link">
+    Tangent Spaces
   </a>
   
 </li>
@@ -1318,7 +1304,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/flip_geodesics.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/geodesic_paths.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1326,191 +1312,105 @@
                   
                 
                 
-                  <h1>Flip Geodesics</h1>
+                  <h1>Tracing Geodesic Paths</h1>
                 
-                <p>This algorithm takes as input a path (or loop/network of paths) along the edges of a triangle mesh, and as output straightens that path to be a <em>geodesic</em> (i.e. a straight line, or equivalently a locally-shortest path along a surface). The procedure runs in milliseconds, is quite robust, comes with a strong guarantee that no new crossings will be created in the path, and as an added benefit also generates a triangulation on the surface which conforms to the geodesic.  Additionally, it even enables the construction of Bézier curves on a surface.</p>
-<p><img alt="shorten path to geodesic" src="/media/flip_geodesic.jpg" /></p>
-<p>See <a href="https://github.com/nmwsharp/flip-geodesics-demo">this repo</a> for a demo application which wraps this implementation as a standalone application with a GUI.</p>
-<p>This is an implementation of the algorithm described in <a href="https://nmwsharp.com/research/flip-geodesics/">You Can Find Geodesic Paths in Triangle Meshes by Just Flipping Edges</a>.</p>
-<p><code>#include "geometrycentral/surface/flip_geodesics.h"</code></p>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/flip_geodesics.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
-
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="p">;</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="o">::</span><span class="n">surface</span><span class="p">;</span>
+                <p>The function <code>traceGeodesic</code> allows one to compute straightest paths along a surface (i.e. <em>geodesic</em> paths). </p>
+<p>Note that straightest paths depend only on the <em>intrinsic</em> geometry of a surface (via the <code>IntrinsicGeometryInterface</code>). Therefore, these routines can be run on abstract geometric domains as well as traditional surfaces in 3D. However, these routines do assume that the domain is a <code>ManifoldSurfaceMesh</code>.</p>
+<p><code>#include "geometrycentral/surface/trace_geodesic.h"</code></p>
+<details class="func"><summary><code class="highlight"><span class="n">TraceGeodesicResult</span> <span class="nf">traceGeodesic</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">SurfacePoint</span> <span class="n">startP</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">traceVec</span><span class="p">,</span> <span class="k">const</span> <span class="n">TraceOptions</span><span class="o">&amp;</span> <span class="n">traceOptions</span> <span class="o">=</span> <span class="n">defaultTraceOptions</span><span class="p">);</span></code></summary><p>Trace a geodesic path along a surface mesh.</p>
+<ul>
+<li><code>inputGeom</code>: the input geometry (as always, a <code>VertexPositionGeometry</code> is valid input)</li>
+<li><code>startP</code>: the point on the surface where the path should start</li>
+<li><code>traceVec</code>: the direction the path should proceed in, and the distance that it should travel</li>
+<li><code>traceOptions</code>: options to specify the behavior of <code>traceGeodesic</code> in various situations</li>
+</ul>
+</details>
+<p>The function <code>traceGeodesic</code> traces out a geodesic path starting at <code>startP</code> which proceeds in the direction of <code>traceVec</code> and has length equal to <code>traceVec.norm()</code>, unless the path intersects a boundary edge in which case it stops there. 
+This is also known as the <em>exponential map</em>. (As an aside, <code>geometry-central</code> also provides procedures for computing the inverse of the exponential map, known as the <a href="/surface/algorithms/vector_heat_method/#logarithmic-map">logarithmic map</a>.)</p>
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/surface_point.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/trace_geodesic.h&quot;</span><span class="cp"></span>
 
 <span class="c1">// Load a mesh</span>
 <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">readManifoldSurfaceMesh</span><span class="p">(</span><span class="s">&quot;my_mesh.obj&quot;</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">readManifoldSurfaceMesh</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
 
-<span class="c1">// Create a path network as a Dijkstra path between endpoints</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">FlipEdgeNetwork</span><span class="o">&gt;</span> <span class="n">edgeNetwork</span><span class="p">;</span>
-<span class="n">Vertex</span> <span class="n">vStart</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">-&gt;</span><span class="n">vertex</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="n">Vertex</span> <span class="n">vEnd</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">-&gt;</span><span class="n">vertex</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
-<span class="n">edgeNetwork</span> <span class="o">=</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">constructFromDijkstraPath</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="o">*</span><span class="n">geometry</span><span class="p">,</span> <span class="n">vStart</span><span class="p">,</span> <span class="n">vEnd</span><span class="p">);</span>
-
-<span class="c1">// Make the path a geodesic</span>
-<span class="n">edgeNetwork</span><span class="o">-&gt;</span><span class="n">iterativeShorten</span><span class="p">();</span>
-
-<span class="c1">// Extract the result as a polyline along the surface</span>
-<span class="n">edgeNetwork</span><span class="o">-&gt;</span><span class="n">posGeom</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;&gt;</span> <span class="n">polyline</span> <span class="o">=</span> <span class="n">edgeNetwork</span><span class="o">-&gt;</span><span class="n">getPathPolyline3D</span><span class="p">();</span>
+<span class="n">Vertex</span> <span class="n">v</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">-&gt;</span><span class="n">vertex</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">Vector2</span> <span class="n">traceVec</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">fromAngle</span><span class="p">(</span><span class="n">M_PI</span><span class="o">/</span><span class="mi">6</span><span class="p">);</span>
+<span class="n">SurfacePoint</span> <span class="n">pathEndpoint</span> <span class="o">=</span> <span class="n">traceGeodesic</span><span class="p">(</span><span class="o">*</span><span class="n">geometry</span><span class="p">,</span> <span class="n">SurfacePoint</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="n">traceVec</span><span class="p">).</span><span class="n">endPoint</span><span class="p">;</span>
 </code></pre></div>
 
-<h2 id="constructing-a-path-network">Constructing a path network</h2>
-<p>The class stateful class <code>FlipEdgeNetwork</code> encapsulates all functionality in the algorithm; all of the methods below are members functions. This class wraps a <code>SignpostIntrinsicTriangulation</code> (as member <code>FlipEdgeNetwork::tri</code>), and also manages a path network along the edges of that triangulation.</p>
-<p>The most direct construct takes as input a sequence of halfedges along the surface which comprise the path.</p>
-<details class="func"><summary><code class="highlight"><span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">FlipEdgeNetwork</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">inputGeom</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Halfedge</span><span class="o">&gt;&gt;&amp;</span> <span class="n">paths</span><span class="p">,</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">extraMarkedVerts</span> <span class="o">=</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">())</span></code></summary><p>Construct a network of paths along the surface.</p>
-<ul>
-<li><code>mesh</code>: the input manifold triangle mesh</li>
-<li><code>inputGeom</code>: the input geometry (as always, a <code>VertexPositionGeometry</code> is valid input)</li>
-<li><code>paths</code>: a collection of paths along the surface, each given as an ordered sequence of halfedges</li>
-<li><code>extraMarkedVerts</code>: if given, boolean vector of vertices where the path is pinned, and should not be straightened</li>
-</ul>
-</details>
-<p>Additionally, several factory methods are provided which assist in constructing a path network from common input data.</p>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">FlipEdgeNetwork</span><span class="o">&gt;</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">constructFromDijkstraPath</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">Vertex</span> <span class="n">startVert</span><span class="p">,</span> <span class="n">Vertex</span> <span class="n">endVert</span><span class="p">)</span></code></summary><p>Construct a network consisting of a single path, generated by running Dijkstra&rsquo;s algorithm between two point.</p>
-<ul>
-<li><code>mesh</code>: the input manifold triangle mesh</li>
-<li><code>inputGeom</code>: the input geometry (as always, a <code>VertexPositionGeometry</code> is valid input)</li>
-<li><code>startVert</code>, <code>endVert</code>: the source and target vertices from which to initialize a Dijkstra path along edges</li>
-</ul>
-</details>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">FlipEdgeNetwork</span><span class="o">&gt;</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">constructFromPiecewiseDijkstraPath</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="o">&gt;</span> <span class="n">points</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">closed</span> <span class="o">=</span> <span class="nb">false</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">markInterior</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span></code></summary><p>Construct a network consisting of a single path, generated by running Dijkstra&rsquo;s algorithm between consecutive pairs of vertices.</p>
-<ul>
-<li><code>mesh</code>: the input manifold triangle mesh</li>
-<li><code>inputGeom</code>: the input geometry (as always, a <code>VertexPositionGeometry</code> is valid input)</li>
-<li><code>points</code>: the not-necessarily-adjacent vertices from which to initialize the Dijkstra path, by running Dijkstra&rsquo;s algorithm between each i&rsquo;th and (i+1)&rsquo;th points.</li>
-<li><code>closed</code>: if true, the first point will be connected to the last to create a closed loop</li>
-<li><code>markInterior</code>: if true, the path will be pinned at the specified <code>points</code> and not shortened there</li>
-</ul>
-</details>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">FlipEdgeNetwork</span><span class="o">&gt;</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">constructFromEdgeSet</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="k">const</span> <span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;&amp;</span> <span class="n">inPath</span><span class="p">,</span> <span class="k">const</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;&amp;</span> <span class="n">extraMarkedVertices</span><span class="p">)</span></code></summary><p>Construct a network from a marked set of edges on the mesh. Endpoints, loops, etc are heuristically inferred (e.g. if a path ends at the same vertex it starts at, it is assumed to be a loop).</p>
-<ul>
-<li><code>mesh</code>: the input manifold triangle mesh</li>
-<li><code>inputGeom</code>: the input geometry (as always, a <code>VertexPositionGeometry</code> is valid input)</li>
-<li><code>inPath</code>: a boolean array indicating edges which are in the path</li>
-<li><code>extraMarkedVerts</code>: if given, boolean vector of vertices where the path is pinned, and should not be straightened</li>
-</ul>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">reinitializePath</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Halfedge</span><span class="o">&gt;&gt;&amp;</span> <span class="n">paths</span><span class="p">)</span></code></summary><p>Re-initialize an existing <code>FlipEdgeNetwork</code> object to hold the paths in <code>paths</code>, just like in the constructor. Useful when used in conjunction with <code>rewind()</code>.</p>
-<ul>
-<li><code>paths</code>: a collection of paths along the surface, each given as an ordered sequence of halfedges</li>
-</ul>
-</details>
-<h2 id="manipulating-paths">Manipulating paths</h2>
-<p>The key routine is <code>FlipEdgeNetwork::iterativeShorten()</code>, which shortens the path until it is a geodesic by flipping edges in the underlying intrinsic triangulation.</p>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">iterativeShorten</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">maxIterations</span> <span class="o">=</span> <span class="n">INVALID_IND</span><span class="p">,</span> <span class="kt">double</span> <span class="n">maxRelativeLengthDecrease</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span></code></summary><p>Shorten the network to be geodesic.</p>
-<p>Additional termination conditions can be set to potentially stop the process before the path is a geodesic:</p>
-<ul>
-<li><code>maxIterations</code> if set to something other than <code>INVALID_IND</code>, limits the number of iterations</li>
-<li><code>maxRelativeLengthDecrease</code> if set to something other than <code>0</code>, limits the maximum decrease in length for the network. E.g. <code>0.5</code> would mean the resulting network is at at <code>0.5 * L</code>, where <code>L</code> is the initial length.</li>
-</ul>
-</details>
-<p>Importantly, after calling <code>iterativeShorten()</code>, the underlying intrinsic triangulation <code>FlipEdgeNetwork::tri</code> is a triangulation which <em>conforms</em> to the generated geodesics. This triangulation can then be used for subsequent computation, such as solving a PDE which has geodesics as boundary conditions.</p>
-<details class="info" open="open"><summary>Shortening many paths</summary><p>After shortening a path to a geodesic, the underlying triangulation has been mutated by edge flips. If you want to shorten another path, you can call <code>rewind()</code> to reset the data structure and prepare it for the next path.</p>
-<p>For instance, if you wanted to find many point-to-point geodesic paths, you might write something like:</p>
-<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">FlipEdgeNetwork</span><span class="o">&gt;</span> <span class="n">flipNetwork</span><span class="p">(</span><span class="k">new</span> <span class="n">FlipEdgeNetwork</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="o">*</span><span class="n">geometry</span><span class="p">,</span> <span class="p">{}));</span>
-<span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">supportRewinding</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
-<span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">posGeom</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-
-<span class="k">for</span><span class="p">(</span><span class="cm">/* each path to compute */</span><span class="p">)</span> <span class="p">{</span>
-
-  <span class="n">Vertex</span> <span class="n">startVert</span><span class="p">;</span> <span class="c1">// populate these somehow</span>
-  <span class="n">Vertex</span> <span class="n">endVert</span><span class="p">;</span> 
-
-  <span class="c1">// Get an initial dijkstra path</span>
-  <span class="c1">// (surface/mesh_graph_algorithms.h)</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Halfedge</span><span class="o">&gt;</span> <span class="n">dijkstraPath</span> <span class="o">=</span> <span class="n">shortestEdgePath</span><span class="p">(</span><span class="o">*</span><span class="n">geom</span><span class="p">,</span> <span class="n">startVert</span><span class="p">,</span> <span class="n">endVert</span><span class="p">);</span>
-
-  <span class="c1">// Reinitialize the ede network to contain this path</span>
-  <span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">reinitializePath</span><span class="p">({</span><span class="n">dijkstraPath</span><span class="p">});</span>
-
-  <span class="c1">// Straighten the path to geodesic</span>
-  <span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">iterativeShorten</span><span class="p">();</span>
-
-  <span class="c1">// Extract the path and store it in the vector</span>
-  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">path3D</span> <span class="o">=</span> <span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">getPathPolyline3D</span><span class="p">().</span><span class="n">front</span><span class="p">();</span>
-
-  <span class="c1">// Be kind, rewind</span>
-  <span class="n">flipNetwork</span><span class="o">-&gt;</span><span class="n">rewind</span><span class="p">();</span>
-<span class="p">}</span>
-</code></pre></div>
-
-</details>
-<h3 id="geodesic-bezier-curves">Geodesic Bézier curves</h3>
-<p>Once we can shorten curves to geodesics, we can use a de Casteljau-style subdivision scheme to construct geodesic Bézier curves along a mesh,
-using a procedure described in &ldquo;Modeling on triangulations with geodesic curves&rdquo; by Morera et al. (2008).</p>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">bezierSubdivide</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">nRounds</span><span class="p">)</span></code></summary><p>Construct a Bézier curve from an input control polygon path via iterative subdivision.</p>
-<ul>
-<li><code>nRounds</code> specifies the number of subdivision rounds to perform; the curve converges to an exact geodesics as <code>nRounds</code> increases. Setting <code>nRounds=3</code> is often a good initial choice.</li>
-</ul>
-<p>Note that the control points of the curve should be <em>marked vertices</em>, as described in the construction section. Additionally, this function should be applied to a network consisting of a <em>single path</em>, not distinct paths between multiple control points.  Calling the factory method <code>FlipEdgeNetwork::constructFromPiecewiseDijkstraPath(mesh, geom, /* vector of constrol vertices */, false, true)</code> above will construct a path ready for Bézier subdivision.</p>
-<p>The algorithm used here is essentially the one described in &ldquo;Modeling on triangulations with geodesic curves&rdquo; by Morera et al. (2008), but using flip-based geodesics to straighten paths.</p>
-</details>
-<figure>
-  <img src="/media/flip_bezier.jpg"/>
-  <figcaption>
-  A geodesic Bézier curve generated with this method.
-  </figcaption>
-</figure>
-
-<h3 id="improving-the-triangulation">Improving the triangulation</h3>
-<p>As noted above, we can additionally generate a triangulation which conforms to geodesic curves, but this triangulation will often contain extremely skinny triangles. Performing Delaunay refinement improves the triangle quality for subsequent computation.</p>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">delaunayRefine</span><span class="p">(</span><span class="kt">double</span> <span class="n">areaThresh</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">infinity</span><span class="p">(),</span> <span class="kt">size_t</span> <span class="n">maxInsertions</span> <span class="o">=</span> <span class="n">INVALID_IND</span><span class="p">,</span> <span class="kt">double</span> <span class="n">angleBound</span> <span class="o">=</span> <span class="mf">25.</span><span class="p">)</span></code></summary><p>Perform intrinsic Delaunay refinement on the underlying triangulation to improve its numerical quality while preserving the geodesics.</p>
-<p>Additional arguments are as in <code>SignpostIntrinsicTriangulation::delaunayRefine()</code>.</p>
-</details>
-<figure>
-  <img src="/media/flip_cathead_refine.jpg"/>
-  <figcaption>
-  A geodesic path is introduced, then the triangulation is refined to remove skinny triangles.
-  </figcaption>
-</figure>
-
-<h2 id="output-and-utilities">Output and utilities</h2>
-<p>After running <code>iterativeShorten()</code>, the resulting geodesic paths are represented as a collection edges in an updated intrinsic triangulation. The most common operation is to extract the resulting path network as a polyline along the surface. Note that these routines return a double list; the outer list represents the paths/loops in the network, while the inner list are the points in each path/loop.</p>
-<p>One option is to get the output as a sequence of <a href="/surface/utilities/surface_point">surface points</a>, where each is a vertex or a point along some edge in the mesh. </p>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;&gt;</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">getPathPolyline</span><span class="p">()</span></code></summary><p>Get the path network as a sequence of surface points along the input mesh.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;&gt;</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">getAllEdgePolyline</span><span class="p">()</span></code></summary><p>Get all edges in the underlying triangulation as a sequence of surface points along the input mesh.</p>
-</details>
-<p>A simpler approach is to simply extract the path as a sequence of points in 3D space.</p>
-<p><strong>To use this approach, you must first set your 3D mesh geometry as the <code>posGeom</code> member.</strong> This extra step is necessary because in general, the <code>FlipEdgeNetwork</code> can be applied to meshes which have only edge lengths, but extracting 3D points requires your mesh to have 3D positions. (see the example at the top.)</p>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;&gt;</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">getPathPolyline3D</span><span class="p">()</span></code></summary><p>Get the path network as a sequence of points in 3D space. </p>
-<p><strong>To use this approach, you must first set your 3D mesh geometry as the <code>posGeom</code> member.</strong> </p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;&gt;</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">getAllEdgePolyline3D</span><span class="p">()</span></code></summary><p>Get all edges in the underlying intrinsic triangulation as a sequence of points in 3D space. </p>
-<p><strong>To use this approach, you must first set your 3D mesh geometry as the <code>posGeom</code> member.</strong> </p>
-</details>
-<p>Additionally, a collection of useful utility functions are provided (see <code>flip_geodesic.h</code> the complete listing).</p>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">rewind</span><span class="p">()</span></code></summary><p>Undo any flips which have been performed, resetting the data structure to its initial state.</p>
-<p>Note that you must set <code>FlipEdgeNetwork::supportRewinding = true</code> right after constructure (before doing any shortening) to be able to use <code>rewind()</code>.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">edgeInPath</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">)</span></code></summary><p>Test whether a given edge from the intrinsic triangulation appears in the path.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">halfedgeInPath</span><span class="p">(</span><span class="n">Halfedge</span> <span class="n">he</span><span class="p">)</span></code></summary><p>Test whether a given halfedge from the intrinsic triangulation appears in the path.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">length</span><span class="p">()</span></code></summary><p>Measure the total length of the path network.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">minAngleIsotopy</span><span class="p">()</span></code></summary><p>Measure the smallest angle in the path (not blocked by isotopy, aka the constraint that curves do not cross).</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">FlipEdgeNetwork</span><span class="o">::</span><span class="n">savePathOBJLine</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filenamePrefix</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withAll</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span></code></summary><p>Write the path to file as line entries in an obj file.</p>
-</details>
-<h2 id="citation">Citation</h2>
-<p>If these routines contribute to academic work, please cite:</p>
-<div class="highlight"><pre><span></span><code><span class="nc">@article</span><span class="p">{</span><span class="nl">sharp2020you</span><span class="p">,</span>
-  <span class="na">title</span><span class="p">=</span><span class="s">{You can find geodesic paths in triangle meshes by just flipping edges}</span><span class="p">,</span>
-  <span class="na">author</span><span class="p">=</span><span class="s">{Sharp, Nicholas and Crane, Keenan}</span><span class="p">,</span>
-  <span class="na">journal</span><span class="p">=</span><span class="s">{ACM Transactions on Graphics (TOG)}</span><span class="p">,</span>
-  <span class="na">volume</span><span class="p">=</span><span class="s">{39}</span><span class="p">,</span>
-  <span class="na">number</span><span class="p">=</span><span class="s">{6}</span><span class="p">,</span>
-  <span class="na">pages</span><span class="p">=</span><span class="s">{1--15}</span><span class="p">,</span>
-  <span class="na">year</span><span class="p">=</span><span class="s">{2020}</span><span class="p">,</span>
-  <span class="na">publisher</span><span class="p">=</span><span class="s">{ACM New York, NY, USA}</span>
-<span class="p">}</span>
-</code></pre></div>
+<h2 id="helper-types">Helper Types</h2>
+<h3 id="options">Options</h3>
+<p>Options are passed in to <code>traceGeodesic</code> via a <code>TraceOptions</code> object.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="kt">bool</span> <span class="n">includePath</span></code></td>
+<td><code>false</code></td>
+<td>whether to return the entire path trajectory (as opposed to merely returning the path&rsquo;s endpoint)</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">bool</span> <span class="n">errorOnProblem</span></code></td>
+<td><code>false</code></td>
+<td>whether to throw exceptions if the procedure encounters degenerate geometry</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;*</span> <span class="n">barrierEdges</span></code></td>
+<td><code>nullptr</code></td>
+<td>if set, paths will stop when they hit barrier edges</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">size_t</span> <span class="n">maxIters</span></code></td>
+<td><code>INVALID_IND</code></td>
+<td>if set, paths will stop after traversing through <code>maxIters</code> faces</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result">Result</h3>
+<p>The result is returned as a <code>TraceGeodesicResult</code>, which has 5 fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="n">SurfacePoint</span> <span class="n">endPoint</span></code></td>
+<td>the point the path ended at</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span> <span class="n">pathPoints</span></code></td>
+<td>all points along the path, including start and end</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="n">Vector2</span> <span class="n">endingDir</span></code></td>
+<td>the incoming direction to the final point, in its tangent space</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">bool</span> <span class="n">hitBoundary</span></code></td>
+<td>did the path stop early because we hit a boundary?</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">bool</span> <span class="n">hasPath</span></code></td>
+<td>is <code>pathPoints</code> populated?</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tangent-spaces">Tangent Spaces</h2>
+<p>The input <code>traceVec</code> is specified as a vector in the <em>tangent space</em> of the starting point. The meaning of this vector depends on whether the starting point is located on a vertex, edge, or face of the mesh. Tangent space in geometry central are discussed in more detail <a href="/surface/geometry/quantities/#tangent-vectors-and-transport">on the Quantities page</a>, but we give a brief overview here.</p>
+<p>Given any mesh element (i.e. vertex, edge, or face) <code>p</code>, the <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis of the tangent space at <code>p</code> points in the direction of <code>p.halfedge()</code>. The <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>-axis then points 90 degrees counterclockwise from the <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis. (This is slightly more complicated at vertices, where one must use rescaled corner angles to define these directions. See the discussion of <a href="/surface/geometry/quantities/#vertex-tangent-spaces">vertex tangent spaces</a>) for more details.</p>
                 
               
               
@@ -1529,7 +1429,7 @@ using a procedure described in &ldquo;Modeling on triangulations with geodesic c
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../robust_geometry/" title="Robust Geometry" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../geodesic_distance/" title="Geodesic Distance" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1538,19 +1438,19 @@ using a procedure described in &ldquo;Modeling on triangulations with geodesic c
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Robust Geometry
+                Geodesic Distance
               </div>
             </div>
           </a>
         
         
-          <a href="../parameterization/" title="Parameterization" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../vector_heat_method/" title="Vector Heat Method" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Parameterization
+                Vector Heat Method
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

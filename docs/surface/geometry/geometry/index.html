@@ -839,6 +839,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../algorithms/geodesic_paths/" title="Tracing Geodesic Paths" class="md-nav__link">
+      Tracing Geodesic Paths
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
       Vector Heat Method
     </a>
@@ -1605,9 +1617,6 @@
 <p>The usual notion of geometry for a mesh, with a position in 3D for each vertex. These positions are stored in the member <code>VertexPositionGeometry::vertexPositions</code> (which is inherited from the <code>EmbeddedGeometryInterface</code>). </p>
 <p>This class inherits from all of the geometry interfaces mentioned above, so all quantities will be available.</p>
 <p><code class="highlight"><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/vertex_position_geometry.h&quot;</span><span class="cp"></span></code></p>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">VertexPositionGeometry</span><span class="o">::</span><span class="n">VertexPositionGeometry</span><span class="p">(</span><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">positions</span><span class="p">)</span></code></summary><p>Construct a new geometry from vertex positions.</p>
-<p>The <code>positions</code> input is copied, and stored in the member <code>VertexPositionGeometry::vertexPositions</code>.</p>
-</details>
 <details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">VertexPositionGeometry</span><span class="o">::</span><span class="n">VertexPositionGeometry</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">)</span></code></summary><p>Construct a new geometry for the mesh, with all positions set to the origin <code>Vector3{0., 0., 0.,}</code>.</p>
 </details>
 <details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">VertexPositionGeometry</span><span class="o">::</span><span class="n">VertexPositionGeometry</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="k">const</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;&amp;</span> <span class="n">positions</span><span class="p">)</span></code></summary><p>Construct a new geometry for a mesh from known vertex positions.</p>
