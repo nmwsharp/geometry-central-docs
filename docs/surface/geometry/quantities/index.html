@@ -907,6 +907,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vertex-dual-mean-curvature-normal" class="md-nav__link">
+    vertex dual mean curvature normal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#face-tangent-basis" class="md-nav__link">
     face tangent basis
   </a>
@@ -1902,6 +1909,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vertex-dual-mean-curvature-normal" class="md-nav__link">
+    vertex dual mean curvature normal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#face-tangent-basis" class="md-nav__link">
     face tangent basis
   </a>
@@ -2135,8 +2149,8 @@
 <p>Should be interpreted as an <em>integrated</em> mean curvature (units: <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>), giving the total curvature in the neighborhood of the vertex.  A corresponding <em>pointwise</em> mean curvature (units: <span><span class="MathJax_Preview">1/m</span><script type="math/tex">1/m</script></span>) can be obtained by dividing by the <code>vertexDualArea</code>.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
-<li><strong>member:</strong> <code>VertexData&lt;double&gt; IntrinsicGeometryInterface::vertexMeanCurvatures</code></li>
-<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexMeanCurvatures()</code></li>
+<li><strong>member:</strong> <code>VertexData&lt;double&gt; ExtrinsicGeometryInterface::vertexMeanCurvatures</code></li>
+<li><strong>require:</strong> <code>void ExtrinsicGeometryInterface::requireVertexMeanCurvatures()</code></li>
 </ul>
 <p>The inline immediate method can be used to compute this value directly from input data for a single element:</p>
 <ul>
@@ -2148,14 +2162,14 @@
 <p>These quantities can be interpreted as <em>pointwise</em> quantities (units: <span><span class="MathJax_Preview">1/m</span><script type="math/tex">1/m</script></span>), approximating the maximum and minimum bending the neighborhood of the vertex.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
-<li><strong>member:</strong> <code>VertexData&lt;double&gt; IntrinsicGeometryInterface::vertexMinPrincipalCurvatures</code></li>
+<li><strong>member:</strong> <code>VertexData&lt;double&gt; ExtrinsicGeometryInterface::vertexMinPrincipalCurvatures</code></li>
 <li>
-<p><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexMinPrincipalCurvatures()</code></p>
+<p><strong>require:</strong> <code>void ExtrinsicGeometryInterface::requireVertexMinPrincipalCurvatures()</code></p>
 </li>
 <li>
-<p><strong>member:</strong> <code>VertexData&lt;double&gt; IntrinsicGeometryInterface::vertexMaxPrincipalCurvatures</code></p>
+<p><strong>member:</strong> <code>VertexData&lt;double&gt; ExtrinsicGeometryInterface::vertexMaxPrincipalCurvatures</code></p>
 </li>
-<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexMaxPrincipalCurvatures()</code></li>
+<li><strong>require:</strong> <code>void ExtrinsicGeometryInterface::requireVertexMaxPrincipalCurvatures()</code></li>
 </ul>
 <p>The inline immediate methods can be used to compute this value directly from input data for a single element:</p>
 <ul>
@@ -2356,6 +2370,20 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <li><strong>member:</strong> <code>VertexData&lt;Vector3&gt; EmbeddedGeometryInterface::faceNormals</code></li>
 <li><strong>require:</strong> <code>void EmbeddedGeometryInterface::requireFaceNormals()</code></li>
 </ul>
+</details>
+<details class="func"><summary>vertex dual mean curvature normal</summary><h5 id="vertex-dual-mean-curvature-normal">vertex dual mean curvature normal</h5>
+<p>Conceptually, the <em>mean curvature normal</em> at any location on a surface is a vector which points in the normal direction, and has magnitude equal to the mean curvature at that location. In practice, we discretize this using the fact that applying the <a href="#cotangent-laplacian">Laplacian</a> to the position function yields the mean curvature normals.</p>
+<p>Should be interpreted as an <em>integrated</em> mean curvature normal (units: <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>), giving the integral of the mean curvature curvature in the neighborhood of the vertex.  A corresponding <em>pointwise</em> mean curvature (units: <span><span class="MathJax_Preview">1/m</span><script type="math/tex">1/m</script></span>) can be obtained by dividing by the <code>vertexDualArea</code>.</p>
+<p>Only valid on triangular meshes.</p>
+<ul>
+<li><strong>member:</strong> <code>VertexData&lt;double&gt; EmbeddedGeometryInterface::vertexDualMeanCurvatureNormals</code></li>
+<li><strong>require:</strong> <code>void EmbeddedGeometryInterface::requireVertexDualMeanCurvatureNormals()</code></li>
+</ul>
+<p>The inline immediate method can be used to compute this value directly from input data for a single element:</p>
+<ul>
+<li><strong>immediate:</strong> <code>Vector3 VertexPositionGeometry::vertexDualMeanCurvatureNormal(Vertex v)</code></li>
+</ul>
+<p>Fun fact: these vertex dual mean curvature normals are also the derivative of the mesh&rsquo;s surface area with respect to vertex positions.</p>
 </details>
 <details class="func"><summary>face tangent basis</summary><h5 id="face-tangent-basis">face tangent basis</h5>
 <p>A pair of <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis and <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>-axis 3D basis vectors in world space, corresponding to the <a href="#face-tangent-spaces">intrinsic tangent space</a> for the face. Always orthogonal to the face normal.</p>
