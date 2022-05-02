@@ -434,6 +434,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../surface/surface_mesh/indexing/" title="Indexing" class="md-nav__link">
+      Indexing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../surface/surface_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
       Navigation and Iteration
     </a>
@@ -706,18 +718,6 @@
   <li class="md-nav__item">
     <a href="../../surface/algorithms/geodesic_voronoi_tessellations/" title="Geodesic Centroidal Voronoi Tessellations" class="md-nav__link">
       Geodesic Centroidal Voronoi Tessellations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
-      Mesh Graph Algorithms
     </a>
   </li>
 
@@ -1318,7 +1318,7 @@
 <h2 id="direct-solvers">Direct solvers</h2>
 <p>These solvers provide a simple interface for solving sparse linear <span><span class="MathJax_Preview">Ax = b</span><script type="math/tex">Ax = b</script></span>. </p>
 <p>A key feature is that these solvers abstract over the underlying numerical library. In their most basic form, <a href="https://eigen.tuxfamily.org/dox/group__TopicSparseSystems.html">Eigen&rsquo;s sparse solvers</a> will be used, and are always available. However, if present, the more-powerful <a href="http://faculty.cse.tamu.edu/davis/suitesparse.html">Suitesprase solvers</a> will be used intead. See the <a href="../../build/dependencies/#suitesparse">dependencies section</a> for instruction to build with Suitesparse support.</p>
-<p>As always, be sure to compile <a href="../../build/build/#compiling-with-optimizations">with optimizations</a> for meaningful performance. In particular, Eigen&rsquo;s built-in solvers will be very slow in debug mode (though the Eigen QR solver is always slow).</p>
+<p>As always, be sure to compile with optimizations (i.e. set <code>CMAKE_BUILD_TYPE</code> to <code>Release</code>) for meaningful performance. In particular, Eigen&rsquo;s built-in solvers will be very slow in debug mode (though the Eigen QR solver is always slow).</p>
 <h3 id="quick-solves">Quick solves</h3>
 <p>These are one-off routines for quick solves.</p>
 <details class="func"><summary><code class="highlight"><span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">solve</span><span class="p">(</span><span class="n">SparseMatrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">matrix</span><span class="p">,</span> <span class="k">const</span> <span class="n">Vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">rhs</span><span class="p">)</span></code></summary><p>Solve a system with a general matrix. Uses a QR decomposition interally.</p>

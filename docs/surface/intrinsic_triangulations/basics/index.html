@@ -436,6 +436,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../surface_mesh/indexing/" title="Indexing" class="md-nav__link">
+      Indexing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../surface_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
       Navigation and Iteration
     </a>
@@ -708,18 +720,6 @@
   <li class="md-nav__item">
     <a href="../../algorithms/geodesic_voronoi_tessellations/" title="Geodesic Centroidal Voronoi Tessellations" class="md-nav__link">
       Geodesic Centroidal Voronoi Tessellations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/mesh_graph_algorithms/" title="Mesh Graph Algorithms" class="md-nav__link">
-      Mesh Graph Algorithms
     </a>
   </li>
 
@@ -1503,7 +1503,7 @@ The above image shows an intrinsic triangulation of a poorly-tessellated surface
 <h3 id="low-level-mutators">Low-Level Mutators</h3>
 <div class="admonition note">
 <p class="admonition-title">Refreshing quantities</p>
-<p>The intrinsic triangulation is-a <a href="../surface/geometry">geometry</a> object, which means that one may <code>require()</code> quantities from it. However, for efficiency reasons, these quantities are not automatically updated after each low-level mutataion. Call <code>refreshQuantities()</code> after a sequence of mutations to update.</p>
+<p>The intrinsic triangulation is-a <a href="/surface/geometry/geometry/">geometry</a> object, which means that one may <code>require()</code> quantities from it. However, for efficiency reasons, these quantities are not automatically updated after each low-level mutataion. Call <code>refreshQuantities()</code> after a sequence of mutations to update.</p>
 </div>
 <details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">IntrinsicTriangulation</span><span class="o">::</span><span class="n">flipEdgeIfNotDelaunay</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">)</span></code></summary><p>If the edge is not (intrinsic) Delaunay, flip it. Returns true if flipped.</p>
 </details>

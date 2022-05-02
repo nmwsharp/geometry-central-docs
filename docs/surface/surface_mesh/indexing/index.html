@@ -15,7 +15,7 @@
     
     
       
-        <title>Mesh Graph Algorithms - Geometry Central</title>
+        <title>Indexing - Geometry Central</title>
       
     
     
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#uncached-index-arrays" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,7 +92,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Mesh Graph Algorithms
+              Indexing
             
           </span>
         </div>
@@ -368,10 +373,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
     
     <label class="md-nav__link" for="nav-4-1">
       Surface Mesh
@@ -395,7 +402,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/basics/" title="Basics" class="md-nav__link">
+    <a href="../basics/" title="Basics" class="md-nav__link">
       Basics
     </a>
   </li>
@@ -407,7 +414,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/elements/" title="Elements" class="md-nav__link">
+    <a href="../elements/" title="Elements" class="md-nav__link">
       Elements
     </a>
   </li>
@@ -419,7 +426,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/boundaries/" title="Boundaries" class="md-nav__link">
+    <a href="../boundaries/" title="Boundaries" class="md-nav__link">
       Boundaries
     </a>
   </li>
@@ -429,9 +436,73 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Indexing
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Indexing" class="md-nav__link md-nav__link--active">
+      Indexing
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#uncached-index-arrays" class="md-nav__link">
+    Uncached index arrays
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cached-index-arrays" class="md-nav__link">
+    Cached index arrays
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-element-indices" class="md-nav__link">
+    Per element indices
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
+    <a href="../navigation/" title="Navigation and Iteration" class="md-nav__link">
       Navigation and Iteration
     </a>
   </li>
@@ -443,7 +514,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/containers/" title="Containers" class="md-nav__link">
+    <a href="../containers/" title="Containers" class="md-nav__link">
       Containers
     </a>
   </li>
@@ -455,7 +526,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/mutation/" title="Mutation" class="md-nav__link">
+    <a href="../mutation/" title="Mutation" class="md-nav__link">
       Mutation
     </a>
   </li>
@@ -467,7 +538,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/delta_complex/" title="Delta Complexes" class="md-nav__link">
+    <a href="../delta_complex/" title="Delta Complexes" class="md-nav__link">
       Delta Complexes
     </a>
   </li>
@@ -479,7 +550,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../surface_mesh/internals/" title="Internals" class="md-nav__link">
+    <a href="../internals/" title="Internals" class="md-nav__link">
       Internals
     </a>
   </li>
@@ -614,12 +685,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
     
     <label class="md-nav__link" for="nav-4-4">
       Algorithms
@@ -643,7 +712,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../direction_fields/" title="Direction Fields" class="md-nav__link">
+    <a href="../../algorithms/direction_fields/" title="Direction Fields" class="md-nav__link">
       Direction Fields
     </a>
   </li>
@@ -655,7 +724,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
+    <a href="../../algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
       Geodesic Distance
     </a>
   </li>
@@ -667,7 +736,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../geodesic_paths/" title="Tracing Geodesic Paths" class="md-nav__link">
+    <a href="../../algorithms/geodesic_paths/" title="Tracing Geodesic Paths" class="md-nav__link">
       Tracing Geodesic Paths
     </a>
   </li>
@@ -679,7 +748,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
+    <a href="../../algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
       Vector Heat Method
     </a>
   </li>
@@ -691,7 +760,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../surface_centers/" title="Surface Centers" class="md-nav__link">
+    <a href="../../algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
       Surface Centers
     </a>
   </li>
@@ -703,7 +772,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../geodesic_voronoi_tessellations/" title="Geodesic Centroidal Voronoi Tessellations" class="md-nav__link">
+    <a href="../../algorithms/geodesic_voronoi_tessellations/" title="Geodesic Centroidal Voronoi Tessellations" class="md-nav__link">
       Geodesic Centroidal Voronoi Tessellations
     </a>
   </li>
@@ -713,28 +782,9 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Mesh Graph Algorithms" class="md-nav__link md-nav__link--active">
-      Mesh Graph Algorithms
-    </a>
-    
-  </li>
-
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
-    <a href="../robust_geometry/" title="Robust Geometry" class="md-nav__link">
+    <a href="../../algorithms/robust_geometry/" title="Robust Geometry" class="md-nav__link">
       Robust Geometry
     </a>
   </li>
@@ -746,7 +796,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../flip_geodesics/" title="Flip Geodesics" class="md-nav__link">
+    <a href="../../algorithms/flip_geodesics/" title="Flip Geodesics" class="md-nav__link">
       Flip Geodesics
     </a>
   </li>
@@ -758,7 +808,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../parameterization/" title="Parameterization" class="md-nav__link">
+    <a href="../../algorithms/parameterization/" title="Parameterization" class="md-nav__link">
       Parameterization
     </a>
   </li>
@@ -1165,12 +1215,56 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#uncached-index-arrays" class="md-nav__link">
+    Uncached index arrays
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cached-index-arrays" class="md-nav__link">
+    Cached index arrays
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-element-indices" class="md-nav__link">
+    Per element indices
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/mesh_graph_algorithms.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/surface_mesh/indexing.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1178,9 +1272,82 @@
                   
                 
                 
-                  <h1>Mesh Graph Algorithms</h1>
+                  <h1>Indexing</h1>
                 
-                
+                <p>Several methods can be used to obtain integer indices associated with mesh elements.  Such indices are often needed for, e.g., building matrices.  These methods index elements from 0 through the number of elements of the same kind.  I.e., vertices are indexed 0, 1, 2, &hellip;, up through the number of vertices.  In general nothing can/should be assumed about this ordering, except that it will remain fixed as long as the mesh connectivity is not changed.</p>
+<p>Note that in some cases, the most straightforward thing may be to just assign your own indices&mdash;especially if the indexing scheme needed to build your matrix is different from a straightforward enumeration of mesh elements.  For instance, in the following example a boolean vertex attribute <code>skip</code> is provided, which determines whether each vertex is used in a linear system:</p>
+<div class="highlight"><pre><span></span><code><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">skip</span><span class="p">;</span> <span class="c1">// assume skip[v] is true if v is not used in the linear system</span>
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span> <span class="n">vertexIndex</span><span class="p">(</span> <span class="n">mesh</span> <span class="p">);</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span> <span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">vertices</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+   <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">skip</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="n">vertexIndex</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+      <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="uncached-index-arrays">Uncached index arrays</h2>
+<p>These methods build and return an <code>ElementData&lt;size_t&gt;</code> array that indexes the mesh elements. Note that these arrays are not cached, and arrays are re-built each time the method is invoked.</p>
+<details class="func"><summary><code class="highlight"><span class="n">HalfedgeData</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">getHalfedgeIndices</span><span class="p">()</span></code></summary><p>Returns an array that provides indices for all halfedges, with values between 0 and <em>H</em>-1, where <em>H</em> is the number of halfedges in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">CornerData</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">getCornerIndices</span><span class="p">()</span></code></summary><p>Returns an array that provides indices for all corners, with values between 0 and <em>C</em>-1, where <em>C</em> is the number of corners in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">getVertexIndices</span><span class="p">()</span></code></summary><p>Returns an array that provides indices for all vertices, with values between 0 and <em>V</em>-1, where <em>V</em> is the number of vertices in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">getInteriorVertexIndices</span><span class="p">()</span></code></summary><p>Returns an array that provides indices for all interior vertices, with values between 0 and <em>I</em>-1, where <em>I</em> is the number of interior vertices in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">getEdgeIndices</span><span class="p">()</span></code></summary><p>Returns an array that provides indices for all edges, with values between 0 and <em>E</em>-1, where <em>E</em> is the number of edges in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">FaceData</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">getFaceIndices</span><span class="p">()</span></code></summary><p>Returns an array that provides indices for all faces, with values between 0 and <em>F</em>-1, where <em>F</em> is the number of faces in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">BoundaryLoopData</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">getBoundaryLoopIndices</span><span class="p">()</span></code></summary><p>Returns an array that provides indices for all boundary loops, with values between 0 and <em>B</em>-1, where <em>B</em> is the number of boundary loops in the mesh.</p>
+</details>
+<h2 id="cached-index-arrays">Cached index arrays</h2>
+<p>These methods build the same arrays as the uncached methods, but cache them in a <code>Geometry</code> object. Note that indices of course do not relate to the actual geometry (i.e., shape and size) of the mesh&mdash;however, this mechanism allows indices to be tracked with the geometry classes, so they can participate in the buffer management and dependency management.  Basic example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">SurfaceMesh</span> <span class="n">mesh</span><span class="p">;</span>
+<span class="n">VertexPositionGeometry</span> <span class="nf">geometry</span><span class="p">(</span> <span class="n">mesh</span> <span class="p">);</span>
+<span class="n">geometry</span><span class="o">-&gt;</span><span class="n">requireVertexIndices</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span> <span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">mesh</span><span class="o">-&gt;</span><span class="n">vertices</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">geometry</span><span class="o">-&gt;</span><span class="n">vertexIndices</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+   <span class="c1">// do science</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">BaseGeometryInterface</span><span class="o">::</span><span class="n">requireHalfedgeIndices</span><span class="p">()</span></code></summary><p>Builds and maintains the array <code>BaseGeometryInterface::halfedgeIndices</code> that provides indices for all halfedges, with values between 0 and <em>H</em>-1, where <em>H</em> is the number of halfedges in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">BaseGeometryInterface</span><span class="o">::</span><span class="n">requireCornerIndices</span><span class="p">()</span></code></summary><p>Builds and maintains the array <code>BaseGeometryInterface::cornerIndices</code> that provides indices for all corners, with values between 0 and <em>C</em>-1, where <em>C</em> is the number of halfedges in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">BaseGeometryInterface</span><span class="o">::</span><span class="n">requireVertexIndices</span><span class="p">()</span></code></summary><p>Builds and maintains the array <code>BaseGeometryInterface::vertexIndices</code> that provides indices for all vertices, with values between 0 and <em>V</em>-1, where <em>V</em> is the number of vertices in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">BaseGeometryInterface</span><span class="o">::</span><span class="n">requireInteriorVertexIndices</span><span class="p">()</span></code></summary><p>Builds and maintains the array <code>BaseGeometryInterface::interiorVertexIndices</code> that provides indices for all interior vertices, with values between 0 and <em>I</em>-1, where <em>I</em> is the number of interior vertices in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">BaseGeometryInterface</span><span class="o">::</span><span class="n">requireEdgeIndices</span><span class="p">()</span></code></summary><p>Builds and maintains the array <code>BaseGeometryInterface::edgeIndices</code> that provides indices for all edges, with values between 0 and <em>E</em>-1, where <em>E</em> is the number of edges in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">BaseGeometryInterface</span><span class="o">::</span><span class="n">requireFaceIndices</span><span class="p">()</span></code></summary><p>Builds and maintains the array <code>BaseGeometryInterface::faceIndices</code> that provides indices for all faces, with values between 0 and <em>F</em>-1, where <em>F</em> is the number of faces in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">BaseGeometryInterface</span><span class="o">::</span><span class="n">requireBoundaryLoopIndices</span><span class="p">()</span></code></summary><p>Builds and maintains the array <code>BaseGeometryInterface::boundaryLoopIndices</code> that provides indices for all boundary loops, with values between 0 and <em>B</em>-1, where <em>B</em> is the number of boundary loops in the mesh.</p>
+</details>
+<h2 id="per-element-indices">Per element indices</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The routines in this section are valid only when the mesh is <a href="/surface/surface_mesh/mutation/#compressed-mode">compressed</a>.</p>
+</div>
+<p>These methods access the index directly from the mesh element itself.  For example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Edge</span> <span class="n">e</span><span class="p">;</span>
+<span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">getIndex</span><span class="p">();</span>
+</code></pre></div>
+
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">Halfedge</span><span class="o">::</span><span class="n">getIndex</span><span class="p">()</span> <span class="k">const</span></code></summary><p>Returns an index between 0 and <em>H</em>-1, where <em>H</em> is the number of halfedges in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">Corner</span><span class="o">::</span><span class="n">getIndex</span><span class="p">()</span> <span class="k">const</span></code></summary><p>Returns an index between 0 and <em>C</em>-1, where <em>C</em> is the number of corners in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">Vertex</span><span class="o">::</span><span class="n">getIndex</span><span class="p">()</span> <span class="k">const</span></code></summary><p>Returns an index between 0 and <em>V</em>-1, where <em>V</em> is the number of vertices in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">Edge</span><span class="o">::</span><span class="n">getIndex</span><span class="p">()</span> <span class="k">const</span></code></summary><p>Returns an index between 0 and <em>E</em>-1, where <em>E</em> is the number of edges in the mesh.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="n">Face</span><span class="o">::</span><span class="n">getIndex</span><span class="p">()</span> <span class="k">const</span></code></summary><p>Returns an index between 0 and <em>F</em>-1, where <em>F</em> is the number of faces in the mesh.</p>
+</details>
                 
               
               
@@ -1199,7 +1366,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../geodesic_voronoi_tessellations/" title="Geodesic Centroidal Voronoi Tessellations" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../boundaries/" title="Boundaries" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1208,19 +1375,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Geodesic Centroidal Voronoi Tessellations
+                Boundaries
               </div>
             </div>
           </a>
         
         
-          <a href="../robust_geometry/" title="Robust Geometry" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../navigation/" title="Navigation and Iteration" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Robust Geometry
+                Navigation and Iteration
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
