@@ -14,7 +14,7 @@
     
     
       
-        <title>Navigation and Iteration - Geometry Central</title>
+        <title>Surface Sampling - Geometry Central</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#collection-iterators" class="md-skip">
+        <a href="#poisson-disk-sampling" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Navigation and Iteration
+              Surface Sampling
             
           </span>
         </div>
@@ -389,14 +389,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" >
       
       <label class="md-nav__link" for="nav-4-1">
         Surface Mesh
@@ -415,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basics/" class="md-nav__link">
+      <a href="../../surface_mesh/basics/" class="md-nav__link">
         Basics
       </a>
     </li>
@@ -427,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../elements/" class="md-nav__link">
+      <a href="../../surface_mesh/elements/" class="md-nav__link">
         Elements
       </a>
     </li>
@@ -439,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../boundaries/" class="md-nav__link">
+      <a href="../../surface_mesh/boundaries/" class="md-nav__link">
         Boundaries
       </a>
     </li>
@@ -451,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../indexing/" class="md-nav__link">
+      <a href="../../surface_mesh/indexing/" class="md-nav__link">
         Indexing
       </a>
     </li>
@@ -461,93 +459,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Navigation and Iteration
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/navigation/" class="md-nav__link">
         Navigation and Iteration
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#collection-iterators" class="md-nav__link">
-    Collection Iterators
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#neighborhood-iterators" class="md-nav__link">
-    Neighborhood Iterators
-  </a>
-  
-    <nav class="md-nav" aria-label="Neighborhood Iterators">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#around-a-vertex" class="md-nav__link">
-    Around a vertex
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#around-an-edge" class="md-nav__link">
-    Around an edge
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#around-a-face" class="md-nav__link">
-    Around a face
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#around-a-boundary-loop" class="md-nav__link">
-    Around a boundary loop
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessors" class="md-nav__link">
-    Accessors
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -557,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../containers/" class="md-nav__link">
+      <a href="../../surface_mesh/containers/" class="md-nav__link">
         Containers
       </a>
     </li>
@@ -569,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mutation/" class="md-nav__link">
+      <a href="../../surface_mesh/mutation/" class="md-nav__link">
         Mutation
       </a>
     </li>
@@ -581,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../delta_complex/" class="md-nav__link">
+      <a href="../../surface_mesh/delta_complex/" class="md-nav__link">
         Delta Complexes
       </a>
     </li>
@@ -593,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../internals/" class="md-nav__link">
+      <a href="../../surface_mesh/internals/" class="md-nav__link">
         Internals
       </a>
     </li>
@@ -725,12 +641,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" checked>
       
       <label class="md-nav__link" for="nav-4-4">
         Algorithms
@@ -749,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/direction_fields/" class="md-nav__link">
+      <a href="../direction_fields/" class="md-nav__link">
         Direction Fields
       </a>
     </li>
@@ -761,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/geodesic_distance/" class="md-nav__link">
+      <a href="../geodesic_distance/" class="md-nav__link">
         Geodesic Distance
       </a>
     </li>
@@ -773,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/geodesic_paths/" class="md-nav__link">
+      <a href="../geodesic_paths/" class="md-nav__link">
         Tracing Geodesic Paths
       </a>
     </li>
@@ -785,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/vector_heat_method/" class="md-nav__link">
+      <a href="../vector_heat_method/" class="md-nav__link">
         Vector Heat Method
       </a>
     </li>
@@ -797,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/surface_centers/" class="md-nav__link">
+      <a href="../surface_centers/" class="md-nav__link">
         Surface Centers
       </a>
     </li>
@@ -807,11 +725,58 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../algorithms/surface_sampling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Surface Sampling
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Surface Sampling
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#poisson-disk-sampling" class="md-nav__link">
+    Poisson disk sampling
+  </a>
+  
+    <nav class="md-nav" aria-label="Poisson disk sampling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -821,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/geodesic_voronoi_tessellations/" class="md-nav__link">
+      <a href="../geodesic_voronoi_tessellations/" class="md-nav__link">
         Geodesic Centroidal Voronoi Tessellations
       </a>
     </li>
@@ -833,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/robust_geometry/" class="md-nav__link">
+      <a href="../robust_geometry/" class="md-nav__link">
         Robust Geometry
       </a>
     </li>
@@ -845,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/flip_geodesics/" class="md-nav__link">
+      <a href="../flip_geodesics/" class="md-nav__link">
         Flip Geodesics
       </a>
     </li>
@@ -857,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/parameterization/" class="md-nav__link">
+      <a href="../parameterization/" class="md-nav__link">
         Parameterization
       </a>
     </li>
@@ -1280,57 +1245,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#collection-iterators" class="md-nav__link">
-    Collection Iterators
+  <a href="#poisson-disk-sampling" class="md-nav__link">
+    Poisson disk sampling
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#neighborhood-iterators" class="md-nav__link">
-    Neighborhood Iterators
-  </a>
-  
-    <nav class="md-nav" aria-label="Neighborhood Iterators">
+    <nav class="md-nav" aria-label="Poisson disk sampling">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#around-a-vertex" class="md-nav__link">
-    Around a vertex
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#around-an-edge" class="md-nav__link">
-    Around an edge
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#around-a-face" class="md-nav__link">
-    Around a face
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#around-a-boundary-loop" class="md-nav__link">
-    Around a boundary loop
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessors" class="md-nav__link">
-    Accessors
-  </a>
   
 </li>
       
@@ -1346,202 +1276,54 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/surface_mesh/navigation.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/surface_sampling.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Navigation and Iteration</h1>
+                  <h1>Surface Sampling</h1>
                 
-                <h3 id="collection-iterators">Collection Iterators</h3>
-<p>Use these routines to iterate over all of the elements in the mesh.</p>
-<p><strong>Note:</strong> Generally, modifying the mesh while iterating is allowed, but the new elements may or may not be iterated over, and previous elements might even appear again later later in the iteration after modifying.</p>
-<hr />
-<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">vertices</span><span class="p">()</span></code></summary><p>Iterate over the vertices in a mesh.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">vertices</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
+                <h2 id="poisson-disk-sampling">Poisson disk sampling</h2>
+<p>The <code>PoissonDiskSampler</code> class contains a function that Poisson disk-samples a surface mesh so that each pair of sampled points are at a minimum distance <em>r</em> away from each other. This ensures that sampled points are distributed evenly <strong>in 3D space</strong>. Technically, Poisson disk sampling on surfaces should ensure that points are at least a certain <em>geodesic</em> distance away from each other. But for the purposes of visualization, it can be better to use extrinsic distance of the embedded surface instead, since this will ensure that the sampling <strong>looks</strong> even &ndash; two points could have a large geodesic distance between them but be very near each other in 3D space, which might lead to a visually crowded image.</p>
+<p>Currently the algorithm only works on manifold meshes.</p>
+<p><code>#include "geometrycentral/surface/poisson_disk_sampler.h"</code></p>
+<p>The algorithm has a few parameters that roughly correspond to the algorithm of Bridson&rsquo;s 2007 <a href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf">Fast Poisson Disk Sampling in Arbitrary Dimensions</a>.</p>
+<p>Additionally, you can specify points around samples should be avoided (shown in red below.) By default, samples will avoid these points with the same radius <code>r</code> used in the rest of the algorithm. You can optionally specify a &ldquo;radius of avoidance&rdquo; for these points, where the radius of avoidance is given in multiples of <code>r</code>. </p>
+<p>The radius of avoidance can be further be specified to be a radius in 3D space, or a radius in terms of distance along the surface. The former will produce a radius of avoidance that will appear perfectly round and is likely more visually pleasing, but for very large radii may occlude samples from opposite sides of the mesh. The latter will restrict the radius of avoidance to only be along the surface, but such a metric ball will not appear perfectly round, especially in areas with very large and sudden changes in curvature.</p>
+<p><img alt="poisson disk sample with point of avoidance" src="/media/poisson_disk_sample.png" /></p>
+<details class="func"><summary><code class="highlight"><span class="n">PoissonDiskSampler</span><span class="o">::</span><span class="n">PoissonDiskSampler</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">VertexPositionGeometry</span><span class="o">&amp;</span> <span class="n">geometry</span><span class="p">)</span></code></summary><p>Create a new solver to Poisson disk-sample on the given mesh with the given geometry.</p>
+<ul>
+<li><code>mesh</code> specifies the mesh. It must be manifold, since the sampling depends on the <code>traceGeodesic</code> function.</li>
+<li><code>geometry</code> specifies the <code>VertexPositionGeometry</code> needed to describe the positions of vertices in 3D space.</li>
+</ul>
+<p>The mesh and geometry cannot be changed after construction.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">halfedges</span><span class="p">()</span></code></summary><p>Iterate over all of the halfedges in a mesh (both interior and exterior, if the mesh has boundary).
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">halfedges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
+<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span> <span class="n">PoissonDiskSampler</span><span class="o">::</span><span class="n">sample</span><span class="p">(</span><span class="kt">double</span> <span class="n">rCoef</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">kCandidates</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span> <span class="n">pointsToAvoid</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="p">(),</span> <span class="kt">int</span> <span class="n">rAvoidance</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">use3DAvoidanceRadius</span> <span class="o">=</span> <span class="nb">true</span><span class="p">);</span></code></summary><p>Poisson disk-sample the surface mesh.</p>
+<ul>
+<li><code>rCoef</code>: corresponds to the minimum distance between samples, expressed as a multiple of the mean edge length. The actual minimum distance is computed as <code>r = rCoef * meanEdgeLength</code></li>
+<li><code>kCandidates</code>: the number of candidate points chosen from the (r,2r)-annulus around each sample.</li>
+<li><code>pointsToAvoid</code>: SurfacePoints which samples should avoid.</li>
+<li><code>rAvoidance</code>: the radius of avoidance around each point to avoid, expressed as a multiple of <code>r</code>.</li>
+<li><code>use3DAvoidanceRadius</code>: If true, the radius of avoidance will specify a solid ball in 3D space around which samples are avoided. Otherwise, samples are avoided within a ball <em>on the surface</em>.</li>
+</ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">interiorHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the interior halfedges in a mesh.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">interiorHalfedges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/manifold_surface_mesh.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/vertex_position_geometry.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/surface_point.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/poisson_disk_sampler.h&quot;</span><span class="cp"></span>
+
+
+<span class="c1">// Load a mesh</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">readManifoldSurfaceMesh</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+
+<span class="c1">// construct a solver</span>
+<span class="n">PoissonDiskSampler</span> <span class="nf">poissonSampler</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="o">*</span><span class="n">geometry</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span> <span class="n">samples</span> <span class="o">=</span> <span class="n">poissonSampler</span><span class="p">.</span><span class="n">sample</span><span class="p">();</span> <span class="c1">// sample using default parameters</span>
 </code></pre></div>
-Note that on a boundary edge between vertices <code>i &lt;--&gt; j</code>, this set will only include a halfedge from <code>i --&gt; j</code>, but not from <code>j --&gt; i</code> (or vice versa).</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">exteriorHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the exterior halfedges in a mesh. (only useful on <code>ManifoldSurfaceMesh</code>)
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">exteriorHalfedges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div>
-Note that on a boundary edge between vertices <code>i &lt;--&gt; j</code>, this set will only include a halfedge from <code>i --&gt; j</code>, but not from <code>j --&gt; i</code> (or vice versa).</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">edges</span><span class="p">()</span></code></summary><p>Iterate over the edges in a mesh.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">edges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">faces</span><span class="p">()</span></code></summary><p>Iterate over the faces in a mesh.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Face</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">faces</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">boundaryLoops</span><span class="p">()</span></code></summary><p>Iterate over the boundary loops for a mesh.</p>
-<p>Remember that only <code>ManifoldSurfaceMesh</code>s have well-defined boundary loops.</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">BoundaryLoop</span> <span class="nl">bl</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">boundaryLoops</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<h2 id="neighborhood-iterators">Neighborhood Iterators</h2>
-<p>Use these routines to iterate over the neighbors of a mesh element.</p>
-<details class="note"><summary>Note: neighborhoods on <span><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>-complexes</summary><p>The iterators in this section may have unexpected behavior in the advanced case of a <span><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>-complex, when there are (e.g.) self-edges, or multiple edges between a pair of vertices. Essentially, these iterators always naively traverse the local neighborhood, even if that neighborhood might include duplicate elements. </p>
-<p>For instance, if a <span><span class="MathJax_Preview">\Delta</span><script type="math/tex">\Delta</script></span>-complex has multiple edges connecting vertex <code>va</code> to vertex <code>vb</code>, then iterating <code>va.adjacentVertices()</code> will return <code>vb</code> multiple times.</p>
-<p>Of course, for ordinary triangle mesh they will behave as expected. See the <a href="../delta_complex/">Delta complex</a> section for more information.</p>
-</details>
-<hr />
-<h3 id="around-a-vertex">Around a vertex</h3>
-<details class="func"><summary><code class="highlight"><span class="n">Vertex</span><span class="o">::</span><span class="n">outgoingHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the halfedges which point outward from a vertex.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">vert</span><span class="p">.</span><span class="n">outgoingHalfedges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="n">assert</span><span class="p">(</span><span class="n">he</span><span class="p">.</span><span class="n">vertex</span><span class="p">()</span> <span class="o">==</span> <span class="n">vert</span><span class="p">);</span> <span class="c1">// true</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Vertex</span><span class="o">::</span><span class="n">incomingHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the halfedges which point inward at a vertex.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">vert</span><span class="p">.</span><span class="n">incomingHalfedges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="n">assert</span><span class="p">(</span><span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">vertex</span><span class="p">()</span> <span class="o">==</span> <span class="n">vert</span><span class="p">);</span> <span class="c1">// true</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Vertex</span><span class="o">::</span><span class="n">adjacentVertices</span><span class="p">()</span></code></summary><p>Iterate over the vertices edge-connected to this vertex.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">vert</span><span class="p">.</span><span class="n">adjacentVertices</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Vertex</span><span class="o">::</span><span class="n">adjacentEdges</span><span class="p">()</span></code></summary><p>Iterate over the edges incident on this vertex.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">vert</span><span class="p">.</span><span class="n">adjacentEdges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Vertex</span><span class="o">::</span><span class="n">adjacentFaces</span><span class="p">()</span></code></summary><p>Iterate over the faces incident on this vertex.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Face</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">vert</span><span class="p">.</span><span class="n">adjacentFaces</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<h3 id="around-an-edge">Around an edge</h3>
-<details class="func"><summary><code class="highlight"><span class="n">Edge</span><span class="o">::</span><span class="n">adjacentHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the halfedges incident on this edge.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">edge</span><span class="p">.</span><span class="n">adjacentHalfedges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Edge</span><span class="o">::</span><span class="n">adjacentFaces</span><span class="p">()</span></code></summary><p>Iterate over the (one or two) faces incident on this edge.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Face</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">edge</span><span class="p">.</span><span class="n">adjacentFaces</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Edge</span><span class="o">::</span><span class="n">adjacentVertices</span><span class="p">()</span></code></summary><p>Iterate over the (two) vertices which are endpoints of the edge.
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">edge</span><span class="p">.</span><span class="n">adjacentVertices</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p>Note: unlike most navigators, this routine actually returns a fixed-size array, so you can alternately write things like:
-<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">verts</span> <span class="o">=</span> <span class="n">edge</span><span class="p">.</span><span class="n">adjacentVertices</span><span class="p">();</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Edge</span><span class="o">::</span><span class="n">diamondBoundary</span><span class="p">()</span></code></summary><p>Iterate over the four halfedges bounding the diamond with this edge as its center diagonal.</p>
-<p>More precisely, for an interior edge on a manifold triangle mesh, this returns
-<div class="highlight"><pre><span></span><code><span class="n">Halfedge</span> <span class="n">he</span> <span class="o">=</span> <span class="n">edge</span><span class="p">.</span><span class="n">halfedge</span><span class="p">();</span>
-<span class="k">return</span> <span class="p">{</span><span class="n">he</span><span class="p">.</span><span class="n">next</span><span class="p">(),</span> <span class="n">he</span><span class="p">.</span><span class="n">next</span><span class="p">().</span><span class="n">next</span><span class="p">(),</span> <span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">next</span><span class="p">(),</span> <span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">next</span><span class="p">().</span><span class="n">next</span><span class="p">()}</span>
-</code></pre></div></p>
-<p>Example:
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">edge</span><span class="p">.</span><span class="n">diamondBoundary</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p>Throws an exception if there are non-triangular faces, the edge is on the boundary, or if the edge is nonmanifold.</p>
-<p>Note: unlike most navigators, this routine actually returns a fixed-size array, so you can alternately write things like:
-<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">Halfedge</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">halfedges</span> <span class="o">=</span> <span class="n">edge</span><span class="p">.</span><span class="n">diamondBoundary</span><span class="p">();</span>
-</code></pre></div></p>
-</details>
-<h3 id="around-a-face">Around a face</h3>
-<details class="func"><summary><code class="highlight"><span class="n">Face</span><span class="o">::</span><span class="n">adjacentVertices</span><span class="p">()</span></code></summary><p>Iterate over the vertices adjacent to a face.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">face</span><span class="p">.</span><span class="n">adjacentVertices</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Face</span><span class="o">::</span><span class="n">adjacentHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the halfedges incident on a face.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">face</span><span class="p">.</span><span class="n">adjacentHalfedges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Face</span><span class="o">::</span><span class="n">adjacentEdges</span><span class="p">()</span></code></summary><p>Iterate over the edges on the boundary of a face.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">face</span><span class="p">.</span><span class="n">adjacentEdges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Face</span><span class="o">::</span><span class="n">adjacentFaces</span><span class="p">()</span></code></summary><p>Iterate over the faces adjacent to a face, across each edge.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Face</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">face</span><span class="p">.</span><span class="n">adjacentFaces</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<h3 id="around-a-boundary-loop">Around a boundary loop</h3>
-<details class="func"><summary><code class="highlight"><span class="n">BoundaryLoop</span><span class="o">::</span><span class="n">adjacentVertices</span><span class="p">()</span></code></summary><p>Iterate over the vertices adjacent to a boundary loop.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">boundaryLoop</span><span class="p">.</span><span class="n">adjacentVertices</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">BoundaryLoop</span><span class="o">::</span><span class="n">adjacentHalfedges</span><span class="p">()</span></code></summary><p>Iterate over the (exterior) halfedges incident on a boundary loop.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">boundaryLoop</span><span class="p">.</span><span class="n">adjacentHalfedges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">BoundaryLoop</span><span class="o">::</span><span class="n">adjacentEdges</span><span class="p">()</span></code></summary><p>Iterate over the edges on the boundary of a boundary loop.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">Edge</span> <span class="nl">e</span> <span class="p">:</span> <span class="n">boundaryLoop</span><span class="p">.</span><span class="n">adjacentEdges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="c1">// do science here</span>
-<span class="p">}</span>
-</code></pre></div></p>
-</details>
-<h2 id="accessors">Accessors</h2>
-<p>Use these routines to access elements of the mesh by their index.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The indexing routines in the section are only valid when the mesh is <a href="../mutation/#compressed-mode">compressed</a>.</p>
-</div>
-<hr />
-<details class="func"><summary><code class="highlight"><span class="n">Halfedge</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">halfedge</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th halfedge in the mesh. <code>0 &lt;= index &lt; nHalfedges()</code>.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Vertex</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">vertex</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th vertex in the mesh. <code>0 &lt;= index &lt; nVertices()</code>.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Face</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">face</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th face in the mesh. <code>0 &lt;= index &lt; nFaces()</code>.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Edge</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">edge</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th edge in the mesh. <code>0 &lt;= index &lt; nEdges()</code>.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Face</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">face</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th face in the mesh. <code>0 &lt;= index &lt; nFaces()</code>.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">Face</span> <span class="n">SurfaceMesh</span><span class="o">::</span><span class="n">boundaryLoop</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span></code></summary><p>Constructs a reference to the i&rsquo;th boundary loop in the mesh. <code>0 &lt;= index &lt; nBoundaryLoops()</code>.</p>
-</details>
                 
               
               
@@ -1560,7 +1342,7 @@ Note that on a boundary edge between vertices <code>i &lt;--&gt; j</code>, this 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../indexing/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../surface_centers/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1569,19 +1351,19 @@ Note that on a boundary edge between vertices <code>i &lt;--&gt; j</code>, this 
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Indexing
+                Surface Centers
               </div>
             </div>
           </a>
         
         
-          <a href="../containers/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../geodesic_voronoi_tessellations/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Containers
+                Geodesic Centroidal Voronoi Tessellations
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
