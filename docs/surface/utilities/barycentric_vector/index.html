@@ -9,19 +9,19 @@
       
       
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
-        <title>Utilities for Eigen Interoperability - Geometry Central</title>
+        <title>Barycentric Vector - Geometry Central</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.cb6bc1d0.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.39b8e14a.min.css">
         
           
           
@@ -40,7 +40,7 @@
     
     
     
-      <link rel="stylesheet" href="../../extras.css">
+      <link rel="stylesheet" href="../../../extras.css">
     
     
       
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#expanding-a-homogenous-pod-type-into-an-eigenmatrix" class="md-skip">
+        <a href="#construction" class="md-skip">
           Skip to content
         </a>
       
@@ -81,7 +81,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../.." title="Geometry Central" class="md-header-nav__button md-logo" aria-label="Geometry Central">
+    <a href="../../.." title="Geometry Central" class="md-header-nav__button md-logo" aria-label="Geometry Central">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Utilities for Eigen Interoperability
+              Barycentric Vector
             
           </span>
         </div>
@@ -174,7 +174,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Geometry Central" class="md-nav__button md-logo" aria-label="Geometry Central">
+    <a href="../../.." title="Geometry Central" class="md-nav__button md-logo" aria-label="Geometry Central">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
@@ -206,7 +206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -243,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../build/versions/" class="md-nav__link">
+      <a href="../../../build/versions/" class="md-nav__link">
         Versions
       </a>
     </li>
@@ -255,7 +255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../build/building/" class="md-nav__link">
+      <a href="../../../build/building/" class="md-nav__link">
         Building
       </a>
     </li>
@@ -267,7 +267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../build/dependencies/" class="md-nav__link">
+      <a href="../../../build/dependencies/" class="md-nav__link">
         Dependencies
       </a>
     </li>
@@ -279,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../build/tests/" class="md-nav__link">
+      <a href="../../../build/tests/" class="md-nav__link">
         Tests
       </a>
     </li>
@@ -322,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/load_mesh/" class="md-nav__link">
+      <a href="../../../tutorials/load_mesh/" class="md-nav__link">
         Load & navigate a mesh
       </a>
     </li>
@@ -334,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/basic_mutation/" class="md-nav__link">
+      <a href="../../../tutorials/basic_mutation/" class="md-nav__link">
         Basic Mutation
       </a>
     </li>
@@ -346,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/direction_fields/" class="md-nav__link">
+      <a href="../../../tutorials/direction_fields/" class="md-nav__link">
         Direction fields
       </a>
     </li>
@@ -365,12 +365,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
       
       <label class="md-nav__link" for="nav-4">
         Surface
@@ -411,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/basics/" class="md-nav__link">
+      <a href="../../surface_mesh/basics/" class="md-nav__link">
         Basics
       </a>
     </li>
@@ -423,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/elements/" class="md-nav__link">
+      <a href="../../surface_mesh/elements/" class="md-nav__link">
         Elements
       </a>
     </li>
@@ -435,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/boundaries/" class="md-nav__link">
+      <a href="../../surface_mesh/boundaries/" class="md-nav__link">
         Boundaries
       </a>
     </li>
@@ -447,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/indexing/" class="md-nav__link">
+      <a href="../../surface_mesh/indexing/" class="md-nav__link">
         Indexing
       </a>
     </li>
@@ -459,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/navigation/" class="md-nav__link">
+      <a href="../../surface_mesh/navigation/" class="md-nav__link">
         Navigation and Iteration
       </a>
     </li>
@@ -471,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/containers/" class="md-nav__link">
+      <a href="../../surface_mesh/containers/" class="md-nav__link">
         Containers
       </a>
     </li>
@@ -483,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/mutation/" class="md-nav__link">
+      <a href="../../surface_mesh/mutation/" class="md-nav__link">
         Mutation
       </a>
     </li>
@@ -495,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/delta_complex/" class="md-nav__link">
+      <a href="../../surface_mesh/delta_complex/" class="md-nav__link">
         Delta Complexes
       </a>
     </li>
@@ -507,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/internals/" class="md-nav__link">
+      <a href="../../surface_mesh/internals/" class="md-nav__link">
         Internals
       </a>
     </li>
@@ -547,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/geometry/geometry/" class="md-nav__link">
+      <a href="../../geometry/geometry/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -559,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/geometry/quantities/" class="md-nav__link">
+      <a href="../../geometry/quantities/" class="md-nav__link">
         Quantities
       </a>
     </li>
@@ -575,12 +577,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
       
       <label class="md-nav__link" for="nav-4-3">
         Utilities
@@ -599,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/utilities/simple_polygon_mesh/" class="md-nav__link">
+      <a href="../simple_polygon_mesh/" class="md-nav__link">
         Simple Polygon Mesh
       </a>
     </li>
@@ -611,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/utilities/io/" class="md-nav__link">
+      <a href="../io/" class="md-nav__link">
         I/O
       </a>
     </li>
@@ -623,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/utilities/surface_point/" class="md-nav__link">
+      <a href="../surface_point/" class="md-nav__link">
         Surface Point
       </a>
     </li>
@@ -633,11 +637,66 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../surface/utilities/barycentric_vector/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Barycentric Vector
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Barycentric Vector
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#construction" class="md-nav__link">
+    Construction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arithmetic" class="md-nav__link">
+    Arithmetic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#member-operations" class="md-nav__link">
+    Member operations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-operations" class="md-nav__link">
+    Function operations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -675,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/direction_fields/" class="md-nav__link">
+      <a href="../../algorithms/direction_fields/" class="md-nav__link">
         Direction Fields
       </a>
     </li>
@@ -687,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/geodesic_distance/" class="md-nav__link">
+      <a href="../../algorithms/geodesic_distance/" class="md-nav__link">
         Geodesic Distance
       </a>
     </li>
@@ -699,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/geodesic_paths/" class="md-nav__link">
+      <a href="../../algorithms/geodesic_paths/" class="md-nav__link">
         Tracing Geodesic Paths
       </a>
     </li>
@@ -711,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/vector_heat_method/" class="md-nav__link">
+      <a href="../../algorithms/vector_heat_method/" class="md-nav__link">
         Vector Heat Method
       </a>
     </li>
@@ -723,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/surface_centers/" class="md-nav__link">
+      <a href="../../algorithms/surface_centers/" class="md-nav__link">
         Surface Centers
       </a>
     </li>
@@ -735,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/surface_sampling/" class="md-nav__link">
+      <a href="../../algorithms/surface_sampling/" class="md-nav__link">
         Surface Sampling
       </a>
     </li>
@@ -747,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/geodesic_voronoi_tessellations/" class="md-nav__link">
+      <a href="../../algorithms/geodesic_voronoi_tessellations/" class="md-nav__link">
         Geodesic Centroidal Voronoi Tessellations
       </a>
     </li>
@@ -759,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/robust_geometry/" class="md-nav__link">
+      <a href="../../algorithms/robust_geometry/" class="md-nav__link">
         Robust Geometry
       </a>
     </li>
@@ -771,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/flip_geodesics/" class="md-nav__link">
+      <a href="../../algorithms/flip_geodesics/" class="md-nav__link">
         Flip Geodesics
       </a>
     </li>
@@ -783,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/parameterization/" class="md-nav__link">
+      <a href="../../algorithms/parameterization/" class="md-nav__link">
         Parameterization
       </a>
     </li>
@@ -823,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/intrinsic_triangulations/basics/" class="md-nav__link">
+      <a href="../../intrinsic_triangulations/basics/" class="md-nav__link">
         Basics
       </a>
     </li>
@@ -835,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/intrinsic_triangulations/common_subdivision/" class="md-nav__link">
+      <a href="../../intrinsic_triangulations/common_subdivision/" class="md-nav__link">
         Common Subdivision
       </a>
     </li>
@@ -847,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/intrinsic_triangulations/signposts/" class="md-nav__link">
+      <a href="../../intrinsic_triangulations/signposts/" class="md-nav__link">
         Signposts
       </a>
     </li>
@@ -859,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/intrinsic_triangulations/integer_coordinates/" class="md-nav__link">
+      <a href="../../intrinsic_triangulations/integer_coordinates/" class="md-nav__link">
         Integer Coordinates
       </a>
     </li>
@@ -871,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/intrinsic_triangulations/function_transfer/" class="md-nav__link">
+      <a href="../../intrinsic_triangulations/function_transfer/" class="md-nav__link">
         Function Transfer
       </a>
     </li>
@@ -920,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pointcloud/basics/" class="md-nav__link">
+      <a href="../../../pointcloud/basics/" class="md-nav__link">
         Basics
       </a>
     </li>
@@ -932,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pointcloud/geometry/" class="md-nav__link">
+      <a href="../../../pointcloud/geometry/" class="md-nav__link">
         Geometry
       </a>
     </li>
@@ -966,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pointcloud/algorithms/heat_solver/" class="md-nav__link">
+      <a href="../../../pointcloud/algorithms/heat_solver/" class="md-nav__link">
         Heat distance & transport
       </a>
     </li>
@@ -1006,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pointcloud/utilities/io/" class="md-nav__link">
+      <a href="../../../pointcloud/utilities/io/" class="md-nav__link">
         IO
       </a>
     </li>
@@ -1018,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pointcloud/utilities/sampling/" class="md-nav__link">
+      <a href="../../../pointcloud/utilities/sampling/" class="md-nav__link">
         Sampling
       </a>
     </li>
@@ -1067,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../numerical/matrix_types/" class="md-nav__link">
+      <a href="../../../numerical/matrix_types/" class="md-nav__link">
         Matrix Types
       </a>
     </li>
@@ -1079,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../numerical/linear_algebra_utilities/" class="md-nav__link">
+      <a href="../../../numerical/linear_algebra_utilities/" class="md-nav__link">
         Linear Algebra Utilities
       </a>
     </li>
@@ -1091,7 +1150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../numerical/linear_solvers/" class="md-nav__link">
+      <a href="../../../numerical/linear_solvers/" class="md-nav__link">
         Linear Solvers
       </a>
     </li>
@@ -1110,14 +1169,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
       
       <label class="md-nav__link" for="nav-7">
         Utilities
@@ -1136,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../miscellaneous/" class="md-nav__link">
+      <a href="../../../utilities/miscellaneous/" class="md-nav__link">
         Miscellaneous
       </a>
     </li>
@@ -1148,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vector2/" class="md-nav__link">
+      <a href="../../../utilities/vector2/" class="md-nav__link">
         Vector2
       </a>
     </li>
@@ -1160,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vector3/" class="md-nav__link">
+      <a href="../../../utilities/vector3/" class="md-nav__link">
         Vector3
       </a>
     </li>
@@ -1170,52 +1227,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Utilities for Eigen Interoperability
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../utilities/eigenmap/" class="md-nav__link">
         Utilities for Eigen Interoperability
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#expanding-a-homogenous-pod-type-into-an-eigenmatrix" class="md-nav__link">
-    Expanding a homogenous POD type into an Eigen::Matrix
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flattening-a-homogeneous-pod-type-into-an-eigenvector" class="md-nav__link">
-    Flattening a homogeneous POD type into an Eigen::Vector
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1249,15 +1265,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#expanding-a-homogenous-pod-type-into-an-eigenmatrix" class="md-nav__link">
-    Expanding a homogenous POD type into an Eigen::Matrix
+  <a href="#construction" class="md-nav__link">
+    Construction
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#flattening-a-homogeneous-pod-type-into-an-eigenvector" class="md-nav__link">
-    Flattening a homogeneous POD type into an Eigen::Vector
+  <a href="#arithmetic" class="md-nav__link">
+    Arithmetic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#member-operations" class="md-nav__link">
+    Member operations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-operations" class="md-nav__link">
+    Function operations
   </a>
   
 </li>
@@ -1274,36 +1304,71 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/utilities/eigenmap.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/utilities/barycentric_vector.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Utilities for Eigen Interoperability</h1>
+                  <h1>Barycentric Vector</h1>
                 
-                <p>Helper functions to interface with Eigen data in interesting ways.</p>
-<p><code class="highlight"><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/utilities/eigen_interop_helpers.h&quot;</span><span class="cp"></span></code></p>
-<h2 id="expanding-a-homogenous-pod-type-into-an-eigenmatrix">Expanding a homogenous POD type into an <code>Eigen::Matrix</code></h2>
-<details class="func"><summary><code class="highlight"><span class="n">Eigen</span><span class="o">::</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Dynamic</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">Options</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Alignment</span><span class="o">&gt;</span> <span class="n">EigenMap</span><span class="p">(</span><span class="n">MeshData</span><span class="o">&lt;</span><span class="n">E</span><span class="p">,</span><span class="n">O</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span></code></summary><p>Given <code>MeshData</code> storing a POD type <code>O</code> like <code>Vector3</code> which can be meaningfully decomposed into a set of <code>k</code> other types <code>T</code>, this function maps the memory of the vector of <code>O</code> as a <code>Matrix&lt;T, Dynamic, k&gt;</code>. E.g., <code>MeshData&lt;Vertex, Vector3&gt;</code> (N x 1) -&gt; <code>Map&lt;Matrix&lt;double, Dynamic, 3&gt;&gt;</code> (N x 3). The template <code>Options</code> allows you to specify is the underlying data should be bound in RowMajor or ColMajor order.</p>
-<div class="highlight"><pre><span></span><code><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">pos</span><span class="p">;</span>
-<span class="c1">// auto resolves to Eigen::Map&lt;Eigen::Matrix&lt;double, Eigen::Dynamic, 3, Eigen::RowMajor&gt;, Alignment&gt;</span>
-<span class="k">auto</span> <span class="n">mapped_position_matrix</span> <span class="o">=</span> <span class="n">EigenMap</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">RowMajor</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
-</code></pre></div>
-<p>Note that it is unnecessary to specify <code>Eigen::RowMajor</code> in this example since it is the default template option. Furthermore template options <code>E</code> and <code>O</code> corresponding to the Mesh Element and Data Type need not be explicitly specified since the compiler can infer it for us.</p>
-<p>Most important, modifications to <code>mapped_position_matrix</code> will be reflected in <code>pos</code> since they share the same memory!</p>
+                <p>A <code>BarycentricVector</code> is a vector that lies along a surface. This vector can lie within a face, along an edge, or at a single vertex (in which case it is simply a zero vector.) Barycentric vectors represent the difference between two barycentric points on the surface, hence their coordinates always sum to 0. (Barycentric points are implemented as <a href="../surface_point">SurfacePoint</a> in geometry-central.) Currently, barycentric points and vectors are only supported on triangle meshes.</p>
+<p><img alt="example of a barycentric vector within a face of an intrinsic triangulation" src="/media/barycentric_vector.svg" /></p>
+<p>Although a barycentric vector can be constructed as the difference of two barycentric points, a barycentric vector technically does not define a single unique vector along the surface but rather a constant vector field within a face.</p>
+<p>Using barycentric vectors, one can easily do vector arithmetic on a surface. Barycentric vectors are especially useful when working with an intrinsic representation of a surface; they can be used to do computations on vectors that depend only on intrinsic geometry, such as inner products.</p>
+<p><code>#include "geometrycentral/surface/barycentric_vector.h"</code></p>
+<p>The field <code>BarycentricVector::type</code> is an enum:
+<div class="highlight"><pre><span></span><code><span class="k">enum</span> <span class="k">class</span> <span class="nc">BarycentricVectorType</span> <span class="p">{</span> <span class="n">Face</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">Edge</span><span class="p">,</span> <span class="n">Vertex</span> <span class="p">};</span>
+</code></pre></div></p>
+<p>which indicates what kind of vector it is.</p>
+<ul>
+<li>
+<p>If the barycentric vector is <strong>inside a face</strong>, the field <code>BarycentricVector::face</code> indicates which face. Otherwise it is the null default face. The field <code>BarycentricVector::faceCoords</code> stores the coordinates of the vector, expressed in barycentric coordinates of the face. If one thinks of a barycentric vector as being the difference of two barycentric points, the order of the vector coordinates can be thought of as corresponding to the usual iteration order of vertices about the face. More technically, the vector coordinates represent vectors in the tangent plane of the <em>standard triangle</em> (see Section 2.3 of <a href="https://markjgillespie.com/Research/int-tri-course/int_tri_course.pdf">these notes</a>.)</p>
+</li>
+<li>
+<p>If the barycentric vector is <strong>along an edge</strong>, the field <code>BarycentricVector::edge</code> indicates which edge. Otherwise it is the null default edge. The field <code>BarycentricVector::edgeCoords</code> stores the coordinates of the vector, expressed in barycentric coordinates of the edge (ordered according to the usual order of vertices on the edge, i.e. the first component corresponds to <code>edge.halfedge().vertex() == edge.firstVertex()</code>.)</p>
+</li>
+<li>
+<p>If the barycentric vector is on a <strong>vertex</strong>, the field <code>BarycentricVector::vertex</code> indicates which vertex. Otherwise it is the null default vertex. There are no corresponding coordinates, since a vector on a vertex is always considered to have zero length.</p>
+</li>
+</ul>
+<h3 id="construction">Construction</h3>
+<details class="func"><summary><code class="highlight"><span class="n">BarycentricVector</span><span class="o">::</span><span class="n">BarycentricVector</span><span class="p">(</span><span class="n">Face</span> <span class="n">f</span><span class="p">,</span> <span class="n">Vector3</span> <span class="n">faceCoords</span><span class="p">)</span></code></summary><p>Construct a barycentric vector that lies along the given face <code>f</code>, with the given barycentric coordinates <code>faceCoords</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Eigen</span><span class="o">::</span><span class="n">Map</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Dynamic</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">Options</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Alignment</span><span class="o">&gt;</span> <span class="n">EigenMap</span><span class="p">(</span><span class="k">const</span> <span class="n">MeshData</span><span class="o">&lt;</span><span class="n">E</span><span class="p">,</span><span class="n">O</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span></code></summary><p>Const version of the above.</p>
+<details class="func"><summary><code class="highlight"><span class="n">BarycentricVector</span><span class="o">::</span><span class="n">BarycentricVector</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">edgeCoords</span><span class="p">)</span></code></summary><p>Construct a barycentric vector that lies along the given edge <code>e</code>, with the given barycentric coordinates <code>edgeCoords</code>.</p>
 </details>
-<h2 id="flattening-a-homogeneous-pod-type-into-an-eigenvector">Flattening a homogeneous POD type into an <code>Eigen::Vector</code></h2>
-<details class="func"><summary><code class="highlight"><span class="n">Eigen</span><span class="o">::</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Dynamic</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Options</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Alignment</span><span class="o">&gt;</span> <span class="n">FlattenedEigenMap</span><span class="p">(</span><span class="n">MeshData</span><span class="o">&lt;</span><span class="n">E</span><span class="p">,</span><span class="n">O</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span></code></summary><p>Given <code>MeshData</code> storing a POD type <code>O</code> like <code>Vector3</code> which can be meaningfully decomposed into a set of <code>k</code> other types <code>T</code>, this function maps the memory of the vector of <code>O</code> as a vector of <code>T</code> (<code>Matrix&lt;T, Dynamic, 1&gt;</code>). E.g., <code>MeshData&lt;Vertex, Vector3&gt;</code> (N x 1) -&gt; <code>Map&lt;Matrix&lt;double, Dynamic, 1&gt;&gt;</code> (3N x 1). The template <code>Options</code> allows you to specify is the underlying data should be bound in RowMajor or ColMajor order.</p>
-<div class="highlight"><pre><span></span><code><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">pos</span><span class="p">;</span>
-<span class="c1">// auto resolves to Eigen::Map&lt;Eigen::Matrix&lt;double, Eigen::Dynamic, 1, Eigen::ColMajor&gt;, Alignment&gt;</span>
-<span class="k">auto</span> <span class="n">mapped_flat_position_matrix</span> <span class="o">=</span> <span class="n">FlattenedEigenMap</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span> <span class="mi">3</span><span class="o">&gt;</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>
-</code></pre></div>
-<p>Note that the return defaults to <code>ColMajor</code> order. The template options <code>E</code> and <code>O</code> corresponding to the Mesh Element and Data Type need not be explicitly specified since the compiler can infer it for us.</p>
-<p>Most important, modifications to <code>mapped_flat_position_matrix</code> will be reflected in <code>pos</code> since they share the same memory! </p>
+<details class="func"><summary><code class="highlight"><span class="n">BarycentricVector</span><span class="o">::</span><span class="n">BarycentricVector</span><span class="p">(</span><span class="n">Vertex</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Construct a (zero-length) barycentric vector that lies on the given vertex <code>v</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Eigen</span><span class="o">::</span><span class="n">Map</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Dynamic</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Options</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Alignment</span><span class="o">&gt;</span> <span class="n">FlattenedEigenMap</span><span class="p">(</span><span class="k">const</span> <span class="n">MeshData</span><span class="o">&lt;</span><span class="n">E</span><span class="p">,</span><span class="n">O</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span></code></summary><p>Const version of the above.</p>
+<details class="func"><summary><code class="highlight"><span class="n">BarycentricVector</span><span class="o">::</span><span class="n">BarycentricVector</span><span class="p">(</span><span class="n">SurfacePoint</span> <span class="n">pA</span><span class="p">,</span> <span class="n">SurfacePoint</span> <span class="n">pB</span><span class="p">)</span></code></summary><p>Construct a barycentric vector from the given <a href="../surface_point">surface points</a>, i.e. barycentric points. The vector direction goes from <code>pA</code> to <code>pB</code>.</p>
+<p>Note that there do not exist unique barycentric endpoints for a given barycentric vector, except for the degenerate case of a vertex-type vector where both endpoints are the vertex itself. Perhaps a more straightforward way to say this is that barycentric vectors really are <strong>vectors</strong> (displacements), <strong>not</strong> rays.</p>
+</details>
+<h3 id="arithmetic">Arithmetic</h3>
+<p>Barycentric vectors support addition, subtraction, scalar multiplication, and scalar division.</p>
+<h3 id="member-operations">Member operations</h3>
+<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">BarycentricVector</span><span class="o">::</span><span class="n">norm</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">)</span> <span class="k">const</span></code></summary><p>Returns the norm (length) of the vector. Because the norm depends on the geometry, you must pass in the geometry (either intrinsic or extrinsic) on which the vector is defined.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">BarycentricVector</span><span class="o">::</span><span class="n">norm2</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">)</span> <span class="k">const</span></code></summary><p>Returns the squared norm of the vector. Because the norm depends on the geometry, you must pass in the geometry (either intrinsic or extrinsic) on which the vector is defined.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">BarycentricVector</span> <span class="n">BarycentricVector</span><span class="o">::</span><span class="n">rotated90</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">)</span> <span class="k">const</span></code></summary><p>Rotate the vector 90 degrees counter-clockwise within the face it belongs to. This requires the geometry, since the meaning of &ldquo;90 degrees&rdquo; depends on the geometry of the triangle.</p>
+</details>
+<p>Barycentric vectors also have a few utility functions:</p>
+<details class="func"><summary><code class="highlight"><span class="n">BarycentricVector</span> <span class="n">BarycentricVector</span><span class="o">::</span><span class="n">BarycentricVector</span> <span class="n">inSomeFace</span><span class="p">()</span> <span class="k">const</span></code></summary><p>All barycentric vectors (vertex, edge, face) have an equivalent vector in one or many adjacent faces. This function reeturns one of the equivalent barycentric vectors in a face (chosen arbitrarily). If the vector is already a face vector, the output is a copy of the vector.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">BarycentricVector</span> <span class="n">BarycentricVector</span><span class="o">::</span><span class="n">BarycentricVector</span> <span class="n">inFace</span><span class="p">(</span><span class="n">Face</span> <span class="n">f</span><span class="p">)</span> <span class="k">const</span></code></summary><p>Returns the barycentric vector as a face vector in face <code>f</code>. If the vector is not on or adjacent to the requested face, throws an error.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">BarycentricVector</span> <span class="n">BarycentricVector</span><span class="o">::</span><span class="n">BarycentricVector</span> <span class="n">inEdge</span><span class="p">(</span><span class="n">Edge</span> <span class="n">e</span><span class="p">)</span> <span class="k">const</span></code></summary><p>Returns the barycentric vector as an edge-type vector in edge <code>e</code>. If the vector is already an edge vector, the output is a copy of the vector. If the the barycentric vector is not on <code>e</code> or one of its adjacent vertices, throws an error.</p>
+</details>
+<h3 id="function-operations">Function operations</h3>
+<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">norm</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="k">const</span> <span class="n">BarycentricVector</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the norm of the input vector <code>v</code>.</p>
+<p>Also available as <code>vec.norm()</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">norm2</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="k">const</span> <span class="n">BarycentricVector</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the squared norm of the input vector <code>v</code>.</p>
+<p>Also available as <code>vec.norm2()</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">dot</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="k">const</span> <span class="n">BarycentricVector</span><span class="o">&amp;</span> <span class="n">u</span><span class="p">,</span> <span class="k">const</span> <span class="n">BarycentricVector</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the inner product between <code>u</code> and <code>v</code>.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Face</span> <span class="n">sharedFace</span><span class="p">(</span><span class="k">const</span> <span class="n">BarycentricVector</span><span class="o">&amp;</span> <span class="n">u</span><span class="p">,</span> <span class="k">const</span> <span class="n">BarycentricVector</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns an arbitrary face shared by the two vectors <code>u</code> and <code>v</code>, if one exists; returns the null default face if none.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="n">Edge</span> <span class="n">sharedEdge</span><span class="p">(</span><span class="k">const</span> <span class="n">BarycentricVector</span><span class="o">&amp;</span> <span class="n">u</span><span class="p">,</span> <span class="k">const</span> <span class="n">BarycentricVector</span><span class="o">&amp;</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the edge shared by the two vectors <code>u</code> and <code>v</code>, if one exists; return the null default edge if none.</p>
 </details>
                 
               
@@ -1323,7 +1388,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../vector3/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../surface_point/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1332,11 +1397,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Vector3
+                Surface Point
               </div>
             </div>
           </a>
         
+        
+          <a href="../../algorithms/direction_fields/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Direction Fields
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
@@ -1357,15 +1436,15 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
-      <script src="../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
-          base: "../..",
+          base: "../../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+            worker: "../../../assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
