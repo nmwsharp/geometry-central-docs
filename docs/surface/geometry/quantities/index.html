@@ -858,6 +858,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#dec-operators" class="md-nav__link">
+    DEC operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#crouzeix-raviart-laplacian" class="md-nav__link">
     Crouzeix-Raviart Laplacian
   </a>
@@ -874,13 +881,6 @@
           <li class="md-nav__item">
   <a href="#crouzeix-raviart-connection-laplacian" class="md-nav__link">
     Crouzeix-Raviart connection Laplacian
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dec-operators" class="md-nav__link">
-    DEC operators
   </a>
   
 </li>
@@ -1888,6 +1888,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#dec-operators" class="md-nav__link">
+    DEC operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#crouzeix-raviart-laplacian" class="md-nav__link">
     Crouzeix-Raviart Laplacian
   </a>
@@ -1904,13 +1911,6 @@
           <li class="md-nav__item">
   <a href="#crouzeix-raviart-connection-laplacian" class="md-nav__link">
     Crouzeix-Raviart connection Laplacian
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dec-operators" class="md-nav__link">
-    DEC operators
   </a>
   
 </li>
@@ -2366,6 +2366,27 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexConnectionLaplacian()</code></li>
 </ul>
 </details>
+<details class="func"><summary>DEC operators</summary><h5 id="dec-operators">DEC operators</h5>
+<p>These operators are the basic building blocks for <em>discrete exterior calculus</em> on surfaces.</p>
+<p><strong>Note:</strong> These quantities slightly deviate from the usual naming scheme for quantities. Rather than <code>requireD0()</code>, <code>requireD1()</code>, etc, there is a single <code>requireDECOperators()</code> function which manages all 8 of the members listed below.</p>
+<p>The following members are constructed:</p>
+<ul>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge0</code> A <span><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge0Inverse</code> A <span><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge1</code> An <span><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge1Inverse</code> An <span><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge2</code> An <span><span class="MathJax_Preview">|F| \times |F|</span><script type="math/tex">|F| \times |F|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge2Inverse</code> An <span><span class="MathJax_Preview">|F| \times |F|</span><script type="math/tex">|F| \times |F|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::d0</code> An <span><span class="MathJax_Preview">|E| \times |V|</span><script type="math/tex">|E| \times |V|</script></span> matrix with <span><span class="MathJax_Preview">\{-1, 0, 1\}</span><script type="math/tex">\{-1, 0, 1\}</script></span> entries</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::d1</code> An <span><span class="MathJax_Preview">|F| \times |E|</span><script type="math/tex">|F| \times |E|</script></span> matrix with <span><span class="MathJax_Preview">\{-1, 0, 1\}</span><script type="math/tex">\{-1, 0, 1\}</script></span> entries</li>
+</ul>
+<p>Only valid on triangular meshes.</p>
+<ul>
+<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireDECOperators()</code></li>
+</ul>
+</details>
+<p>While the vertex-based cotan Laplacian above is standard in geometry processing, one can also construct a discrete Laplacian using different basis functions. The following matrices are the result of using <em>Crouzeix-Raviart</em> basis functions, which are Lagrange elements based at edge midpoints: Each function is piecewise linear, has a value at 1 at its associated edge midpoint, and is 0 at all other adjacent edge midpoints.</p>
+<p>In graphics and geometry processing, Crouzeix-Raviart elements have been used, for example, to <a href="https://cims.nyu.edu/gcl/papers/wardetzky2007dqb.pdf">discretize bending energies</a> and <a href="https://odedstein.com/projects/a-simple-discretization/a-simple-discretization.pdf">discretize vector Dirichlet energy</a>. Because there are typically more edges than vertices in a mesh, and there are only two faces in the support of each Crouzeix-Raviart basis function, Crouzeix-Raviart operators also typically have more DOFs than vertex-based operators.</p>
 <details class="func"><summary>Crouzeix-Raviart Laplacian</summary><h5 id="crouzeix-raviart-laplacian">Crouzeix-Raviart Laplacian</h5>
 <p>The discrete Laplace operator, discretized via the piecewise linear <em>Crouzeix-Raviart</em> basis functions associated with edge midpoints.</p>
 <p>A <span><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> real matrix. Always symmetric and positive semi-definite. This is the <em>weak</em> Laplace operator, if we use it to evaluate <span><span class="MathJax_Preview">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</span><script type="math/tex">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</script></span>, <span><span class="MathJax_Preview">\mathsf{x}</span><script type="math/tex">\mathsf{x}</script></span> should hold <em>pointwise</em> quantities at edge midpoints, and the result <span><span class="MathJax_Preview">\mathsf{y}</span><script type="math/tex">\mathsf{y}</script></span> will contain <em>integrated</em> values of the result in the neighborhood of each edge midpoint. If used to solve a Poisson problem, a mass matrix is likely necessary on the right hand side.</p>
@@ -2392,25 +2413,6 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <ul>
 <li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::crouzeixRaviartConnectionLaplacian</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireCrouzeixRaviartConnectionLaplacian()</code></li>
-</ul>
-</details>
-<details class="func"><summary>DEC operators</summary><h5 id="dec-operators">DEC operators</h5>
-<p>These operators are the basic building blocks for <em>discrete exterior calculus</em> on surfaces.</p>
-<p><strong>Note:</strong> These quantities slightly deviate from the usual naming scheme for quantities. Rather than <code>requireD0()</code>, <code>requireD1()</code>, etc, there is a single <code>requireDECOperators()</code> function which manages all 8 of the members listed below.</p>
-<p>The following members are constructed:</p>
-<ul>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge0</code> A <span><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge0Inverse</code> A <span><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge1</code> An <span><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge1Inverse</code> An <span><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge2</code> An <span><span class="MathJax_Preview">|F| \times |F|</span><script type="math/tex">|F| \times |F|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge2Inverse</code> An <span><span class="MathJax_Preview">|F| \times |F|</span><script type="math/tex">|F| \times |F|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::d0</code> An <span><span class="MathJax_Preview">|E| \times |V|</span><script type="math/tex">|E| \times |V|</script></span> matrix with <span><span class="MathJax_Preview">\{-1, 0, 1\}</span><script type="math/tex">\{-1, 0, 1\}</script></span> entries</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::d1</code> An <span><span class="MathJax_Preview">|F| \times |E|</span><script type="math/tex">|F| \times |E|</script></span> matrix with <span><span class="MathJax_Preview">\{-1, 0, 1\}</span><script type="math/tex">\{-1, 0, 1\}</script></span> entries</li>
-</ul>
-<p>Only valid on triangular meshes.</p>
-<ul>
-<li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireDECOperators()</code></li>
 </ul>
 </details>
 <h2 id="extrinsic-angles">Extrinsic angles</h2>
