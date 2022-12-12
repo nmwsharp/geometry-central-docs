@@ -15,7 +15,7 @@
     
     
       
-        <title>Vector Heat Method - Geometry Central</title>
+        <title>Remeshing - Geometry Central</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vector-heat-solver" class="md-skip">
+        <a href="#tangential-vertex-smoothing" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Vector Heat Method
+              Remeshing
             
           </span>
         </div>
@@ -730,11 +730,96 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../remeshing/" title="Remeshing" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Remeshing
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Remeshing" class="md-nav__link md-nav__link--active">
       Remeshing
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tangential-vertex-smoothing" class="md-nav__link">
+    Tangential Vertex Smoothing
+  </a>
+  
+    <nav class="md-nav" aria-label="Tangential Vertex Smoothing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boundary-conditions" class="md-nav__link">
+    Boundary Conditions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extrinsic-delaunay-flipping" class="md-nav__link">
+    Extrinsic Delaunay Flipping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-length-adjustment" class="md-nav__link">
+    Edge Length Adjustment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helper-types" class="md-nav__link">
+    Helper Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Helper Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -790,77 +875,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Vector Heat Method
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Vector Heat Method" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
       Vector Heat Method
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#vector-heat-solver" class="md-nav__link">
-    Vector Heat Solver
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scalar-extension" class="md-nav__link">
-    Scalar Extension
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vector-extension" class="md-nav__link">
-    Vector Extension
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logarithmic-map" class="md-nav__link">
-    Logarithmic Map
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#citation" class="md-nav__link">
-    Citation
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1282,37 +1301,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vector-heat-solver" class="md-nav__link">
-    Vector Heat Solver
+  <a href="#tangential-vertex-smoothing" class="md-nav__link">
+    Tangential Vertex Smoothing
+  </a>
+  
+    <nav class="md-nav" aria-label="Tangential Vertex Smoothing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boundary-conditions" class="md-nav__link">
+    Boundary Conditions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extrinsic-delaunay-flipping" class="md-nav__link">
+    Extrinsic Delaunay Flipping
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scalar-extension" class="md-nav__link">
-    Scalar Extension
+  <a href="#edge-length-adjustment" class="md-nav__link">
+    Edge Length Adjustment
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vector-extension" class="md-nav__link">
-    Vector Extension
+  <a href="#helper-types" class="md-nav__link">
+    Helper Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Helper Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#logarithmic-map" class="md-nav__link">
-    Logarithmic Map
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#citation" class="md-nav__link">
-    Citation
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1328,7 +1366,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/vector_heat_method.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/algorithms/remeshing.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1336,83 +1374,123 @@
                   
                 
                 
-                  <h1>Vector Heat Method</h1>
+                  <h1>Remeshing</h1>
                 
-                <p>This section describes the <em>Vector Heat Method</em> in geometry-central, which computes parallel transport of vectors using heat flow, and applications that follow from it.</p>
-<p>Note that these quantities all depend on the <em>intrinsic</em> geometry of a surface (via the <code>IntrinsicGeometryInterface</code>). Therefore, these routines can be run on abstract geometric domains as well as traditional surfaces in 3D.</p>
-<p>These algorithms are described in <a href="http://www.cs.cmu.edu/~kmcrane/Projects/VectorHeatMethod/paper.pdf">The Vector Heat Method</a>. </p>
-<p><code>#include "geometrycentral/surface/vector_heat_method.h"</code></p>
-<h2 id="vector-heat-solver">Vector Heat Solver</h2>
-<p>The stateful class <code>VectorHeatSolver</code> shares precomputation for all of the routines below.</p>
-<details class="func"><summary><code class="highlight"><span class="n">VectorHeatSolver</span><span class="o">::</span><span class="n">VectorHeatSolver</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="kt">double</span> <span class="n">tCoef</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span></code></summary><p>Create a new solver for the Vector Heat Method. Precomputation is performed lazily as needed.</p>
+                <table>
+<thead>
+<tr>
+<th>Original</th>
+<th>Remeshed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="finely_triangulated_spot" src="/media/spot-triangulation-original.png" style="max-width: 20em; display: block; margin-left: auto; margin-right: auto;" /></td>
+<td><img alt="coarsely_triangulated_spot" src="/media/spot-triangulation-remeshed.png" style="max-width: 20em; display: block; margin-left: auto; margin-right: auto;" /></td>
+</tr>
+</tbody>
+</table>
+<p>These routines try to improve mesh quality using repeated rounds of <a href="#tangential-vertex-smoothing">vertex position smoothing</a>, <a href="#extrinsic-delaunay-flipping">edge flipping</a>, and <a href="#edge-length-adjustment">edge splits/collapses</a>.</p>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="nf">remesh</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">RemeshOptions</span> <span class="n">options</span> <span class="o">=</span> <span class="n">defaultRemeshOptions</span><span class="p">);</span></code></summary><p>Remesh a mesh using vertex smoothing along with edge splits, collapses, and flips. Options are passed as a <a href="#options">RemeshOptions</a> object.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="nf">remesh</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">MutationManager</span><span class="o">&amp;</span> <span class="n">mm</span><span class="p">,</span> <span class="n">RemeshOptions</span> <span class="n">options</span> <span class="o">=</span> <span class="n">defaultRemeshOptions</span><span class="p">);</span></code></summary><p>Remesh a mesh using vertex smoothing along with edge splits, collapses, and flips. Options are passed as a <a href="#options">RemeshOptions</a> object.
+All mesh mutations are performed through a <code>MutationManager</code> object, which can e.g. keep special vertices fixed or run callback functions when certain mesh mutations occur.</p>
+</details>
+<h2 id="tangential-vertex-smoothing">Tangential Vertex Smoothing</h2>
+<p>Vertex smoothing moves each vertex towards the average of its neighborhood. This average can be computed in two ways: in <em>circumentric</em> smoothing, every vertex is moved towards the area-weighted average of the circumcenters of its neighboring faces (as in <a href="https://www.sciencedirect.com/science/article/abs/pii/S0045782510003117">[Chen &amp; Holst 2011]</a>), whereas in <em>Laplacian</em> smoothing, every vertex is moved towards the average of the positions of its neighboring vertices.</p>
+<p>In either case we perform <em>tangential smoothing</em>, meaning that we only move vertices tangentially along the surface. </p>
+<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="nf">smoothByCircumcenter</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">VertexPositionGeometry</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="kt">double</span> <span class="n">stepSize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">RemeshBoundaryCondition</span> <span class="n">bc</span> <span class="o">=</span> <span class="n">RemeshBoundaryCondition</span><span class="o">::</span><span class="n">Tangential</span><span class="p">);</span></code></summary><p>Move each vertex tangentially towards the area-weighted average of its neighboring face circumcenters.
+Returns the average amount that each vertex was moved by.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="nf">smoothByCircumcenter</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">VertexPositionGeometry</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">MutationManager</span><span class="o">&amp;</span> <span class="n">mm</span><span class="p">,</span> <span class="kt">double</span> <span class="n">stepSize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">RemeshBoundaryCondition</span> <span class="n">bc</span> <span class="o">=</span> <span class="n">RemeshBoundaryCondition</span><span class="o">::</span><span class="n">Tangential</span><span class="p">);</span></code></summary><p>Move each vertex tangentially towards the area-weighted average of its neighboring face circumcenters
+, using the provided <code>MutationManager</code> to move the vertices
+Returns the average amount that each vertex was moved by.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="nf">smoothByLaplacian</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">VertexPositionGeometry</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="kt">double</span> <span class="n">stepSize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">RemeshBoundaryCondition</span> <span class="n">bc</span> <span class="o">=</span> <span class="n">RemeshBoundaryCondition</span><span class="o">::</span><span class="n">Tangential</span><span class="p">);</span></code></summary></details>
+<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="nf">smoothByLaplacian</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">VertexPositionGeometry</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">MutationManager</span><span class="o">&amp;</span> <span class="n">mm</span><span class="p">,</span> <span class="kt">double</span> <span class="n">stepSize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">RemeshBoundaryCondition</span> <span class="n">bc</span> <span class="o">=</span> <span class="n">RemeshBoundaryCondition</span><span class="o">::</span><span class="n">Tangential</span><span class="p">);</span></code></summary><p>Move each vertex tangentially towards the average of its neighbors, using the provided <code>MutationManager</code> to move the vertices
+Returns the average amount that each vertex was moved by.</p>
+</details>
+<h3 id="boundary-conditions">Boundary Conditions</h3>
+<p>The boundary conditions for smoothing can be set to <code>RemeshBoundaryCondition::Tangential</code>, <code>RemeshBoundaryCondition::Fixed</code>, or <code>RemeshBoundaryCondition::Free</code>. Tangential smoothing allows boundary vertices to move along the tangent direction to the boundary curve, fixed smoothing fixes the boundary vertices, and free smoothing allows boundary vertices to move along any direction in the surface&rsquo;s tangent plane. Leaving boundary vertices free allows the mesh to degenerate, so it is not recommended unless you impose additional constraints.</p>
+<h2 id="extrinsic-delaunay-flipping">Extrinsic Delaunay Flipping</h2>
+<p>Delaunay flipping performs edge flips to improve triangle quality.</p>
+<div class="admonition warning">
+<p class="admonition-title">No guarantees</p>
+<p>Unlike the <a href="/surface/intrinsic_triangulations/basics/#high-level-mutators">intrinsic Delaunay flipping routines</a>, extrinsic flipping algorithms are not guaranteed to produce a Delaunay mesh. Nonetheless, these edge flips generally improve triangle quality in practice.</p>
+</div>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="nf">fixDelaunay</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">VertexPositionGeometry</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">);</span></code></summary><p>Try to make all triangles Delaunay using extrinsic edge flips.
+Returns the number of flips performed.</p>
+</details>
+<details class="func"><summary><code class="highlight"><span class="kt">size_t</span> <span class="nf">fixDelaunay</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">VertexPositionGeometry</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">MutationManager</span><span class="o">&amp;</span> <span class="n">mm</span><span class="p">);</span></code></summary><p>Try to make all triangles Delaunay using extrinsic edge flips, using the provided <code>MutationManager</code> to flip edges.
+Returns the number of flips performed.</p>
+</details>
+<h2 id="edge-length-adjustment">Edge Length Adjustment</h2>
+<p>These routines perform edge splits and collapses to drive mesh edge lengths towards a target value. If curvature adaptation is enabled, this target length is made shorter in high-curvature areas, leading to more resolution there.</p>
+<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="nf">adjustEdgeLengths</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">VertexPositionGeometry</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">RemeshOptions</span> <span class="n">options</span> <span class="o">=</span> <span class="n">defaultRemeshOptions</span><span class="p">);</span></code></summary><p>Apply splits and collapses to adjust edge lengths.</p>
+<p>Reads the following options from <code>options</code>, with the following default values and meanings:</p>
 <ul>
-<li>
-<p><code>geom</code> is the geometry (and hence mesh) on which to compute. Note that nearly any geometry object (<code>VertexPositionGeometry</code>, etc) can be passed here.</p>
-</li>
-<li>
-<p><code>tCoef</code> is the time to use for short time heat flow, as a factor <code>m * h^2</code>, where <code>h</code> is the mean edge length. The default value of <code>1.0</code> is almost always sufficient.</p>
-</li>
+<li><code class="highlight"><span class="kt">double</span> <span class="n">options</span><span class="p">.</span><span class="n">targetEdgeLength</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span></code>: the target edge length in flat regions. If <code>targetEdgeLength</code> is negative, the target length is set relative to the input mesh&rsquo;s mean length.</li>
+<li><code class="highlight"><span class="kt">double</span> <span class="n">options</span><span class="p">.</span><span class="n">curvatureAdaptation</span> <span class="o">=</span> <span class="mi">0</span></code>: how much target edge length should vary due to curvature. Set <code>curvatureAdaptation</code> to zero if you want edge lengths to be approximately <code>targetEdgeLength</code> everywhere.</li>
+<li><code class="highlight"><span class="kt">double</span> <span class="n">options</span><span class="p">.</span><span class="n">minRelativeLength</span> <span class="o">=</span> <span class="mf">0.05</span></code>: the minimum possible edge length in the output mesh. Defined relative to <code>targetEdgeLength</code>.</li>
 </ul>
-<p>Algorithm options (like <code>tCoef</code>) cannot be changed after construction; create a new solver object with the new settings.</p>
 </details>
-<h2 id="scalar-extension">Scalar Extension</h2>
-<p>Given scalar data defined at isolated source locations on a surface, extend it to the entire domain. Each point on the domain will take the value of the nearest source point.  Note that the fast diffusion algorithm means the result is a slightly smoothed-out field.</p>
-<p><img alt="bean scalar extension" src="/media/bean_scalar.jpg" /></p>
-<p>Example:
-<div class="highlight"><pre><span></span><code><span class="c1">// your mesh and geometry</span>
-<span class="n">VertexPositionGeometry</span> <span class="n">geometry</span><span class="p">;</span>
-<span class="n">SurfaceMesh</span> <span class="n">mesh</span><span class="p">;</span>
-
-<span class="c1">// construct a solver</span>
-<span class="n">VectorHeatMethodSolver</span> <span class="nf">vhmSolver</span><span class="p">(</span><span class="n">geometry</span><span class="p">);</span>
-
-<span class="c1">// some interesting source values</span>
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="kt">double</span><span class="o">&gt;&gt;</span> <span class="n">points</span><span class="p">;</span>
-<span class="k">for</span> <span class="p">(</span><span class="cm">/* ... some inputs ... */</span> <span class="p">)</span> <span class="p">{</span>
-  <span class="n">Vertex</span> <span class="n">sourceVert</span> <span class="o">=</span> <span class="cm">/* something */</span><span class="p">;</span>
-  <span class="kt">double</span> <span class="n">sourceVal</span> <span class="o">=</span> <span class="cm">/* something */</span><span class="p">;</span>
-  <span class="n">points</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">sourceVert</span><span class="p">,</span> <span class="n">sourceVal</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="c1">// solve!</span>
-<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">scalarExtension</span> <span class="o">=</span> <span class="n">vhmSolver</span><span class="o">-&gt;</span><span class="n">extendScalar</span><span class="p">(</span><span class="n">points</span><span class="p">);</span>
-</code></pre></div></p>
-<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">VectorHeatSolver</span><span class="o">::</span><span class="n">extendScalar</span><span class="p">(</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="kt">double</span><span class="o">&gt;&gt;&amp;</span> <span class="n">sources</span><span class="p">)</span></code></summary><p>Compute the nearest-neighbor extension of scalar data defined at isolated vertices to the entire domain.  The input is a list of vertices and their corresponding values.</p>
+<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="nf">adjustEdgeLengths</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">VertexPositionGeometry</span><span class="o">&amp;</span> <span class="n">geom</span><span class="p">,</span> <span class="n">MutationManager</span><span class="o">&amp;</span> <span class="n">mm</span><span class="p">,</span> <span class="n">RemeshOptions</span> <span class="n">options</span> <span class="o">=</span> <span class="n">defaultRemeshOptions</span><span class="p">);</span></code></summary><p>Apply splits and collapses to adjust edge lengths.
+All splits and collapses are performed using the provided <code>MutationManager</code>.</p>
+<p>Reads the following options from <code>options</code>, with the following default values and meanings:</p>
+<ul>
+<li><code class="highlight"><span class="kt">double</span> <span class="n">options</span><span class="p">.</span><span class="n">targetEdgeLength</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span></code>: the target edge length in flat regions. If <code>targetEdgeLength</code> is negative, the target length is set relative to the input mesh&rsquo;s mean length.</li>
+<li><code class="highlight"><span class="kt">double</span> <span class="n">options</span><span class="p">.</span><span class="n">curvatureAdaptation</span> <span class="o">=</span> <span class="mi">0</span></code>: how much target edge length should vary due to curvature. Set <code>curvatureAdaptation</code> to zero if you want edge lengths to be approximately <code>targetEdgeLength</code> everywhere.</li>
+<li><code class="highlight"><span class="kt">double</span> <span class="n">options</span><span class="p">.</span><span class="n">minRelativeLength</span> <span class="o">=</span> <span class="mf">0.05</span></code>: the minimum possible edge length in the output mesh. Defined relative to <code>targetEdgeLength</code>.</li>
+</ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">VectorHeatSolver</span><span class="o">::</span><span class="n">extendScalar</span><span class="p">(</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="p">,</span> <span class="kt">double</span><span class="o">&gt;&gt;&amp;</span> <span class="n">sources</span><span class="p">)</span></code></summary><p>Compute the nearest-neighbor extension of scalar data defined at isolated points to the entire domain.  The input is a list of <a href="../../utilities/surface_point/">surface points</a> and their corresponding values.</p>
-</details>
-<h2 id="vector-extension">Vector Extension</h2>
-<p><img alt="bean vector extension" src="/media/bean_vector.jpg" /></p>
-<p>Given tangent vectors defined at one or more isolated source locations on a surface, extend transport the vectors across the entire domain according to parallel transport. Each point on the domain will take the value of the nearest source point.  Note that the fast diffusion algorithm means the result is a slightly smoothed-out field.</p>
-<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">VectorHeatSolver</span><span class="o">::</span><span class="n">transportTangentVectors</span><span class="p">(</span><span class="n">Vertex</span> <span class="n">sourceVert</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">sourceVec</span><span class="p">)</span></code></summary><p>Compute the parallel transport of a vector defined at a single vertex to the entire domain. The input is defined in the tangent space of the source vertex.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">VectorHeatSolver</span><span class="o">::</span><span class="n">transportTangentVectors</span><span class="p">(</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span> <span class="n">Vector2</span><span class="o">&gt;&gt;&amp;</span> <span class="n">sources</span><span class="p">)</span></code></summary><p>Compute the parallel transport of vectors defined at a collection of vertices to the entire domain. The input is defined in the tangent space of each the source vertex.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">VectorHeatSolver</span><span class="o">::</span><span class="n">transportTangentVectors</span><span class="p">(</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="p">,</span> <span class="n">Vector2</span><span class="o">&gt;&gt;&amp;</span> <span class="n">sources</span><span class="p">)</span></code></summary><p>Compute the parallel transport of vectors defined at a collection of <a href="../../utilities/surface_point/">surface points</a> to the entire domain. The input is defined in the tangent space of each the vertex, face, or edge respectively.</p>
-</details>
-<h2 id="logarithmic-map">Logarithmic Map</h2>
-<p>The <em>logarithmic map</em> is a very special 2D local parameterization of a surface about a point, where for each point on the surface the magnitude of the log map gives the geodesic distance from the source, and the polar coordinate of the log map gives the direction at which a geodesic must leave the source to arrive at the point.</p>
-<p><img alt="octopus logmap" src="/media/octopus_logmap.jpg" style="height:300px; display: block; margin-left: auto; margin-right: auto;" /></p>
-<p>These routines compute the logarithmic map using the vector heat method.</p>
-<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">VectorHeatSolver</span><span class="o">::</span><span class="n">computeLogMap</span><span class="p">(</span><span class="k">const</span> <span class="n">Vertex</span><span class="o">&amp;</span> <span class="n">sourceVert</span><span class="p">)</span></code></summary><p>Compute the logarithmic map with respect to the given source vertex.</p>
-<p>The angular coordinate of the log map will be respect to the tangent space of the source vertex.</p>
-</details>
-<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">VectorHeatSolver</span><span class="o">::</span><span class="n">computeLogMap</span><span class="p">(</span><span class="k">const</span> <span class="n">SurfacePoint</span><span class="o">&amp;</span> <span class="n">sourceP</span><span class="p">)</span></code></summary><p>Compute the logarithmic map with respect to the given source point, which is a general <a href="../../utilities/surface_point/">surface point</a>.</p>
-<p>The angular coordinate of the log map will be respect to the tangent space of the source vertex, edge, or face.</p>
-</details>
-<h2 id="citation">Citation</h2>
-<p>If these algorithms contribute to academic work, please cite the following paper:</p>
-<div class="highlight"><pre><span></span><code><span class="nc">@article</span><span class="p">{</span><span class="nl">sharp2019vector</span><span class="p">,</span>
-  <span class="na">title</span><span class="p">=</span><span class="s">{The Vector Heat Method}</span><span class="p">,</span>
-  <span class="na">author</span><span class="p">=</span><span class="s">{Sharp, Nicholas and Soliman, Yousuf and Crane, Keenan}</span><span class="p">,</span>
-  <span class="na">journal</span><span class="p">=</span><span class="s">{ACM Transactions on Graphics (TOG)}</span><span class="p">,</span>
-  <span class="na">volume</span><span class="p">=</span><span class="s">{38}</span><span class="p">,</span>
-  <span class="na">number</span><span class="p">=</span><span class="s">{3}</span><span class="p">,</span>
-  <span class="na">pages</span><span class="p">=</span><span class="s">{24}</span><span class="p">,</span>
-  <span class="na">year</span><span class="p">=</span><span class="s">{2019}</span><span class="p">,</span>
-  <span class="na">publisher</span><span class="p">=</span><span class="s">{ACM}</span>
-<span class="p">}</span>
-</code></pre></div>
+<h2 id="helper-types">Helper Types</h2>
+<h3 id="options">Options</h3>
+<p>Options are passed in to <code>remesh</code> via a <code>RemeshOptions</code> object.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="kt">double</span> <span class="n">targetEdgeLength</span></code></td>
+<td><code>-1</code></td>
+<td>the target edge length in flat regions. If <code>targetEdgeLength</code> is negative, the target edge length is set to relative the input mesh&rsquo;s mean edge length</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">size_t</span> <span class="n">maxIterations</span></code></td>
+<td><code>10</code></td>
+<td>the maximum number of iterations to run for</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">double</span> <span class="n">curvatureAdaptation</span></code></td>
+<td><code>0</code></td>
+<td>how much target length should vary due to curvature. Set curvatureAdaptation to 0 if you want edge lengths to be approximately targetEdgeLength everywhere</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">double</span> <span class="n">minRelativeLength</span></code></td>
+<td><code>0.05</code></td>
+<td>the minimum possible edge length allowed in the output mesh. Defined relative to targetEdgeLength</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="n">RemeshSmoothStyle</span> <span class="n">smoothStyle</span></code></td>
+<td><code>RemeshSmoothStyle::Circumcentric</code></td>
+<td>the type of vertex smoothing to use (either <code>RemeshSmoothStyle::Circumcentric</code> or <code>RemeshSmoothStyle::Laplacian</code>)</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="n">RemeshBoundaryCondition</span> <span class="n">boundaryCondition</span></code></td>
+<td><code>RemeshBoundaryCondition::Tangential</code></td>
+<td>the type of motions allowed for boundary vertices (either <code>RemeshBoundaryCondition::Fixed</code>, <code>RemeshBoundaryCondition::Tangential</code> or <code>RemeshBoundaryCondition::Free</code>)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">&lsquo;Fixed&rsquo; boundary may still move slightly</p>
+<p>Setting <code>boundaryCondition</code> to <code>RemeshBoundaryCondition::Fixed</code> only fixes boundary vertices during vertex smoothing. Boundary edges may still be split or collapsed during edge length adjustment, which can also cause the boundary to move slightly. To stop all motion of the boundary, you can pass in a <code>MutationManager</code> which marks all boundary edges as not splittable or collapsible.</p>
+</div>
                 
               
               
@@ -1431,7 +1509,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../geodesic_paths/" title="Tracing Geodesic Paths" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../parameterization/" title="Parameterization" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1440,19 +1518,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Tracing Geodesic Paths
+                Parameterization
               </div>
             </div>
           </a>
         
         
-          <a href="../../intrinsic_triangulations/basics/" title="Basics" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../robust_geometry/" title="Robust Geometry" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Basics
+                Robust Geometry
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
