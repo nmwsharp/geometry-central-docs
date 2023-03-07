@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -10,8 +8,14 @@
       
       
       
-      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.1">
+      
+        <link rel="prev" href="../geometry/">
+      
+      
+        <link rel="next" href="../../utilities/simple_polygon_mesh/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
@@ -19,34 +23,32 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.fe0cca5b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ffa9267a.min.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a46bcfb3.min.css">
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
+      
+
+    
+    
+    
       
         
         
-        <meta name="theme-color" content="#ff7043">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CInconsolata:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Inconsolata"}</style>
       
-    
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700%7CInconsolata&display=fallback">
-        <style>body,input{font-family:"Merriweather",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Inconsolata",SFMono-Regular,Consolas,Menlo,monospace}</style>
-      
-    
     
     
       <link rel="stylesheet" href="../../../extras.css">
     
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-58346315-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+
+    
     
     
   </head>
@@ -55,8 +57,11 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="red">
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="red">
   
+    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -73,48 +78,58 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../../.." title="Geometry Central" class="md-header-nav__button md-logo" aria-label="Geometry Central">
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Geometry Central" class="md-header__button md-logo" aria-label="Geometry Central" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Geometry Central
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Quantities
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -122,7 +137,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -130,12 +145,11 @@
 </div>
     
     
-      <div class="md-header-nav__source">
-        
-<a href="https://github.com/nmwsharp/geometry-central/" title="Go to repository" class="md-source">
+      <div class="md-header__source">
+        <a href="https://github.com/nmwsharp/geometry-central" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     nmwsharp/geometry-central
@@ -144,39 +158,43 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
+      
         
-      
-      
+          
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Geometry Central" class="md-nav__button md-logo" aria-label="Geometry Central">
+    <a href="../../.." title="Geometry Central" class="md-nav__button md-logo" aria-label="Geometry Central" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
 
     </a>
     Geometry Central
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/nmwsharp/geometry-central/" title="Go to repository" class="md-source">
+      <a href="https://github.com/nmwsharp/geometry-central" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     nmwsharp/geometry-central
@@ -190,156 +208,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../../.." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
-      Build
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Build" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Build
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../build/versions/" title="Versions" class="md-nav__link">
-      Versions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../build/building/" title="Building" class="md-nav__link">
-      Building
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../build/dependencies/" title="Dependencies" class="md-nav__link">
-      Dependencies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../build/tests/" title="Tests" class="md-nav__link">
-      Tests
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Tutorials
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Tutorials
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../tutorials/load_mesh/" title="Load & navigate a mesh" class="md-nav__link">
-      Load & navigate a mesh
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../tutorials/basic_mutation/" title="Basic Mutation" class="md-nav__link">
-      Basic Mutation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../tutorials/direction_fields/" title="Direction fields" class="md-nav__link">
-      Direction fields
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
@@ -347,240 +224,437 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
-    
-    <label class="md-nav__link" for="nav-4">
-      Surface
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Surface" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Surface
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Build
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Build
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
-    
-    <label class="md-nav__link" for="nav-4-1">
-      Surface Mesh
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Surface Mesh" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Surface Mesh
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/basics/" title="Basics" class="md-nav__link">
-      Basics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/elements/" title="Elements" class="md-nav__link">
-      Elements
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/boundaries/" title="Boundaries" class="md-nav__link">
-      Boundaries
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/indexing/" title="Indexing" class="md-nav__link">
-      Indexing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
-      Navigation and Iteration
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/containers/" title="Containers" class="md-nav__link">
-      Containers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/mutation/" title="Mutation" class="md-nav__link">
-      Mutation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/delta_complex/" title="Delta Complexes" class="md-nav__link">
-      Delta Complexes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/internals/" title="Internals" class="md-nav__link">
-      Internals
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build/versions/" class="md-nav__link">
+        Versions
+      </a>
+    </li>
   
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
-    
-    <label class="md-nav__link" for="nav-4-2">
-      Geometry
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Geometry" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Geometry
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../geometry/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build/building/" class="md-nav__link">
+        Building
+      </a>
+    </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build/dependencies/" class="md-nav__link">
+        Dependencies
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--active">
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build/tests/" class="md-nav__link">
+        Tests
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+
+  
+  
+  
     
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/load_mesh/" class="md-nav__link">
+        Load & navigate a mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/basic_mutation/" class="md-nav__link">
+        Basic Mutation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/direction_fields/" class="md-nav__link">
+        Direction fields
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Surface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Surface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Surface Mesh
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Surface Mesh
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/elements/" class="md-nav__link">
+        Elements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/boundaries/" class="md-nav__link">
+        Boundaries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/indexing/" class="md-nav__link">
+        Indexing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/navigation/" class="md-nav__link">
+        Navigation and Iteration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/containers/" class="md-nav__link">
+        Containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/mutation/" class="md-nav__link">
+        Mutation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/delta_complex/" class="md-nav__link">
+        Delta Complexes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/internals/" class="md-nav__link">
+        Internals
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Geometry
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Geometry
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometry/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Quantities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Quantities
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Quantities" class="md-nav__link md-nav__link--active">
-      Quantities
-    </a>
-    
+      </a>
       
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
+  
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#indices" class="md-nav__link">
@@ -968,642 +1042,746 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          Utilities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utilities/simple_polygon_mesh/" class="md-nav__link">
+        Simple Polygon Mesh
+      </a>
+    </li>
+  
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utilities/io/" class="md-nav__link">
+        I/O
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utilities/surface_point/" class="md-nav__link">
+        Surface Point
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../utilities/barycentric_vector/" class="md-nav__link">
+        Barycentric Vector
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/direction_fields/" class="md-nav__link">
+        Direction Fields
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/flip_geodesics/" class="md-nav__link">
+        Flip Geodesics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/geodesic_distance/" class="md-nav__link">
+        Geodesic Distance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/geodesic_voronoi_tessellations/" class="md-nav__link">
+        Geodesic Centroidal Voronoi Tessellations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/parameterization/" class="md-nav__link">
+        Parameterization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/remeshing/" class="md-nav__link">
+        Remeshing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/robust_geometry/" class="md-nav__link">
+        Robust Geometry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/surface_centers/" class="md-nav__link">
+        Surface Centers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/surface_sampling/" class="md-nav__link">
+        Surface Sampling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/geodesic_paths/" class="md-nav__link">
+        Tracing Geodesic Paths
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/vector_heat_method/" class="md-nav__link">
+        Vector Heat Method
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-4-3">
-      Utilities
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Utilities" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Utilities
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../utilities/simple_polygon_mesh/" title="Simple Polygon Mesh" class="md-nav__link">
-      Simple Polygon Mesh
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../utilities/io/" title="I/O" class="md-nav__link">
-      I/O
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../utilities/surface_point/" title="Surface Point" class="md-nav__link">
-      Surface Point
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../utilities/barycentric_vector/" title="Barycentric Vector" class="md-nav__link">
-      Barycentric Vector
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
-    
-    <label class="md-nav__link" for="nav-4-4">
-      Algorithms
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Algorithms
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/direction_fields/" title="Direction Fields" class="md-nav__link">
-      Direction Fields
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/flip_geodesics/" title="Flip Geodesics" class="md-nav__link">
-      Flip Geodesics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
-      Geodesic Distance
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/geodesic_voronoi_tessellations/" title="Geodesic Centroidal Voronoi Tessellations" class="md-nav__link">
-      Geodesic Centroidal Voronoi Tessellations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/parameterization/" title="Parameterization" class="md-nav__link">
-      Parameterization
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/remeshing/" title="Remeshing" class="md-nav__link">
-      Remeshing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/robust_geometry/" title="Robust Geometry" class="md-nav__link">
-      Robust Geometry
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
-      Surface Centers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/surface_sampling/" title="Surface Sampling" class="md-nav__link">
-      Surface Sampling
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/geodesic_paths/" title="Tracing Geodesic Paths" class="md-nav__link">
-      Tracing Geodesic Paths
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
-      Vector Heat Method
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
-    
-    <label class="md-nav__link" for="nav-4-5">
-      Intrinsic Triangulations
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Intrinsic Triangulations" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Intrinsic Triangulations
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../intrinsic_triangulations/basics/" title="Basics" class="md-nav__link">
-      Basics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../intrinsic_triangulations/common_subdivision/" title="Common Subdivision" class="md-nav__link">
-      Common Subdivision
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../intrinsic_triangulations/signposts/" title="Signposts" class="md-nav__link">
-      Signposts
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../intrinsic_triangulations/integer_coordinates/" title="Integer Coordinates" class="md-nav__link">
-      Integer Coordinates
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../intrinsic_triangulations/function_transfer/" title="Function Transfer" class="md-nav__link">
-      Function Transfer
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          Intrinsic Triangulations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Intrinsic Triangulations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intrinsic_triangulations/basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intrinsic_triangulations/common_subdivision/" class="md-nav__link">
+        Common Subdivision
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intrinsic_triangulations/signposts/" class="md-nav__link">
+        Signposts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intrinsic_triangulations/integer_coordinates/" class="md-nav__link">
+        Integer Coordinates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intrinsic_triangulations/function_transfer/" class="md-nav__link">
+        Function Transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Point Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Point Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pointcloud/basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pointcloud/geometry/" class="md-nav__link">
+        Geometry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-5">
-      Point Cloud
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Point Cloud" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Point Cloud
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pointcloud/algorithms/heat_solver/" class="md-nav__link">
+        Heat distance & transport
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../pointcloud/basics/" title="Basics" class="md-nav__link">
-      Basics
-    </a>
-  </li>
-
-        
+            
           
-          
-          
+        </ul>
+      </nav>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../pointcloud/geometry/" title="Geometry" class="md-nav__link">
-      Geometry
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
+            
+              
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
-    
-    <label class="md-nav__link" for="nav-5-3">
-      Algorithms
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Algorithms
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Utilities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pointcloud/utilities/io/" class="md-nav__link">
+        IO
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pointcloud/utilities/sampling/" class="md-nav__link">
+        Sampling
+      </a>
+    </li>
+  
+
+            
           
+        </ul>
+      </nav>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../pointcloud/algorithms/heat_solver/" title="Heat distance & transport" class="md-nav__link">
-      Heat distance & transport
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
-    
-    <label class="md-nav__link" for="nav-5-4">
-      Utilities
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Utilities" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Utilities
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../pointcloud/utilities/io/" title="IO" class="md-nav__link">
-      IO
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../pointcloud/utilities/sampling/" title="Sampling" class="md-nav__link">
-      Sampling
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Numerical
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Numerical" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Numerical
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Numerical
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Numerical
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../numerical/matrix_types/" class="md-nav__link">
+        Matrix Types
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../numerical/linear_algebra_utilities/" class="md-nav__link">
+        Linear Algebra Utilities
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../numerical/linear_solvers/" class="md-nav__link">
+        Linear Solvers
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../numerical/matrix_types/" title="Matrix Types" class="md-nav__link">
-      Matrix Types
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../numerical/linear_algebra_utilities/" title="Linear Algebra Utilities" class="md-nav__link">
-      Linear Algebra Utilities
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../numerical/linear_solvers/" title="Linear Solvers" class="md-nav__link">
-      Linear Solvers
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
-      Utilities
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Utilities" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Utilities
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Utilities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utilities/miscellaneous/" class="md-nav__link">
+        Miscellaneous
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utilities/vector2/" class="md-nav__link">
+        Vector2
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utilities/vector3/" class="md-nav__link">
+        Vector3
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../utilities/miscellaneous/" title="Miscellaneous" class="md-nav__link">
-      Miscellaneous
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utilities/eigenmap/" class="md-nav__link">
+        Utilities for Eigen Interoperability
+      </a>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../utilities/vector2/" title="Vector2" class="md-nav__link">
-      Vector2
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../utilities/vector3/" title="Vector3" class="md-nav__link">
-      Vector3
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../utilities/eigenmap/" title="Utilities for Eigen Interoperability" class="md-nav__link">
-      Utilities for Eigen Interoperability
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -1613,21 +1791,22 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
+  
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#indices" class="md-nav__link">
@@ -2020,88 +2199,97 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/geometry/quantities.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
                   
-                
-                
-                  <h1>Quantities</h1>
-                
-                <p>This page enumerates the surface geometry quantities available in geometry central.</p>
+
+  
+  
+
+
+  <h1>Quantities</h1>
+
+<p>This page enumerates the surface geometry quantities available in geometry central.</p>
 <p>Recall that these quantities are each associated with a <a href="../geometry/#geometry-hierarchy">geometry interface</a> specifying what can be computed from the given input data. Instantiating a geometry from data, classes like <code>VertexPositionGeometry</code> extend these interfaces and give access to all of the quantities therein.  Quantities should usually be accessed via the <a href="../geometry/#managed-quantities">managed caches</a>, as in the example below.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/vertex_position_geometry.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="o">::</span><span class="n">surface</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/vertex_position_geometry.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">geometrycentral</span><span class="o">::</span><span class="nn">surface</span><span class="p">;</span>
 
 <span class="c1">// Load a mesh and geometry from file</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">positionGeometry</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="o">&lt;</span><span class="n">mesh</span><span class="p">,</span> <span class="n">positionGeometry</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">readSurfaceMesh</span><span class="p">(</span><span class="s">&quot;spot.obj&quot;</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">positionGeometry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="o">&lt;</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">positionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readSurfaceMesh</span><span class="p">(</span><span class="s">&quot;spot.obj&quot;</span><span class="p">);</span>
 
 <span class="c1">// For the sake of the example, use an interface type that offers</span>
 <span class="c1">// only the quantities which we will actually use below.</span>
-<span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geometry</span> <span class="o">=</span> <span class="o">*</span><span class="n">positionGeometry</span><span class="p">;</span>
+<span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">positionGeometry</span><span class="p">;</span>
 
 <span class="c1">// populate the quantity</span>
 <span class="n">geometry</span><span class="p">.</span><span class="n">requireFaceAreas</span><span class="p">();</span>
 
-<span class="k">for</span><span class="p">(</span><span class="n">Face</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">mesh</span><span class="o">-&gt;</span><span class="n">faces</span><span class="p">())</span> <span class="p">{</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Face</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh</span><span class="o">-&gt;</span><span class="n">faces</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 
-  <span class="c1">// Managed array holding quantity</span>
-  <span class="kt">double</span> <span class="n">area</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">faceAreas</span><span class="p">[</span><span class="n">f</span><span class="p">];</span>
+<span class="w">  </span><span class="c1">// Managed array holding quantity</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">faceAreas</span><span class="p">[</span><span class="n">f</span><span class="p">];</span>
 
-  <span class="c1">// Immediate computation, computes directly from </span>
-  <span class="c1">// input data without touching caches.</span>
-  <span class="c1">// Generally discouraged but occasionally useful.</span>
-  <span class="n">area</span> <span class="o">=</span> <span class="n">positionGeometry</span><span class="o">-&gt;</span><span class="n">faceArea</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Immediate computation, computes directly from </span>
+<span class="w">  </span><span class="c1">// input data without touching caches.</span>
+<span class="w">  </span><span class="c1">// Generally discouraged but occasionally useful.</span>
+<span class="w">  </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">positionGeometry</span><span class="o">-&gt;</span><span class="n">faceArea</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h2 id="indices">Indices</h2>
 <p>These quantities are defined for the base <code>BaseGeometryInterface</code>, and will always be available. They are not actually geometric data, but it is convenient to cache the canonical arrays alongside geometric quantities, as they are often used in concert.</p>
-<details class="func"><summary>vertex indices</summary><h5 id="vertex-indices">vertex indices</h5>
+<details class="func">
+<summary>vertex indices</summary>
+<h5 id="vertex-indices">vertex indices</h5>
 <p>A dense 0-based enumeration of vertices. Equivalent to the result of <code>SurfaceMesh::getVertexIndices()</code>.</p>
 <ul>
 <li><strong>member:</strong> <code>VertexData&lt;size_t&gt; BaseGeometryInterface::vertexIndices</code></li>
 <li><strong>require:</strong> <code>void BaseGeometryInterface::requireVertexIndices()</code></li>
 </ul>
 </details>
-<details class="func"><summary>halfedge indices</summary><h5 id="halfedge-indices">halfedge indices</h5>
+<details class="func">
+<summary>halfedge indices</summary>
+<h5 id="halfedge-indices">halfedge indices</h5>
 <p>A dense 0-based enumeration of halfedges. Equivalent to the result of <code>SurfaceMesh::getHalfedgeIndices()</code>.</p>
 <ul>
 <li><strong>member:</strong> <code>HalfedgeData&lt;size_t&gt; BaseGeometryInterface::halfedgeIndices</code></li>
 <li><strong>require:</strong> <code>void BaseGeometryInterface::requireHalfedgeIndices()</code></li>
 </ul>
 </details>
-<details class="func"><summary>corner indices</summary><h5 id="corner-indices">corner indices</h5>
+<details class="func">
+<summary>corner indices</summary>
+<h5 id="corner-indices">corner indices</h5>
 <p>A dense 0-based enumeration of corners. Equivalent to the result of <code>SurfaceMesh::getCornerIndices()</code>.</p>
 <ul>
 <li><strong>member:</strong> <code>CornerData&lt;size_t&gt; BaseGeometryInterface::cornerIndices</code></li>
 <li><strong>require:</strong> <code>void BaseGeometryInterface::requireCornerIndices()</code></li>
 </ul>
 </details>
-<details class="func"><summary>edge indices</summary><h5 id="edge-indices">edge indices</h5>
+<details class="func">
+<summary>edge indices</summary>
+<h5 id="edge-indices">edge indices</h5>
 <p>A dense 0-based enumeration of edges. Equivalent to the result of <code>SurfaceMesh::getEdgeIndices()</code>.</p>
 <ul>
 <li><strong>member:</strong> <code>EdgeData&lt;size_t&gt; BaseGeometryInterface::edgeIndices</code></li>
 <li><strong>require:</strong> <code>void BaseGeometryInterface::requireEdgeIndices()</code></li>
 </ul>
 </details>
-<details class="func"><summary>face indices</summary><h5 id="face-indices">face indices</h5>
+<details class="func">
+<summary>face indices</summary>
+<h5 id="face-indices">face indices</h5>
 <p>A dense 0-based enumeration of faces. Equivalent to the result of <code>SurfaceMesh::getFaceIndices()</code>.</p>
 <ul>
 <li><strong>member:</strong> <code>FaceData&lt;size_t&gt; BaseGeometryInterface::faceIndices</code></li>
 <li><strong>require:</strong> <code>void BaseGeometryInterface::requireFaceIndices()</code></li>
 </ul>
 </details>
-<details class="func"><summary>boundary loop indices</summary><h5 id="boundary-loop-indices">boundary loop indices</h5>
+<details class="func">
+<summary>boundary loop indices</summary>
+<h5 id="boundary-loop-indices">boundary loop indices</h5>
 <p>A dense 0-based enumeration of <a href="../../surface_mesh/boundaries">boundary loops</a>. Equivalent to the result of <code>SurfaceMesh::getBoundaryLoopIndices()</code>.</p>
 <ul>
 <li><strong>member:</strong> <code>BoundaryLoopData&lt;size_t&gt; BaseGeometryInterface::boundaryLoopIndices</code></li>
@@ -2110,7 +2298,9 @@
 </details>
 <h2 id="lengths-areas-and-angles">Lengths, areas, and angles</h2>
 <p>These quantities are defined for any <code>IntrinsicGeometryInterface</code>, which is the base class of all other geometry objects&mdash;they will always be available on any kind of geometry.</p>
-<details class="func"><summary>edge length</summary><h5 id="edge-length">edge length</h5>
+<details class="func">
+<summary>edge length</summary>
+<h5 id="edge-length">edge length</h5>
 <p>The length of an edge in the mesh, as a non-negative real number.</p>
 <ul>
 <li><strong>member:</strong> <code>EdgeData&lt;double&gt; IntrinsicGeometryInterface::edgeLengths</code></li>
@@ -2121,7 +2311,9 @@
 <li><strong>immediate:</strong> <code>double VertexPositionGeometry::edgeLength(Edge e)</code></li>
 </ul>
 </details>
-<details class="func"><summary>face area</summary><h5 id="face-area">face area</h5>
+<details class="func">
+<summary>face area</summary>
+<h5 id="face-area">face area</h5>
 <p>The area of a face, as a non-negative real number.</p>
 <p>May be computed from edge lengths via Heron&rsquo;s formula, or from embedded vertex positions with a cross product.</p>
 <p>Only valid on triangular meshes.</p>
@@ -2135,10 +2327,12 @@
 <li><strong>immediate:</strong> <code>double VertexPositionGeometry::faceArea(Face f)</code></li>
 </ul>
 </details>
-<details class="func"><summary>vertex dual area</summary><h5 id="vertex-dual-area">vertex dual area</h5>
+<details class="func">
+<summary>vertex dual area</summary>
+<h5 id="vertex-dual-area">vertex dual area</h5>
 <p>An area associated with each vertex, as a non-negative real number.</p>
 <p>Only valid on triangular meshes.</p>
-<p>Defined to be <span><span class="MathJax_Preview">1/3</span><script type="math/tex">1/3</script></span> the sum of all adjacent face areas. The sum of all vertex dual areas is equal to the usual surface area of the mesh.</p>
+<p>Defined to be <span class="arithmatex"><span class="MathJax_Preview">1/3</span><script type="math/tex">1/3</script></span> the sum of all adjacent face areas. The sum of all vertex dual areas is equal to the usual surface area of the mesh.</p>
 <ul>
 <li><strong>member:</strong> <code>VertexData&lt;double&gt; IntrinsicGeometryInterface::vertexDualAreas</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexDualAreas()</code></li>
@@ -2149,7 +2343,9 @@
 <li><strong>immediate:</strong> <code>double VertexPositionGeometry::vertexDualArea(Vertex v)</code></li>
 </ul>
 </details>
-<details class="func"><summary>corner angles</summary><h5 id="corner-angles">corner angles</h5>
+<details class="func">
+<summary>corner angles</summary>
+<h5 id="corner-angles">corner angles</h5>
 <p>The angle between incident edges at each corner of a mesh.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
@@ -2162,7 +2358,9 @@
 <li><strong>immediate:</strong> <code>double VertexPositionGeometry::cornerAngle(Corner c)</code></li>
 </ul>
 </details>
-<details class="func"><summary>vertex angle sum</summary><h5 id="vertex-angle-sum">vertex angle sum</h5>
+<details class="func">
+<summary>vertex angle sum</summary>
+<h5 id="vertex-angle-sum">vertex angle sum</h5>
 <p>The sum of corner angles around a vertex.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
@@ -2170,17 +2368,21 @@
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexAngleSums()</code></li>
 </ul>
 </details>
-<details class="func"><summary>corner scaled angles</summary><h5 id="corner-scaled-angles">corner scaled angles</h5>
-<p>The angle between incident edges at each corner of a mesh, linearly rescaled such that the angles around every vertex sum to <span><span class="MathJax_Preview">2 \pi</span><script type="math/tex">2 \pi</script></span>. At boundary vertices, no scaling will be performed.</p>
+<details class="func">
+<summary>corner scaled angles</summary>
+<h5 id="corner-scaled-angles">corner scaled angles</h5>
+<p>The angle between incident edges at each corner of a mesh, linearly rescaled such that the angles around every vertex sum to <span class="arithmatex"><span class="MathJax_Preview">2 \pi</span><script type="math/tex">2 \pi</script></span>. At boundary vertices, no scaling will be performed.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>CornerData&lt;double&gt; IntrinsicGeometryInterface::cornerScaledAngles</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireCornerScaledAngles()</code></li>
 </ul>
 </details>
-<details class="func"><summary>halfedge cotan weight</summary><h5 id="halfedge-cotan-weight">halfedge cotan weight</h5>
-<p>The &ldquo;cotangent weight&rdquo; of an interior halfedge, defined as <span><span class="MathJax_Preview">\frac{1}{2} \cot(\theta)</span><script type="math/tex">\frac{1}{2} \cot(\theta)</script></span>, where <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> is the corner angle opposite the halfedge. Defined to be <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> for exterior halfedges.</p>
-<p>Can be computed directly from edge lengths, or more efficiently in an embedded triangle via <span><span class="MathJax_Preview">\cot(\theta) = \frac{u \cdot v}{||u \times v||}</span><script type="math/tex">\cot(\theta) = \frac{u \cdot v}{||u \times v||}</script></span>, where <span><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> and <span><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> are the edge vectors emanating from the opposite corner.</p>
+<details class="func">
+<summary>halfedge cotan weight</summary>
+<h5 id="halfedge-cotan-weight">halfedge cotan weight</h5>
+<p>The &ldquo;cotangent weight&rdquo; of an interior halfedge, defined as <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{2} \cot(\theta)</span><script type="math/tex">\frac{1}{2} \cot(\theta)</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> is the corner angle opposite the halfedge. Defined to be <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> for exterior halfedges.</p>
+<p>Can be computed directly from edge lengths, or more efficiently in an embedded triangle via <span class="arithmatex"><span class="MathJax_Preview">\cot(\theta) = \frac{u \cdot v}{||u \times v||}</span><script type="math/tex">\cot(\theta) = \frac{u \cdot v}{||u \times v||}</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> and <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> are the edge vectors emanating from the opposite corner.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>HalfedgeData&lt;double&gt; IntrinsicGeometryInterface::halfedgeCotanWeights</code></li>
@@ -2192,7 +2394,9 @@
 <li><strong>immediate:</strong> <code>double VertexPositionGeometry::halfedgeCotanWeight(Halfedge he)</code></li>
 </ul>
 </details>
-<details class="func"><summary>edge cotan weight</summary><h5 id="edge-cotan-weight">edge cotan weight</h5>
+<details class="func">
+<summary>edge cotan weight</summary>
+<h5 id="edge-cotan-weight">edge cotan weight</h5>
 <p>The &ldquo;cotangent weight&rdquo; of an edge, defined as the sum of halfedge cotan weights for incident interior halfedges.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
@@ -2208,9 +2412,11 @@
 <h2 id="curvatures">Curvatures</h2>
 <p>Different curvatures are available depending on whether geometry is intrinsic or extrinsic.  In particular, Gaussian curvature is available for any <code>IntrinsicGeometryInterface</code> (such as <code>EdgeLengthGeometry</code>), which is the base class of all other geometry objects, whereas mean and principal curvatures are available only from an <code>ExtrinsicGeometryInterface</code> (such as <code>VertexPositionGeometry</code>).  All curvatures are rigid motion invariant.  Importantly, Gaussian and mean curvatures correspond to the <em>integral</em> of curvature over a local neighborhood, and are hence scale invariant&mdash;to get the pointwise curvatures you should divide by area (see details below).  Principal curvatures are pointwise values.  See also <code>vertexPrincipalCurvatureDirections</code>, which provides curvature directions (rather than curvature magnitudes).  See <a href="https://www.youtube.com/watch?v=NlU1m-OfumE&amp;ab_channel=KeenanCrane">this video</a> for further background on discrete curvature.</p>
 <p><img alt="vertex scalar curvatures" src="/media/vertex_scalar_curvatures.jpg" /></p>
-<details class="func"><summary>vertex Gaussian curvature</summary><h5 id="vertex-gaussian-curvature">vertex Gaussian curvature</h5>
-<p>The <a href="https://en.wikipedia.org/wiki/Gaussian_curvature"><em>Gaussian curvature</em></a> <span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> at a vertex, defined via the angle defect <span><span class="MathJax_Preview">K_v = 2 \pi - \sum \theta_i</span><script type="math/tex">K_v = 2 \pi - \sum \theta_i</script></span>, where <span><span class="MathJax_Preview">\sum \theta_i</span><script type="math/tex">\sum \theta_i</script></span> is the <code>vertexAngleSum</code> as above.</p>
-<p>Should be interpreted as an <em>integrated</em> Gaussian curvature, giving the total curvature in the neighborhood of the vertex. On a closed surface, the <a href="https://en.wikipedia.org/wiki/Gauss%E2%80%93Bonnet_theorem">Gauss-Bonnet theorem</a> tells us that the sum of these Gaussian curvatures will be a topological constant given by <span><span class="MathJax_Preview">\sum_v K_v = 2 \pi \chi</span><script type="math/tex">\sum_v K_v = 2 \pi \chi</script></span>, where <span><span class="MathJax_Preview">\chi</span><script type="math/tex">\chi</script></span> is the <a href="../../surface_mesh/basics/#properties">Euler characteristic</a> of the surface. On surfaces with boundary, the geodesic curvature of the boundary factors in.</p>
+<details class="func">
+<summary>vertex Gaussian curvature</summary>
+<h5 id="vertex-gaussian-curvature">vertex Gaussian curvature</h5>
+<p>The <a href="https://en.wikipedia.org/wiki/Gaussian_curvature"><em>Gaussian curvature</em></a> <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> at a vertex, defined via the angle defect <span class="arithmatex"><span class="MathJax_Preview">K_v = 2 \pi - \sum \theta_i</span><script type="math/tex">K_v = 2 \pi - \sum \theta_i</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">\sum \theta_i</span><script type="math/tex">\sum \theta_i</script></span> is the <code>vertexAngleSum</code> as above.</p>
+<p>Should be interpreted as an <em>integrated</em> Gaussian curvature, giving the total curvature in the neighborhood of the vertex. On a closed surface, the <a href="https://en.wikipedia.org/wiki/Gauss%E2%80%93Bonnet_theorem">Gauss-Bonnet theorem</a> tells us that the sum of these Gaussian curvatures will be a topological constant given by <span class="arithmatex"><span class="MathJax_Preview">\sum_v K_v = 2 \pi \chi</span><script type="math/tex">\sum_v K_v = 2 \pi \chi</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">\chi</span><script type="math/tex">\chi</script></span> is the <a href="../../surface_mesh/basics/#properties">Euler characteristic</a> of the surface. On surfaces with boundary, the geodesic curvature of the boundary factors in.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>VertexData&lt;double&gt; IntrinsicGeometryInterface::vertexGaussianCurvatures</code></li>
@@ -2222,9 +2428,11 @@
 <li><strong>immediate:</strong> <code>double EdgeLengthGeometry::vertexGaussianCurvature(Vertex v)</code></li>
 </ul>
 </details>
-<details class="func"><summary>vertex mean curvature</summary><h5 id="vertex-mean-curvature">vertex mean curvature</h5>
-<p>The <a href="https://en.wikipedia.org/wiki/Mean_curvature"><em>mean curvature</em></a> <span><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> at a vertex <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>, defined via the Steiner approximation <span><span class="MathJax_Preview">H_i = \frac{1}{4}\sum_{ij} \theta_{ij} \ell_{ij}</span><script type="math/tex">H_i = \frac{1}{4}\sum_{ij} \theta_{ij} \ell_{ij}</script></span>, where <span><span class="MathJax_Preview">\theta_{ij}</span><script type="math/tex">\theta_{ij}</script></span> is the <code>edgeDihedralAngle</code> and <span><span class="MathJax_Preview">\ell_{ij}</span><script type="math/tex">\ell_{ij}</script></span> is the <code>edgeLength</code> as defined above (and the sum is taken over halfedges extending from <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>).</p>
-<p>Should be interpreted as an <em>integrated</em> mean curvature (units: <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>), giving the total curvature in the neighborhood of the vertex.  A corresponding <em>pointwise</em> mean curvature (units: <span><span class="MathJax_Preview">1/m</span><script type="math/tex">1/m</script></span>) can be obtained by dividing by the <code>vertexDualArea</code>.</p>
+<details class="func">
+<summary>vertex mean curvature</summary>
+<h5 id="vertex-mean-curvature">vertex mean curvature</h5>
+<p>The <a href="https://en.wikipedia.org/wiki/Mean_curvature"><em>mean curvature</em></a> <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> at a vertex <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>, defined via the Steiner approximation <span class="arithmatex"><span class="MathJax_Preview">H_i = \frac{1}{4}\sum_{ij} \theta_{ij} \ell_{ij}</span><script type="math/tex">H_i = \frac{1}{4}\sum_{ij} \theta_{ij} \ell_{ij}</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">\theta_{ij}</span><script type="math/tex">\theta_{ij}</script></span> is the <code>edgeDihedralAngle</code> and <span class="arithmatex"><span class="MathJax_Preview">\ell_{ij}</span><script type="math/tex">\ell_{ij}</script></span> is the <code>edgeLength</code> as defined above (and the sum is taken over halfedges extending from <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>).</p>
+<p>Should be interpreted as an <em>integrated</em> mean curvature (units: <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>), giving the total curvature in the neighborhood of the vertex.  A corresponding <em>pointwise</em> mean curvature (units: <span class="arithmatex"><span class="MathJax_Preview">1/m</span><script type="math/tex">1/m</script></span>) can be obtained by dividing by the <code>vertexDualArea</code>.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>VertexData&lt;double&gt; ExtrinsicGeometryInterface::vertexMeanCurvatures</code></li>
@@ -2235,9 +2443,11 @@
 <li><strong>immediate:</strong> <code>double VertexPositionGeometry::vertexMeanCurvature(Vertex v)</code></li>
 </ul>
 </details>
-<details class="func"><summary>vertex principal curvature</summary><h5 id="vertex-principal-curvatures">vertex principal curvatures</h5>
-<p>The <a href="https://en.wikipedia.org/wiki/Principal_curvature"><em>principal curvatures</em></a> <span><span class="MathJax_Preview">\kappa_1,\kappa_2</span><script type="math/tex">\kappa_1,\kappa_2</script></span> at a vertex <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>, defined by the relationships <span><span class="MathJax_Preview">K = \kappa_1\kappa_2</span><script type="math/tex">K = \kappa_1\kappa_2</script></span> and <span><span class="MathJax_Preview">H = (\kappa_1+\kappa_2)/2</span><script type="math/tex">H = (\kappa_1+\kappa_2)/2</script></span>, where <span><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> and <span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> are the pointwise mean and Gaussian curvatures (resp.).  These values are signed, and <span><span class="MathJax_Preview">\kappa_1</span><script type="math/tex">\kappa_1</script></span> is always the smaller curvature <em>in value</em>, but not necessarily the smaller one <em>in magnitude</em> (e.g., <span><span class="MathJax_Preview">\kappa_1</span><script type="math/tex">\kappa_1</script></span> could be a very large negative value, and <span><span class="MathJax_Preview">\kappa_2</span><script type="math/tex">\kappa_2</script></span> could be a very small positive value).</p>
-<p>These quantities can be interpreted as <em>pointwise</em> quantities (units: <span><span class="MathJax_Preview">1/m</span><script type="math/tex">1/m</script></span>), approximating the maximum and minimum bending the neighborhood of the vertex.</p>
+<details class="func">
+<summary>vertex principal curvature</summary>
+<h5 id="vertex-principal-curvatures">vertex principal curvatures</h5>
+<p>The <a href="https://en.wikipedia.org/wiki/Principal_curvature"><em>principal curvatures</em></a> <span class="arithmatex"><span class="MathJax_Preview">\kappa_1,\kappa_2</span><script type="math/tex">\kappa_1,\kappa_2</script></span> at a vertex <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>, defined by the relationships <span class="arithmatex"><span class="MathJax_Preview">K = \kappa_1\kappa_2</span><script type="math/tex">K = \kappa_1\kappa_2</script></span> and <span class="arithmatex"><span class="MathJax_Preview">H = (\kappa_1+\kappa_2)/2</span><script type="math/tex">H = (\kappa_1+\kappa_2)/2</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> and <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> are the pointwise mean and Gaussian curvatures (resp.).  These values are signed, and <span class="arithmatex"><span class="MathJax_Preview">\kappa_1</span><script type="math/tex">\kappa_1</script></span> is always the smaller curvature <em>in value</em>, but not necessarily the smaller one <em>in magnitude</em> (e.g., <span class="arithmatex"><span class="MathJax_Preview">\kappa_1</span><script type="math/tex">\kappa_1</script></span> could be a very large negative value, and <span class="arithmatex"><span class="MathJax_Preview">\kappa_2</span><script type="math/tex">\kappa_2</script></span> could be a very small positive value).</p>
+<p>These quantities can be interpreted as <em>pointwise</em> quantities (units: <span class="arithmatex"><span class="MathJax_Preview">1/m</span><script type="math/tex">1/m</script></span>), approximating the maximum and minimum bending the neighborhood of the vertex.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>VertexData&lt;double&gt; ExtrinsicGeometryInterface::vertexMinPrincipalCurvatures</code></li>
@@ -2255,10 +2465,12 @@
 <li><strong>immediate:</strong> <code>double VertexPositionGeometry::vertexMaxPrincipalCurvature(Vertex v)</code></li>
 </ul>
 </details>
-<details class="func"><summary>face Gaussian curvature</summary><h5 id="face-gaussian-curvature">face Gaussian curvature</h5>
-<p>The <a href="https://en.wikipedia.org/wiki/Gaussian_curvature"><em>Gaussian curvature</em></a> <span><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> at a face, defined via the rescaled angle defect in the face <span><span class="MathJax_Preview">K_f = \pi - \sum \tilde{\theta}_i</span><script type="math/tex">K_f = \pi - \sum \tilde{\theta}_i</script></span>, where <span><span class="MathJax_Preview">\tilde{\theta}_i</span><script type="math/tex">\tilde{\theta}_i</script></span> are the <em>rescaled</em> corner angles (as in <code>cornerScaledAngles</code>) incident on the face.</p>
+<details class="func">
+<summary>face Gaussian curvature</summary>
+<h5 id="face-gaussian-curvature">face Gaussian curvature</h5>
+<p>The <a href="https://en.wikipedia.org/wiki/Gaussian_curvature"><em>Gaussian curvature</em></a> <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> at a face, defined via the rescaled angle defect in the face <span class="arithmatex"><span class="MathJax_Preview">K_f = \pi - \sum \tilde{\theta}_i</span><script type="math/tex">K_f = \pi - \sum \tilde{\theta}_i</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">\tilde{\theta}_i</span><script type="math/tex">\tilde{\theta}_i</script></span> are the <em>rescaled</em> corner angles (as in <code>cornerScaledAngles</code>) incident on the face.</p>
 <p>Should be interpreted as an <em>integrated</em> Gaussian curvature, giving the total curvature inside of the face. A corresponding curvature-per-unit-area can be computed by dividing by the area of the face.</p>
-<p>On a closed surface, the <a href="https://en.wikipedia.org/wiki/Gauss%E2%80%93Bonnet_theorem">Gauss-Bonnet theorem</a> tells us that the sum of these Gaussian curvatures will be a topological constant given by <span><span class="MathJax_Preview">\sum_f K_f = 2 \pi \chi</span><script type="math/tex">\sum_f K_f = 2 \pi \chi</script></span>, where <span><span class="MathJax_Preview">\chi</span><script type="math/tex">\chi</script></span> is the <a href="../../surface_mesh/basics/#properties">Euler characteristic</a> of the surface. On surfaces with boundary, the geodesic curvature of the boundary factors in.</p>
+<p>On a closed surface, the <a href="https://en.wikipedia.org/wiki/Gauss%E2%80%93Bonnet_theorem">Gauss-Bonnet theorem</a> tells us that the sum of these Gaussian curvatures will be a topological constant given by <span class="arithmatex"><span class="MathJax_Preview">\sum_f K_f = 2 \pi \chi</span><script type="math/tex">\sum_f K_f = 2 \pi \chi</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">\chi</span><script type="math/tex">\chi</script></span> is the <a href="../../surface_mesh/basics/#properties">Euler characteristic</a> of the surface. On surfaces with boundary, the geodesic curvature of the boundary factors in.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>FaceData&lt;double&gt; IntrinsicGeometryInterface::faceGaussianCurvatures</code></li>
@@ -2268,15 +2480,17 @@
 <h2 id="tangent-vectors-and-transport">Tangent vectors and transport</h2>
 <p>These quantities are defined for any <code>IntrinsicGeometryInterface</code>, which is the base class of all other geometry objects&mdash;they will always be available on any kind of geometry. Tangent vectors and transport are defined in terms of tangent spaces at faces and vertices, as defined below.</p>
 <p>Recall that our <code>Vector2</code> types obey the multiplication and division rules of complex arithmetic, and thus can be used to represent rotations. For instance, a 2D vector representing a rotation can be used to rotate another vector like:
-<div class="highlight"><pre><span></span><code><span class="n">Vector2</span> <span class="n">v</span> <span class="o">=</span> <span class="cm">/* your vector */</span>
-<span class="n">Vector2</span> <span class="n">r</span> <span class="o">=</span> <span class="n">Vector2</span><span class="p">{</span><span class="n">std</span><span class="o">::</span><span class="n">cos</span><span class="p">(</span><span class="n">PI</span><span class="o">/</span><span class="mi">4</span><span class="p">),</span> <span class="n">std</span><span class="o">::</span><span class="n">sin</span><span class="p">(</span><span class="n">PI</span><span class="o">/</span><span class="mi">4</span><span class="p">)};</span> <span class="c1">// rotation by 45 degrees</span>
-<span class="n">Vector2</span> <span class="n">vRot</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">v</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* your vector */</span>
+<span class="n">Vector2</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector2</span><span class="p">{</span><span class="n">std</span><span class="o">::</span><span class="n">cos</span><span class="p">(</span><span class="n">PI</span><span class="o">/</span><span class="mi">4</span><span class="p">),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">sin</span><span class="p">(</span><span class="n">PI</span><span class="o">/</span><span class="mi">4</span><span class="p">)};</span><span class="w"> </span><span class="c1">// rotation by 45 degrees</span>
+<span class="n">Vector2</span><span class="w"> </span><span class="n">vRot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
 </code></pre></div>
 This is fundamentally no different from using 2x2 rotation matrices, but leads to much cleaner code (try using division to compute relative rotations!).</p>
 <h4 id="face-tangent-spaces">Face tangent spaces</h4>
-<p>To represent vectors that sit in flat mesh faces, we define a 2D coordinate frame tangent to each face. By default, this frame is aligned such that <code>face.halfedge()</code> points along the <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis (but subclasses might change this convention). All vectors in faces are then expressed via <span><span class="MathJax_Preview">(x,y)</span><script type="math/tex">(x,y)</script></span> <code>Vector2D</code> coordinates in this frame. Crucially, this basis is well-defined even if the geometry does not have vertex positions.</p>
+<p>To represent vectors that sit in flat mesh faces, we define a 2D coordinate frame tangent to each face. By default, this frame is aligned such that <code>face.halfedge()</code> points along the <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis (but subclasses might change this convention). All vectors in faces are then expressed via <span class="arithmatex"><span class="MathJax_Preview">(x,y)</span><script type="math/tex">(x,y)</script></span> <code>Vector2D</code> coordinates in this frame. Crucially, this basis is well-defined even if the geometry does not have vertex positions.</p>
 <p>See <a href="#face-tangent-basis">face tangent basis</a> to convert these vectors to world coordinates (if your mesh has vertex positions).</p>
-<details class="func"><summary>halfedge vectors in face</summary><h5 id="halfedge-vectors-in-face">halfedge vectors in face</h5>
+<details class="func">
+<summary>halfedge vectors in face</summary>
+<h5 id="halfedge-vectors-in-face">halfedge vectors in face</h5>
 <p>Vectors for each halfedge in the coordinate frame of the face in which they sit. See the description of face tangent spaces above for a definition.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
@@ -2284,7 +2498,9 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireHalfedgeVectorsInFace()</code></li>
 </ul>
 </details>
-<details class="func"><summary>transport vector across halfedge</summary><h5 id="transport-vector-across-halfedge">transport vector across halfedge</h5>
+<details class="func">
+<summary>transport vector across halfedge</summary>
+<h5 id="transport-vector-across-halfedge">transport vector across halfedge</h5>
 <p>Rotations which transport tangent vectors <strong>across</strong> a halfedge, rotating a vector from the tangent space of <code>halfedge.face()</code> to the tangent space <code>halfedge.twin().face()</code>.</p>
 <p>Always a unit vector, which can be multiplied by any other vector to compute the rotation. (recall our <code>Vector2</code>s multiply like complex numbers)</p>
 <p>Only valid on triangular meshes. Not defined for halfedges (interior or exterior) incident on boundary edges, these boundary values are set to NaN so errors can be caught quickly.</p>
@@ -2295,22 +2511,24 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <p>Example usage:
 <div class="highlight"><pre><span></span><code><span class="n">geometry</span><span class="p">.</span><span class="n">requireTransportVectorsAcrossHalfedge</span><span class="p">();</span>
 
-<span class="n">Face</span> <span class="n">f</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>        <span class="c1">// a face of interest</span>
-<span class="n">Vector2</span> <span class="n">myVec</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span> <span class="c1">// tangent vector in face f</span>
+<span class="n">Face</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="p">;</span><span class="w">        </span><span class="c1">// a face of interest</span>
+<span class="n">Vector2</span><span class="w"> </span><span class="n">myVec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="p">;</span><span class="w"> </span><span class="c1">// tangent vector in face f</span>
 
-<span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">f</span><span class="p">.</span><span class="n">adjacentHalfedges</span><span class="p">())</span> <span class="p">{</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span><span class="w"> </span><span class="n">he</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">adjacentHalfedges</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 
-  <span class="n">Face</span> <span class="n">neighborFace</span> <span class="o">=</span> <span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">face</span><span class="p">();</span>
-  <span class="n">Vector2</span> <span class="n">rot</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">transportVectorAcrossHalfedge</span><span class="p">[</span><span class="n">he</span><span class="p">];</span>
-  <span class="n">Vector2</span> <span class="n">neighVec</span> <span class="o">=</span> <span class="n">rot</span> <span class="o">*</span> <span class="n">myVec</span><span class="p">;</span>    <span class="c1">// now in the basis of neighborFace</span>
+<span class="w">  </span><span class="n">Face</span><span class="w"> </span><span class="n">neighborFace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">face</span><span class="p">();</span>
+<span class="w">  </span><span class="n">Vector2</span><span class="w"> </span><span class="n">rot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">transportVectorAcrossHalfedge</span><span class="p">[</span><span class="n">he</span><span class="p">];</span>
+<span class="w">  </span><span class="n">Vector2</span><span class="w"> </span><span class="n">neighVec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rot</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">myVec</span><span class="p">;</span><span class="w">    </span><span class="c1">// now in the basis of neighborFace</span>
 <span class="p">}</span>
 </code></pre></div></p>
 </details>
 <h4 id="vertex-tangent-spaces">Vertex tangent spaces</h4>
-<p>To represent vectors that sit at mesh faces, we consider a polar coordinate frame at each vertex. This frame is defined by measuring angles according to the rescaled corner angles as in <code>cornerScaledAngles</code>. By default, this frame is aligned such that <code>vertex.halfedge()</code> points along the <span><span class="MathJax_Preview">\phi=0</span><script type="math/tex">\phi=0</script></span> <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis (but subclasses might change this convention). Of course, rather than using polar coordinates we can equivalently work in the corresponding Cartesian frame&mdash;tangent vectors at vertices are then expressed via <span><span class="MathJax_Preview">(x,y)</span><script type="math/tex">(x,y)</script></span> <code>Vector2D</code> coordinates in this frame. Crucially, this basis does not require picking a vertex normal, and is well-defined even if the geometry does not have vertex positions.</p>
+<p>To represent vectors that sit at mesh faces, we consider a polar coordinate frame at each vertex. This frame is defined by measuring angles according to the rescaled corner angles as in <code>cornerScaledAngles</code>. By default, this frame is aligned such that <code>vertex.halfedge()</code> points along the <span class="arithmatex"><span class="MathJax_Preview">\phi=0</span><script type="math/tex">\phi=0</script></span> <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis (but subclasses might change this convention). Of course, rather than using polar coordinates we can equivalently work in the corresponding Cartesian frame&mdash;tangent vectors at vertices are then expressed via <span class="arithmatex"><span class="MathJax_Preview">(x,y)</span><script type="math/tex">(x,y)</script></span> <code>Vector2D</code> coordinates in this frame. Crucially, this basis does not require picking a vertex normal, and is well-defined even if the geometry does not have vertex positions.</p>
 <p>See <a href="#vertex-tangent-basis">vertex tangent basis</a> to convert these tangent vectors to world coordinates (if your mesh has vertex positions).</p>
 <p><img alt="vertex tangent coordinates diagram" src="../../../media/vertex_tangent_coordinates.svg" /></p>
-<details class="func"><summary>halfedge vectors in vertex</summary><h5 id="halfedge-vectors-in-vertex">halfedge vectors in vertex</h5>
+<details class="func">
+<summary>halfedge vectors in vertex</summary>
+<h5 id="halfedge-vectors-in-vertex">halfedge vectors in vertex</h5>
 <p>Vectors for each halfedge in the coordinate frame of the vertex from which the emanate (in <code>halfedge.vertex()</code>). See the description of vertex tangent spaces above for a definition.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
@@ -2318,7 +2536,9 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireHalfedgeVectorsInVertex()</code></li>
 </ul>
 </details>
-<details class="func"><summary>transport vector along halfedge</summary><h5 id="transport-vector-along-halfedge">transport vector along halfedge</h5>
+<details class="func">
+<summary>transport vector along halfedge</summary>
+<h5 id="transport-vector-along-halfedge">transport vector along halfedge</h5>
 <p>Rotations which transport tangent vectors <strong>along</strong> a halfedge, rotating a vector from the tangent space of <code>halfedge.vertex()</code> to the tangent space <code>halfedge.twin().vertex()</code>.</p>
 <p>Always a unit vector, which can be multiplied by any other vector to compute the rotation. (recall our <code>Vector2</code>s multiply like complex numbers)</p>
 <p>Only valid on triangular meshes.</p>
@@ -2329,70 +2549,80 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <p>Example usage:
 <div class="highlight"><pre><span></span><code><span class="n">geometry</span><span class="p">.</span><span class="n">requireTransportVectorsAlongHalfedge</span><span class="p">();</span>
 
-<span class="n">Vertex</span> <span class="n">v</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>        <span class="c1">// a vertex of interest</span>
-<span class="n">Vector2</span> <span class="n">myVec</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>   <span class="c1">// tangent vector in vertex v</span>
+<span class="n">Vertex</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="p">;</span><span class="w">        </span><span class="c1">// a vertex of interest</span>
+<span class="n">Vector2</span><span class="w"> </span><span class="n">myVec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="p">;</span><span class="w">   </span><span class="c1">// tangent vector in vertex v</span>
 
-<span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span> <span class="nl">he</span> <span class="p">:</span> <span class="n">v</span><span class="p">.</span><span class="n">outgoingHalfedges</span><span class="p">())</span> <span class="p">{</span>
-  <span class="n">Vertex</span> <span class="n">neighborVertex</span> <span class="o">=</span> <span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">vertex</span><span class="p">();</span>
-  <span class="n">Vector2</span> <span class="n">rot</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">transportVectorAlongHalfedge</span><span class="p">[</span><span class="n">he</span><span class="p">];</span>
-  <span class="n">Vector2</span> <span class="n">neighVec</span> <span class="o">=</span> <span class="n">rot</span> <span class="o">*</span> <span class="n">myVec</span><span class="p">;</span>    <span class="c1">// now in the basis of neighborVertex</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Halfedge</span><span class="w"> </span><span class="n">he</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">outgoingHalfedges</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Vertex</span><span class="w"> </span><span class="n">neighborVertex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">he</span><span class="p">.</span><span class="n">twin</span><span class="p">().</span><span class="n">vertex</span><span class="p">();</span>
+<span class="w">  </span><span class="n">Vector2</span><span class="w"> </span><span class="n">rot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">transportVectorAlongHalfedge</span><span class="p">[</span><span class="n">he</span><span class="p">];</span>
+<span class="w">  </span><span class="n">Vector2</span><span class="w"> </span><span class="n">neighVec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rot</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">myVec</span><span class="p">;</span><span class="w">    </span><span class="c1">// now in the basis of neighborVertex</span>
 <span class="p">}</span>
 </code></pre></div></p>
 </details>
 <h2 id="operators">Operators</h2>
 <p>These quantities are defined for any <code>IntrinsicGeometryInterface</code>, which is the base class of all other geometry objects&mdash;they will always be available on any kind of geometry. A full explanation of these operators is beyond the scope of these docs; see <a href="https://www.cs.cmu.edu/~kmcrane/Projects/DDG/paper.pdf">these course notes</a> for one introduction.</p>
 <p>All operators are indexed over mesh elements according to the natural iteration order of the elements, or equivalently the indices from <code>SurfaceMesh::getVertexIndices()</code> (etc).</p>
-<details class="func"><summary>cotangent Laplacian</summary><h5 id="cotangent-laplacian">cotangent laplacian</h5>
+<details class="func">
+<summary>cotangent Laplacian</summary>
+<h5 id="cotangent-laplacian">cotangent laplacian</h5>
 <p>The discrete Laplace operator, discretized via cotangent weights.</p>
-<p>A <span><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> real matrix. Always symmetric and positive semi-definite. If and only the underlying geometry is <em>Delaunay</em>, the matrix will furthermore have all negative off-diagonal entries, satisfy a maximum principle, and be an <em>M-matrix</em>.</p>
-<p>This is the <em>weak</em> Laplace operator, if we use it to evalutae <span><span class="MathJax_Preview">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</span><script type="math/tex">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</script></span>, <span><span class="MathJax_Preview">\mathsf{x}</span><script type="math/tex">\mathsf{x}</script></span> should hold <em>pointwise</em> quantities at vertices, and the result <span><span class="MathJax_Preview">\mathsf{y}</span><script type="math/tex">\mathsf{y}</script></span> will contain <em>integrated</em> values of the result in the neighborhood of each vertex. If used to solve a Poisson problem, a mass matrix (such as the lumped or Galerkin mass matrices below) are likely necessary on the right hand side.</p>
+<p>A <span class="arithmatex"><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> real matrix. Always symmetric and positive semi-definite. If and only the underlying geometry is <em>Delaunay</em>, the matrix will furthermore have all negative off-diagonal entries, satisfy a maximum principle, and be an <em>M-matrix</em>.</p>
+<p>This is the <em>weak</em> Laplace operator, if we use it to evalutae <span class="arithmatex"><span class="MathJax_Preview">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</span><script type="math/tex">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\mathsf{x}</span><script type="math/tex">\mathsf{x}</script></span> should hold <em>pointwise</em> quantities at vertices, and the result <span class="arithmatex"><span class="MathJax_Preview">\mathsf{y}</span><script type="math/tex">\mathsf{y}</script></span> will contain <em>integrated</em> values of the result in the neighborhood of each vertex. If used to solve a Poisson problem, a mass matrix (such as the lumped or Galerkin mass matrices below) are likely necessary on the right hand side.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::cotanLaplacian</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireCotanLaplacian()</code></li>
 </ul>
 </details>
-<details class="func"><summary>vertex lumped mass matrix</summary><h5 id="vertex-lumped-mass-matrix">vertex lumped mass matrix</h5>
-<p>A mass matrix at vertices, where vertex area is <span><span class="MathJax_Preview">1/3</span><script type="math/tex">1/3</script></span> the incident face areas as in <code>vertexDualAreas</code>.</p>
-<p>A <span><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> real diagonal matrix. Generally less-accurate than the Galerkin mass matrix below, but can be easily inverted since it is a diagonal matrix.</p>
+<details class="func">
+<summary>vertex lumped mass matrix</summary>
+<h5 id="vertex-lumped-mass-matrix">vertex lumped mass matrix</h5>
+<p>A mass matrix at vertices, where vertex area is <span class="arithmatex"><span class="MathJax_Preview">1/3</span><script type="math/tex">1/3</script></span> the incident face areas as in <code>vertexDualAreas</code>.</p>
+<p>A <span class="arithmatex"><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> real diagonal matrix. Generally less-accurate than the Galerkin mass matrix below, but can be easily inverted since it is a diagonal matrix.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::vertexLumpedMassMatrix</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexLumpedMassMatrix()</code></li>
 </ul>
 </details>
-<details class="func"><summary>vertex Galerkin mass matrix</summary><h5 id="vertex-galerkin-mass-matrix">vertex Galerkin mass matrix</h5>
+<details class="func">
+<summary>vertex Galerkin mass matrix</summary>
+<h5 id="vertex-galerkin-mass-matrix">vertex Galerkin mass matrix</h5>
 <p>A mass matrix at vertices, supported at all neighbors of a vertex via integration of piecewise-linear elements.</p>
-<p>A <span><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> real matrix. Generally more accurate than the lumped mass matrix above, should be preferred unless the mass matrix needs to be inverted.</p>
+<p>A <span class="arithmatex"><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> real matrix. Generally more accurate than the lumped mass matrix above, should be preferred unless the mass matrix needs to be inverted.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::vertexGalerkinMassMatrix</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexGalerkinMassMatrix()</code></li>
 </ul>
 </details>
-<details class="func"><summary>vertex connection Laplacian</summary><h5 id="vertex-connection-laplacian">vertex connection Laplacian</h5>
+<details class="func">
+<summary>vertex connection Laplacian</summary>
+<h5 id="vertex-connection-laplacian">vertex connection Laplacian</h5>
 <p>A discrete connection Laplacian operator, which applies to vector fields defined in vertex tangent spaces. Essentially defined as the scalar cotangent Laplacian, augmented with rotations given by the rotations in <code>transportVectorAlongHalfedge</code>; see <a href="http://www.cs.cmu.edu/~kmcrane/Projects/VectorHeatMethod/paper.pdf">The Vector Heat Method, Sec 5.3</a> for more explanation and definition.</p>
-<p>A <span><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> complex matrix. Always Hermitian, but positive semi-definite if and only the underlying geometry is <em>Delaunay</em>.  This is a <em>weak</em> Laplace operator, the application of which outputs integrated values in vertex neighborhood.</p>
-<p>Given a complex vector <span><span class="MathJax_Preview">\mathsf{x}</span><script type="math/tex">\mathsf{x}</script></span> of tangent vectors at vertices, apply the operator by multiplying <span><span class="MathJax_Preview">\mathsf{L} * \mathsf{x}</span><script type="math/tex">\mathsf{L} * \mathsf{x}</script></span>.</p>
+<p>A <span class="arithmatex"><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> complex matrix. Always Hermitian, but positive semi-definite if and only the underlying geometry is <em>Delaunay</em>.  This is a <em>weak</em> Laplace operator, the application of which outputs integrated values in vertex neighborhood.</p>
+<p>Given a complex vector <span class="arithmatex"><span class="MathJax_Preview">\mathsf{x}</span><script type="math/tex">\mathsf{x}</script></span> of tangent vectors at vertices, apply the operator by multiplying <span class="arithmatex"><span class="MathJax_Preview">\mathsf{L} * \mathsf{x}</span><script type="math/tex">\mathsf{L} * \mathsf{x}</script></span>.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;std::complex&lt;double&gt;&gt; IntrinsicGeometryInterface::vertexConnectionLaplacian</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireVertexConnectionLaplacian()</code></li>
 </ul>
 </details>
-<details class="func"><summary>DEC operators</summary><h5 id="dec-operators">DEC operators</h5>
+<details class="func">
+<summary>DEC operators</summary>
+<h5 id="dec-operators">DEC operators</h5>
 <p>These operators are the basic building blocks for <em>discrete exterior calculus</em> on surfaces.</p>
 <p><strong>Note:</strong> These quantities slightly deviate from the usual naming scheme for quantities. Rather than <code>requireD0()</code>, <code>requireD1()</code>, etc, there is a single <code>requireDECOperators()</code> function which manages all 8 of the members listed below.</p>
 <p>The following members are constructed:</p>
 <ul>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge0</code> A <span><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge0Inverse</code> A <span><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge1</code> An <span><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge1Inverse</code> An <span><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge2</code> An <span><span class="MathJax_Preview">|F| \times |F|</span><script type="math/tex">|F| \times |F|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge2Inverse</code> An <span><span class="MathJax_Preview">|F| \times |F|</span><script type="math/tex">|F| \times |F|</script></span> diagonal matrix</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::d0</code> An <span><span class="MathJax_Preview">|E| \times |V|</span><script type="math/tex">|E| \times |V|</script></span> matrix with <span><span class="MathJax_Preview">\{-1, 0, 1\}</span><script type="math/tex">\{-1, 0, 1\}</script></span> entries</li>
-<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::d1</code> An <span><span class="MathJax_Preview">|F| \times |E|</span><script type="math/tex">|F| \times |E|</script></span> matrix with <span><span class="MathJax_Preview">\{-1, 0, 1\}</span><script type="math/tex">\{-1, 0, 1\}</script></span> entries</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge0</code> A <span class="arithmatex"><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge0Inverse</code> A <span class="arithmatex"><span class="MathJax_Preview">|V| \times |V|</span><script type="math/tex">|V| \times |V|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge1</code> An <span class="arithmatex"><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge1Inverse</code> An <span class="arithmatex"><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge2</code> An <span class="arithmatex"><span class="MathJax_Preview">|F| \times |F|</span><script type="math/tex">|F| \times |F|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::hodge2Inverse</code> An <span class="arithmatex"><span class="MathJax_Preview">|F| \times |F|</span><script type="math/tex">|F| \times |F|</script></span> diagonal matrix</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::d0</code> An <span class="arithmatex"><span class="MathJax_Preview">|E| \times |V|</span><script type="math/tex">|E| \times |V|</script></span> matrix with <span class="arithmatex"><span class="MathJax_Preview">\{-1, 0, 1\}</span><script type="math/tex">\{-1, 0, 1\}</script></span> entries</li>
+<li><code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::d1</code> An <span class="arithmatex"><span class="MathJax_Preview">|F| \times |E|</span><script type="math/tex">|F| \times |E|</script></span> matrix with <span class="arithmatex"><span class="MathJax_Preview">\{-1, 0, 1\}</span><script type="math/tex">\{-1, 0, 1\}</script></span> entries</li>
 </ul>
 <p>Only valid on triangular meshes.</p>
 <ul>
@@ -2401,28 +2631,34 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 </details>
 <p>While the vertex-based cotan Laplacian above is standard in geometry processing, one can also construct a discrete Laplacian using different basis functions. The following matrices are the result of using <em>Crouzeix-Raviart</em> basis functions, which are Lagrange elements based at edge midpoints: Each function is piecewise linear, has a value at 1 at its associated edge midpoint, and is 0 at all other adjacent edge midpoints.</p>
 <p>In graphics and geometry processing, Crouzeix-Raviart elements have been used, for example, to <a href="https://cims.nyu.edu/gcl/papers/wardetzky2007dqb.pdf">discretize bending energies</a> and <a href="https://odedstein.com/projects/a-simple-discretization/a-simple-discretization.pdf">discretize vector Dirichlet energy</a>. Because there are typically more edges than vertices in a mesh, and there are only two faces in the support of each Crouzeix-Raviart basis function, Crouzeix-Raviart operators also typically have more DOFs than vertex-based operators.</p>
-<details class="func"><summary>Crouzeix-Raviart Laplacian</summary><h5 id="crouzeix-raviart-laplacian">Crouzeix-Raviart Laplacian</h5>
+<details class="func">
+<summary>Crouzeix-Raviart Laplacian</summary>
+<h5 id="crouzeix-raviart-laplacian">Crouzeix-Raviart Laplacian</h5>
 <p>The discrete Laplace operator, discretized via the piecewise linear <em>Crouzeix-Raviart</em> basis functions associated with edge midpoints.</p>
-<p>A <span><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> real matrix. Always symmetric and positive semi-definite. This is the <em>weak</em> Laplace operator, if we use it to evaluate <span><span class="MathJax_Preview">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</span><script type="math/tex">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</script></span>, <span><span class="MathJax_Preview">\mathsf{x}</span><script type="math/tex">\mathsf{x}</script></span> should hold <em>pointwise</em> quantities at edge midpoints, and the result <span><span class="MathJax_Preview">\mathsf{y}</span><script type="math/tex">\mathsf{y}</script></span> will contain <em>integrated</em> values of the result in the neighborhood of each edge midpoint. If used to solve a Poisson problem, a mass matrix is likely necessary on the right hand side.</p>
+<p>A <span class="arithmatex"><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> real matrix. Always symmetric and positive semi-definite. This is the <em>weak</em> Laplace operator, if we use it to evaluate <span class="arithmatex"><span class="MathJax_Preview">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</span><script type="math/tex">\mathsf{y} \leftarrow \mathsf{L} \mathsf{x}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\mathsf{x}</span><script type="math/tex">\mathsf{x}</script></span> should hold <em>pointwise</em> quantities at edge midpoints, and the result <span class="arithmatex"><span class="MathJax_Preview">\mathsf{y}</span><script type="math/tex">\mathsf{y}</script></span> will contain <em>integrated</em> values of the result in the neighborhood of each edge midpoint. If used to solve a Poisson problem, a mass matrix is likely necessary on the right hand side.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::crouzeixRaviartLaplacian</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireCrouzeixRaviartLaplacian()</code></li>
 </ul>
 </details>
-<details class="func"><summary>Crouzeix-Raviart mass matrix</summary><h5 id="crouzeix-raviart-mass-matrix">Crouzeix-Raviart mass matrix</h5>
-<p>A mass matrix at edges, where the edge area is <span><span class="MathJax_Preview">1/3</span><script type="math/tex">1/3</script></span> the incident face areas.</p>
-<p>A <span><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> real diagonal matrix. Corresponds to the Galerkin mass matrix for Crouzeix-Raviart elements, which is already diagonal without lumping.</p>
+<details class="func">
+<summary>Crouzeix-Raviart mass matrix</summary>
+<h5 id="crouzeix-raviart-mass-matrix">Crouzeix-Raviart mass matrix</h5>
+<p>A mass matrix at edges, where the edge area is <span class="arithmatex"><span class="MathJax_Preview">1/3</span><script type="math/tex">1/3</script></span> the incident face areas.</p>
+<p>A <span class="arithmatex"><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> real diagonal matrix. Corresponds to the Galerkin mass matrix for Crouzeix-Raviart elements, which is already diagonal without lumping.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::crouzeixRaviartMassMatrix</code></li>
 <li><strong>require:</strong> <code>void IntrinsicGeometryInterface::requireCrouzeixRaviartMassMatrix()</code></li>
 </ul>
 </details>
-<details class="func"><summary>Crouzeix-Raviart connection Laplacian</summary><h5 id="crouzeix-raviart-connection-laplacian">Crouzeix-Raviart connection Laplacian</h5>
+<details class="func">
+<summary>Crouzeix-Raviart connection Laplacian</summary>
+<h5 id="crouzeix-raviart-connection-laplacian">Crouzeix-Raviart connection Laplacian</h5>
 <p>A discrete connection Laplacian operator, which applies to vector fields defined in edge tangent spaces</p>
-<p>A <span><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> complex matrix. Always Hermitian and positive semi-definite.</p>
-<p>Given a complex vector <span><span class="MathJax_Preview">\mathsf{x}</span><script type="math/tex">\mathsf{x}</script></span> of tangent vectors at edge midpoints, apply the operator by multiplying <span><span class="MathJax_Preview">\mathsf{L} * \mathsf{x}</span><script type="math/tex">\mathsf{L} * \mathsf{x}</script></span>. Like other mesh elements, the <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis of the tangent space at edge <code>e</code> points in the direction of <code>e.halfedge()</code>.</p>
+<p>A <span class="arithmatex"><span class="MathJax_Preview">|E| \times |E|</span><script type="math/tex">|E| \times |E|</script></span> complex matrix. Always Hermitian and positive semi-definite.</p>
+<p>Given a complex vector <span class="arithmatex"><span class="MathJax_Preview">\mathsf{x}</span><script type="math/tex">\mathsf{x}</script></span> of tangent vectors at edge midpoints, apply the operator by multiplying <span class="arithmatex"><span class="MathJax_Preview">\mathsf{L} * \mathsf{x}</span><script type="math/tex">\mathsf{L} * \mathsf{x}</script></span>. Like other mesh elements, the <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis of the tangent space at edge <code>e</code> points in the direction of <code>e.halfedge()</code>.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>Eigen::SparseMatrix&lt;double&gt; IntrinsicGeometryInterface::crouzeixRaviartConnectionLaplacian</code></li>
@@ -2431,8 +2667,10 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 </details>
 <h2 id="extrinsic-angles">Extrinsic angles</h2>
 <p>These quantities depend on extrinsic angles, but are still rotation-invariant, and independent of a particular embeddeding. They are defined for <code>ExtrinsicGeometryInterface</code> and classes that extend it, including the <code>EmbeddedGeometryInterface</code> one usually constructs from vertex positions. Currently there is no realization that constructs an <code>ExtrinsicGeometryInterface</code> from input data which is not also an <code>EmbeddedGeometryInterface</code>, but such a class could be implemented in the future.</p>
-<details class="func"><summary>edge dihedral angle</summary><h5 id="edge-dihedral-angle">edge dihedral angle</h5>
-<p>The dihedral angle at an edge, in radians. Defined to be the signed angle between the incident triangle normals: <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> if the edge is flat, positive at a convex edge, and negative at a nonconvex edge.</p>
+<details class="func">
+<summary>edge dihedral angle</summary>
+<h5 id="edge-dihedral-angle">edge dihedral angle</h5>
+<p>The dihedral angle at an edge, in radians. Defined to be the signed angle between the incident triangle normals: <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> if the edge is flat, positive at a convex edge, and negative at a nonconvex edge.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>EdgeData&lt;double&gt; ExtrinsicGeometryInterface::edgeDihedralAngles</code></li>
@@ -2443,8 +2681,10 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <li><strong>immediate:</strong> <code>double VertexPositionGeometry::edgeDihedralAngle(Edge e)</code></li>
 </ul>
 </details>
-<details class="func"><summary>vertex principal curvature direction</summary><h5 id="vertex-principal-curvature-direction">vertex principal curvature direction</h5>
-<p>A 2-symmetric tangent vector field at vertices. The direction corresponds to the first principal direction, and the magnitude is proportional to the squared difference of the 1st and 2nd principal curvatures <span><span class="MathJax_Preview">(\kappa_1 - \kappa_2)^2</span><script type="math/tex">(\kappa_1 - \kappa_2)^2</script></span> (so for instance, if a surface is flat and <span><span class="MathJax_Preview">\kappa_1 \approx \kappa_2</span><script type="math/tex">\kappa_1 \approx \kappa_2</script></span>, the magnitude of the field will be near <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>).</p>
+<details class="func">
+<summary>vertex principal curvature direction</summary>
+<h5 id="vertex-principal-curvature-direction">vertex principal curvature direction</h5>
+<p>A 2-symmetric tangent vector field at vertices. The direction corresponds to the first principal direction, and the magnitude is proportional to the squared difference of the 1st and 2nd principal curvatures <span class="arithmatex"><span class="MathJax_Preview">(\kappa_1 - \kappa_2)^2</span><script type="math/tex">(\kappa_1 - \kappa_2)^2</script></span> (so for instance, if a surface is flat and <span class="arithmatex"><span class="MathJax_Preview">\kappa_1 \approx \kappa_2</span><script type="math/tex">\kappa_1 \approx \kappa_2</script></span>, the magnitude of the field will be near <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>).</p>
 <p>A formal description appears in section 6.1.2 of <a href="http://www.cs.cmu.edu/~kmcrane/Projects/GloballyOptimalDirectionFields/paper.pdf">Globally Optimal Direction Fields</a></p>
 <p>Only valid on triangular meshes.</p>
 <ul>
@@ -2454,14 +2694,18 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 </details>
 <h2 id="embedded-positions-and-normals">Embedded positions and normals</h2>
 <p>These quantities depend explicitly on an embedding in 3D space (better known as vertex positions). They are defined for <code>EmbeddedGeometryInterface</code> (which is usually instantiated as a <code>VertexPositionGeometry</code>). Don&rsquo;t forget, <code>EmbeddedGeometryInterface</code> extends the <code>IntrinsicGeometryInterface</code> and <code>ExtrinsicGeometryInterface</code>, so all of the quantities above are also accessible.</p>
-<details class="func"><summary>vertex position</summary><h5 id="vertex-position">vertex position</h5>
+<details class="func">
+<summary>vertex position</summary>
+<h5 id="vertex-position">vertex position</h5>
 <p>Vertex positions in 3D.</p>
 <ul>
 <li><strong>member:</strong> <code>VertexData&lt;Vector3&gt; EmbeddedGeometryInterface::vertexPositions</code></li>
 <li><strong>require:</strong> <code>void EmbeddedGeometryInterface::requireVertexPositions()</code></li>
 </ul>
 </details>
-<details class="func"><summary>face normal</summary><h5 id="face-normal">face normal</h5>
+<details class="func">
+<summary>face normal</summary>
+<h5 id="face-normal">face normal</h5>
 <p>A normal vector for each face.</p>
 <ul>
 <li><strong>member:</strong> <code>FaceData&lt;Vector3&gt; EmbeddedGeometryInterface::faceNormals</code></li>
@@ -2472,16 +2716,20 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 <li><strong>immediate:</strong> <code>Vector3 VertexPositionGeometry::faceNormal(Face f)</code></li>
 </ul>
 </details>
-<details class="func"><summary>vertex normal</summary><h5 id="vertex-normal">vertex normal</h5>
+<details class="func">
+<summary>vertex normal</summary>
+<h5 id="vertex-normal">vertex normal</h5>
 <p>A normal vector for each vertex. Defined as the corner-angle weighted average of incident face normals.</p>
 <ul>
 <li><strong>member:</strong> <code>VertexData&lt;Vector3&gt; EmbeddedGeometryInterface::faceNormals</code></li>
 <li><strong>require:</strong> <code>void EmbeddedGeometryInterface::requireFaceNormals()</code></li>
 </ul>
 </details>
-<details class="func"><summary>vertex dual mean curvature normal</summary><h5 id="vertex-dual-mean-curvature-normal">vertex dual mean curvature normal</h5>
+<details class="func">
+<summary>vertex dual mean curvature normal</summary>
+<h5 id="vertex-dual-mean-curvature-normal">vertex dual mean curvature normal</h5>
 <p>Conceptually, the <em>mean curvature normal</em> at any location on a surface is a vector which points in the normal direction, and has magnitude equal to the mean curvature at that location. In practice, we discretize this using the fact that applying the <a href="#cotangent-laplacian">Laplacian</a> to the position function yields the mean curvature normals.</p>
-<p>Should be interpreted as an <em>integrated</em> mean curvature normal (units: <span><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>), giving the integral of the mean curvature curvature in the neighborhood of the vertex.  A corresponding <em>pointwise</em> mean curvature (units: <span><span class="MathJax_Preview">1/m</span><script type="math/tex">1/m</script></span>) can be obtained by dividing by the <code>vertexDualArea</code>.</p>
+<p>Should be interpreted as an <em>integrated</em> mean curvature normal (units: <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>), giving the integral of the mean curvature curvature in the neighborhood of the vertex.  A corresponding <em>pointwise</em> mean curvature (units: <span class="arithmatex"><span class="MathJax_Preview">1/m</span><script type="math/tex">1/m</script></span>) can be obtained by dividing by the <code>vertexDualArea</code>.</p>
 <p>Only valid on triangular meshes.</p>
 <ul>
 <li><strong>member:</strong> <code>VertexData&lt;double&gt; EmbeddedGeometryInterface::vertexDualMeanCurvatureNormals</code></li>
@@ -2493,132 +2741,97 @@ This is fundamentally no different from using 2x2 rotation matrices, but leads t
 </ul>
 <p>Fun fact: these vertex dual mean curvature normals are also the derivative of the mesh&rsquo;s surface area with respect to vertex positions.</p>
 </details>
-<details class="func"><summary>face tangent basis</summary><h5 id="face-tangent-basis">face tangent basis</h5>
-<p>A pair of <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis and <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>-axis 3D basis vectors in world space, corresponding to the <a href="#face-tangent-spaces">intrinsic tangent space</a> for the face. Always orthogonal to the face normal.</p>
+<details class="func">
+<summary>face tangent basis</summary>
+<h5 id="face-tangent-basis">face tangent basis</h5>
+<p>A pair of <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis and <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>-axis 3D basis vectors in world space, corresponding to the <a href="#face-tangent-spaces">intrinsic tangent space</a> for the face. Always orthogonal to the face normal.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span> <span class="o">=</span> <span class="cm">/* ... */</span> 
-<span class="n">VertexPositionGeometry</span><span class="o">&amp;</span> <span class="n">geometry</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>    
-<span class="n">FaceData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">myTangentVectorField</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span>
+<span class="n">VertexPositionGeometry</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="p">;</span><span class="w">    </span>
+<span class="n">FaceData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myTangentVectorField</span><span class="p">;</span>
 
 <span class="n">geometry</span><span class="p">.</span><span class="n">requireFaceTangentBasis</span><span class="p">();</span>
 
-<span class="k">for</span><span class="p">(</span><span class="n">Face</span> <span class="nl">f</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">faces</span><span class="p">())</span> <span class="p">{</span>
-  <span class="n">Vector2</span> <span class="n">field</span> <span class="o">=</span> <span class="n">myTangentVectorField</span><span class="p">[</span><span class="n">f</span><span class="p">];</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Face</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">faces</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Vector2</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myTangentVectorField</span><span class="p">[</span><span class="n">f</span><span class="p">];</span>
 
-  <span class="n">Vector3</span> <span class="n">basisX</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">faceTangentBasis</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
-  <span class="n">Vector3</span> <span class="n">basisY</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">faceTangentBasis</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">  </span><span class="n">Vector3</span><span class="w"> </span><span class="n">basisX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">faceTangentBasis</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">  </span><span class="n">Vector3</span><span class="w"> </span><span class="n">basisY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">faceTangentBasis</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
 
-  <span class="n">Vector3</span> <span class="n">fieldInWorldCoords</span> <span class="o">=</span> <span class="n">basisX</span> <span class="o">*</span> <span class="n">field</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">basisY</span> <span class="o">*</span> <span class="n">field</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Vector3</span><span class="w"> </span><span class="n">fieldInWorldCoords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">basisX</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">field</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">basisY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">field</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <ul>
 <li><strong>member:</strong> <code>FaceData&lt;std::array&lt;Vector3,2&gt;&gt; EmbeddedGeometryInterface::faceTangentBasis</code></li>
 <li><strong>require:</strong> <code>void EmbeddedGeometryInterface::requireFaceTangentBasis()</code></li>
 </ul>
 </details>
-<details class="func"><summary>vertex tangent basis</summary><h5 id="vertex-tangent-basis">vertex tangent basis</h5>
-<p>A pair of <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis and <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>-axis 3D basis vectors in world space, corresponding to the <a href="#vertex-tangent-spaces">intrinsic tangent space</a> for the vertex. Always orthogonal to the vertex normal.</p>
+<details class="func">
+<summary>vertex tangent basis</summary>
+<h5 id="vertex-tangent-basis">vertex tangent basis</h5>
+<p>A pair of <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis and <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>-axis 3D basis vectors in world space, corresponding to the <a href="#vertex-tangent-spaces">intrinsic tangent space</a> for the vertex. Always orthogonal to the vertex normal.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span> <span class="o">=</span> <span class="cm">/* ... */</span> 
-<span class="n">VertexPositionGeometry</span><span class="o">&amp;</span> <span class="n">geometry</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>    
-<span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">myTangentVectorField</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span>
+<span class="n">VertexPositionGeometry</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="p">;</span><span class="w">    </span>
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myTangentVectorField</span><span class="p">;</span>
 
 <span class="n">geometry</span><span class="p">.</span><span class="n">requireFaceTangentBasis</span><span class="p">();</span>
 
-<span class="k">for</span><span class="p">(</span><span class="n">Vertex</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">mesh</span><span class="p">.</span><span class="n">vertices</span><span class="p">())</span> <span class="p">{</span>
-  <span class="n">Vector2</span> <span class="n">field</span> <span class="o">=</span> <span class="n">myTangentVectorField</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Vertex</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">vertices</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Vector2</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myTangentVectorField</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
 
-  <span class="n">Vector3</span> <span class="n">basisX</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">vertexTangentBasis</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
-  <span class="n">Vector3</span> <span class="n">basisY</span> <span class="o">=</span> <span class="n">geometry</span><span class="p">.</span><span class="n">vertexTangentBasis</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">  </span><span class="n">Vector3</span><span class="w"> </span><span class="n">basisX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">vertexTangentBasis</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">  </span><span class="n">Vector3</span><span class="w"> </span><span class="n">basisY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">geometry</span><span class="p">.</span><span class="n">vertexTangentBasis</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span>
 
-  <span class="n">Vector3</span> <span class="n">fieldInWorldCoords</span> <span class="o">=</span> <span class="n">basisX</span> <span class="o">*</span> <span class="n">field</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">basisY</span> <span class="o">*</span> <span class="n">field</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Vector3</span><span class="w"> </span><span class="n">fieldInWorldCoords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">basisX</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">field</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">basisY</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">field</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <ul>
 <li><strong>member:</strong> <code>VertexData&lt;std::array&lt;Vector3,2&gt;&gt; EmbeddedGeometryInterface::vertexTangentBasis</code></li>
 <li><strong>require:</strong> <code>void EmbeddedGeometryInterface::requireVertexTangentBasis()</code></li>
 </ul>
 </details>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../geometry/" title="Overview" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Overview
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../utilities/simple_polygon_mesh/" title="Simple Polygon Mesh" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Simple Polygon Mesh
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.5532dfb7.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../../..",
-          features: [],
-          search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.7a2ea5ba.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

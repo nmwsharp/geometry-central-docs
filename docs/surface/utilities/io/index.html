@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -10,8 +8,14 @@
       
       
       
-      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.1">
+      
+        <link rel="prev" href="../simple_polygon_mesh/">
+      
+      
+        <link rel="next" href="../surface_point/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
@@ -19,34 +23,32 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.fe0cca5b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ffa9267a.min.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a46bcfb3.min.css">
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
+      
+
+    
+    
+    
       
         
         
-        <meta name="theme-color" content="#ff7043">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CInconsolata:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Inconsolata"}</style>
       
-    
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700%7CInconsolata&display=fallback">
-        <style>body,input{font-family:"Merriweather",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Inconsolata",SFMono-Regular,Consolas,Menlo,monospace}</style>
-      
-    
     
     
       <link rel="stylesheet" href="../../../extras.css">
     
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-58346315-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+
+    
     
     
   </head>
@@ -55,8 +57,11 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="red">
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="red">
   
+    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -73,48 +78,58 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../../.." title="Geometry Central" class="md-header-nav__button md-logo" aria-label="Geometry Central">
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Geometry Central" class="md-header__button md-logo" aria-label="Geometry Central" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Geometry Central
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               I/O
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -122,7 +137,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -130,12 +145,11 @@
 </div>
     
     
-      <div class="md-header-nav__source">
-        
-<a href="https://github.com/nmwsharp/geometry-central/" title="Go to repository" class="md-source">
+      <div class="md-header__source">
+        <a href="https://github.com/nmwsharp/geometry-central" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     nmwsharp/geometry-central
@@ -144,39 +158,43 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
+      
         
-      
-      
+          
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Geometry Central" class="md-nav__button md-logo" aria-label="Geometry Central">
+    <a href="../../.." title="Geometry Central" class="md-nav__button md-logo" aria-label="Geometry Central" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
 
     </a>
     Geometry Central
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/nmwsharp/geometry-central/" title="Go to repository" class="md-source">
+      <a href="https://github.com/nmwsharp/geometry-central" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     nmwsharp/geometry-central
@@ -190,156 +208,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../../.." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
-      Build
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Build" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Build
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../build/versions/" title="Versions" class="md-nav__link">
-      Versions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../build/building/" title="Building" class="md-nav__link">
-      Building
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../build/dependencies/" title="Dependencies" class="md-nav__link">
-      Dependencies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../build/tests/" title="Tests" class="md-nav__link">
-      Tests
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Tutorials
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Tutorials
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../tutorials/load_mesh/" title="Load & navigate a mesh" class="md-nav__link">
-      Load & navigate a mesh
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../tutorials/basic_mutation/" title="Basic Mutation" class="md-nav__link">
-      Basic Mutation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../tutorials/direction_fields/" title="Direction fields" class="md-nav__link">
-      Direction fields
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
@@ -347,294 +224,499 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
-    
-    <label class="md-nav__link" for="nav-4">
-      Surface
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Surface" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Surface
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Build
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Build
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
-    
-    <label class="md-nav__link" for="nav-4-1">
-      Surface Mesh
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Surface Mesh" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Surface Mesh
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/basics/" title="Basics" class="md-nav__link">
-      Basics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/elements/" title="Elements" class="md-nav__link">
-      Elements
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/boundaries/" title="Boundaries" class="md-nav__link">
-      Boundaries
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/indexing/" title="Indexing" class="md-nav__link">
-      Indexing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
-      Navigation and Iteration
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/containers/" title="Containers" class="md-nav__link">
-      Containers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/mutation/" title="Mutation" class="md-nav__link">
-      Mutation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/delta_complex/" title="Delta Complexes" class="md-nav__link">
-      Delta Complexes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface_mesh/internals/" title="Internals" class="md-nav__link">
-      Internals
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
-    
-    <label class="md-nav__link" for="nav-4-2">
-      Geometry
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Geometry" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Geometry
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../geometry/geometry/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../geometry/quantities/" title="Quantities" class="md-nav__link">
-      Quantities
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build/versions/" class="md-nav__link">
+        Versions
+      </a>
+    </li>
   
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
-    
-    <label class="md-nav__link" for="nav-4-3">
-      Utilities
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Utilities" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Utilities
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../simple_polygon_mesh/" title="Simple Polygon Mesh" class="md-nav__link">
-      Simple Polygon Mesh
-    </a>
-  </li>
-
-        
-          
-          
-          
-
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build/building/" class="md-nav__link">
+        Building
+      </a>
+    </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build/dependencies/" class="md-nav__link">
+        Dependencies
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--active">
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../build/tests/" class="md-nav__link">
+        Tests
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+
+  
+  
+  
     
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/load_mesh/" class="md-nav__link">
+        Load & navigate a mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/basic_mutation/" class="md-nav__link">
+        Basic Mutation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorials/direction_fields/" class="md-nav__link">
+        Direction fields
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Surface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Surface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Surface Mesh
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Surface Mesh
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/elements/" class="md-nav__link">
+        Elements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/boundaries/" class="md-nav__link">
+        Boundaries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/indexing/" class="md-nav__link">
+        Indexing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/navigation/" class="md-nav__link">
+        Navigation and Iteration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/containers/" class="md-nav__link">
+        Containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/mutation/" class="md-nav__link">
+        Mutation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/delta_complex/" class="md-nav__link">
+        Delta Complexes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface_mesh/internals/" class="md-nav__link">
+        Internals
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Geometry
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Geometry
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../geometry/geometry/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../geometry/quantities/" class="md-nav__link">
+        Quantities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          Utilities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simple_polygon_mesh/" class="md-nav__link">
+        Simple Polygon Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          I/O
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         I/O
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="I/O" class="md-nav__link md-nav__link--active">
-      I/O
-    </a>
-    
+      </a>
       
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
+  
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#reading-meshes" class="md-nav__link">
@@ -707,588 +789,684 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../surface_point/" class="md-nav__link">
+        Surface Point
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../barycentric_vector/" class="md-nav__link">
+        Barycentric Vector
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-  </li>
-
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/direction_fields/" class="md-nav__link">
+        Direction Fields
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/flip_geodesics/" class="md-nav__link">
+        Flip Geodesics
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/geodesic_distance/" class="md-nav__link">
+        Geodesic Distance
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../surface_point/" title="Surface Point" class="md-nav__link">
-      Surface Point
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/geodesic_voronoi_tessellations/" class="md-nav__link">
+        Geodesic Centroidal Voronoi Tessellations
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/parameterization/" class="md-nav__link">
+        Parameterization
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/remeshing/" class="md-nav__link">
+        Remeshing
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../barycentric_vector/" title="Barycentric Vector" class="md-nav__link">
-      Barycentric Vector
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
+            
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/robust_geometry/" class="md-nav__link">
+        Robust Geometry
+      </a>
+    </li>
+  
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/surface_centers/" class="md-nav__link">
+        Surface Centers
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/surface_sampling/" class="md-nav__link">
+        Surface Sampling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/geodesic_paths/" class="md-nav__link">
+        Tracing Geodesic Paths
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithms/vector_heat_method/" class="md-nav__link">
+        Vector Heat Method
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
-    
-    <label class="md-nav__link" for="nav-4-4">
-      Algorithms
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Algorithms
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          Intrinsic Triangulations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Intrinsic Triangulations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intrinsic_triangulations/basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intrinsic_triangulations/common_subdivision/" class="md-nav__link">
+        Common Subdivision
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intrinsic_triangulations/signposts/" class="md-nav__link">
+        Signposts
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/direction_fields/" title="Direction Fields" class="md-nav__link">
-      Direction Fields
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intrinsic_triangulations/integer_coordinates/" class="md-nav__link">
+        Integer Coordinates
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intrinsic_triangulations/function_transfer/" class="md-nav__link">
+        Function Transfer
+      </a>
+    </li>
+  
+
+            
           
+        </ul>
+      </nav>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/flip_geodesics/" title="Flip Geodesics" class="md-nav__link">
-      Flip Geodesics
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
-      Geodesic Distance
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/geodesic_voronoi_tessellations/" title="Geodesic Centroidal Voronoi Tessellations" class="md-nav__link">
-      Geodesic Centroidal Voronoi Tessellations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/parameterization/" title="Parameterization" class="md-nav__link">
-      Parameterization
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/remeshing/" title="Remeshing" class="md-nav__link">
-      Remeshing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/robust_geometry/" title="Robust Geometry" class="md-nav__link">
-      Robust Geometry
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
-      Surface Centers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/surface_sampling/" title="Surface Sampling" class="md-nav__link">
-      Surface Sampling
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/geodesic_paths/" title="Tracing Geodesic Paths" class="md-nav__link">
-      Tracing Geodesic Paths
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
-      Vector Heat Method
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
-    
-    <label class="md-nav__link" for="nav-4-5">
-      Intrinsic Triangulations
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Intrinsic Triangulations" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Intrinsic Triangulations
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../intrinsic_triangulations/basics/" title="Basics" class="md-nav__link">
-      Basics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../intrinsic_triangulations/common_subdivision/" title="Common Subdivision" class="md-nav__link">
-      Common Subdivision
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../intrinsic_triangulations/signposts/" title="Signposts" class="md-nav__link">
-      Signposts
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../intrinsic_triangulations/integer_coordinates/" title="Integer Coordinates" class="md-nav__link">
-      Integer Coordinates
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../intrinsic_triangulations/function_transfer/" title="Function Transfer" class="md-nav__link">
-      Function Transfer
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Point Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Point Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pointcloud/basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pointcloud/geometry/" class="md-nav__link">
+        Geometry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-5">
-      Point Cloud
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Point Cloud" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Point Cloud
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pointcloud/algorithms/heat_solver/" class="md-nav__link">
+        Heat distance & transport
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../pointcloud/basics/" title="Basics" class="md-nav__link">
-      Basics
-    </a>
-  </li>
-
-        
+            
           
-          
-          
+        </ul>
+      </nav>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../pointcloud/geometry/" title="Geometry" class="md-nav__link">
-      Geometry
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
+            
+              
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
-    
-    <label class="md-nav__link" for="nav-5-3">
-      Algorithms
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Algorithms
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Utilities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pointcloud/utilities/io/" class="md-nav__link">
+        IO
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pointcloud/utilities/sampling/" class="md-nav__link">
+        Sampling
+      </a>
+    </li>
+  
+
+            
           
+        </ul>
+      </nav>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../pointcloud/algorithms/heat_solver/" title="Heat distance & transport" class="md-nav__link">
-      Heat distance & transport
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
-    
-    <label class="md-nav__link" for="nav-5-4">
-      Utilities
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Utilities" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Utilities
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../pointcloud/utilities/io/" title="IO" class="md-nav__link">
-      IO
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../pointcloud/utilities/sampling/" title="Sampling" class="md-nav__link">
-      Sampling
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Numerical
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Numerical" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Numerical
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Numerical
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Numerical
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../numerical/matrix_types/" class="md-nav__link">
+        Matrix Types
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../numerical/linear_algebra_utilities/" class="md-nav__link">
+        Linear Algebra Utilities
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../numerical/linear_solvers/" class="md-nav__link">
+        Linear Solvers
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../numerical/matrix_types/" title="Matrix Types" class="md-nav__link">
-      Matrix Types
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../numerical/linear_algebra_utilities/" title="Linear Algebra Utilities" class="md-nav__link">
-      Linear Algebra Utilities
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../numerical/linear_solvers/" title="Linear Solvers" class="md-nav__link">
-      Linear Solvers
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
-      Utilities
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Utilities" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Utilities
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Utilities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utilities/miscellaneous/" class="md-nav__link">
+        Miscellaneous
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utilities/vector2/" class="md-nav__link">
+        Vector2
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utilities/vector3/" class="md-nav__link">
+        Vector3
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../../utilities/miscellaneous/" title="Miscellaneous" class="md-nav__link">
-      Miscellaneous
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utilities/eigenmap/" class="md-nav__link">
+        Utilities for Eigen Interoperability
+      </a>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../utilities/vector2/" title="Vector2" class="md-nav__link">
-      Vector2
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../utilities/vector3/" title="Vector3" class="md-nav__link">
-      Vector3
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../utilities/eigenmap/" title="Utilities for Eigen Interoperability" class="md-nav__link">
-      Utilities for Eigen Interoperability
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -1298,21 +1476,22 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
+  
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#reading-meshes" class="md-nav__link">
@@ -1390,39 +1569,38 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/surface/utilities/io.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
                   
-                
-                
-                  <h1>I/O</h1>
-                
-                <p><code>#include "geometrycentral/surface/meshio.h"</code></p>
+
+  
+  
+
+
+  <h1>I/O</h1>
+
+<p><code>#include "geometrycentral/surface/meshio.h"</code></p>
 <h2 id="reading-meshes">Reading meshes</h2>
 <p>Construct a surface mesh from a file on disk, or more generally any <code>std::istream</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="o">::</span><span class="n">surface</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">geometrycentral</span><span class="o">::</span><span class="nn">surface</span><span class="p">;</span>
 
 <span class="c1">// Load a surface mesh which is required to be manifold</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">readManifoldSurfaceMesh</span><span class="p">(</span><span class="s">&quot;spot.obj&quot;</span><span class="p">);</span> 
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">geometry</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readManifoldSurfaceMesh</span><span class="p">(</span><span class="s">&quot;spot.obj&quot;</span><span class="p">);</span><span class="w"> </span>
 
 
 <span class="c1">// Load a more general surface mesh, which might be nonmanifold</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh2</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry2</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh2</span><span class="p">,</span> <span class="n">geometry2</span><span class="p">)</span> <span class="o">=</span> <span class="n">readSurfaceMesh</span><span class="p">(</span><span class="s">&quot;spot_messy.obj&quot;</span><span class="p">);</span> 
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh2</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry2</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh2</span><span class="p">,</span><span class="w"> </span><span class="n">geometry2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readSurfaceMesh</span><span class="p">(</span><span class="s">&quot;spot_messy.obj&quot;</span><span class="p">);</span><span class="w"> </span>
 </code></pre></div>
-
-<details class="note"><summary>Why use <code>std::unique_ptr&lt;&gt;</code>?</summary><p>The mesh loader, like many functions in geometry-central, returns constructed objects via a <code>unique_ptr</code>. Unique pointers are an important tool for memory management in modern C++; if you haven&rsquo;t used them before, we suggest you give them a try!</p>
+<details class="note">
+<summary>Why use <code>std::unique_ptr&lt;&gt;</code>?</summary>
+<p>The mesh loader, like many functions in geometry-central, returns constructed objects via a <code>unique_ptr</code>. Unique pointers are an important tool for memory management in modern C++; if you haven&rsquo;t used them before, we suggest you give them a try!</p>
 <p>In most ways, a <code>unique_ptr</code> acts just like a normal C++ pointer. You can dereference it with <code>*uPtr</code>, and access its members and function like <code>uPtr-&gt;function()</code>. However, the <code>unique_ptr</code> helps prevent common memory-management mistakes, and communicates the programmer&rsquo;s intent about object lifetime. This is accomplished with two properties:</p>
 <ul>
 <li>
@@ -1435,88 +1613,107 @@
 <hr />
 <p>The general paradigm in geometry-central (and a recommended style in modern C++) is to return long-lived, allocated objects with a <code>unique_ptr</code>, and pass these objects in to functions and dependent classes by reference.</p>
 <p>For instance, we might write a function which takes a mesh as an argument like</p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span> <span class="nf">processMesh</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">inputMesh</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* do stuff */</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">processMesh</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">inputMesh</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* do stuff */</span><span class="p">}</span>
 </code></pre></div>
-
 <p>and call it by dereferencing the unique pointer to pass a reference</p>
-<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">readSurfaceMesh</span><span class="p">(</span><span class="s">&quot;spot.obj&quot;</span><span class="p">);</span> 
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">geometry</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readSurfaceMesh</span><span class="p">(</span><span class="s">&quot;spot.obj&quot;</span><span class="p">);</span><span class="w"> </span>
 
 <span class="n">processMesh</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">);</span>
 </code></pre></div>
-
 <p>For more details about unique pointers, see the <a href="https://en.cppreference.com/w/cpp/memory/unique_ptr">language documentation</a>, or many tutorials around the web.</p>
 <hr />
 <p>If you really don&rsquo;t want to use unique pointers, you can simply release the unique pointer to an ordinary pointer:</p>
-<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span> <span class="cm">/* populated as above */</span><span class="p">;</span>
-<span class="n">SurfaceMesh</span><span class="o">*</span> <span class="n">meshPtr</span> <span class="o">=</span> <span class="n">mesh</span><span class="p">.</span><span class="n">release</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="w"> </span><span class="cm">/* populated as above */</span><span class="p">;</span>
+<span class="n">SurfaceMesh</span><span class="o">*</span><span class="w"> </span><span class="n">meshPtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mesh</span><span class="p">.</span><span class="n">release</span><span class="p">();</span>
 </code></pre></div>
-
 <p>The <code>meshPtr</code> now points the mesh object, and you are responsible for eventually deleting this pointer. After calling <code>release()</code>, the unique pointer points to nothing and will no longer deallocate the object.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">readSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></code></summary><p>Load a general, not-necessarily-manifold mesh from file. Returns both a <code>SurfaceMesh</code> representing the connectivity, and a <code>Geometry</code> representing the geometry. See the example above to concisely unpack.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">readSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span></code></summary>
+<p>Load a general, not-necessarily-manifold mesh from file. Returns both a <code>SurfaceMesh</code> representing the connectivity, and a <code>Geometry</code> representing the geometry. See the example above to concisely unpack.</p>
 <p>If the file includes vertices which do not appear in any face, they will be stripped from the vertex listing and ignored.</p>
 <p>The <code>type</code> parameter determines the type of file to load. For example, <code>type="ply"</code> will attempt to read the target file as a .ply file. If no type is given, the type will be inferred from the file extension. </p>
 <p>See the matrix below for all supported file types.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">readSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">in</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">type</span><span class="p">)</span></code></summary><p>Same as above, but reads from a general <code>istream</code> object rather than a filename. </p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">readSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="p">)</span></code></summary>
+<p>Same as above, but reads from a general <code>istream</code> object rather than a filename. </p>
 <p>When reading from a stream, the type <em>must</em> be specified and cannot be automatically inferred.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">readManifoldSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></code></summary><p>Load a manifold mesh from file. Returns both a <code>ManifoldSurfaceMesh</code> representing the connectivity, and a <code>Geometry</code> representing the geometry. See the example above to concisely unpack. If the mesh to be loaded is not manifold, an exception will be thrown.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">readManifoldSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span></code></summary>
+<p>Load a manifold mesh from file. Returns both a <code>ManifoldSurfaceMesh</code> representing the connectivity, and a <code>Geometry</code> representing the geometry. See the example above to concisely unpack. If the mesh to be loaded is not manifold, an exception will be thrown.</p>
 <p>If the file includes vertices which do not appear in any face, they will be stripped from the vertex listing and ignored.</p>
 <p>The <code>type</code> parameter determines the type of file to load. For example, <code>type="ply"</code> will attempt to read the target file as a .ply file. If no type is given, the type will be inferred from the file extension. </p>
 <p>See the matrix below for all supported file types.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">readManifoldSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">in</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">type</span><span class="p">)</span></code></summary><p>Same as above, but reads from a general <code>istream</code> object rather than a filename. </p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">readManifoldSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">in</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="p">)</span></code></summary>
+<p>Same as above, but reads from a general <code>istream</code> object rather than a filename. </p>
 <p>When reading from a stream, the type <em>must</em> be specified and cannot be automatically inferred.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;&gt;&gt;</span> <span class="n">readParameterizedManifoldSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span></code></summary><p>Loads a manifold surface mesh plus UV (texture) coordinates from a file.  See other variants for details.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">readParameterizedManifoldSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span></code></summary>
+<p>Loads a manifold surface mesh plus UV (texture) coordinates from a file.  See other variants for details.</p>
 <p>Currently only OBJ files are supported.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;&gt;&gt;</span> <span class="n">readParameterizedSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">type</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span></code></summary><p>Loads a general surface mesh plus UV (texture) coordinates from a file.  See other variants for details.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">readParameterizedSurfaceMesh</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span></code></summary>
+<p>Loads a general surface mesh plus UV (texture) coordinates from a file.  See other variants for details.</p>
 <p>Currently only OBJ files are supported.</p>
 </details>
 <h2 id="writing-meshes">Writing meshes</h2>
 <p>Write a mesh to file, or more generally any <code>std::ostream</code>. </p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="o">::</span><span class="n">surface</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">geometrycentral</span><span class="o">::</span><span class="nn">surface</span><span class="p">;</span>
 
 <span class="c1">// Write a surface mesh</span>
 <span class="c1">// Recall that ManifoldSurfaceMesh is a subclass of SurfaceMesh, so</span>
 <span class="c1">// it can be used just the same</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
-<span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="o">*</span><span class="n">geometry</span><span class="p">,</span> <span class="s">&quot;my_mesh.obj&quot;</span><span class="p">);</span> 
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="p">;</span>
+<span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">geometry</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;my_mesh.obj&quot;</span><span class="p">);</span><span class="w"> </span>
 </code></pre></div>
-
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span> <span class="n">geometry</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></code></summary><p>Write a mesh to file. </p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span></code></summary>
+<p>Write a mesh to file. </p>
 <p>The <code>type</code> parameter determines the type of file to write. For example, <code>type="obj"</code> will write the target file as a .obj file. If no type is given, the type will be inferred from the file extension. </p>
 <p>See the matrix below for all supported file types.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span> <span class="n">geometry</span><span class="p">,</span> <span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;&amp;</span> <span class="n">texCoords</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span></code></summary><p>Write a mesh to file as above, except corner per-corner coordinates are also written, if supported by the file format.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="p">,</span><span class="w"> </span><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">texCoords</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span></code></summary>
+<p>Write a mesh to file as above, except corner per-corner coordinates are also written, if supported by the file format.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span> <span class="n">geometry</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">type</span><span class="p">)</span></code></summary><p>Write a mesh to file as above, to a general <code>std::ostream</code> rather than directly to a named file.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="p">)</span></code></summary>
+<p>Write a mesh to file as above, to a general <code>std::ostream</code> rather than directly to a named file.</p>
 <p>When writing to a stream, the type <em>must</em> be specified and cannot be automatically inferred.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span> <span class="n">geometry</span><span class="p">,</span> <span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;&amp;</span> <span class="n">texCoords</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">type</span><span class="p">)</span></code></summary><p>Write a mesh to file as above, to a general <code>std::ostream</code> and with the specified texture coordinates, if the file format supports it.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="p">,</span><span class="w"> </span><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">texCoords</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">type</span><span class="p">)</span></code></summary>
+<p>Write a mesh to file as above, to a general <code>std::ostream</code> and with the specified texture coordinates, if the file format supports it.</p>
 <p>When writing to a stream, the type <em>must</em> be specified and cannot be automatically inferred.</p>
 </details>
 <h3 id="packing-scalar-data">Packing scalar data</h3>
 <p>A handy trick for transferring data between programs (e.g., to create visualizations) is to pack scalar data in to texture coordinates when writing a mesh to file. To make this easier, the helper <code>packToParam()</code> stores data as corner coordinates which can be passed to the writers.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="o">::</span><span class="n">surface</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">geometrycentral</span><span class="o">::</span><span class="nn">surface</span><span class="p">;</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span> <span class="c1">// some mesh</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span> <span class="c1">// some geometry</span>
-<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">vals</span><span class="p">;</span> <span class="c1">// some values at vertices</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"> </span><span class="c1">// some mesh</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="p">;</span><span class="w"> </span><span class="c1">// some geometry</span>
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vals</span><span class="p">;</span><span class="w"> </span><span class="c1">// some values at vertices</span>
 
-<span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="o">*</span><span class="n">geometry</span><span class="p">,</span> <span class="n">packToParam</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span> <span class="n">vals</span><span class="p">),</span> <span class="s">&quot;my_mesh.obj&quot;</span><span class="p">);</span> 
+<span class="n">writeSurfaceMesh</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">geometry</span><span class="p">,</span><span class="w"> </span><span class="n">packToParam</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">vals</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;my_mesh.obj&quot;</span><span class="p">);</span><span class="w"> </span>
 </code></pre></div>
-
-<details class="func"><summary><code class="highlight"><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">packToParam</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span> <span class="n">vals</span><span class="p">)</span></code></summary><p>Create a <code>CornerData</code> with the value from <code>vals</code> stored in the first coordinate at each corner. The second coordinate will hold <code>0</code>s.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">packToParam</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">vals</span><span class="p">)</span></code></summary>
+<p>Create a <code>CornerData</code> with the value from <code>vals</code> stored in the first coordinate at each corner. The second coordinate will hold <code>0</code>s.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span> <span class="n">packToParam</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span> <span class="n">valsX</span><span class="p">,</span> <span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span> <span class="n">valsY</span><span class="p">)</span></code></summary><p>Create a <code>CornerData</code> with the value from <code>valsX</code> stored in the first coordinate at each corner, and <code>valsY</code> stored in the second coordinate.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">packToParam</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">valsX</span><span class="p">,</span><span class="w"> </span><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">valsY</span><span class="p">)</span></code></summary>
+<p>Create a <code>CornerData</code> with the value from <code>valsX</code> stored in the first coordinate at each corner, and <code>valsY</code> stored in the second coordinate.</p>
 </details>
 <h2 id="supported-file-types">Supported file types</h2>
 <table>
@@ -1570,120 +1767,140 @@
 <p>Internally, data is stored as additional custom fields of a <code>.ply</code> file.  Here, we&rsquo;re using the <code>.ply</code> format as a general container for structured data&mdash;other software will not automatically understand the additional fields in these files.  A benefit of the <code>ply</code> format is that data can be written in both efficient binary or plaintext ascii formats&mdash;the default is binary.  The <code>RichSurfaceMeshData</code> class is used to read and write these souped-up <code>.ply</code> files, and is distinct from the simple mesh-loading <code>.ply</code> interface above. </p>
 <p><code>#include "geometrycentral/surface/rich_surface_mesh_data.h"</code></p>
 <p>Example: loading and saving data on a surface</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/rich_surface_mesh_data.h&quot;</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="o">::</span><span class="n">surface</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/rich_surface_mesh_data.h&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">geometrycentral</span><span class="o">::</span><span class="nn">surface</span><span class="p">;</span>
 
 <span class="c1">// Open a file and load the mesh therein</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;</span> <span class="n">richData</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">richData</span><span class="p">)</span> <span class="o">=</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readMeshAndData</span><span class="p">(</span><span class="s">&quot;archive.ply&quot;</span><span class="p">);</span> 
-<span class="n">geometry</span> <span class="o">=</span> <span class="n">richData</span><span class="o">-&gt;</span><span class="n">getGeometry</span><span class="p">();</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">richData</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">richData</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readMeshAndData</span><span class="p">(</span><span class="s">&quot;archive.ply&quot;</span><span class="p">);</span><span class="w"> </span>
+<span class="n">geometry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">richData</span><span class="o">-&gt;</span><span class="n">getGeometry</span><span class="p">();</span>
 
 <span class="c1">// Read a stored value</span>
-<span class="n">FaceData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">faceValues</span> <span class="o">=</span> <span class="n">richData</span><span class="o">-&gt;</span><span class="n">getFaceProperty</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;name_a&quot;</span><span class="p">);</span>
+<span class="n">FaceData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">faceValues</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">richData</span><span class="o">-&gt;</span><span class="n">getFaceProperty</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;name_a&quot;</span><span class="p">);</span>
 
 <span class="c1">// Do some science</span>
-<span class="n">CornerData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">cornerValues</span> <span class="o">=</span> <span class="cm">/* something important */</span>
-<span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">edgeValues</span> <span class="o">=</span> <span class="cm">/* something else important */</span>
+<span class="n">CornerData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">cornerValues</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* something important */</span>
+<span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">edgeValues</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* something else important */</span>
 
 <span class="c1">// Add these values to the reader/writer</span>
 <span class="c1">// Note: alternately you could create a new record like</span>
 <span class="c1">// RichSurfaceMeshData newData(*mesh);</span>
-<span class="n">richData</span><span class="o">-&gt;</span><span class="n">addCornerProperty</span><span class="p">(</span><span class="s">&quot;name_b&quot;</span><span class="p">,</span> <span class="n">cornerValues</span><span class="p">);</span>
-<span class="n">richData</span><span class="o">-&gt;</span><span class="n">addEdgeProperty</span><span class="p">(</span><span class="s">&quot;name_c&quot;</span><span class="p">,</span> <span class="n">edgeValues</span><span class="p">);</span>
+<span class="n">richData</span><span class="o">-&gt;</span><span class="n">addCornerProperty</span><span class="p">(</span><span class="s">&quot;name_b&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cornerValues</span><span class="p">);</span>
+<span class="n">richData</span><span class="o">-&gt;</span><span class="n">addEdgeProperty</span><span class="p">(</span><span class="s">&quot;name_c&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">edgeValues</span><span class="p">);</span>
 
 <span class="c1">// Write the data to file</span>
 <span class="n">richData</span><span class="o">-&gt;</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;new_archive.ply&quot;</span><span class="p">)</span>
 </code></pre></div>
-
 <p>Example: saving and loading a surface along with some properties</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/rich_surface_mesh_data.h&quot;</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="o">::</span><span class="n">surface</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/rich_surface_mesh_data.h&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">geometrycentral</span><span class="o">::</span><span class="nn">surface</span><span class="p">;</span>
 
 <span class="c1">// Your existing mesh and data</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span> <span class="c1">// your mesh</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span> <span class="c1">// your geometry</span>
-<span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">data</span><span class="p">;</span> <span class="c1">// your data</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"> </span><span class="c1">// your mesh</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="p">;</span><span class="w"> </span><span class="c1">// your geometry</span>
+<span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"> </span><span class="c1">// your data</span>
 
 <span class="c1">// Store data</span>
-<span class="n">RichSurfaceMeshData</span> <span class="nf">richData</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">);</span>
+<span class="n">RichSurfaceMeshData</span><span class="w"> </span><span class="nf">richData</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">);</span>
 <span class="n">richData</span><span class="p">.</span><span class="n">addMeshConnectivity</span><span class="p">();</span>
 <span class="n">richData</span><span class="p">.</span><span class="n">addGeometry</span><span class="p">(</span><span class="o">*</span><span class="n">geometry</span><span class="p">);</span>
-<span class="n">richData</span><span class="p">.</span><span class="n">addEdgeProperty</span><span class="p">(</span><span class="s">&quot;my prop&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
+<span class="n">richData</span><span class="p">.</span><span class="n">addEdgeProperty</span><span class="p">(</span><span class="s">&quot;my prop&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
 
 <span class="c1">// Write to file</span>
 <span class="n">richData</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;file.ply&quot;</span><span class="p">);</span>
 </code></pre></div>
-
 <p>later, when loading&hellip;</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// Load the mesh and the data from file</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span> 
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;</span> <span class="n">richData</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">richData</span><span class="p">)</span> <span class="o">=</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readMeshAndData</span><span class="p">(</span><span class="s">&quot;file.ply&quot;</span><span class="p">);</span>  
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span><span class="w"> </span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;</span><span class="w"> </span><span class="n">richData</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">richData</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readMeshAndData</span><span class="p">(</span><span class="s">&quot;file.ply&quot;</span><span class="p">);</span><span class="w">  </span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span> <span class="o">=</span> <span class="n">richData</span><span class="o">-&gt;</span><span class="n">getGeometry</span><span class="p">();</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">richData</span><span class="o">-&gt;</span><span class="n">getGeometry</span><span class="p">();</span>
 
-<span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">richData</span><span class="o">-&gt;</span><span class="n">getEdgeProperty</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;my prop&quot;</span><span class="p">);</span>
+<span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">richData</span><span class="o">-&gt;</span><span class="n">getEdgeProperty</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;my prop&quot;</span><span class="p">);</span>
 </code></pre></div>
-
 <h3 id="writing-rich-data">Writing rich data</h3>
 <p>These methods add properties to the <code>RichSurfaceMeshData</code> object, which will be written when <code>write()</code> is called. The set of scalar types supported is the same as the <a href="https://github.com/nmwsharp/happly">.ply</a> format, including list types.  For instance, a property of type <code>double</code> on vertices could written to a new <code>ply</code> file with.</p>
-<div class="highlight"><pre><span></span><code><span class="n">RichSurfaceMeshData</span> <span class="nf">richData</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">);</span>
-<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">values</span> <span class="o">=</span> <span class="cm">/* incredibly important data */</span>
-<span class="n">richData</span><span class="p">.</span><span class="n">addVertexProperty</span><span class="p">(</span><span class="s">&quot;important_values&quot;</span><span class="p">,</span> <span class="n">values</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">RichSurfaceMeshData</span><span class="w"> </span><span class="nf">richData</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">);</span>
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* incredibly important data */</span>
+<span class="n">richData</span><span class="p">.</span><span class="n">addVertexProperty</span><span class="p">(</span><span class="s">&quot;important_values&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">values</span><span class="p">);</span>
 <span class="n">richData</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;my_file.ply&quot;</span><span class="p">);</span>
 </code></pre></div>
-
 <p>The following routines can create the data object and write it to file:</p>
-<details class="func"><summary><code class="highlight"><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">RichSurfaceMeshData</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">)</span></code></summary><p>Construct a data object from an existing mesh.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">RichSurfaceMeshData</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">)</span></code></summary>
+<p>Construct a data object from an existing mesh.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">write</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">)</span></code></summary><p>Write the object to file. The binary/ascii writing mode is determined by the <code>RichSurfaceMeshData::outputFormat</code> option.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">write</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span></code></summary>
+<p>Write the object to file. The binary/ascii writing mode is determined by the <code>RichSurfaceMeshData::outputFormat</code> option.</p>
 <p>Note that if this reader/writer was created by loading a file, and is later written using <code>write()</code> all fields from the initial file will be automatically written out.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">write</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">)</span></code></summary><p>Write the object to stream. The binary/ascii writing mode is determined by the <code>RichSurfaceMeshData::outputFormat</code> option.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">write</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">out</span><span class="p">)</span></code></summary>
+<p>Write the object to stream. The binary/ascii writing mode is determined by the <code>RichSurfaceMeshData::outputFormat</code> option.</p>
 <p>Note that if this reader/writer was created by loading a file, and is later written using <code>write()</code> all fields from the initial file will be automatically written out.</p>
 </details>
 <p>To store the mesh connectivity itself in the file, call <code>addMeshConnectivity()</code>&mdash;this is required if you want to load the mesh from the file later. Similarly, the <code>addGeometry()</code> helpers will store geometry as vertex positions or edge lengths.</p>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addMeshConnectivity</span><span class="p">()</span></code></summary><p>Store the meshes connectivity in the file.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addMeshConnectivity</span><span class="p">()</span></code></summary>
+<p>Store the meshes connectivity in the file.</p>
 <p>This routine always stores both the internal <code>SurfaceMesh</code> representation (for use with geometry-central), and a traditional face-index list representation (for use with other software).</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addGeometry</span><span class="p">(</span><span class="k">const</span> <span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span> <span class="n">geometry</span><span class="p">)</span></code></summary><p>Add geometry to the record, which will written as <code>double</code> vertex coordinates properties named &ldquo;x&rdquo;, &ldquo;y&rdquo;, and &ldquo;z&rdquo;.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addGeometry</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="p">)</span></code></summary>
+<p>Add geometry to the record, which will written as <code>double</code> vertex coordinates properties named &ldquo;x&rdquo;, &ldquo;y&rdquo;, and &ldquo;z&rdquo;.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addIntrinsicGeometry</span><span class="p">(</span><span class="k">const</span> <span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span> <span class="n">geometry</span><span class="p">)</span></code></summary><p>Add geometry to the record, which will written as a <code>double</code> edge propery called <code>intrinsic_edge_lengths</code>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addIntrinsicGeometry</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="p">)</span></code></summary>
+<p>Add geometry to the record, which will written as a <code>double</code> edge propery called <code>intrinsic_edge_lengths</code>.</p>
 </details>
 <p>General properties can then be written as:</p>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addVertexProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">VertexData</span><span class="o">&lt;&gt;&amp;</span> <span class="n">data</span><span class="p">)</span></code></summary><p>Add a property for writing. </p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addVertexProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">VertexData</span><span class="o">&lt;&gt;&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span></code></summary>
+<p>Add a property for writing. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be written to file. Must be unique within the file.</li>
 <li><code>data</code> The data to be written, such a <code>VertexData&lt;double&gt;</code>.</li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addHalfedgeProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">HalfedgeData</span><span class="o">&lt;&gt;&amp;</span> <span class="n">data</span><span class="p">)</span></code></summary><p>Add a property for writing. </p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addHalfedgeProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">HalfedgeData</span><span class="o">&lt;&gt;&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span></code></summary>
+<p>Add a property for writing. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be written to file. Must be unique within the file.</li>
 <li><code>data</code> The data to be written, such a <code>HalfedgeData&lt;double&gt;</code>. </li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">PlyCornerMeshData</span><span class="o">::</span><span class="n">addCornerProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">CornerData</span><span class="o">&lt;&gt;&amp;</span> <span class="n">data</span><span class="p">)</span></code></summary><p>Add a property for writing. </p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">PlyCornerMeshData</span><span class="o">::</span><span class="n">addCornerProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">CornerData</span><span class="o">&lt;&gt;&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span></code></summary>
+<p>Add a property for writing. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be written to file. Must be unique within the file.</li>
 <li><code>data</code> The data to be written, such a <code>CornerData&lt;double&gt;</code>. </li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addEdgeProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">EdgeData</span><span class="o">&lt;&gt;&amp;</span> <span class="n">data</span><span class="p">)</span></code></summary><p>Add a property for writing. </p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addEdgeProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">EdgeData</span><span class="o">&lt;&gt;&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span></code></summary>
+<p>Add a property for writing. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be written to file. Must be unique within the file.</li>
 <li><code>data</code> The data to be written, such a <code>EdgeData&lt;double&gt;</code>.</li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addFaceProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">FaceData</span><span class="o">&lt;&gt;&amp;</span> <span class="n">data</span><span class="p">)</span></code></summary><p>Add a property for writing. </p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addFaceProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FaceData</span><span class="o">&lt;&gt;&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span></code></summary>
+<p>Add a property for writing. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be written to file. Must be unique within the file.</li>
 <li><code>data</code> The data to be written, such a <code>FaceData&lt;double&gt;</code>. </li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">void</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addBoundaryLoopProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">BoundaryLoopData</span><span class="o">&lt;&gt;&amp;</span> <span class="n">data</span><span class="p">)</span></code></summary><p>Add a property for writing. </p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">addBoundaryLoopProperty</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">BoundaryLoopData</span><span class="o">&lt;&gt;&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">)</span></code></summary>
+<p>Add a property for writing. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be written to file. Must be unique within the file.</li>
 <li><code>data</code> The data to be written, such a <code>BoundaryLoopData&lt;double&gt;</code>. </li>
@@ -1692,186 +1909,183 @@
 <h3 id="reading-rich-data">Reading rich data</h3>
 <p>When reading a <code>RichSurfaceMeshData</code> object, you have two options:</p>
 <p><strong>Option A</strong> Open the object <em>on</em> an existing mesh, like <code>RichSurfaceMeshData(*mesh, "file.ply")</code>. All resulting properties will be defined on this mesh. The existing mesh must be the &ldquo;same&rdquo; as the one the file was saved from, with the same number of elements in the same semantic ordering.</p>
-<details class="func"><summary><code class="highlight"><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">RichSurfaceMeshData</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">)</span></code></summary><p>Open a <code>ply</code> file, and interpret its fields as living on the existing halfedge mesh <code>mesh</code>. Any read properties will be returned in containers defined on <code>mesh</code>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">RichSurfaceMeshData</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span></code></summary>
+<p>Open a <code>ply</code> file, and interpret its fields as living on the existing halfedge mesh <code>mesh</code>. Any read properties will be returned in containers defined on <code>mesh</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">RichSurfaceMeshData</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span> <span class="n">mesh</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">in</span><span class="p">)</span></code></summary><p>Same as above, loading from a general <code>istream</code>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">RichSurfaceMeshData</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">in</span><span class="p">)</span></code></summary>
+<p>Same as above, loading from a general <code>istream</code>.</p>
 </details>
 <p><strong>Option B</strong> Simultaneously construct a new mesh from the file, and open the file <em>on</em> that mesh, via <code>readMeshAndData(...)</code>. The file must have been saved with mesh connectivity included by calling <code>addMeshConnectivity()</code>.</p>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readMeshAndData</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">)</span></code></summary><p>Convenience factory function to open a rich <code>.ply</code> file and load the mesh contained within, as well as creating a <code>RichSurfaceMeshData</code> reader/writer to access any other properties stored in the file.</p>
+<details class="func">
+<summary><code class="highlight"><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readMeshAndData</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span></code></summary>
+<p>Convenience factory function to open a rich <code>.ply</code> file and load the mesh contained within, as well as creating a <code>RichSurfaceMeshData</code> reader/writer to access any other properties stored in the file.</p>
 <p>The base class of the created <code>SurfaceMesh</code> will match the mesh from which is was created.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readMeshAndData</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">in</span><span class="p">)</span></code></summary><p>Same as above, loading from a stream.</p>
+<details class="func">
+<summary><code class="highlight"><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readMeshAndData</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">in</span><span class="p">)</span></code></summary>
+<p>Same as above, loading from a stream.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readManifoldMeshAndData</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">filename</span><span class="p">)</span></code></summary><p>Convenience factory function to open a rich <code>.ply</code> file and load the mesh contained within, as well as creating a <code>RichSurfaceMeshData</code> reader/writer to access any other properties stored in the file.</p>
+<details class="func">
+<summary><code class="highlight"><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readManifoldMeshAndData</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span></code></summary>
+<p>Convenience factory function to open a rich <code>.ply</code> file and load the mesh contained within, as well as creating a <code>RichSurfaceMeshData</code> reader/writer to access any other properties stored in the file.</p>
 <p>Returns a <em>manifold</em> mesh, erroring out out if the file was not saved from a <code>ManifoldSurfaceMesh</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readManifoldMeshAndData</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">in</span><span class="p">)</span></code></summary><p>Same as above, loading from a stream.</p>
+<details class="func">
+<summary><code class="highlight"><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">RichSurfaceMeshData</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">readManifoldMeshAndData</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">istream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">in</span><span class="p">)</span></code></summary>
+<p>Same as above, loading from a stream.</p>
 </details>
 <p>Once the <code>RichSurfaceMeshData</code> has been opened, properties can then be read from the file like <code>getVertexProperty&lt;double&gt;(name)</code>, etc.  The template argument to this function will likely be necessary to resolve the expected type of the data. For instance, a property of type <code>double</code> on vertices could be accessed with.</p>
-<div class="highlight"><pre><span></span><code><span class="n">RichSurfaceMeshData</span> <span class="nf">data</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="s">&quot;my_file.ply&quot;</span><span class="p">);</span>
-<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">values</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">getVertexProperty</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;important_values&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">RichSurfaceMeshData</span><span class="w"> </span><span class="n">data</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;my_file.ply&quot;</span><span class="p">);</span>
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">getVertexProperty</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;important_values&quot;</span><span class="p">);</span>
 </code></pre></div>
-
 <p>The automatic type promotion in <a href="https://github.com/nmwsharp/happly">hapPLY</a> gives some flexibility in specifying the type of the read data&mdash; for instance if property <code>"propName"</code> in the example above was stored as a <code>float</code>, it could still be read as a <code>double</code>. See the documentation there for details.</p>
 <p>Properties can then be read as:</p>
-<details class="func"><summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getVertexProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></summary><p>Read a property from a loaded file. </p>
+<details class="func">
+<summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getVertexProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span></code></summary>
+<p>Read a property from a loaded file. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be read from the file. Throws if no such property exists.</li>
 <li><strong>Return:</strong> The requested container.</li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">HalfedgeData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getHalfedgeProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></summary><p>Read a property from a loaded file. </p>
+<details class="func">
+<summary><code class="highlight"><span class="n">HalfedgeData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getHalfedgeProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span></code></summary>
+<p>Read a property from a loaded file. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be read from the file. Throws if no such property exists.</li>
 <li><strong>Return:</strong> The requested container.</li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">PlyCornerMeshData</span><span class="o">::</span><span class="n">getCornerProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></summary><p>Read a property from a loaded file. </p>
+<details class="func">
+<summary><code class="highlight"><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">PlyCornerMeshData</span><span class="o">::</span><span class="n">getCornerProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span></code></summary>
+<p>Read a property from a loaded file. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be read from the file. Throws if no such property exists.</li>
 <li><strong>Return:</strong> The requested container.</li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">EdgeData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getEdgeProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></summary><p>Read a property from a loaded file. </p>
+<details class="func">
+<summary><code class="highlight"><span class="n">EdgeData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getEdgeProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span></code></summary>
+<p>Read a property from a loaded file. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be read from the file. Throws if no such property exists.</li>
 <li><strong>Return:</strong> The requested container.</li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">FaceData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getFaceProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></summary><p>Read a property from a loaded file. </p>
+<details class="func">
+<summary><code class="highlight"><span class="n">FaceData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getFaceProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span></code></summary>
+<p>Read a property from a loaded file. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be read from the file. Throws if no such property exists.</li>
 <li><strong>Return:</strong> The requested container.</li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">BoundaryLoopData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getBoundaryLoopProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></summary><p>Read a property from a loaded file. </p>
+<details class="func">
+<summary><code class="highlight"><span class="n">BoundaryLoopData</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getBoundaryLoopProperty</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span></code></summary>
+<p>Read a property from a loaded file. </p>
 <ul>
 <li><code>name</code> A user-defined name with which the property will be read from the file. Throws if no such property exists.</li>
 <li><strong>Return:</strong> The requested container.</li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getGeometry</span><span class="p">()</span></code></summary><p>Build a new geometry object from vertex postions stored in a file (by <code>addGeometry()</code>).</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getGeometry</span><span class="p">()</span></code></summary>
+<p>Build a new geometry object from vertex postions stored in a file (by <code>addGeometry()</code>).</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">EdgeLengthGeometry</span><span class="o">&gt;</span> <span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getIntrinsicGeometry</span><span class="p">()</span></code></summary><p>Build a new geometry object from edge lengths stored in a file (by <code>addIntrinsicGeometry()</code>).</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">EdgeLengthGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">RichSurfaceMeshData</span><span class="o">::</span><span class="n">getIntrinsicGeometry</span><span class="p">()</span></code></summary>
+<p>Build a new geometry object from edge lengths stored in a file (by <code>addIntrinsicGeometry()</code>).</p>
 </details>
 <h2 id="factory-constructors">Factory constructors</h2>
 <p>These simultaneously construct the connectivity and geometry of a mesh, and are used internally in many of the subroutines above.</p>
 <p><code>#include "geometrycentral/surface/surface_mesh_factories.h"</code></p>
 <p>Construct a mesh and geometry from a list of polygons and vertex positions:</p>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">makeSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">vertexPositions</span><span class="p">)</span></code></summary><p>Construct a new surface mesh and geometry from a list of face indices and a list of vertex positions. See the constructors of <code>SurfaceMesh</code> and <code>VertexPositionGeometry</code> for more details about their semantics.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">makeSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">polygons</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vertexPositions</span><span class="p">)</span></code></summary>
+<p>Construct a new surface mesh and geometry from a list of face indices and a list of vertex positions. See the constructors of <code>SurfaceMesh</code> and <code>VertexPositionGeometry</code> for more details about their semantics.</p>
 <ul>
 <li><code>polygons</code> is a nested list of zero-indexed face indices </li>
 <li><code>vertexPositions</code> is a list of 3D vertex positions</li>
 </ul>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">makeManifoldSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span> <span class="n">polygons</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span> <span class="n">vertexPositions</span><span class="p">)</span></code></summary><p>Same as above, but the result is a <code>ManifoldSurfaceMesh</code> (and thus the connectivity must describe a manifold mesh).</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">makeManifoldSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">polygons</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vertexPositions</span><span class="p">)</span></code></summary>
+<p>Same as above, but the result is a <code>ManifoldSurfaceMesh</code> (and thus the connectivity must describe a manifold mesh).</p>
 </details>
 <p>Construct a mesh and geometry from face indices and vertex positions, stored in dense (Eigen) matrices:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/surface/surface_mesh_factories.h&quot;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/surface_mesh_factories.h&quot;</span>
 
 <span class="c1">// matrices describing mesh (populated somehow)</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span> <span class="n">vMat</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>  <span class="c1">// V x 3 array of vertex positions</span>
-<span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXi</span> <span class="n">fMat</span> <span class="o">=</span> <span class="cm">/* ... */</span><span class="p">;</span>  <span class="c1">// F x 3 array of zero-indexed face indices </span>
-                                   <span class="c1">// (or F x 4 for quads, etc)</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXd</span><span class="w"> </span><span class="n">vMat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="p">;</span><span class="w">  </span><span class="c1">// V x 3 array of vertex positions</span>
+<span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixXi</span><span class="w"> </span><span class="n">fMat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... */</span><span class="p">;</span><span class="w">  </span><span class="c1">// F x 3 array of zero-indexed face indices </span>
+<span class="w">                                   </span><span class="c1">// (or F x 4 for quads, etc)</span>
 
 <span class="c1">// construct geometry-central mesh types</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span> <span class="n">mesh</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometry</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">geometry</span><span class="p">)</span> <span class="o">=</span> <span class="n">makeSurfaceMeshAndGeometry</span><span class="p">(</span><span class="n">vMat</span><span class="p">,</span> <span class="n">fMat</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">geometry</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">makeSurfaceMeshAndGeometry</span><span class="p">(</span><span class="n">vMat</span><span class="p">,</span><span class="w"> </span><span class="n">fMat</span><span class="p">);</span>
 
 <span class="c1">// OR to construct a mesh which must be manifold</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span> <span class="n">meshManifold</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span> <span class="n">geometryManifold</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">meshManifold</span><span class="p">,</span> <span class="n">geometryManifold</span><span class="p">)</span> <span class="o">=</span> <span class="n">makeManifoldSurfaceMeshAndGeometry</span><span class="p">(</span><span class="n">vMat</span><span class="p">,</span> <span class="n">fMat</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">meshManifold</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometryManifold</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">meshManifold</span><span class="p">,</span><span class="w"> </span><span class="n">geometryManifold</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">makeManifoldSurfaceMeshAndGeometry</span><span class="p">(</span><span class="n">vMat</span><span class="p">,</span><span class="w"> </span><span class="n">fMat</span><span class="p">);</span>
 </code></pre></div>
-
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">makeSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_V</span><span class="o">&gt;&amp;</span> <span class="n">vMat</span><span class="p">,</span> <span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_F</span><span class="o">&gt;&amp;</span> <span class="n">fMat</span><span class="p">)</span></code></summary><p>Construct a new surface mesh and geometry from a list of face indices and a list of vertex positions. See the constructors of <code>SurfaceMesh</code> and <code>VertexPositionGeometry</code> for more details about their semantics. Note that these arguments are ordered <code>V,F</code> to match MATLAB &amp; friends conventions.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">makeSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_V</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">vMat</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_F</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">fMat</span><span class="p">)</span></code></summary>
+<p>Construct a new surface mesh and geometry from a list of face indices and a list of vertex positions. See the constructors of <code>SurfaceMesh</code> and <code>VertexPositionGeometry</code> for more details about their semantics. Note that these arguments are ordered <code>V,F</code> to match MATLAB &amp; friends conventions.</p>
 <ul>
 <li><code>vMat</code> is a <code>Vx3</code> floating-point valued matrix of vertex positions. Any floating point type can be used.</li>
 <li><code>fMat</code> is an <code>FxD</code> index valued matrix of zero-indexed face indices (e.g. an Fx3 array of triangles, of Fx4 array of quads). The index type can be any integer type (like <code>size_t</code> or <code>int</code>).</li>
 </ul>
 <p>The <code>Eigen:MatrixBase&lt;T&gt;</code> type is just a general type which accepts most Eigen matrix types as input, including geometry-central&rsquo;s nicely-named wrapper <code>DenseMatrix&lt;T&gt;</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span> <span class="n">makeManifoldSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_V</span><span class="o">&gt;&amp;</span> <span class="n">vMat</span><span class="p">,</span> <span class="k">const</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_F</span><span class="o">&gt;&amp;</span> <span class="n">fMat</span><span class="p">)</span></code></summary><p>Same as above, but the result is a <code>ManifoldSurfaceMesh</code> (and thus the connectivity must describe a manifold mesh).</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">makeManifoldSurfaceMeshAndGeometry</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_V</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">vMat</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">Scalar_F</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">fMat</span><span class="p">)</span></code></summary>
+<p>Same as above, but the result is a <code>ManifoldSurfaceMesh</code> (and thus the connectivity must describe a manifold mesh).</p>
 </details>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../simple_polygon_mesh/" title="Simple Polygon Mesh" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Simple Polygon Mesh
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../surface_point/" title="Surface Point" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Surface Point
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.5532dfb7.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../../..",
-          features: [],
-          search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.7a2ea5ba.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

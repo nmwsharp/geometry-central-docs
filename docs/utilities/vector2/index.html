@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -10,8 +8,14 @@
       
       
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.1">
+      
+        <link rel="prev" href="../miscellaneous/">
+      
+      
+        <link rel="next" href="../vector3/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
@@ -19,34 +23,32 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ffa9267a.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
+      
+
+    
+    
+    
       
         
         
-        <meta name="theme-color" content="#ff7043">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i%7CInconsolata:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather";--md-code-font:"Inconsolata"}</style>
       
-    
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700%7CInconsolata&display=fallback">
-        <style>body,input{font-family:"Merriweather",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Inconsolata",SFMono-Regular,Consolas,Menlo,monospace}</style>
-      
-    
     
     
       <link rel="stylesheet" href="../../extras.css">
     
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-58346315-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-      
+
+    
     
     
   </head>
@@ -55,8 +57,11 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-orange" data-md-color-accent="red">
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="red">
   
+    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -73,48 +78,58 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../.." title="Geometry Central" class="md-header-nav__button md-logo" aria-label="Geometry Central">
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Geometry Central" class="md-header__button md-logo" aria-label="Geometry Central" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Geometry Central
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Vector2
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -122,7 +137,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -130,12 +145,11 @@
 </div>
     
     
-      <div class="md-header-nav__source">
-        
-<a href="https://github.com/nmwsharp/geometry-central/" title="Go to repository" class="md-source">
+      <div class="md-header__source">
+        <a href="https://github.com/nmwsharp/geometry-central" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     nmwsharp/geometry-central
@@ -144,39 +158,43 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
+      
         
-      
-      
+          
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Geometry Central" class="md-nav__button md-logo" aria-label="Geometry Central">
+    <a href="../.." title="Geometry Central" class="md-nav__button md-logo" aria-label="Geometry Central" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
 
     </a>
     Geometry Central
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/nmwsharp/geometry-central/" title="Go to repository" class="md-source">
+      <a href="https://github.com/nmwsharp/geometry-central" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     nmwsharp/geometry-central
@@ -190,924 +208,995 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
-      Build
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Build" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Build
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../build/versions/" title="Versions" class="md-nav__link">
-      Versions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../build/building/" title="Building" class="md-nav__link">
-      Building
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../build/dependencies/" title="Dependencies" class="md-nav__link">
-      Dependencies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../build/tests/" title="Tests" class="md-nav__link">
-      Tests
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Tutorials
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Tutorials
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Build
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Build
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/versions/" class="md-nav__link">
+        Versions
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/building/" class="md-nav__link">
+        Building
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/dependencies/" class="md-nav__link">
+        Dependencies
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../tutorials/load_mesh/" title="Load & navigate a mesh" class="md-nav__link">
-      Load & navigate a mesh
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/tests/" class="md-nav__link">
+        Tests
+      </a>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../tutorials/basic_mutation/" title="Basic Mutation" class="md-nav__link">
-      Basic Mutation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../tutorials/direction_fields/" title="Direction fields" class="md-nav__link">
-      Direction fields
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/load_mesh/" class="md-nav__link">
+        Load & navigate a mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basic_mutation/" class="md-nav__link">
+        Basic Mutation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/direction_fields/" class="md-nav__link">
+        Direction fields
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-    <label class="md-nav__link" for="nav-4">
-      Surface
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Surface" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Surface
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
+      
+      
+      
 
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Surface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Surface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-4-1">
-      Surface Mesh
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Surface Mesh" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-1">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Surface Mesh
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Surface Mesh
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Surface Mesh
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/surface_mesh/basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/surface_mesh/elements/" class="md-nav__link">
+        Elements
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/surface_mesh/boundaries/" class="md-nav__link">
+        Boundaries
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../surface/surface_mesh/basics/" title="Basics" class="md-nav__link">
-      Basics
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/surface_mesh/indexing/" class="md-nav__link">
+        Indexing
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/surface_mesh/navigation/" class="md-nav__link">
+        Navigation and Iteration
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/surface_mesh/containers/" class="md-nav__link">
+        Containers
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../surface/surface_mesh/elements/" title="Elements" class="md-nav__link">
-      Elements
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/surface_mesh/mutation/" class="md-nav__link">
+        Mutation
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/surface_mesh/delta_complex/" class="md-nav__link">
+        Delta Complexes
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/surface_mesh/internals/" class="md-nav__link">
+        Internals
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../surface/surface_mesh/boundaries/" title="Boundaries" class="md-nav__link">
-      Boundaries
-    </a>
-  </li>
-
-        
+            
           
+        </ul>
+      </nav>
+    </li>
+  
+
+            
           
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/surface_mesh/indexing/" title="Indexing" class="md-nav__link">
-      Indexing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/surface_mesh/navigation/" title="Navigation and Iteration" class="md-nav__link">
-      Navigation and Iteration
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/surface_mesh/containers/" title="Containers" class="md-nav__link">
-      Containers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/surface_mesh/mutation/" title="Mutation" class="md-nav__link">
-      Mutation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/surface_mesh/delta_complex/" title="Delta Complexes" class="md-nav__link">
-      Delta Complexes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/surface_mesh/internals/" title="Internals" class="md-nav__link">
-      Internals
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
+            
+              
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Geometry
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Geometry
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/geometry/geometry/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/geometry/quantities/" class="md-nav__link">
+        Quantities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-4-2">
-      Geometry
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Geometry" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          Utilities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/utilities/simple_polygon_mesh/" class="md-nav__link">
+        Simple Polygon Mesh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/utilities/io/" class="md-nav__link">
+        I/O
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/utilities/surface_point/" class="md-nav__link">
+        Surface Point
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/utilities/barycentric_vector/" class="md-nav__link">
+        Barycentric Vector
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/algorithms/direction_fields/" class="md-nav__link">
+        Direction Fields
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/algorithms/flip_geodesics/" class="md-nav__link">
+        Flip Geodesics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/algorithms/geodesic_distance/" class="md-nav__link">
+        Geodesic Distance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/algorithms/geodesic_voronoi_tessellations/" class="md-nav__link">
+        Geodesic Centroidal Voronoi Tessellations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/algorithms/parameterization/" class="md-nav__link">
+        Parameterization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/algorithms/remeshing/" class="md-nav__link">
+        Remeshing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/algorithms/robust_geometry/" class="md-nav__link">
+        Robust Geometry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/algorithms/surface_centers/" class="md-nav__link">
+        Surface Centers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/algorithms/surface_sampling/" class="md-nav__link">
+        Surface Sampling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/algorithms/geodesic_paths/" class="md-nav__link">
+        Tracing Geodesic Paths
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/algorithms/vector_heat_method/" class="md-nav__link">
+        Vector Heat Method
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          Intrinsic Triangulations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Intrinsic Triangulations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/intrinsic_triangulations/basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/intrinsic_triangulations/common_subdivision/" class="md-nav__link">
+        Common Subdivision
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/intrinsic_triangulations/signposts/" class="md-nav__link">
+        Signposts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/intrinsic_triangulations/integer_coordinates/" class="md-nav__link">
+        Integer Coordinates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../surface/intrinsic_triangulations/function_transfer/" class="md-nav__link">
+        Function Transfer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Point Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Point Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pointcloud/basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pointcloud/geometry/" class="md-nav__link">
         Geometry
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../surface/geometry/geometry/" title="Overview" class="md-nav__link">
-      Overview
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/geometry/quantities/" title="Quantities" class="md-nav__link">
-      Quantities
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
+            
+              
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
-    
-    <label class="md-nav__link" for="nav-4-3">
-      Utilities
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Utilities" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Utilities
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/utilities/simple_polygon_mesh/" title="Simple Polygon Mesh" class="md-nav__link">
-      Simple Polygon Mesh
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/utilities/io/" title="I/O" class="md-nav__link">
-      I/O
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/utilities/surface_point/" title="Surface Point" class="md-nav__link">
-      Surface Point
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/utilities/barycentric_vector/" title="Barycentric Vector" class="md-nav__link">
-      Barycentric Vector
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
-    
-    <label class="md-nav__link" for="nav-4-4">
-      Algorithms
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Algorithms
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/direction_fields/" title="Direction Fields" class="md-nav__link">
-      Direction Fields
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/flip_geodesics/" title="Flip Geodesics" class="md-nav__link">
-      Flip Geodesics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/geodesic_distance/" title="Geodesic Distance" class="md-nav__link">
-      Geodesic Distance
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/geodesic_voronoi_tessellations/" title="Geodesic Centroidal Voronoi Tessellations" class="md-nav__link">
-      Geodesic Centroidal Voronoi Tessellations
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/parameterization/" title="Parameterization" class="md-nav__link">
-      Parameterization
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/remeshing/" title="Remeshing" class="md-nav__link">
-      Remeshing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/robust_geometry/" title="Robust Geometry" class="md-nav__link">
-      Robust Geometry
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/surface_centers/" title="Surface Centers" class="md-nav__link">
-      Surface Centers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/surface_sampling/" title="Surface Sampling" class="md-nav__link">
-      Surface Sampling
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/geodesic_paths/" title="Tracing Geodesic Paths" class="md-nav__link">
-      Tracing Geodesic Paths
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/algorithms/vector_heat_method/" title="Vector Heat Method" class="md-nav__link">
-      Vector Heat Method
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
-    
-    <label class="md-nav__link" for="nav-4-5">
-      Intrinsic Triangulations
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Intrinsic Triangulations" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Intrinsic Triangulations
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/intrinsic_triangulations/basics/" title="Basics" class="md-nav__link">
-      Basics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/intrinsic_triangulations/common_subdivision/" title="Common Subdivision" class="md-nav__link">
-      Common Subdivision
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/intrinsic_triangulations/signposts/" title="Signposts" class="md-nav__link">
-      Signposts
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/intrinsic_triangulations/integer_coordinates/" title="Integer Coordinates" class="md-nav__link">
-      Integer Coordinates
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../surface/intrinsic_triangulations/function_transfer/" title="Function Transfer" class="md-nav__link">
-      Function Transfer
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Point Cloud
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Point Cloud" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Point Cloud
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../pointcloud/basics/" title="Basics" class="md-nav__link">
-      Basics
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../pointcloud/geometry/" title="Geometry" class="md-nav__link">
-      Geometry
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
-    
-    <label class="md-nav__link" for="nav-5-3">
-      Algorithms
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Algorithms" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Algorithms
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../pointcloud/algorithms/heat_solver/" title="Heat distance & transport" class="md-nav__link">
-      Heat distance & transport
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
-    
-    <label class="md-nav__link" for="nav-5-4">
-      Utilities
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Utilities" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Utilities
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../pointcloud/utilities/io/" title="IO" class="md-nav__link">
-      IO
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../pointcloud/utilities/sampling/" title="Sampling" class="md-nav__link">
-      Sampling
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
       
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pointcloud/algorithms/heat_solver/" class="md-nav__link">
+        Heat distance & transport
+      </a>
+    </li>
+  
 
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+            
+          
+            
+              
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      Numerical
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Numerical" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Numerical
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Utilities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pointcloud/utilities/io/" class="md-nav__link">
+        IO
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pointcloud/utilities/sampling/" class="md-nav__link">
+        Sampling
+      </a>
+    </li>
+  
+
+            
           
+        </ul>
+      </nav>
+    </li>
+  
 
-
-  <li class="md-nav__item">
-    <a href="../../numerical/matrix_types/" title="Matrix Types" class="md-nav__link">
-      Matrix Types
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../numerical/linear_algebra_utilities/" title="Linear Algebra Utilities" class="md-nav__link">
-      Linear Algebra Utilities
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../numerical/linear_solvers/" title="Linear Solvers" class="md-nav__link">
-      Linear Solvers
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
@@ -1115,75 +1204,157 @@
       
 
   
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
-    
-    <label class="md-nav__link" for="nav-7">
-      Utilities
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Utilities" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Utilities
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Numerical
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Numerical
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../miscellaneous/" title="Miscellaneous" class="md-nav__link">
-      Miscellaneous
-    </a>
-  </li>
-
-        
-          
-          
-          
-
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../numerical/matrix_types/" class="md-nav__link">
+        Matrix Types
+      </a>
+    </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../numerical/linear_algebra_utilities/" class="md-nav__link">
+        Linear Algebra Utilities
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--active">
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../numerical/linear_solvers/" class="md-nav__link">
+        Linear Solvers
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+
+  
+  
     
+  
+  
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Utilities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miscellaneous/" class="md-nav__link">
+        Miscellaneous
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Vector2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Vector2
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Vector2" class="md-nav__link md-nav__link--active">
-      Vector2
-    </a>
-    
+      </a>
       
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
+  
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#construction" class="md-nav__link">
@@ -1250,37 +1421,44 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vector3/" class="md-nav__link">
+        Vector3
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eigenmap/" class="md-nav__link">
+        Utilities for Eigen Interoperability
+      </a>
+    </li>
+  
+
+            
           
-
-
-  <li class="md-nav__item">
-    <a href="../vector3/" title="Vector3" class="md-nav__link">
-      Vector3
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../eigenmap/" title="Utilities for Eigen Interoperability" class="md-nav__link">
-      Utilities for Eigen Interoperability
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -1290,21 +1468,22 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
+  
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#construction" class="md-nav__link">
@@ -1376,209 +1555,232 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                  <a href="https://github.com/nmwsharp/geometry-central/edit/master/docs/utilities/vector2.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
                   
-                
-                
-                  <h1>Vector2</h1>
-                
-                <p><code>geometrycentral::Vector2</code> is the basic 2D vector type in geometry central. Like a good turkey sandwich, it aims to be unsurprising yet satisfying.</p>
+
+  
+  
+
+
+  <h1>Vector2</h1>
+
+<p><code>geometrycentral::Vector2</code> is the basic 2D vector type in geometry central. Like a good turkey sandwich, it aims to be unsurprising yet satisfying.</p>
 <p>Of particular interest, <code>Vector2</code> is also used to encode 2D rotations, by supporting multiplication as a complex number. See the <a href="#rotations-and-complex-multiplication">rotations section</a>.</p>
-<p><code class="highlight"><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/utilities/vector2.h&quot;</span><span class="cp"></span></code></p>
+<p><code class="highlight"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/utilities/vector2.h&quot;</span></code></p>
 <h3 id="construction">Construction</h3>
 <p><code>Vector2</code> is a POD type, so you should use brace-initialization sytax:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;geometrycentral/utilities/vector2.h</span><span class="cp"></span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">geometrycentral</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include &quot;geometrycentral/utilities/vector2.h</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">geometrycentral</span><span class="p">;</span>
 
-<span class="n">Vector2</span> <span class="n">myVec</span><span class="p">{</span><span class="mf">3.8</span><span class="p">,</span> <span class="mf">2.9</span><span class="p">};</span> <span class="c1">//create</span>
-<span class="n">myVec</span> <span class="o">=</span> <span class="n">Vector2</span><span class="p">{</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">};</span> <span class="c1">// reassign</span>
+<span class="n">Vector2</span><span class="w"> </span><span class="n">myVec</span><span class="p">{</span><span class="mf">3.8</span><span class="p">,</span><span class="w"> </span><span class="mf">2.9</span><span class="p">};</span><span class="w"> </span><span class="c1">//create</span>
+<span class="n">myVec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector2</span><span class="p">{</span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2</span><span class="p">};</span><span class="w"> </span><span class="c1">// reassign</span>
 </code></pre></div>
-
 <p>Factory methods can construct a few common values:</p>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">zero</span><span class="p">()</span></code></summary><p>Returns the zero vector</p>
+<details class="func">
+<summary><code class="highlight"><span class="k">static</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">zero</span><span class="p">()</span></code></summary>
+<p>Returns the zero vector</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">constant</span><span class="p">(</span><span class="kt">double</span> <span class="n">c</span><span class="p">)</span></code></summary><p>Returns a vector with all components set to <span><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span></p>
+<details class="func">
+<summary><code class="highlight"><span class="k">static</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">constant</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="p">)</span></code></summary>
+<p>Returns a vector with all components set to <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span></p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">infinity</span><span class="p">()</span></code></summary><p>Returns the infinite vector <span><span class="MathJax_Preview">(\infty, \infty)</span><script type="math/tex">(\infty, \infty)</script></span>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="k">static</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">infinity</span><span class="p">()</span></code></summary>
+<p>Returns the infinite vector <span class="arithmatex"><span class="MathJax_Preview">(\infty, \infty)</span><script type="math/tex">(\infty, \infty)</script></span>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">undefined</span><span class="p">()</span></code></summary><p>Returns the undefined vector <code>(NaN, NaN)</code>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="k">static</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">undefined</span><span class="p">()</span></code></summary>
+<p>Returns the undefined vector <code>(NaN, NaN)</code>.</p>
 </details>
 <p>And serve as constructors:</p>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">fromAngle</span><span class="p">(</span><span class="kt">double</span> <span class="n">theta</span><span class="p">)</span></code></summary><p>Returns the vector <span><span class="MathJax_Preview">(\cos(\theta), \sin(\theta))</span><script type="math/tex">(\cos(\theta), \sin(\theta))</script></span>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="k">static</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">fromAngle</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">theta</span><span class="p">)</span></code></summary>
+<p>Returns the vector <span class="arithmatex"><span class="MathJax_Preview">(\cos(\theta), \sin(\theta))</span><script type="math/tex">(\cos(\theta), \sin(\theta))</script></span>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="k">static</span> <span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">fromComplex</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">c</span><span class="p">)</span></code></summary><p>Converts a <code>std::complex&lt;double&gt;</code> to a <code>Vector2</code>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="k">static</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">fromComplex</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span></code></summary>
+<p>Converts a <code>std::complex&lt;double&gt;</code> to a <code>Vector2</code>.</p>
 </details>
 <h3 id="access">Access</h3>
 <p>The two elements of the vector can be accessed as <code>vec.x</code> and <code>vec.y</code>.</p>
 <p>Alternately, the two elements can be indexed as <code>vec[0]</code> and <code>vec[1]</code>.</p>
 <h3 id="conversion">Conversion</h3>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span><span class="o">::</span><span class="k">operator</span> <span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">()</span></code></summary><p><code>Vector2</code> is implicitly convertible to <code>std::complex&lt;double&gt;</code>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="o">::</span><span class="k">operator</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">()</span></code></summary>
+<p><code>Vector2</code> is implicitly convertible to <code>std::complex&lt;double&gt;</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span><span class="o">::</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">()</span></code></summary><p><code>Vector2</code> can be serialized.</p>
-<div class="highlight"><pre><span></span><code><span class="n">Vector2</span> <span class="n">v</span><span class="p">{</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">};</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">v</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="o">::</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">()</span></code></summary>
+<p><code>Vector2</code> can be serialized.</p>
+<div class="highlight"><pre><span></span><code><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">{</span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.4</span><span class="p">};</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="c1">// prints something like: &lt;1.2, 3.4&gt;</span>
 </code></pre></div>
-
 </details>
 <h3 id="arithmetic">Arithmetic</h3>
 <p>Vector2 supports the element-wise addition, subraction, and scalar multiplication you would probably expect.</p>
 <h4 id="rotations-and-complex-multiplication">Rotations and complex multiplication</h4>
 <p>Our <code>Vector2</code> types further obey the multiplication and division rules of complex arithmetic, and thus can be used to represent rotations. For instance, a unit 2D vector representing a rotation can be used to rotate another vector like:
-<div class="highlight"><pre><span></span><code><span class="n">Vector2</span> <span class="n">v</span> <span class="o">=</span> <span class="cm">/* your vector */</span>
-<span class="n">Vector2</span> <span class="n">r</span> <span class="o">=</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">fromAngle</span><span class="p">(</span><span class="n">PI</span><span class="o">/</span><span class="mi">4</span><span class="p">);</span> <span class="c1">// rotation by 45 degrees</span>
-<span class="n">Vector2</span> <span class="n">vRot</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">v</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* your vector */</span>
+<span class="n">Vector2</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">fromAngle</span><span class="p">(</span><span class="n">PI</span><span class="o">/</span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// rotation by 45 degrees</span>
+<span class="n">Vector2</span><span class="w"> </span><span class="n">vRot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
 </code></pre></div>
 This is fundamentally no different from using 2x2 rotation matrices, but leads to much cleaner code (try using division to compute relative rotations!).</p>
 <h3 id="member-operations">Member operations</h3>
 <p>These methods <em>do not</em> change the underlying <code>Vector2</code>, but return a new <code>Vector2</code>.
-<div class="highlight"><pre><span></span><code><span class="n">Vector2</span> <span class="n">vec</span><span class="p">{</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">};</span>
-<span class="n">vec</span><span class="p">.</span><span class="n">rotate90</span><span class="p">();</span>         <span class="c1">// does nothing</span>
-<span class="n">vec</span> <span class="o">=</span> <span class="n">vec</span><span class="p">.</span><span class="n">rotate90</span><span class="p">();</span>   <span class="c1">// much better</span>
+<div class="highlight"><pre><span></span><code><span class="n">Vector2</span><span class="w"> </span><span class="n">vec</span><span class="p">{</span><span class="mf">1.</span><span class="p">,</span><span class="w"> </span><span class="mf">2.</span><span class="p">};</span>
+<span class="n">vec</span><span class="p">.</span><span class="n">rotate90</span><span class="p">();</span><span class="w">         </span><span class="c1">// does nothing</span>
+<span class="n">vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">rotate90</span><span class="p">();</span><span class="w">   </span><span class="c1">// much better</span>
 </code></pre></div></p>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">normalize</span><span class="p">()</span></code></summary><p>Returns a unit-norm vector with the same direction. If the input is the zero vector, the result will contain NaNs.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">normalize</span><span class="p">()</span></code></summary>
+<p>Returns a unit-norm vector with the same direction. If the input is the zero vector, the result will contain NaNs.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">normalizeCutoff</span><span class="p">(</span><span class="kt">double</span> <span class="n">mag</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span></code></summary><p>Returns a unit-norm vector with the same direction. If the input has magnitude less <code>&lt;= mag</code>, the vector is unchanged.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">normalizeCutoff</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">mag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span></code></summary>
+<p>Returns a unit-norm vector with the same direction. If the input has magnitude less <code>&lt;= mag</code>, the vector is unchanged.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">unit</span><span class="p">()</span></code></summary><p>Alias for <code>normalize()</code>. </p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">unit</span><span class="p">()</span></code></summary>
+<p>Alias for <code>normalize()</code>. </p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">rotate</span><span class="p">(</span><span class="kt">double</span> <span class="n">theta</span><span class="p">)</span></code></summary><p>Rotate the vector by angle <span><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> in the counter-clockwise direction.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">rotate</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">theta</span><span class="p">)</span></code></summary>
+<p>Rotate the vector by angle <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> in the counter-clockwise direction.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">rotate90</span><span class="p">()</span></code></summary><p>Rotate the vector by <span><span class="MathJax_Preview">90^{\circ}</span><script type="math/tex">90^{\circ}</script></span> in the counter-clockwise direction.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">rotate90</span><span class="p">()</span></code></summary>
+<p>Rotate the vector by <span class="arithmatex"><span class="MathJax_Preview">90^{\circ}</span><script type="math/tex">90^{\circ}</script></span> in the counter-clockwise direction.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">pow</span><span class="p">(</span><span class="kt">double</span> <span class="n">p</span><span class="p">)</span></code></summary><p>Raise the vector to a real power, in the sense of complex arithmetic. (see <a href="https://en.cppreference.com/w/cpp/numeric/complex/pow">std::pow</a>)</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">pow</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">)</span></code></summary>
+<p>Raise the vector to a real power, in the sense of complex arithmetic. (see <a href="https://en.cppreference.com/w/cpp/numeric/complex/pow">std::pow</a>)</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">pow</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">p</span><span class="p">)</span></code></summary><p>Raise the vector to a complex power, in the sense of complex arithmetic. (see <a href="https://en.cppreference.com/w/cpp/numeric/complex/pow">std::pow</a>)</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">pow</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">p</span><span class="p">)</span></code></summary>
+<p>Raise the vector to a complex power, in the sense of complex arithmetic. (see <a href="https://en.cppreference.com/w/cpp/numeric/complex/pow">std::pow</a>)</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">conj</span><span class="p">()</span></code></summary><p>Transform the vector to its complex conjugate, negating the <code>y</code> component.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">conj</span><span class="p">()</span></code></summary>
+<p>Transform the vector to its complex conjugate, negating the <code>y</code> component.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">Vector2</span><span class="o">::</span><span class="n">inv</span><span class="p">()</span></code></summary><p>Invert the vector, in the sense of complex arithmetic. Equivalent to <code>Vector2{1., 0.} / v</code>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">Vector2</span><span class="o">::</span><span class="n">inv</span><span class="p">()</span></code></summary>
+<p>Invert the vector, in the sense of complex arithmetic. Equivalent to <code>Vector2{1., 0.} / v</code>.</p>
 </details>
 <h3 id="function-operations">Function operations</h3>
 <p>These operations do not change the vector on which they are called.</p>
-<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">norm</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the magnitude of the vector.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">norm</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<p>Returns the magnitude of the vector.</p>
 <p>Also available as <code>v.norm()</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">norm2</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the squared magnitude of the vector.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">norm2</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<p>Returns the squared magnitude of the vector.</p>
 <p>Also available as <code>v.norm()</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">normalize</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns normalized copy of the vector.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">normalize</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<p>Returns normalized copy of the vector.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">normalizeCutoff</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">,</span> <span class="kt">double</span> <span class="n">mag</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">)</span></code></summary><p>Returns a normalized copy of the vector. If the input has magnitude less <code>&lt;= mag</code>, the vector is unchanged.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">normalizeCutoff</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">mag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">)</span></code></summary>
+<p>Returns a normalized copy of the vector. If the input has magnitude less <code>&lt;= mag</code>, the vector is unchanged.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">unit</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Alias for <code>normalize(v)</code>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">unit</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<p>Alias for <code>normalize(v)</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">arg</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the argument in the sense of complex arithmetic (i.e., the angle against the <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis).</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">arg</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<p>Returns the argument in the sense of complex arithmetic (i.e., the angle against the <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis).</p>
 <p>Also available as <code>v.arg()</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">dot</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">u</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the dot product between two vectors.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<p>Returns the dot product between two vectors.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">cross</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">u</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the &ldquo;cross&rdquo; product between two vectors, that is <code>u.x * v.y - u.y * v.x</code>. Intuitively, the <span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>-component of the 3D cross product of vectors in the plane.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">cross</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<p>Returns the &ldquo;cross&rdquo; product between two vectors, that is <code>u.x * v.y - u.y * v.x</code>. Intuitively, the <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>-component of the 3D cross product of vectors in the plane.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector3</span> <span class="n">cross3</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">u</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the 3D cross product of vectors in the plane.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector3</span><span class="w"> </span><span class="n">cross3</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<p>Returns the 3D cross product of vectors in the plane.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">double</span> <span class="n">angle</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">u</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns the angle between two not-necessarily-unit vectors. Output in the range <span><span class="MathJax_Preview">[0, \pi]</span><script type="math/tex">[0, \pi]</script></span>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">angle</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<p>Returns the angle between two not-necessarily-unit vectors. Output in the range <span class="arithmatex"><span class="MathJax_Preview">[0, \pi]</span><script type="math/tex">[0, \pi]</script></span>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">clamp</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">val</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">low</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">high</span><span class="p">)</span></code></summary><p>Returns returns a a vector where each component has been clamped to be between the corresponding compnents of <code>low</code> and <code>high</code>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">clamp</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">low</span><span class="p">,</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">high</span><span class="p">)</span></code></summary>
+<p>Returns returns a a vector where each component has been clamped to be between the corresponding compnents of <code>low</code> and <code>high</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">componentwiseMin</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">u</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns a new vector, each component of which is the minimum of that component in <code>u</code> and <code>v</code>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">componentwiseMin</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<p>Returns a new vector, each component of which is the minimum of that component in <code>u</code> and <code>v</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="n">Vector2</span> <span class="n">componentwiseMax</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">u</span><span class="p">,</span> <span class="n">Vector2</span> <span class="n">v</span><span class="p">)</span></code></summary><p>Returns a new vector, each component of which is the maximum of that component in <code>u</code> and <code>v</code>.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">componentwiseMax</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">Vector2</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<p>Returns a new vector, each component of which is the maximum of that component in <code>u</code> and <code>v</code>.</p>
 </details>
 <h3 id="properties">Properties</h3>
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">isfinite</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">u</span><span class="p">)</span></code></summary><p>Returns true if both of the components of the vector are finite.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">bool</span><span class="w"> </span><span class="n">isfinite</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">u</span><span class="p">)</span></code></summary>
+<p>Returns true if both of the components of the vector are finite.</p>
 <p>Note: this function is intentionally not camel-cased out of solidarity with <code>std::isfinite()</code>.</p>
 <p>Also available as <code>u.isFinite()</code>.</p>
 </details>
-<details class="func"><summary><code class="highlight"><span class="kt">bool</span> <span class="n">isDefined</span><span class="p">(</span><span class="n">Vector2</span> <span class="n">u</span><span class="p">)</span></code></summary><p>Returns true if both of the components of the vector are not NaN.</p>
+<details class="func">
+<summary><code class="highlight"><span class="kt">bool</span><span class="w"> </span><span class="n">isDefined</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">u</span><span class="p">)</span></code></summary>
+<p>Returns true if both of the components of the vector are not NaN.</p>
 <p>Also available as <code>u.isDefined()</code>.</p>
 </details>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+                
+              </article>
+            </div>
+          
+          
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../miscellaneous/" title="Miscellaneous" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Miscellaneous
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../vector3/" title="Vector3" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Vector3
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../assets/javascripts/bundle.5532dfb7.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: [],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.7a2ea5ba.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
