@@ -15,7 +15,7 @@
         <link rel="next" href="../geodesic_voronoi_tessellations/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ffa9267a.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.c4a75a56.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -81,7 +81,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Geometry Central" class="md-header__button md-logo" aria-label="Geometry Central" data-md-component="logo">
       
@@ -844,6 +846,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#vector-valued-queries" class="md-nav__link">
+    Vector-valued Queries
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1515,6 +1524,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#vector-valued-queries" class="md-nav__link">
+    Vector-valued Queries
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1567,11 +1583,11 @@
 
   <h1>Geodesic Distance</h1>
 
-<p>This section describes algorithms for computing distance along a surface, or <em>geodesic</em> distance. </p>
+<p>This section describes algorithms for computing distance along a surface, or <em>geodesic</em> distance.</p>
 <p>Note that distance depends on the <em>intrinsic</em> geometry of a surface (via the <code>IntrinsicGeometryInterface</code>). Therefore, these routines can be run on abstract geometric domains as well as traditional surfaces in 3D.</p>
 <h2 id="polyhedral-distance">Polyhedral Distance</h2>
 <p>These routines use <a href="https://code.google.com/archive/p/geodesic/">Danil Kirsanov&rsquo;s implementation</a> of the <a href="https://www.cs.jhu.edu/~misha/ReadingSeminar/Papers/Mitchell87.pdf">MMP algorithm for exact polyhedral geodesic distance</a> to compute geodesic distance (and geodesic paths) along a surface.</p>
-<p>This class supports any (possibly-nonmanifold) triangle mesh as input, and requires only intrinsic geometry (aka edge lengths) to function. </p>
+<p>This class supports any (possibly-nonmanifold) triangle mesh as input, and requires only intrinsic geometry (aka edge lengths) to function.</p>
 <p><code>#include "geometrycentral/surface/exact_geodesics.h"</code></p>
 <h3 id="single-solves">Single Solves</h3>
 <p>Geodesic distance from a single source vertex can be computed via the following utility function.
@@ -1638,6 +1654,12 @@ More general source data, queries in the interior of triangles, and geodesic pat
 <span class="c1">// Get the geodesic path from a query point to the nearest source</span>
 <span class="n">SurfacePoint</span><span class="w"> </span><span class="n">queryPoint2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* some point on the surface */</span>
 <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mmp</span><span class="p">.</span><span class="n">traceBack</span><span class="p">(</span><span class="n">queryPoint2</span><span class="p">);</span>
+
+<span class="c1">// Get the gradient of the distance function at some point</span>
+<span class="n">Vector2</span><span class="w"> </span><span class="n">gradDist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mmp</span><span class="p">.</span><span class="n">getDistanceGradient</span><span class="p">(</span><span class="n">queryPoint</span><span class="p">);</span>
+
+<span class="c1">// Find the tangent vector pointing to a query point from the closest source</span>
+<span class="n">Vector2</span><span class="w"> </span><span class="n">log_base_source_of_query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mmp</span><span class="p">.</span><span class="n">getLog</span><span class="p">(</span><span class="n">queryPoint</span><span class="p">);</span>
 </code></pre></div></p>
 <details class="func">
 <summary><code class="highlight"><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">GeodesicAlgorithmExact</span><span class="p">(</span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geom</span><span class="p">)</span></code></summary>
@@ -1671,38 +1693,55 @@ More general source data, queries in the interior of triangles, and geodesic pat
 <p>Performs the same computation as the first <code>propagate</code> function, but takes a single source vertex rather than arbitrary surface points for convenience.</p>
 </details>
 <details class="func">
-<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">traceBack</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfacePoint</span><span class="o">&amp;</span><span class="w"> </span><span class="n">point</span><span class="p">)</span></code></summary>
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">traceBack</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfacePoint</span><span class="o">&amp;</span><span class="w"> </span><span class="n">point</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
 <p>Compute the geodesic path from <code>point</code> to the closest source. This path is encoded as a list of <code>SurfacePoints</code> starting at <code>point</code> and ending at the source.</p>
 </details>
 <details class="func">
-<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">traceBack</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vertex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">traceBack</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vertex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
 <p>Compute the geodesic path from <code>v</code> to the closest source point. This path is encoded as a list of <code>SurfacePoints</code> starting at <code>v</code> and ending at the source point.</p>
 </details>
 <details class="func">
-<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">closestSource</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfacePoint</span><span class="o">&amp;</span><span class="w"> </span><span class="n">point</span><span class="p">)</span></code></summary>
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">closestSource</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfacePoint</span><span class="o">&amp;</span><span class="w"> </span><span class="n">point</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
 <p>Identify the closest source to <code>point</code> and compute the distance to that source. Returns the index of that source in the source list along with the distance.</p>
 </details>
 <details class="func">
-<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">closestSource</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vertex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">closestSource</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vertex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
 <p>Identify the closest source to <code>v</code> and compute the distance to that source. Returns the index of that source in the source list along with the distance.</p>
 </details>
 <details class="func">
-<summary><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getDistance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfacePoint</span><span class="o">&amp;</span><span class="w"> </span><span class="n">point</span><span class="p">)</span></code></summary>
+<summary><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getDistance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfacePoint</span><span class="o">&amp;</span><span class="w"> </span><span class="n">point</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
 <p>Returns the distance from <code>point</code> to the closest source.</p>
 </details>
 <details class="func">
-<summary><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getDistance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vertex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span></code></summary>
+<summary><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getDistance</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vertex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
 <p>Returns the distance from <code>v</code> to the closest source.</p>
 </details>
 <details class="func">
-<summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getDistanceFunction</span><span class="p">()</span></code></summary>
+<summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getDistanceFunction</span><span class="p">()</span><span class="w"> </span><span class="k">const</span></code></summary>
 <p>Evaluate the distance function at every vertex of the mesh.</p>
 </details>
 <details class="func">
-<summary><code class="highlight"><span class="n">IntervalList</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getEdgeIntervals</span><span class="p">(</span><span class="n">Edge</span><span class="w"> </span><span class="n">e</span><span class="p">)</span></code></summary>
+<summary><code class="highlight"><span class="n">IntervalList</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getEdgeIntervals</span><span class="p">(</span><span class="n">Edge</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
 <p>Get the list of windows along edge <code>e</code> that MMP uses to represent the distance function.</p>
 </details>
-<p>TODO document <code>exact_polyhedral_geodesics.h</code></p>
+<h3 id="vector-valued-queries">Vector-valued Queries</h3>
+<p>Computing exact geodesic paths also allows one to compute exact <a href="/surface/algorithms/vector_heat_method/#logarithmic-map">log maps</a>, as well as the exact gradient of the distance function.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getLog</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfacePoint</span><span class="o">&amp;</span><span class="w"> </span><span class="n">point</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
+<p>Returns the log map at the source closest to <code>point</code> (i.e. the tangent vector based at the closest source which points towards <code>point</code> whose magnitude is the distance from the source to <code>point</code>).</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getLog</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vertex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
+<p>Returns the log map at the source closest to <code>v</code> (i.e. the tangent vector based at the closest source which points towards <code>v</code> whose magnitude is the distance from the source to <code>point</code>).</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getDistanceGradient</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SurfacePoint</span><span class="o">&amp;</span><span class="w"> </span><span class="n">point</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
+<p>Returns the gradient of the distance function at <code>point</code> (i.e. the unit tangent vector at <code>point</code> which points away from the closest source)</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getDistanceGradient</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vertex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
+<p>Returns the gradient of the distance function at <code>v</code> (i.e. the unit tangent vector at <code>v</code> which points away from the closest source)</p>
+</details>
 <h2 id="heat-method-for-distance">Heat Method for Distance</h2>
 <p>These routines implement the <a href="http://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/paper.pdf">Heat Method for Geodesic Distance</a>. This algorithm uses short time heat flow to compute distance on surfaces. Because the main burden is simply solving linear systems of equations, it tends to be faster than polyhedral schemes, especially when computing distance multiple times on the same surface.  In the computational geometry sense, this method is an approximation, as the result is not precisely equal to the polyhedral distance on the surface; nonetheless it is fast and well-suited for many applications.</p>
 <p>This class also supports any (possibly-nonmanifold) triangle mesh as input, and requires only intrinsic geometry (aka edge lengths) to function. Furthermore, it can optionally use robust operators internally to improve performance on low-quality meshes.</p>
@@ -1835,7 +1874,7 @@ More general source data, queries in the interior of triangles, and geodesic pat
     <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
