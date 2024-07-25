@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../geodesic_voronoi_tessellations/">
+        <link rel="prev" href="../direction_fields/">
       
       
-        <link rel="next" href="../parameterization/">
+        <link rel="next" href="../flip_geodesics/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
-        <title>Intersection - Geometry Central</title>
+        <title>Embedding - Geometry Central</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#example" class="md-skip">
+        <a href="#basic-usage" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intersection
+              Embedding
             
           </span>
         </div>
@@ -777,11 +777,102 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../embedding/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Embedding
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Embedding
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    Basic Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-usage" class="md-nav__link">
+    Advanced Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    Constructors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding-functions" class="md-nav__link">
+    Embedding functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedder-data" class="md-nav__link">
+    Embedder data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helper-types" class="md-nav__link">
+    Helper Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Helper Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -833,68 +924,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Intersection
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../intersection/" class="md-nav__link">
         Intersection
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#helper-types" class="md-nav__link">
-    Helper Types
-  </a>
-  
-    <nav class="md-nav" aria-label="Helper Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#result" class="md-nav__link">
-    Result
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1495,9 +1529,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#basic-usage" class="md-nav__link">
+    Basic Usage
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-usage" class="md-nav__link">
+    Advanced Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    Constructors
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedding-functions" class="md-nav__link">
+    Embedding functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedder-data" class="md-nav__link">
+    Embedder data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1510,8 +1578,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#result" class="md-nav__link">
-    Result
+  <a href="#options" class="md-nav__link">
+    Options
   </a>
   
 </li>
@@ -1539,77 +1607,199 @@
   
 
 
-  <h1>Intersection</h1>
+  <h1>Embedding</h1>
 
-<p>The functions <code>intersections</code> and <code>selfIntersections</code> find intersections between a pair of triangle meshes, or between a mesh and itself. </p>
-<p>Intersections are meaningful only for meshes that have an <em>extrinsic</em> geometry, encoded via an <code>EmbeddedGeometryInterface</code> (e.g. a <code>VertexPositionGeometry</code>). These routines assume the meshes are triangle meshes, but otherwise works with arbitrary polygon soup (encoded via <code>SurfaceMesh</code>).</p>
-<p>Intersections are returned as an &ldquo;edge soup,&rdquo; i.e., a collection of line segments with no explicit connectivity between shared endpoints.</p>
-<p>Triangle-triangle intersections are computed using <a href="https://web.stanford.edu/class/cs277/resources/papers/Moller1997b.pdf">Tomas Moller&rsquo;s 1997 triangle intersection routine</a>, provided <a href="https://github.com/erich666/jgt-code/blob/master/Volume_08/Number_1/Shen2003/tri_tri_test/include/Moller97.c">here</a>.</p>
+<p><img alt="A circle and a triangle glued together to form a convex polyhedron" src="/media/embed_convex.jpg" /></p>
+<p>Isometric embedding algorithms attempt to find 3D vertex positions for a mesh (i.e., an extrinsic embedding) that match a given set of edge lengths (i.e., an intrinsic metric).  Loosely speaking, these algorithms enable the 3D shape of an object to be recovered from its 2D UV coordinates—as long as the mesh was flattened without any stretching or distortion.  In general, an exact isometric embedding may not exist, or may require that the triangulation be modified.  For instance, the example above shows the shape obtained by gluing together a circular disk and a triangle of equal perimeter along their boundary.  In this case, we can successfully find an embedding, but must flip many edges in order for the disk to bend as needed.</p>
+<p>At present, Geometry Central implements only one embedding algorithm, for <em>convex</em> metrics.  In this case a solution always exists, and can always be found via an efficient algorithm.  A convex metric means that every vertex has non-negative <a href="/surface/geometry/quantities/#vertex-gaussian-curvature">Gaussian curvature</a>. <a href="https://en.wikipedia.org/wiki/Alexandrov%27s_uniqueness_theorem">Alexandrov&rsquo;s uniqueness theorem</a> guarantees that any convex metric has an isometric embedding in three-dimensional space, which is unique up to rigid motions.  Geometry Central uses a method based on <a href="https://arxiv.org/abs/math/0609447">Bobenko and Izmestiev&rsquo;s algorithm</a> to find such embeddings.</p>
+<p>The input metric is purely <em>intrinsic</em>, and can hence be provided using any <code>IntrinsicGeometryInterface</code>.  It can also be provided by specifying edge lengths or UV coordinates, as described below.  In all cases, (i) the input mesh must be triangulated, (ii) edge lengths must be positive, (iii) edge lengths must satisfy the <a href="https://en.wikipedia.org/wiki/Triangle_inequality">triangle inequality</a> in each face, and (iv) <a href="/surface/geometry/quantities/#vertex-gaussian-curvature">vertex Gaussian curvature</a> must be positive.</p>
+<p>The output is an ordinary triangle mesh with vertex positions in three-dimensional space, encoded by a <code>ManifoldSurfaceMesh</code> and <code>VertexPositionGeometry</code>.  Optionally (e.g., for debugging and visualization), one can also recover vertex positions at corners for intermediate stages of the embedding, and the correspondence between the input and embedded mesh, encoded by an <a href="/intrinsic_triangulations/basics/">intrinsic triangulation</a>.</p>
 <div class="admonition warning">
-<p class="admonition-title">all-pairs check</p>
-<p>The current implementation does a naive all-pairs check, which takes O(nm) time (or O(n^2) time in the case of self-intersections).  This makes the methods very slow for large meshes.  A natural future improvement would be to perform hierarchical collision checking.</p>
+<p class="admonition-title">uv coordinates</p>
+<p>When a metric is read from UV coordinates (e.g., in an OBJ file), lengths should be equal on opposite sides of each seam edge.  These lengths will automatically be averaged if they are not exactly equal.  Also be careful that coordinates written to disk are not truncated to a small number of digits, which can make flat vertices appear to have slight negative curvature.</p>
 </div>
-<p><code>#include "geometrycentral/surface/intersection.h"</code></p>
-<p><img alt="intersections between two meshes" src="/media/intersect.png" style="max-width: 40em; display: block; margin-left: auto; margin-right: auto;" /></p>
-<details class="func">
-<summary><code class="highlight"><span class="n">SurfaceIntersectionResult</span><span class="w"> </span><span class="nf">intersections</span><span class="p">(</span><span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry1</span><span class="p">,</span><span class="w"> </span><span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry2</span><span class="p">);</span></code></summary>
-<p>Find all intersections between two meshes.</p>
-<ul>
-<li><code>geometry1</code>: the geometry of the first mesh</li>
-<li><code>geometry2</code>: the geometry of the second mesh</li>
-</ul>
-</details>
-<p><img alt="mesh self-intersections" src="/media/self_intersect.png" style="max-width: 40em; display: block; margin-left: auto; margin-right: auto;" /></p>
-<details class="func">
-<summary><code class="highlight"><span class="n">SurfaceIntersectionResult</span><span class="w"> </span><span class="nf">selfIntersections</span><span class="p">(</span><span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="p">);</span></code></summary>
-<p>Find all intersections between non-adjacent pairs of triangles in a single mesh, i.e., triangles that do not share vertices or edges.  (Adjacent triangles are excluded, since otherwise we would find all the mesh vertices and edges in addition to more global intersections.) Note that for polygon soup, where triangles have identical vertex locations but there is no explicit connectivity, intersections will still be found between adjacent triangles (such as the triangles in the eyes of the model pictured above).</p>
-<ul>
-<li><code>geometry</code>: the input geometry</li>
-</ul>
-</details>
-<h3 id="example">Example</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/surface_mesh.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/intersection.h&quot;</span>
+<p>The basic idea of Bobenko and Izmestiev&rsquo;s algorithm is to create an intrinsic tetrahedral mesh, where every triangle of the given surface mesh is connected to a central &ldquo;apex&rdquo; by radial edges that are initially very long, creating long skinny tetrahedra.  The radii of these edges are then optimized until the dihedral angle sum around all of them is equal to 2π, allowing the tetrahedra to be laid out in three-dimensional space without overlap.  During optimization, edge flips are applied to ensure that edges of the boundary (i.e., the surface mesh) remain convex rather than concave.</p>
+<p>Note that the Geometry Central implementation of this algorithm is based in part on the <a href="https://gitlab.discretization.de/sechel/f1software/-/tree/master/src/alexandrov">Java reference implementation</a> by Stefan Sechelmann.  However, our implementation makes some significant modifications not advocated by the original authors.  Users interested in making comparisons (e.g., for academic research papers) are advised to consult the reference implementation.</p>
+<div class="admonition warning">
+<p class="admonition-title">convergence</p>
+<p>Although the convex embedding algorithm is guaranteed to work in exact arithmetic, it can still fail to converge due to floating point error (e.g., when triangulations have near-degenerate elements, or are slightly non-convex due to truncation error in the input data).  In this case, it can sometimes help to loosen the tolerances and/or increase the number of iterations in the <a href="#options">embedder options</a>.  Additional diagnostic information is provided by setting <code>EmbedConvexOptions::verbose = true</code>.</p>
+</div>
+<h3 id="basic-usage">Basic Usage</h3>
+<p>The easiest way to compute an embedding is through &ldquo;one shot&rdquo; wrapper functions that take some description of the intrinsic metric as input, and produce an embedded mesh as output.</p>
+<p>Example
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/embed_convex.h&quot;</span>
 
-<span class="c1">// Load two meshes</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh1</span><span class="p">,</span><span class="w"> </span><span class="n">mesh2</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry1</span><span class="p">,</span><span class="w"> </span><span class="n">geometry2</span><span class="p">;</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh1</span><span class="p">,</span><span class="w"> </span><span class="n">geometry1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readSurfaceMesh</span><span class="p">(</span><span class="n">filename1</span><span class="p">);</span>
-<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh2</span><span class="p">,</span><span class="w"> </span><span class="n">geometry2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readSurfaceMesh</span><span class="p">(</span><span class="n">filename2</span><span class="p">);</span>
+<span class="c1">// Load a mesh with UVs</span>
+<span class="c1">// Note: vertex positions will be ignored (e.g., can all be set to zero),</span>
+<span class="c1">// since our goal is to solve for vertex positions that exhibit the UV lengths.</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">uvs</span><span class="p">;</span>
+<span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">geometry</span><span class="p">,</span><span class="w"> </span><span class="n">uvs</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readParameterizedManifoldSurfaceMesh</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
 
-<span class="c1">// Find self-intersections in mesh1</span>
-<span class="n">SurfaceIntersectionResult</span><span class="w"> </span><span class="n">r1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">selfIntersections</span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="n">geometry1</span><span class="w"> </span><span class="p">);</span>
+<span class="c1">// Compute the embedding</span>
+<span class="n">EmbedConvexResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">embedConvex</span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">uvs</span><span class="w"> </span><span class="p">);</span>
 
-<span class="c1">// Find intersections between the two meshes</span>
-<span class="n">SurfaceIntersectionResult</span><span class="w"> </span><span class="n">r12</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intersections</span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="n">geometry1</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">geometry2</span><span class="w"> </span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">success</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// do something with result.mesh and result.geometry</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Additional options can be passed to the embedder by passing an optional <code>EmbedConvexOptions</code> struct to the embedding function:</p>
+<div class="highlight"><pre><span></span><code><span class="n">EmbedConvexOptions</span><span class="w"> </span><span class="n">options</span><span class="p">;</span>
+<span class="n">options</span><span class="p">.</span><span class="n">tolerance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e-2</span><span class="p">;</span><span class="w"> </span><span class="c1">// use a looser tolerance than default</span>
+<span class="n">EmbedConvexResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">embedConvex</span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">uvs</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="p">);</span>
 </code></pre></div>
+<details class="func">
+<summary><code class="highlight"><span class="n">EmbedConvexResult</span><span class="w"> </span><span class="nf">embedConvex</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">edgeLengths</span><span class="p">,</span><span class="w"> </span><span class="n">EmbedConvexOptions</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">defaultEmbedConvexOptions</span><span class="p">);</span></code></summary>
+<p>Embed a metric described by a set of edge lengths.  Options are passed as a <a href="#options">RemeshOptions</a> object.  If embedding fails, the flag <code>EmbedConvexResult::success</code> will be set to <code>false</code>.  Input mesh <code>mesh</code> and edge lengths <code>edgeLengths</code> are unchanged.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">EmbedConvexResult</span><span class="w"> </span><span class="nf">embedConvex</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">textureCoordinates</span><span class="p">,</span><span class="w"> </span><span class="n">EmbedConvexOptions</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">defaultEmbedConvexOptions</span><span class="p">);</span></code></summary>
+<p>Embed a metric described by a set of UV coordinates.  Options are passed as a <a href="#options">RemeshOptions</a> object.  If embedding fails, the flag <code>EmbedConvexResult::success</code> will be set to <code>false</code>.  Note that since UVs are in general discontinuous, the two lengths across any seam edge must agree (and will be averaged if not).  Note also that shape recovery from UVs will work only if the mesh was unfolded isometrically, i.e., without any stretching or distortion of edges.  Input mesh <code>mesh</code> and UVs <code>textureCoordinates</code> are unchanged.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">EmbedConvexResult</span><span class="w"> </span><span class="nf">embedConvex</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">intrinsicGeometry</span><span class="p">,</span><span class="w"> </span><span class="n">EmbedConvexOptions</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">defaultEmbedConvexOptions</span><span class="p">);</span></code></summary>
+<p>Embed a metric described by an <code>IntrinsicGeometryInterface</code>.  Note that this could be a purely intrinsic description such as <code>EdgeLengthGeometry</code>, but also an extrinsic description such as <code>VertexPositionGeometry</code> (e.g., for debugging/sanity checking).  Options are passed as a <a href="#options">RemeshOptions</a> object.  If embedding fails, the flag <code>EmbedConvexResult::success</code> will be set to <code>false</code>.  Input mesh <code>mesh</code> and metric <code>IntrinsicGeometry</code> are unchanged.</p>
+</details>
+<h3 id="advanced-usage">Advanced Usage</h3>
+<p><img alt="Animation of embedding progress" src="/media/convex_embed.gif" /></p>
+<p>More options are available when performing an embedding via the <code>ConvexEmbedder</code> class.  The basic pattern is:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ConvexEmbedder</span><span class="w"> </span><span class="nf">embedder</span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">uvs</span><span class="p">,</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">embedder</span><span class="p">.</span><span class="n">init</span><span class="p">()</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// try initializing the embedding</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">embedder</span><span class="p">.</span><span class="n">embed</span><span class="p">()</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// try finding the embedding</span>
+<span class="w">        </span><span class="n">embedder</span><span class="p">.</span><span class="n">refreshVertexCoordinates</span><span class="p">();</span><span class="w"> </span><span class="c1">// compute final vertex coordinates</span>
+<span class="w">        </span><span class="c1">// now do something with members of embedder</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The separate <code>init()</code> and <code>embed()</code> method help provide diagnostics&mdash;if initialization fails, the mesh failed to meet the preconditions of the algorithm (e.g., non-triangular faces); if embedding fails, the embedder likely ran into numerical difficulty (and perhaps looser tolerances or more iterations are required).  Rather than embedding the whole surface all at once, you can also take one step at a time:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">embedder</span><span class="p">.</span><span class="n">stepEmbedding</span><span class="p">();</span>
+<span class="w">    </span><span class="n">embedder</span><span class="p">.</span><span class="n">refreshVertexCoordinates</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// e.g., animate the partial results at each step</span>
+<span class="w">    </span><span class="c1">// using embedder-&gt;localLayout</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">final vertex coordinates</p>
+<p>Note that the embedding is primarily represented by the radii stored in <code>ConvexEmbedder::r</code>.  When using the class interface, neither vertex positions nor corner positions are computed automatically (since they are not needed by intermediate stages of the algorithm).  One must therefore call <code>ConvexEmbedder::refreshVertexCoordinates()</code> before attempting to access <code>ConvexEmbedder::embedding</code> or <code>ConvexEmbedder::localLayout</code>.</p>
+</div>
+<h4 id="constructors">Constructors</h4>
+<details class="func">
+<summary><code class="highlight"><span class="n">ConvexEmbedder</span><span class="o">::</span><span class="n">ConvexEmbedder</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">edgeLengths</span><span class="p">,</span><span class="w"> </span><span class="n">EmbedConvexOptions</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">defaultEmbedConvexOptions</span><span class="p">);</span></code></summary>
+<p>Create an embedder from a metric described by a set of edge lengths.  Options are passed as a <a href="#options">RemeshOptions</a> object.  Input mesh <code>mesh</code> and edge lengths <code>edgeLengths</code> are unchanged.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">ConvexEmbedder</span><span class="o">::</span><span class="n">ConvexEmbedder</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">CornerData</span><span class="o">&lt;</span><span class="n">Vector2</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">textureCoordinates</span><span class="p">,</span><span class="w"> </span><span class="n">EmbedConvexOptions</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">defaultEmbedConvexOptions</span><span class="p">);</span></code></summary>
+<p>Create an embedder from a metric described by a set of UV coordinates.  Options are passed as a <a href="#options">RemeshOptions</a> object.  Note that since UVs are in general discontinuous, the two lengths across any seam edge must agree (and will be averaged if not).  Note also that shape recovery from UVs will work only if the mesh was unfolded isometrically, i.e., without any stretching or distortion of edges.  Input mesh <code>mesh</code> and UVs <code>textureCoordinates</code> are unchanged.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">ConvexEmbedder</span><span class="o">::</span><span class="n">ConvexEmbedder</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">intrinsicGeometry</span><span class="p">,</span><span class="w"> </span><span class="n">EmbedConvexOptions</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">defaultEmbedConvexOptions</span><span class="p">);</span></code></summary>
+<p>Create an embedder from a metric described by an <code>IntrinsicGeometryInterface</code>.  Note that this could be a purely intrinsic description such as <code>EdgeLengthGeometry</code>, but also an extrinsic description such as <code>VertexPositionGeometry</code> (e.g., for debugging/sanity checking).  Options are passed as a <a href="#options">RemeshOptions</a> object.  Input mesh <code>mesh</code> and metric <code>IntrinsicGeometry</code> are unchanged.</p>
+</details>
+<h4 id="embedding-functions">Embedding functions</h4>
+<details class="func">
+<summary><code class="highlight"><span class="kt">bool</span><span class="w"> </span><span class="nf">ConvexEmbedder::init</span><span class="p">();</span></code></summary>
+<p>Initialize the embedding, returning false if the given triangulation and metric do not meet the criteria for convex embedding (no boundary, triangulated, genus zero, and positive angle defect at all vertices).</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="kt">bool</span><span class="w"> </span><span class="nf">ConvexEmbedder::embed</span><span class="p">();</span></code></summary>
+<p>Embed the given metric, returning true if embedding was successful.  Note that this method &ldquo;fails gracefully&rdquo; in the sense that if the embedder can&rsquo;t find an embedding that meets the specified tolerance, it will still construct vertex positions that are as close as possible, by averaging the most recent corner coordinates.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="nf">ConvexEmbedder::stepEmbedding</span><span class="p">();</span></code></summary>
+<p>Take a single embedding step.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="nf">ConvexEmbedder::refreshVertexCoordinates</span><span class="p">();</span></code></summary>
+<p>Compute extrinsic vertex positions at corners from the current intrinsic embedding, stored in <code>localLayout</code>.  Also compute average coordinates at vertices, stored in <code>embeding</code>.</p>
+</details>
+<h4 id="embedder-data">Embedder data</h4>
+<p>The current state of the embedding is encoded by edge lengths on a tetrahedral mesh connecting all surface triangles to a central &ldquo;apex&rdquo; vertex (<code>ConvexEmbedder::apex</code>).  The edge lengths for this tetrahedral mesh are split up into lengths for each edge of a surface mesh (<code>ConvexEmbedder::intrinsicTriangulation</code>), as well as radii associated with each vertex of the surface mesh (<code>ConvexEmbedder::r</code>).  At any moment, one can update corner and vertex coordinates by calling <code>ConvexEmbedder::refreshVertexCoordinates()</code>.  The input metric is also stored in order to, e.g., visualize correspondence between the input metric and embedded triangulation.</p>
+<details class="func">
+<summary>Input metric</summary>
+<ul>
+<li><code>ManifoldSurfaceMesh ConvexEmbedder::originalMesh</code> — the triangulation used to define the input metric</li>
+<li><code>IntrinsicGeometryInterface* ConvexEmbedder::originalMetric</code> - the input metric, which determines edge lengths for <code>originalMesh</code></li>
+</ul>
+</details>
+<details class="func">
+<summary>Current metric</summary>
+<ul>
+<li><code>IntegerCoordinatesIntrinsicTriangulation* intrinsicTriangulation</code> — the triangulation and edge lengths defining the current metric</li>
+</ul>
+</details>
+<details class="func">
+<summary>Embedding</summary>
+<ul>
+<li><code>VertexData&lt;double&gt; r</code> — length of radial edges connecting each vertex to the central apex</li>
+<li><code>CornerData&lt;Vector3&gt; localLayout</code> — embedding of current metric (will be discontinuous for non-flat metrics). Update by calling <code>ConvexEmbedder::refreshVertexCoordinates()</code>.</li>
+<li><code>VertexData&lt;Vector3&gt; embedding</code> — embedding of current metric (average of discontinuous values).  Update by calling <code>ConvexEmbedder::refreshVertexCoordinates()</code>.</li>
+<li><code>Vector3 apex</code> — location of central vertex, which makes tetrahedra with each triangle.  Update by calling <code>ConvexEmbedder::refreshVertexCoordinates()</code>.</li>
+</ul>
+</details>
 <h2 id="helper-types">Helper Types</h2>
-<h3 id="result">Result</h3>
-<p>The result is returned as a <code>SurfaceIntersectionResult</code>, which has 3 fields:</p>
+<h3 id="options">Options</h3>
+<p>Options are passed in to <code>embedConvex()</code> and constructors for <code>ConvexEmbedder</code> via a <code>EmbedConvexOptions</code> object.</p>
 <table>
 <thead>
 <tr>
 <th>Field</th>
+<th>Default value</th>
 <th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code class="highlight"><span class="n">SurfacePoint</span><span class="w"> </span><span class="n">endPoint</span></code></td>
-<td>the point the path ended at</td>
+<td><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">metricConvexityTolerance</span></code></td>
+<td><code>1e-5</code></td>
+<td>how negative do we allow input Gaussian curvature to be?</td>
 </tr>
 <tr>
-<td><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">points</span></code></td>
-<td>endpoints of segments along intersection</td>
+<td><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">edgeConvexityTolerance</span></code></td>
+<td><code>1e-3</code></td>
+<td>how negative do we allow mean curvature to be?</td>
 </tr>
 <tr>
-<td><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="p">,</span><span class="mi">2</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">edges</span></code></td>
-<td>segments along intersection, as pairs of indices into the <code>points</code> list</td>
+<td><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">initialStepSize</span></code></td>
+<td><code>1</code></td>
+<td>initial step size for an embedding step</td>
 </tr>
 <tr>
-<td><code class="highlight"><span class="kt">bool</span><span class="w"> </span><span class="n">hasIntersections</span></code></td>
-<td>were there any intersections?</td>
+<td><code class="highlight"><span class="kt">int</span><span class="w"> </span><span class="n">maxSteps</span></code></td>
+<td><code>20</code></td>
+<td>maximum number of embedding steps</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">int</span><span class="w"> </span><span class="n">maxLineSearchSteps</span></code></td>
+<td><code>100</code></td>
+<td>maximum number of line search steps</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">embeddingTolerance</span></code></td>
+<td><code>1e-3</code></td>
+<td>maximum angle defect for any radial edge</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">int</span><span class="w"> </span><span class="n">maxNewtonIterations</span></code></td>
+<td><code>20</code></td>
+<td>maximum number of steps for inner Newton solver</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">int</span><span class="w"> </span><span class="n">maxNewtonLineSearchSteps</span></code></td>
+<td><code>32</code></td>
+<td>maximum number of line search steps for inner Newton solver</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">newtonTolerance</span></code></td>
+<td><code>1e-4</code></td>
+<td>l2 norm of residual for convergence of Newton&rsquo;s method</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">bool</span><span class="w"> </span><span class="n">verbose</span></code></td>
+<td><code>false</code></td>
+<td>whether to display diagnostic output</td>
 </tr>
 </tbody>
 </table>

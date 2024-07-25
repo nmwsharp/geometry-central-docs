@@ -844,6 +844,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../algorithms/embedding/" class="md-nav__link">
+        Embedding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../algorithms/flip_geodesics/" class="md-nav__link">
         Flip Geodesics
       </a>
@@ -1642,6 +1656,23 @@
 <details class="func">
 <summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">SimplePolygonMesh</span><span class="o">::</span><span class="n">stripFacesWithDuplicateVertices</span><span class="p">()</span></code></summary>
 <p>Remove any faces from <code>polygons</code> for which some vertex index appears multiple times.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">SimplePolygonMesh</span><span class="o">::</span><span class="n">stripInvalidFaces</span><span class="p">()</span></code></summary>
+<p>Remove any faces from <code>polygons</code> which:
+    - have &lt; 3 vertices
+    - OR have out of bounds vertex indices
+    - OR have repated vertices</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">SimplePolygonMesh</span><span class="o">::</span><span class="n">stripDuplicateFaces</span><span class="p">()</span></code></summary>
+<p>Remove repeated faces from <code>polygons</code>, defined as having identical vertex sets even if the permutation of the vertices may be different.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">SimplePolygonMesh</span><span class="o">::</span><span class="n">consistentlyOrientFaces</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">outwardOrient</span><span class="o">=</span><span class="nb">true</span><span class="p">)</span></code></summary>
+<p>Greedily re-orient faces by flipping them to have consistent orientation within each manifold subpatch.</p>
+<p>The inward/outward orientation is arbitrary, unless <code>outwardOrient=true</code>. In this case, an (approximate) geometric raycasting check will be performed to attempt to orient the patches to face outward. This optional check only supports triangular meshes.</p>
+<p>In the case of non-orientable patches, there will be a not-matching boundary where greedy outward orientation fails.</p>
 </details>
 <details class="func">
 <summary><code class="highlight"><span class="kt">void</span><span class="w"> </span><span class="n">SimplePolygonMesh</span><span class="o">::</span><span class="n">triangulate</span><span class="p">()</span></code></summary>

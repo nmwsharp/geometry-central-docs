@@ -837,6 +837,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../algorithms/embedding/" class="md-nav__link">
+        Embedding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../algorithms/flip_geodesics/" class="md-nav__link">
         Flip Geodesics
       </a>
@@ -1531,7 +1545,7 @@
 
 <p>A <code>BarycentricVector</code> is a vector that lies along a surface. This vector can lie within a face, along an edge, or at a single vertex (in which case it is simply a zero vector.) Barycentric vectors represent the difference between two barycentric points on the surface, hence their coordinates always sum to 0. (Barycentric points are implemented as <a href="../surface_point">SurfacePoint</a> in geometry-central.) Currently, barycentric points and vectors are only supported on triangle meshes.</p>
 <p><img alt="example of a barycentric vector within a face of an intrinsic triangulation" src="/media/barycentric_vector.svg" /></p>
-<p>Although a barycentric vector can be constructed as the difference of two barycentric points, a barycentric vector technically does not define a single unique vector along the surface but rather a constant vector field within a face.</p>
+<p>Although a barycentric vector can be constructed as the difference of two barycentric points, a barycentric vector technically does not define a single unique vector along the surface but rather a constant vector field within a face &mdash; barycentric vectors really are <strong>vectors</strong> (displacements), <strong>not</strong> rays.</p>
 <p>Using barycentric vectors, one can easily do vector arithmetic on a surface. Barycentric vectors are especially useful when working with an intrinsic representation of a surface; they can be used to do computations on vectors that depend only on intrinsic geometry, such as inner products.</p>
 <p><code>#include "geometrycentral/surface/barycentric_vector.h"</code></p>
 <p>The field <code>BarycentricVector::type</code> is an enum:
@@ -1579,8 +1593,12 @@
 <p>Returns the squared norm of the vector. Because the norm depends on the geometry, you must pass in the geometry (either intrinsic or extrinsic) on which the vector is defined.</p>
 </details>
 <details class="func">
-<summary><code class="highlight"><span class="n">BarycentricVector</span><span class="w"> </span><span class="n">BarycentricVector</span><span class="o">::</span><span class="n">rotated90</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geom</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
-<p>Rotate the vector 90 degrees counter-clockwise within the face it belongs to. This requires the geometry, since the meaning of &ldquo;90 degrees&rdquo; depends on the geometry of the triangle.</p>
+<summary><code class="highlight"><span class="n">BarycentricVector</span><span class="w"> </span><span class="n">BarycentricVector</span><span class="o">::</span><span class="n">rotate90</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geom</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
+<p>Rotate the given tangent vector 90 degrees counter-clockwise within the face it belongs to. This function requires the geometry, since the meaning of &ldquo;90 degrees&rdquo; depends on the geometry of the triangle. If the vector is initially an edge-type vector, this function will return a face-type vector whose face is the one the rotated vector &ldquo;points into&rdquo;; though if the edge is a boundary edge, the returned vector will always lie within an interior face.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">BarycentricVector</span><span class="w"> </span><span class="n">BarycentricVector</span><span class="o">::</span><span class="n">rotate</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geom</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">angle</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
+<p>Rotate the given tangent vector counter-clockwise within the face it belongs to, by the given angle (specified in radians). This function requires the geometry, since the rotation depends on the geometry of the triangle. If the vector is initially an edge-type vector, this function will return a face-type vector whose face is the one the rotated vector &ldquo;points into&rdquo;; though if the edge is a boundary edge, the returned vector will always lie within an interior face.</p>
 </details>
 <p>Barycentric vectors also have a few utility functions:</p>
 <details class="func">
