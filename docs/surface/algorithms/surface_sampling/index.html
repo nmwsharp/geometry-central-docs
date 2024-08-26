@@ -954,6 +954,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#helper-types" class="md-nav__link">
+    Helper Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Helper Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1507,6 +1527,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#helper-types" class="md-nav__link">
+    Helper Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Helper Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1532,8 +1572,7 @@
 <p>Currently the algorithm only works on manifold meshes.</p>
 <p><code>#include "geometrycentral/surface/poisson_disk_sampler.h"</code></p>
 <p>The algorithm has a few parameters that roughly correspond to the algorithm of Bridson&rsquo;s 2007 <a href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf">Fast Poisson Disk Sampling in Arbitrary Dimensions</a>.</p>
-<p>Additionally, you can specify points around samples should be avoided (shown in red below.) By default, samples will avoid these points with the same radius <code>r</code> used in the rest of the algorithm. You can optionally specify a &ldquo;radius of avoidance&rdquo; for these points, where the radius of avoidance is given in multiples of <code>r</code>. </p>
-<p>The radius of avoidance can be further be specified to be a radius in 3D space, or a radius in terms of distance along the surface. The former will produce a radius of avoidance that will appear perfectly round and is likely more visually pleasing, but for very large radii may occlude samples from opposite sides of the mesh. The latter will restrict the radius of avoidance to only be along the surface, but such a metric ball will not appear perfectly round, especially in areas with very large and sudden changes in curvature.</p>
+<p>Additionally, you can specify points around samples should be avoided (shown in red below.)</p>
 <p><img alt="poisson disk sample with point of avoidance" src="/media/poisson_disk_sample.png" /></p>
 <details class="func">
 <summary><code class="highlight"><span class="n">PoissonDiskSampler</span><span class="o">::</span><span class="n">PoissonDiskSampler</span><span class="p">(</span><span class="n">ManifoldSurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">VertexPositionGeometry</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="p">)</span></code></summary>
@@ -1545,15 +1584,8 @@
 <p>The mesh and geometry cannot be changed after construction.</p>
 </details>
 <details class="func">
-<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">PoissonDiskSampler</span><span class="o">::</span><span class="n">sample</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">rCoef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">kCandidates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pointsToAvoid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">rAvoidance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">use3DAvoidanceRadius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span></code></summary>
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sample</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">PoissonDiskOptions</span><span class="o">&amp;</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PoissonDiskOptions</span><span class="p">())</span></code></summary>
 <p>Poisson disk-sample the surface mesh.</p>
-<ul>
-<li><code>rCoef</code>: corresponds to the minimum distance between samples, expressed as a multiple of the mean edge length. The actual minimum distance is computed as <code>r = rCoef * meanEdgeLength</code></li>
-<li><code>kCandidates</code>: the number of candidate points chosen from the (r,2r)-annulus around each sample.</li>
-<li><code>pointsToAvoid</code>: SurfacePoints which samples should avoid.</li>
-<li><code>rAvoidance</code>: the radius of avoidance around each point to avoid, expressed as a multiple of <code>r</code>.</li>
-<li><code>use3DAvoidanceRadius</code>: If true, the radius of avoidance will specify a solid ball in 3D space around which samples are avoided. Otherwise, samples are avoided within a ball <em>on the surface</em>.</li>
-</ul>
 </details>
 <h3 id="example">Example</h3>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/manifold_surface_mesh.h&quot;</span>
@@ -1571,7 +1603,52 @@
 <span class="c1">// construct a solver</span>
 <span class="n">PoissonDiskSampler</span><span class="w"> </span><span class="nf">poissonSampler</span><span class="p">(</span><span class="o">*</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">geometry</span><span class="p">);</span>
 <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poissonSampler</span><span class="p">.</span><span class="n">sample</span><span class="p">();</span><span class="w"> </span><span class="c1">// sample using default parameters</span>
+
+<span class="c1">// Sample with some different parameters.</span>
+<span class="n">PoissonDiskOptions</span><span class="w"> </span><span class="n">sampleOptions</span><span class="p">;</span>
+<span class="n">sampleOptions</span><span class="p">.</span><span class="n">minDist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">newSamples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poissonSampler</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="n">sampleOptions</span><span class="p">);</span>
 </code></pre></div>
+<h2 id="helper-types">Helper Types</h2>
+<h3 id="options">Options</h3>
+<p>Options are passed in to <code>options</code> via a <code>PoissonDiskOptions</code> object.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">minDist</span></code></td>
+<td><code>1</code></td>
+<td>The minimum distance <code>r</code> between samples, expressed in world-space units.</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">int</span><span class="w"> </span><span class="n">kCandidates</span></code></td>
+<td><code>30</code></td>
+<td>The number of candidate points chosen from the (<code>r</code>,2<code>r</code>)-annulus around each sample.</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pointsToAvoid</span></code></td>
+<td><code>std::vector&lt;SurfacePoint&gt;()</code></td>
+<td>Points which samples should avoid.</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">double</span><span class="w"> </span><span class="n">minDistAvoidance</span></code></td>
+<td><code>1</code></td>
+<td>The radius of avoidance around each point to avoid, expressed in world-space units.</td>
+</tr>
+<tr>
+<td><code class="highlight"><span class="kt">bool</span><span class="w"> </span><span class="n">use3DAvoidance</span></code></td>
+<td><code>true</code></td>
+<td>If true, the radius of avoidance will specify a solid ball in 3D space around which samples are avoided. Otherwise, samples are avoided within a geodesic ball on the surface.</td>
+</tr>
+</tbody>
+</table>
+<p>Using the <code>use3DAvoidance</code> option, the radius of avoidance <code>minDistAvoidance</code> can specify either the radius in 3D space, or in terms of distance along the surface. The former will produce a radius of avoidance that will appear perfectly round, and is likely more visually pleasing, but for very large radii may occlude samples from opposite sides of the mesh. The latter will restrict the radius of avoidance to only be along the surface, but such a metric ball may not appear perfectly round, especially in areas with very large changes in curvature.</p>
 
 
 
