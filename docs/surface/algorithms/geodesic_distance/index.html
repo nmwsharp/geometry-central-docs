@@ -1221,6 +1221,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fast-marching-method-for-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fast Marching Method for Distance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#heat-method-for-distance" class="md-nav__link">
     <span class="md-ellipsis">
       Heat Method for Distance
@@ -2284,6 +2293,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fast-marching-method-for-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fast Marching Method for Distance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#heat-method-for-distance" class="md-nav__link">
     <span class="md-ellipsis">
       Heat Method for Distance
@@ -2499,6 +2517,40 @@ More general source data, queries in the interior of triangles, and geodesic pat
 <summary><code class="highlight"><span class="n">Vector2</span><span class="w"> </span><span class="n">GeodesicAlgorithmExact</span><span class="o">::</span><span class="n">getDistanceGradient</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Vertex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
 <p>Returns the gradient of the distance function at <code>v</code> (i.e. the unit tangent vector at <code>v</code> which points away from the closest source)</p>
 </details>
+<h2 id="fast-marching-method-for-distance">Fast Marching Method for Distance</h2>
+<p>These routines implement the <em>fast marching method</em> (FMM) for geodesic distance on triangle meshes, as described by <a href="https://www.pnas.org/doi/pdf/10.1073/pnas.95.15.8431">Kimmel and Sethian 1998</a>. </p>
+<p>This implementation allows you to obtain unsigned distance to a source set of points, or signed distance to a source set of curves, where the distance values on the source set may be initialized to any value. (When initial distances are not 0, &ldquo;signed&rdquo; means that the gradient of distance is continuous across the source curves.)</p>
+<p>Note that as a wave-based propagation method, if the source curves are not closed, then signed distance output is not guaranteed to be well-behaved; if you&rsquo;re looking for robust signed distance computation, consider the <a href="/surface/algorithms/signed_heat_method">Signed Heat Method routines</a>. If your curves are closed, then FMM will in general be more efficient.</p>
+<p><code>#include "geometrycentral/surface/fast_marching_method.h"</code></p>
+<details class="func">
+<summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">FMMDistance</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">SurfacePoint</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;&gt;&gt;&amp;</span><span class="w"> </span><span class="n">initialDistances</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">sign</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span></code></summary>
+<p>Compute the distance from a source set of <a href="/surface/utilities/surface_point/">Surface Points</a>, initialized with the given distance values. </p>
+<p>If <code>sign</code> is false, computes unsigned distance. If <code>sign</code> is true, computes signed distance by interpreting the source points as a set of curves and propagating their orientation. </p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">FMMDistance</span><span class="p">(</span><span class="n">IntrinsicGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geometry</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">initialDistances</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">sign</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span></code></summary>
+<p>Compute the distance from a set of source vertices, initialized with the given distance values. </p>
+<p>If <code>sign</code> is false, computes unsigned distance. If <code>sign</code> is true, computes signed distance by interpreting the source vertices as a set of curves and propagating their orientation.</p>
+</details>
+<p>Example
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/fast_marching_method.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/meshio.h&quot;</span>
+
+<span class="c1">// Load a mesh</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">SurfaceMesh</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mesh</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">VertexPositionGeometry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">tie</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="w"> </span><span class="n">geometry</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loadMesh</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+
+<span class="c1">// Pick some vertices and initial distances.</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">Vertex</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">initialDistances</span><span class="p">;</span>
+<span class="n">initialDistances</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">mesh</span><span class="o">-&gt;</span><span class="n">vertex</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span><span class="w"> </span><span class="mf">0.</span><span class="p">);</span>
+<span class="n">initialDistances</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">mesh</span><span class="o">-&gt;</span><span class="n">vertex</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span><span class="w"> </span><span class="mf">0.</span><span class="p">);</span>
+
+<span class="c1">// Compute distance</span>
+<span class="n">VertexData</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FMMDistance</span><span class="p">(</span><span class="o">*</span><span class="n">geometry</span><span class="p">,</span><span class="w"> </span><span class="n">initialDistances</span><span class="p">);</span>
+<span class="cm">/* do something useful */</span>
+</code></pre></div></p>
+<p>If computing signed distance, distances should be initialized to 0 on the source points.</p>
 <h2 id="heat-method-for-distance">Heat Method for Distance</h2>
 <p>These routines implement the <a href="http://www.cs.cmu.edu/~kmcrane/Projects/HeatMethod/paper.pdf">Heat Method for Geodesic Distance</a>. This algorithm uses short time heat flow to compute distance on surfaces. Because the main burden is simply solving linear systems of equations, it tends to be faster than polyhedral schemes, especially when computing distance multiple times on the same surface.  In the computational geometry sense, this method is an approximation, as the result is not precisely equal to the polyhedral distance on the surface; nonetheless it is fast and well-suited for many applications.</p>
 <p>This class also supports any (possibly-nonmanifold) triangle mesh as input, and requires only intrinsic geometry (aka edge lengths) to function. Furthermore, it can optionally use robust operators internally to improve performance on low-quality meshes.</p>
