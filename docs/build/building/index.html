@@ -324,6 +324,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bazel" class="md-nav__link">
+    Bazel
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1541,6 +1548,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bazel" class="md-nav__link">
+    Bazel
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1578,6 +1592,26 @@ make<span class="w"> </span>-j4
 <p>When using Visual Studio on Windows, CMake can be used (either via the terminal or gui) to generate Visual Studio project and solution files. The project has been verified to compile out of the box with Visual Studio 2017 &amp; 2019 (older versions not tested).</p>
 <h2 id="compile-flags-options">Compile flags &amp; options</h2>
 <p>The library includes a few optional safety checks which are performed at runtime, even in release mode. Such checks are generally very cheap yet quite useful. Nonetheless, adding the <code>NGC_SAFETY_CHECKS</code> define will disable all optional safety checks, for a very small increase in performance.</p>
+<h2 id="bazel">Bazel</h2>
+<p>geometry-central is now available as a Bazel module: https://registry.bazel.build/modules/geometry-central</p>
+<p>To use it, simply add this line to your MODULE.bazel:</p>
+<p><code>bazel_dep(name = "geometry-central", version = "1.0.0")</code></p>
+<p>and then specify the dependencies in your build rules. There are four public targets, which correspond to the groupings in the source code: 
+ - <code>@geometry-central//:numerical</code>
+ - <code>@geometry-central//:surface</code>
+ - <code>@geometry-central//:pointcloud</code>
+ - <code>@geometry-central//:utilities</code></p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">cc_binary</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;main&quot;</span><span class="p">,</span>
+    <span class="n">srcs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;main.cpp&quot;</span><span class="p">],</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;fox.ply&quot;</span><span class="p">],</span>
+    <span class="n">deps</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;@geometry-central//:surface&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;@geometry-central//:utilities&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
 
 
 
