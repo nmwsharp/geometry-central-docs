@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../dependencies/">
+        <link rel="prev" href="../vector3/">
       
       
-        <link rel="next" href="../../tutorials/load_mesh/">
+        <link rel="next" href="../eigenmap/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
-        <title>Tests - Geometry Central</title>
+        <title>Nearest Neighbors - Geometry Central</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#building-and-running-tests" class="md-skip">
+        <a href="#queries" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tests
+              Nearest Neighbors
             
           </span>
         </div>
@@ -225,16 +225,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
@@ -243,7 +241,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Build
@@ -256,7 +254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../versions/" class="md-nav__link">
+      <a href="../../build/versions/" class="md-nav__link">
         Versions
       </a>
     </li>
@@ -270,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../building/" class="md-nav__link">
+      <a href="../../build/building/" class="md-nav__link">
         Building
       </a>
     </li>
@@ -284,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dependencies/" class="md-nav__link">
+      <a href="../../build/dependencies/" class="md-nav__link">
         Dependencies
       </a>
     </li>
@@ -296,75 +294,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tests
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../build/tests/" class="md-nav__link">
         Tests
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#building-and-running-tests" class="md-nav__link">
-    Building and running tests
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tests-organization" class="md-nav__link">
-    Tests organization
-  </a>
-  
-    <nav class="md-nav" aria-label="Tests organization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#googletest" class="md-nav__link">
-    googletest
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assets" class="md-nav__link">
-    Assets
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1432,14 +1366,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
       
       
       
@@ -1448,7 +1384,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Utilities
@@ -1461,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utilities/miscellaneous/" class="md-nav__link">
+      <a href="../miscellaneous/" class="md-nav__link">
         Miscellaneous
       </a>
     </li>
@@ -1475,7 +1411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utilities/vector2/" class="md-nav__link">
+      <a href="../vector2/" class="md-nav__link">
         Vector2
       </a>
     </li>
@@ -1489,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utilities/vector3/" class="md-nav__link">
+      <a href="../vector3/" class="md-nav__link">
         Vector3
       </a>
     </li>
@@ -1501,11 +1437,48 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../utilities/nearest_neighbors/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Nearest Neighbors
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Nearest Neighbors
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#queries" class="md-nav__link">
+    Queries
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1517,7 +1490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utilities/eigenmap/" class="md-nav__link">
+      <a href="../eigenmap/" class="md-nav__link">
         Utilities for Eigen Interoperability
       </a>
     </li>
@@ -1556,36 +1529,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#building-and-running-tests" class="md-nav__link">
-    Building and running tests
+  <a href="#queries" class="md-nav__link">
+    Queries
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tests-organization" class="md-nav__link">
-    Tests organization
-  </a>
-  
-    <nav class="md-nav" aria-label="Tests organization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#googletest" class="md-nav__link">
-    googletest
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assets" class="md-nav__link">
-    Assets
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1607,21 +1553,44 @@
   
 
 
-  <h1>Tests</h1>
+  <h1>Nearest Neighbors</h1>
 
-<h2 id="building-and-running-tests">Building and running tests</h2>
-<p>Compile and run the tests with:
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="nb">test</span>
-mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
-cmake<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Debug<span class="w"> </span>..
-make<span class="w"> </span>-j12<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./bin/geometry-central-test
-</code></pre></div></p>
-<h2 id="tests-organization">Tests organization</h2>
-<p>All tests are stored in the <code>test/</code> subdirectory, which is not touched by the usual build system.</p>
-<h3 id="googletest">googletest</h3>
-<p>We use <a href="https://github.com/google/googletest">googletest</a> as a testing framework. Most users do not need the tests, so rather than packing it as a git submodule which would unavoidably be cloned, the build system downloads a binary of the googletest when the tests are built&mdash;a consequence is that you must have a network connection to build tests for the first time (TODO: enable using a system install of googletest).</p>
-<h3 id="assets">Assets</h3>
-<p>The <code>tests/assets/</code> directory contains a handful of input files for various tests. The absolute paths to these files are baked in to the test executable by the build system, so moving this directory after compiling tests may cause problems. The disk footprint of assets should be kept as small as possible since they are stored in the library repository.</p>
+<p>A simple utility class for 3D nearest-neighbor queries, backed by a <a href="https://github.com/jlblancoc/nanoflann">nanoflann</a> KD-tree.</p>
+<p><code class="highlight"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/utilities/knn.h&quot;</span></code></p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/utilities/knn.h&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">geometrycentral</span><span class="p">;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;</span><span class="w"> </span><span class="n">points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">}</span><span class="w"> </span><span class="p">};</span>
+<span class="n">NearestNeighborFinder</span><span class="w"> </span><span class="nf">finder</span><span class="p">(</span><span class="n">points</span><span class="p">);</span>
+
+<span class="c1">// 2 nearest points to a query location</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nearest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">finder</span><span class="p">.</span><span class="n">kNearest</span><span class="p">({</span><span class="mf">1.1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="c1">// 2 nearest neighbors of points[1], excluding itself</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">neighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">finder</span><span class="p">.</span><span class="n">kNearestNeighbors</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+
+<span class="c1">// all points within radius 1.5 of a query location</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">inBall</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">finder</span><span class="p">.</span><span class="n">radiusSearch</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="mf">1.5</span><span class="p">);</span>
+</code></pre></div>
+<p>All query results are indices into the input <code>points</code> vector.</p>
+<details class="func">
+<summary><code class="highlight"><span class="n">NearestNeighborFinder</span><span class="o">::</span><span class="n">NearestNeighborFinder</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Vector3</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">points</span><span class="p">)</span></code></summary>
+<p>Construct a finder over the given point set and build the spatial index. All subsequent queries return indices into this vector.</p>
+</details>
+<h3 id="queries">Queries</h3>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">NearestNeighborFinder</span><span class="o">::</span><span class="n">kNearest</span><span class="p">(</span><span class="n">Vector3</span><span class="w"> </span><span class="n">query</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">k</span><span class="p">)</span></code></summary>
+<p>Returns the indices of the <code>k</code> closest points in the input set to <code>query</code>, in order of increasing distance. <code>query</code> need not be one of the input points.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">NearestNeighborFinder</span><span class="o">::</span><span class="n">kNearestNeighbors</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">sourceInd</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">k</span><span class="p">)</span></code></summary>
+<p>Returns the indices of the <code>k</code> closest points to <code>points[sourceInd]</code>, excluding <code>sourceInd</code> itself. Useful for computing point-to-point neighbor relationships within the input set.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">NearestNeighborFinder</span><span class="o">::</span><span class="n">radiusSearch</span><span class="p">(</span><span class="n">Vector3</span><span class="w"> </span><span class="n">query</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">rad</span><span class="p">)</span></code></summary>
+<p>Returns the indices of all points within distance <code>rad</code> of <code>query</code>.</p>
+<p>Pass the actual desired radius, not the squared radius that some other libraries use.</p>
+</details>
 
 
 

@@ -9,24 +9,24 @@
       
       
       
-        <link rel="prev" href="../dependencies/">
+        <link rel="prev" href="../barycentric_vector/">
       
       
-        <link rel="next" href="../../tutorials/load_mesh/">
+        <link rel="next" href="../../algorithms/direction_fields/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
     
     
       
-        <title>Tests - Geometry Central</title>
+        <title>Mesh Ray Tracer - Geometry Central</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ffa9267a.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ffa9267a.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../../extras.css">
+      <link rel="stylesheet" href="../../../extras.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#building-and-running-tests" class="md-skip">
+        <a href="#result-struct" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Geometry Central" class="md-header__button md-logo" aria-label="Geometry Central" data-md-component="logo">
+    <a href="../../.." title="Geometry Central" class="md-header__button md-logo" aria-label="Geometry Central" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tests
+              Mesh Ray Tracer
             
           </span>
         </div>
@@ -181,7 +181,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Geometry Central" class="md-nav__button md-logo" aria-label="Geometry Central" data-md-component="logo">
+    <a href="../../.." title="Geometry Central" class="md-nav__button md-logo" aria-label="Geometry Central" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z"/></svg>
@@ -212,7 +212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -225,16 +225,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
@@ -243,7 +241,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Build
@@ -256,7 +254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../versions/" class="md-nav__link">
+      <a href="../../../build/versions/" class="md-nav__link">
         Versions
       </a>
     </li>
@@ -270,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../building/" class="md-nav__link">
+      <a href="../../../build/building/" class="md-nav__link">
         Building
       </a>
     </li>
@@ -284,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dependencies/" class="md-nav__link">
+      <a href="../../../build/dependencies/" class="md-nav__link">
         Dependencies
       </a>
     </li>
@@ -296,75 +294,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tests
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../build/tests/" class="md-nav__link">
         Tests
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#building-and-running-tests" class="md-nav__link">
-    Building and running tests
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tests-organization" class="md-nav__link">
-    Tests organization
-  </a>
-  
-    <nav class="md-nav" aria-label="Tests organization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#googletest" class="md-nav__link">
-    googletest
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assets" class="md-nav__link">
-    Assets
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -411,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/load_mesh/" class="md-nav__link">
+      <a href="../../../tutorials/load_mesh/" class="md-nav__link">
         Load & navigate a mesh
       </a>
     </li>
@@ -425,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/basic_mutation/" class="md-nav__link">
+      <a href="../../../tutorials/basic_mutation/" class="md-nav__link">
         Basic Mutation
       </a>
     </li>
@@ -439,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorials/direction_fields/" class="md-nav__link">
+      <a href="../../../tutorials/direction_fields/" class="md-nav__link">
         Direction fields
       </a>
     </li>
@@ -459,14 +393,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
@@ -475,7 +411,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Surface
@@ -515,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/basics/" class="md-nav__link">
+      <a href="../../surface_mesh/basics/" class="md-nav__link">
         Basics
       </a>
     </li>
@@ -529,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/elements/" class="md-nav__link">
+      <a href="../../surface_mesh/elements/" class="md-nav__link">
         Elements
       </a>
     </li>
@@ -543,7 +479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/boundaries/" class="md-nav__link">
+      <a href="../../surface_mesh/boundaries/" class="md-nav__link">
         Boundaries
       </a>
     </li>
@@ -557,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/indexing/" class="md-nav__link">
+      <a href="../../surface_mesh/indexing/" class="md-nav__link">
         Indexing
       </a>
     </li>
@@ -571,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/navigation/" class="md-nav__link">
+      <a href="../../surface_mesh/navigation/" class="md-nav__link">
         Navigation and Iteration
       </a>
     </li>
@@ -585,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/containers/" class="md-nav__link">
+      <a href="../../surface_mesh/containers/" class="md-nav__link">
         Containers
       </a>
     </li>
@@ -599,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/mutation/" class="md-nav__link">
+      <a href="../../surface_mesh/mutation/" class="md-nav__link">
         Mutation
       </a>
     </li>
@@ -613,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/delta_complex/" class="md-nav__link">
+      <a href="../../surface_mesh/delta_complex/" class="md-nav__link">
         Delta Complexes
       </a>
     </li>
@@ -627,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/surface_mesh/internals/" class="md-nav__link">
+      <a href="../../surface_mesh/internals/" class="md-nav__link">
         Internals
       </a>
     </li>
@@ -675,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/geometry/geometry/" class="md-nav__link">
+      <a href="../../geometry/geometry/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -689,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/geometry/quantities/" class="md-nav__link">
+      <a href="../../geometry/quantities/" class="md-nav__link">
         Quantities
       </a>
     </li>
@@ -708,14 +644,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
       
       
       
@@ -724,7 +662,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Utilities
@@ -737,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/utilities/simple_polygon_mesh/" class="md-nav__link">
+      <a href="../simple_polygon_mesh/" class="md-nav__link">
         Simple Polygon Mesh
       </a>
     </li>
@@ -751,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/utilities/io/" class="md-nav__link">
+      <a href="../io/" class="md-nav__link">
         I/O
       </a>
     </li>
@@ -765,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/utilities/surface_point/" class="md-nav__link">
+      <a href="../surface_point/" class="md-nav__link">
         Surface Point
       </a>
     </li>
@@ -779,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/utilities/barycentric_vector/" class="md-nav__link">
+      <a href="../barycentric_vector/" class="md-nav__link">
         Barycentric Vector
       </a>
     </li>
@@ -791,11 +729,69 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../surface/utilities/mesh_ray_tracer/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Mesh Ray Tracer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Mesh Ray Tracer
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#result-struct" class="md-nav__link">
+    Result struct
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#construction" class="md-nav__link">
+    Construction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#queries" class="md-nav__link">
+    Queries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilities" class="md-nav__link">
+    Utilities
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -841,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/direction_fields/" class="md-nav__link">
+      <a href="../../algorithms/direction_fields/" class="md-nav__link">
         Direction Fields
       </a>
     </li>
@@ -855,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/embedding/" class="md-nav__link">
+      <a href="../../algorithms/embedding/" class="md-nav__link">
         Embedding
       </a>
     </li>
@@ -869,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/flip_geodesics/" class="md-nav__link">
+      <a href="../../algorithms/flip_geodesics/" class="md-nav__link">
         Flip Geodesics
       </a>
     </li>
@@ -883,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/geodesic_distance/" class="md-nav__link">
+      <a href="../../algorithms/geodesic_distance/" class="md-nav__link">
         Geodesic Distance
       </a>
     </li>
@@ -897,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/geodesic_voronoi_tessellations/" class="md-nav__link">
+      <a href="../../algorithms/geodesic_voronoi_tessellations/" class="md-nav__link">
         Geodesic Centroidal Voronoi Tessellations
       </a>
     </li>
@@ -911,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/intersection/" class="md-nav__link">
+      <a href="../../algorithms/intersection/" class="md-nav__link">
         Intersection
       </a>
     </li>
@@ -925,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/parameterization/" class="md-nav__link">
+      <a href="../../algorithms/parameterization/" class="md-nav__link">
         Parameterization
       </a>
     </li>
@@ -939,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/polygon_heat_solver/" class="md-nav__link">
+      <a href="../../algorithms/polygon_heat_solver/" class="md-nav__link">
         Polygon Mesh Heat Distance & Transport
       </a>
     </li>
@@ -953,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/remeshing/" class="md-nav__link">
+      <a href="../../algorithms/remeshing/" class="md-nav__link">
         Remeshing
       </a>
     </li>
@@ -967,7 +963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/robust_geometry/" class="md-nav__link">
+      <a href="../../algorithms/robust_geometry/" class="md-nav__link">
         Robust Geometry
       </a>
     </li>
@@ -981,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/signed_heat_method/" class="md-nav__link">
+      <a href="../../algorithms/signed_heat_method/" class="md-nav__link">
         Signed Heat Method
       </a>
     </li>
@@ -995,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/surface_centers/" class="md-nav__link">
+      <a href="../../algorithms/surface_centers/" class="md-nav__link">
         Surface Centers
       </a>
     </li>
@@ -1009,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/surface_sampling/" class="md-nav__link">
+      <a href="../../algorithms/surface_sampling/" class="md-nav__link">
         Surface Sampling
       </a>
     </li>
@@ -1023,7 +1019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/geodesic_paths/" class="md-nav__link">
+      <a href="../../algorithms/geodesic_paths/" class="md-nav__link">
         Tracing Geodesic Paths
       </a>
     </li>
@@ -1037,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/vector_heat_method/" class="md-nav__link">
+      <a href="../../algorithms/vector_heat_method/" class="md-nav__link">
         Vector Heat Method
       </a>
     </li>
@@ -1051,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/algorithms/stripes/" class="md-nav__link">
+      <a href="../../algorithms/stripes/" class="md-nav__link">
         Stripes
       </a>
     </li>
@@ -1099,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/intrinsic_triangulations/basics/" class="md-nav__link">
+      <a href="../../intrinsic_triangulations/basics/" class="md-nav__link">
         Basics
       </a>
     </li>
@@ -1113,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/intrinsic_triangulations/common_subdivision/" class="md-nav__link">
+      <a href="../../intrinsic_triangulations/common_subdivision/" class="md-nav__link">
         Common Subdivision
       </a>
     </li>
@@ -1127,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/intrinsic_triangulations/signposts/" class="md-nav__link">
+      <a href="../../intrinsic_triangulations/signposts/" class="md-nav__link">
         Signposts
       </a>
     </li>
@@ -1141,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/intrinsic_triangulations/integer_coordinates/" class="md-nav__link">
+      <a href="../../intrinsic_triangulations/integer_coordinates/" class="md-nav__link">
         Integer Coordinates
       </a>
     </li>
@@ -1155,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../surface/intrinsic_triangulations/function_transfer/" class="md-nav__link">
+      <a href="../../intrinsic_triangulations/function_transfer/" class="md-nav__link">
         Function Transfer
       </a>
     </li>
@@ -1211,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pointcloud/basics/" class="md-nav__link">
+      <a href="../../../pointcloud/basics/" class="md-nav__link">
         Basics
       </a>
     </li>
@@ -1225,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pointcloud/geometry/" class="md-nav__link">
+      <a href="../../../pointcloud/geometry/" class="md-nav__link">
         Geometry
       </a>
     </li>
@@ -1266,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pointcloud/algorithms/heat_solver/" class="md-nav__link">
+      <a href="../../../pointcloud/algorithms/heat_solver/" class="md-nav__link">
         Heat distance & transport
       </a>
     </li>
@@ -1314,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pointcloud/utilities/io/" class="md-nav__link">
+      <a href="../../../pointcloud/utilities/io/" class="md-nav__link">
         IO
       </a>
     </li>
@@ -1328,7 +1324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pointcloud/utilities/sampling/" class="md-nav__link">
+      <a href="../../../pointcloud/utilities/sampling/" class="md-nav__link">
         Sampling
       </a>
     </li>
@@ -1384,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../numerical/matrix_types/" class="md-nav__link">
+      <a href="../../../numerical/matrix_types/" class="md-nav__link">
         Matrix Types
       </a>
     </li>
@@ -1398,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../numerical/linear_algebra_utilities/" class="md-nav__link">
+      <a href="../../../numerical/linear_algebra_utilities/" class="md-nav__link">
         Linear Algebra Utilities
       </a>
     </li>
@@ -1412,7 +1408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../numerical/linear_solvers/" class="md-nav__link">
+      <a href="../../../numerical/linear_solvers/" class="md-nav__link">
         Linear Solvers
       </a>
     </li>
@@ -1461,7 +1457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utilities/miscellaneous/" class="md-nav__link">
+      <a href="../../../utilities/miscellaneous/" class="md-nav__link">
         Miscellaneous
       </a>
     </li>
@@ -1475,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utilities/vector2/" class="md-nav__link">
+      <a href="../../../utilities/vector2/" class="md-nav__link">
         Vector2
       </a>
     </li>
@@ -1489,7 +1485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utilities/vector3/" class="md-nav__link">
+      <a href="../../../utilities/vector3/" class="md-nav__link">
         Vector3
       </a>
     </li>
@@ -1503,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utilities/nearest_neighbors/" class="md-nav__link">
+      <a href="../../../utilities/nearest_neighbors/" class="md-nav__link">
         Nearest Neighbors
       </a>
     </li>
@@ -1517,7 +1513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utilities/eigenmap/" class="md-nav__link">
+      <a href="../../../utilities/eigenmap/" class="md-nav__link">
         Utilities for Eigen Interoperability
       </a>
     </li>
@@ -1556,36 +1552,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#building-and-running-tests" class="md-nav__link">
-    Building and running tests
+  <a href="#result-struct" class="md-nav__link">
+    Result struct
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tests-organization" class="md-nav__link">
-    Tests organization
-  </a>
-  
-    <nav class="md-nav" aria-label="Tests organization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#googletest" class="md-nav__link">
-    googletest
+  <a href="#construction" class="md-nav__link">
+    Construction
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#assets" class="md-nav__link">
-    Assets
+      
+        <li class="md-nav__item">
+  <a href="#queries" class="md-nav__link">
+    Queries
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#utilities" class="md-nav__link">
+    Utilities
+  </a>
   
 </li>
       
@@ -1607,21 +1597,61 @@
   
 
 
-  <h1>Tests</h1>
+  <h1>Mesh Ray Tracer</h1>
 
-<h2 id="building-and-running-tests">Building and running tests</h2>
-<p>Compile and run the tests with:
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span><span class="nb">test</span>
-mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
-cmake<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Debug<span class="w"> </span>..
-make<span class="w"> </span>-j12<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./bin/geometry-central-test
-</code></pre></div></p>
-<h2 id="tests-organization">Tests organization</h2>
-<p>All tests are stored in the <code>test/</code> subdirectory, which is not touched by the usual build system.</p>
-<h3 id="googletest">googletest</h3>
-<p>We use <a href="https://github.com/google/googletest">googletest</a> as a testing framework. Most users do not need the tests, so rather than packing it as a git submodule which would unavoidably be cloned, the build system downloads a binary of the googletest when the tests are built&mdash;a consequence is that you must have a network connection to build tests for the first time (TODO: enable using a system install of googletest).</p>
-<h3 id="assets">Assets</h3>
-<p>The <code>tests/assets/</code> directory contains a handful of input files for various tests. The absolute paths to these files are baked in to the test executable by the build system, so moving this directory after compiling tests may cause problems. The disk footprint of assets should be kept as small as possible since they are stored in the library repository.</p>
+<p>A BVH-accelerated ray-triangle intersection utility for triangle meshes, backed by <a href="https://github.com/lighttransport/nanort">nanort</a>.</p>
+<p><code class="highlight"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/mesh_ray_tracer.h&quot;</span></code></p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;geometrycentral/surface/mesh_ray_tracer.h&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">geometrycentral</span><span class="o">::</span><span class="nn">surface</span><span class="p">;</span>
+
+<span class="c1">// Build the acceleration structure once</span>
+<span class="n">MeshRayTracer</span><span class="w"> </span><span class="nf">tracer</span><span class="p">(</span><span class="n">geometry</span><span class="p">);</span>
+
+<span class="c1">// Trace a ray — origin and direction, direction need not be normalized</span>
+<span class="n">RayHitResult</span><span class="w"> </span><span class="n">hit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tracer</span><span class="p">.</span><span class="n">trace</span><span class="p">({</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.0</span><span class="p">});</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hit</span><span class="p">.</span><span class="n">hit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// distance along ray</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hit</span><span class="p">.</span><span class="n">t</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// which triangle was hit</span>
+<span class="w">  </span><span class="kt">size_t</span><span class="w"> </span><span class="n">faceIdx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hit</span><span class="p">.</span><span class="n">faceIndex</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// barycentric coords in that triangle</span>
+<span class="w">  </span><span class="n">Vector3</span><span class="w"> </span><span class="n">bary</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hit</span><span class="p">.</span><span class="n">faceCoords</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The mesh must be triangulated. The BVH is built once at construction and can be queried any number of times.</p>
+<h3 id="result-struct">Result struct</h3>
+<p><code>RayHitResult</code> is returned by every <code>trace()</code> call.</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">RayHitResult</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">hit</span><span class="p">;</span><span class="w">           </span><span class="c1">// true if the ray intersected the mesh</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w">           </span><span class="c1">// distance along the ray to the hit point</span>
+<span class="w">  </span><span class="kt">size_t</span><span class="w"> </span><span class="n">faceIndex</span><span class="p">;</span><span class="w">   </span><span class="c1">// index of the hit face in the mesh</span>
+<span class="w">  </span><span class="n">Vector3</span><span class="w"> </span><span class="n">faceCoords</span><span class="p">;</span><span class="w"> </span><span class="c1">// barycentric coords in the hit face, in the same order as the face&#39;s vertices are given</span>
+<span class="p">};</span>
+</code></pre></div>
+<h3 id="construction">Construction</h3>
+<details class="func">
+<summary><code class="highlight"><span class="n">MeshRayTracer</span><span class="o">::</span><span class="n">MeshRayTracer</span><span class="p">(</span><span class="n">EmbeddedGeometryInterface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">geom</span><span class="p">)</span></code></summary>
+<p>Build the BVH over the triangles of <code>geom</code>&lsquo;s mesh. The mesh must be fully triangular.</p>
+</details>
+<details class="func">
+<summary><code class="highlight"><span class="n">MeshRayTracer</span><span class="o">::</span><span class="n">MeshRayTracer</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SimplePolygonMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">)</span></code></summary>
+<p>Build the BVH from a <code>SimplePolygonMesh</code>. All polygons must be triangles.</p>
+</details>
+<h3 id="queries">Queries</h3>
+<details class="func">
+<summary><code class="highlight"><span class="n">RayHitResult</span><span class="w"> </span><span class="n">MeshRayTracer</span><span class="o">::</span><span class="n">trace</span><span class="p">(</span><span class="n">Vector3</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">dir</span><span class="p">)</span><span class="w"> </span><span class="k">const</span></code></summary>
+<p>Trace a ray from <code>origin</code> in direction <code>dir</code> (need not be normalized).</p>
+</details>
+<h3 id="utilities">Utilities</h3>
+<details class="func">
+<summary><code class="highlight"><span class="n">SurfacePoint</span><span class="w"> </span><span class="n">toSurfacePoint</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">RayHitResult</span><span class="o">&amp;</span><span class="w"> </span><span class="n">hit</span><span class="p">,</span><span class="w"> </span><span class="n">SurfaceMesh</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mesh</span><span class="p">)</span></code></summary>
+<p>Convert a <code>RayHitResult</code> to a <code>SurfacePoint</code> on <code>mesh</code>. </p>
+<p>Only meaningful when the tracer was built from that mesh (or its geometry). Can only be called if the result was a hit.</p>
+<p>The returned point is a face point with the hit&rsquo;s barycentric coordinates.</p>
+</details>
 
 
 
@@ -1659,10 +1689,10 @@ make<span class="w"> </span>-j12<span class="w"> </span><span class="o">&amp;&am
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
